@@ -12,7 +12,7 @@
     --border-color: rgba(255, 255, 255, 0.08);
     --font-head: 'Syne', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --transition: all 0.3s ease;
+    --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * {
@@ -63,7 +63,7 @@ a {
 }
 
 /* ==========================================================================
-   TYPOGRAPHY
+   TYPOGRAPHY & BUTTONS
    ========================================================================== */
 h1, h2, h3, h4 {
     font-family: var(--font-head);
@@ -89,9 +89,6 @@ h1, h2, h3, h4 {
     font-weight: 800;
 }
 
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
 .btn {
     display: inline-block;
     padding: 12px 26px;
@@ -146,7 +143,7 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(13, 15, 18, 0.92);
+    background-color: rgba(13, 15, 18, 0.94);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -183,12 +180,12 @@ h1, h2, h3, h4 {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
 .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-sub);
     transition: var(--transition);
 }
@@ -340,208 +337,257 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   PORTFOLIO & FILTERS
+   ESTILO NETFLIX (CARROSSEL HORIZONTAL DE PORTFÓLIO)
    ========================================================================== */
-.filter-bar {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 35px;
-    flex-wrap: wrap;
+.netflix-row {
+    margin-bottom: 45px;
 }
 
-.filter-btn {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-sub);
-    padding: 6px 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-family: var(--font-head);
-    font-size: 0.75rem;
-    transition: var(--transition);
-}
-
-.filter-btn.active, .filter-btn:hover {
-    background-color: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.portfolio-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.portfolio-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
-}
-
-.card-img-ph {
-    height: 160px;
-    background: #232832;
+.netflix-row-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--text-sub);
-    font-size: 0.8rem;
+    gap: 10px;
 }
 
-.card-content {
-    padding: 18px;
+.netflix-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-card);
 }
 
-.card-tag {
-    font-size: 0.7rem;
+.netflix-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.netflix-slider::-webkit-scrollbar-track {
+    background: var(--bg-card);
+}
+
+.netflix-slider::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.netflix-card {
+    flex: 0 0 300px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: start;
+    transition: var(--transition);
+    position: relative;
+}
+
+.netflix-card:hover {
+    transform: scale(1.04);
+    border-color: var(--accent);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.netflix-card-cover {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.netflix-card-body {
+    padding: 15px;
+}
+
+.netflix-badge {
+    font-size: 0.65rem;
     color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.netflix-card-title {
+    font-size: 1rem;
+    margin: 5px 0;
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.card-title {
-    font-size: 1.1rem;
-    margin: 6px 0;
-}
-
-.card-desc {
+.netflix-card-sub {
+    font-size: 0.8rem;
     color: var(--text-sub);
-    font-size: 0.85rem;
 }
 
 /* ==========================================================================
-   ON AIR & ON SCREEN
+   MODAL NETFLIX (DETALHES DO PROJETO)
    ========================================================================== */
-.audio-studio-box {
-    background: var(--bg-card);
-    padding: 30px;
-    border: 1px solid var(--border-color);
-}
-
-.soundwave-mock {
-    display: flex;
-    gap: 4px;
-    height: 25px;
-    align-items: flex-end;
-    margin-bottom: 12px;
-}
-
-.soundwave-mock span {
-    width: 5px;
-    background: var(--accent);
-    animation: wave 1.2s ease-in-out infinite alternate;
-}
-
-@keyframes wave {
-    0% { height: 4px; }
-    100% { height: 25px; }
-}
-
-.placeholder-note {
-    font-size: 0.75rem;
-    color: var(--text-sub);
-    margin-top: 10px;
-    text-align: center;
-}
-
-.video-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-}
-
-.video-wrapper {
+.modal-netflix {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 280px;
-    background: #000;
-    display: flex;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    z-index: 3000;
     align-items: center;
     justify-content: center;
-}
-
-.video-placeholder {
-    color: var(--text-sub);
-    font-size: 0.85rem;
-}
-
-.video-details {
     padding: 20px;
 }
 
-.badge {
-    background: var(--accent);
-    color: #fff;
-    padding: 2px 7px;
-    font-size: 0.65rem;
-    font-weight: 700;
-}
-
-.tech-stack {
-    margin-top: 12px;
+.modal-netflix.active {
     display: flex;
-    gap: 15px;
-    font-size: 0.8rem;
-    color: var(--text-sub);
 }
 
-/* ==========================================================================
-   ON DIGITAL
-   ========================================================================== */
-.digital-press-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.press-item-card {
+.modal-netflix-content {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.modal-netflix-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-hero-header {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+.modal-hero-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, var(--bg-card), transparent);
+}
+
+.modal-badge {
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+.modal-hero-overlay h2 {
+    font-size: 1.8rem;
+    margin-top: 8px;
+}
+
+.modal-date-text {
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.modal-body-content {
     padding: 25px;
+}
+
+.modal-desc-full {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.modal-media-box {
+    margin: 20px 0;
+}
+
+.modal-media-box iframe, 
+.modal-media-box video, 
+.modal-media-box audio {
+    width: 100%;
     border-radius: 4px;
 }
 
-.press-source {
-    font-size: 0.75rem;
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.press-item-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: 8px;
-}
-
-.press-item-card p {
-    font-size: 0.85rem;
-    color: var(--text-sub);
-    margin-bottom: 15px;
-}
-
-.press-link {
-    font-size: 0.8rem;
-    color: var(--text-main);
-    font-weight: 700;
-    border-bottom: 1px solid var(--accent);
+.modal-actions-bar {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
 }
 
 /* ==========================================================================
-   TIMELINE
+   TIMELINE, PROJETOS & ORGANIZAÇÕES (GERAL)
    ========================================================================== */
+.card-cover-container {
+    width: 100%;
+    height: 180px;
+    background: #232832;
+    overflow: hidden;
+}
+
+.card-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.entity-logo-box {
+    width: 48px;
+    height: 48px;
+    background: #232832;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
 .timeline-container {
     position: relative;
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto;
     border-left: 2px solid var(--border-color);
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 .timeline-block {
@@ -549,15 +595,10 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
-.timeline-block::before {
-    content: '';
+.timeline-block .entity-logo-box {
     position: absolute;
-    left: -32px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    background: var(--accent);
-    border-radius: 50%;
+    left: -68px;
+    top: 0;
 }
 
 .timeline-date {
@@ -581,6 +622,12 @@ h1, h2, h3, h4 {
     color: var(--text-sub);
 }
 
+.role-desc {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    margin-top: 6px;
+}
+
 .thesis-card {
     margin-top: 12px;
     background: rgba(255, 255, 255, 0.03);
@@ -588,8 +635,62 @@ h1, h2, h3, h4 {
     border-left: 2px solid var(--accent-gold);
 }
 
+.grid-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px 10px 20px;
+}
+
+.card-subtitle {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
+}
+
+.card-body-text {
+    padding: 0 20px 15px 20px;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+}
+
+.time-badge {
+    padding: 10px 20px 18px 20px;
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.roles-list {
+    list-style: none;
+    padding: 0 20px 20px 20px;
+    font-size: 0.8rem;
+    color: var(--text-sub);
+}
+
+.roles-list li {
+    margin-bottom: 5px;
+}
+
 /* ==========================================================================
-   THE TOOLKIT & IDIOMAS (APRIMORADO)
+   TOOLKIT & SOFT SKILLS
    ========================================================================== */
 .toolkit-modern {
     display: flex;
@@ -617,6 +718,13 @@ h1, h2, h3, h4 {
     padding: 6px 14px;
     font-size: 0.85rem;
     border-radius: 4px;
+}
+
+.skill-pill {
+    background: rgba(230, 57, 70, 0.1) !important;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    font-weight: 600;
 }
 
 .lang-grid-modern {
@@ -649,94 +757,12 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   AWARDS & CERTIFICADOS (REDUZIDOS E COMPACTOS)
+   CONTACTOS E SECÇÃO DE REDES SOCIAIS (APÓS E-MAIL)
    ========================================================================== */
-.awards-compact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.award-compact-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 20px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.award-compact-card.gold {
-    border-color: var(--accent-gold);
-}
-
-.award-badge {
-    background: rgba(255, 215, 0, 0.1);
-    color: var(--accent-gold);
-    font-size: 0.75rem;
-    font-weight: 800;
-    padding: 5px 10px;
-    border-radius: 3px;
-    white-space: nowrap;
-}
-
-.award-details h4 {
-    font-size: 1rem;
-}
-
-.award-details p {
-    font-size: 0.8rem;
-    color: var(--text-sub);
-}
-
-.cert-compact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cert-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 12px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-}
-
-.cert-sub {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--text-sub);
-}
-
-.cert-btn-link {
-    font-size: 0.75rem;
-    color: var(--accent);
-    font-weight: 700;
-}
-
-/* ==========================================================================
-   EXTRACURRICULAR & CONTACTO CLEAN
-   ========================================================================== */
-.extra-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.extra-icon {
-    font-size: 2rem;
-}
-
 .contact-details-clean {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     margin-top: 30px;
     flex-wrap: wrap;
 }
@@ -747,7 +773,7 @@ h1, h2, h3, h4 {
     padding: 20px 30px;
     border-radius: 4px;
     text-align: center;
-    min-width: 240px;
+    min-width: 260px;
 }
 
 .contact-lbl {
@@ -764,8 +790,51 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
+.social-section-wrapper {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-tag-title {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.social-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
 /* ==========================================================================
-   FOOTER & MODAL
+   FOOTER
    ========================================================================== */
 .footer {
     padding: 35px 0;
@@ -773,43 +842,6 @@ h1, h2, h3, h4 {
     text-align: center;
     font-size: 0.8rem;
     color: var(--text-sub);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal.active {
-    display: flex;
-}
-
-.modal-content {
-    background: var(--bg-card);
-    padding: 30px;
-    max-width: 550px;
-    width: 90%;
-    position: relative;
-    border: 1px solid var(--border-color);
-}
-
-.modal-close {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.6rem;
-    cursor: pointer;
 }
 
 /* ==========================================================================
@@ -822,6 +854,17 @@ h1, h2, h3, h4 {
 
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .timeline-container {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .timeline-block .entity-logo-box {
+        position: relative;
+        left: 0;
+        margin-bottom: 10px;
     }
 
     .nav-links {
