@@ -10,21 +10,21 @@ const projects = [
         date: "Novembro 2024",
         description: "Trabalho de reportagem televisiva vencedor da Medalha de Ouro no campeonato nacional.",
         imagePh: "[IMAGEM DA REPORTAGEM]",
-        details: "Trabalho prático desenvolvido no contexto da competição nacional Skills Portugal 2024 em Santa Maria da Feira."
+        details: "Trabalho prático desenvolvido no contexto da competição nacional Skills Portugal 2024, em Santa Maria da Feira."
     },
     {
         id: 2,
-        title: "Emissão & Animação RUA FM",
+        title: "RUA FM",
         category: "radio",
         categoryLabel: "RÁDIO",
         date: "2022 — Atualidade",
         description: "Exercício contínuo de locução, jornalismo e animação na Rádio Universitária do Algarve.",
         imagePh: "[FOTO ESTÚDIO RÁDIO]",
-        details: "Acompanhamento da atualidade local e académica em 102.7 FM."
+        details: "Acompanhamento da atualidade local e académica em 102.7 FM ou em rua.pt."
     },
     {
         id: 3,
-        title: "Conteúdos Digitais ENTR PT — RTP",
+        title: "ENTR PT — RTP",
         category: "video",
         categoryLabel: "CRIAÇÃO DE CONTEÚDOS",
         date: "Maio 2024 — Agosto 2024",
@@ -34,7 +34,7 @@ const projects = [
     },
     {
         id: 4,
-        title: "Cobertura Jornalística Sul Informação",
+        title: "Sul Informação",
         category: "journalism",
         categoryLabel: "IMPRENSA / ONLINE",
         date: "2021 — 2022",
