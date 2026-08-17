@@ -19,7 +19,7 @@ const projects = [
         categoryLabel: "RÁDIO",
         date: "2022 — Atualidade",
         description: "Exercício contínuo de locução, jornalismo e animação na Rádio Universitária do Algarve.",
-        imagePh: "[FOTO ESTÚDIO RÁDIO]",
+        imagePh: "https://www.sulinformacao.pt/wp-content/uploads/2025/02/rua-fm.jpg",
         details: "Acompanhamento da atualidade local e académica em 102.7 FM ou em rua.pt."
     },
     {
@@ -29,7 +29,7 @@ const projects = [
         categoryLabel: "CRIAÇÃO DE CONTEÚDOS",
         date: "Maio 2024 — Agosto 2024",
         description: "Produção de conteúdos audiovisuais em formato digital e redes sociais para a RTP.",
-        imagePh: "[IMAGEM ENTR PT]",
+        imagePh: "https://yt3.googleusercontent.com/u9s6qoUpGZE49zYTkgMMTTcP-YTnG_RpRM2AI9e_a-rBSGYs_OC-hlwKRhodW8V0CFt8SCob6lo=s900-c-k-c0x00ffffff-no-rj",
         details: "Criação, edição e adaptação de linguagem jornalística para novos públicos."
     },
     {
