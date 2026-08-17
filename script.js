@@ -41,6 +41,16 @@ const projects = [
         description: "Reportagens e artigos de investigação no jornal regional online líder no Algarve.",
         imagePh: "[IMAGEM SUL INFORMAÇÃO]",
         details: "Estágio profissional com cobertura de temas regionais, cultura e sociedade."
+    },
+   {
+        id: 5,
+        title: "Confissões",
+        category: "radio",
+        categoryLabel: "RÁDIO",
+        date: "2026 - Atualmente",
+        description: "...",
+        imagePh: "[IMAGEM SUL INFORMAÇÃO]",
+        details: "..."
     }
 ];
 
