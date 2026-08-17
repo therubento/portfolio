@@ -8,49 +8,39 @@ const projects = [
         category: "tv",
         categoryLabel: "TELEVISÃO",
         date: "Novembro 2024",
-        description: "Trabalho de reportagem televisiva vencedor da Medalha de Ouro no campeonato nacional.",
-        imagePh: "[IMAGEM DA REPORTAGEM]",
-        details: "Trabalho prático desenvolvido no contexto da competição nacional Skills Portugal 2024, em Santa Maria da Feira."
+        description: "Trabalho de reportagem televisiva galardoado com a Medalha de Ouro no campeonato nacional.",
+        imagePh: "[FOTO / REPORTAGEM TV]",
+        details: "Desenvolvido no contexto do campeonato nacional de profissões em Santa Maria da Feira."
     },
     {
         id: 2,
-        title: "RUA FM",
+        title: "Emissão & Animação RUA FM",
         category: "radio",
         categoryLabel: "RÁDIO",
         date: "2022 — Atualidade",
-        description: "Exercício contínuo de locução, jornalismo e animação na Rádio Universitária do Algarve.",
-        imagePh: "https://www.sulinformacao.pt/wp-content/uploads/2025/02/rua-fm.jpg",
-        details: "Acompanhamento da atualidade local e académica em 102.7 FM ou em rua.pt."
+        description: "Exercício contínuo de locução, acompanhamento da atualidade e jornalismo em 102.7 FM.",
+        imagePh: "[ESTÚDIO RUA FM]",
+        details: "Trabalho contínuo de produção radialística na Rádio Universitária do Algarve."
     },
     {
         id: 3,
-        title: "ENTR PT — RTP",
+        title: "Conteúdos Digitais ENTR PT — RTP",
         category: "video",
         categoryLabel: "CRIAÇÃO DE CONTEÚDOS",
         date: "Maio 2024 — Agosto 2024",
         description: "Produção de conteúdos audiovisuais em formato digital e redes sociais para a RTP.",
-        imagePh: "https://yt3.googleusercontent.com/u9s6qoUpGZE49zYTkgMMTTcP-YTnG_RpRM2AI9e_a-rBSGYs_OC-hlwKRhodW8V0CFt8SCob6lo=s900-c-k-c0x00ffffff-no-rj",
+        imagePh: "[CONTEÚDO DIGITAL ENTR PT]",
         details: "Criação, edição e adaptação de linguagem jornalística para novos públicos."
     },
     {
         id: 4,
-        title: "Sul Informação",
+        title: "Jornalismo Regional — Sul Informação",
         category: "journalism",
         categoryLabel: "IMPRENSA / ONLINE",
         date: "2021 — 2022",
-        description: "Reportagens e artigos de investigação no jornal regional online líder no Algarve.",
-        imagePh: "[IMAGEM SUL INFORMAÇÃO]",
-        details: "Estágio profissional com cobertura de temas regionais, cultura e sociedade."
-    },
-   {
-        id: 5,
-        title: "Confissões",
-        category: "radio",
-        categoryLabel: "RÁDIO",
-        date: "2026 - Atualmente",
-        description: "...",
-        imagePh: "[IMAGEM SUL INFORMAÇÃO]",
-        details: "..."
+        description: "Cobertura de notícias, entrevistas e artigos no jornal regional online do Algarve.",
+        imagePh: "[NOTÍCIA SUL INFORMAÇÃO]",
+        details: "Trabalho de campo e escrita de notícias durante estágio profissional."
     }
 ];
 
@@ -69,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 function renderProjects(items) {
     const grid = document.getElementById('portfolio-grid');
+    if (!grid) return;
     grid.innerHTML = '';
 
     items.forEach(item => {
@@ -118,15 +109,17 @@ function initNavigation() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
-    });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 }
 
 /* ==========================================================================
@@ -136,27 +129,31 @@ function initModal() {
     const modal = document.getElementById('project-modal');
     const closeBtn = document.getElementById('modal-close');
 
-    closeBtn.onclick = () => {
-        modal.classList.remove('active');
-    };
-
-    window.onclick = (e) => {
-        if (e.target === modal) {
+    if (closeBtn && modal) {
+        closeBtn.onclick = () => {
             modal.classList.remove('active');
-        }
-    };
+        };
+
+        window.onclick = (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        };
+    }
 }
 
 function openModal(project) {
     const modal = document.getElementById('project-modal');
     const modalBody = document.getElementById('modal-body');
 
+    if (!modal || !modalBody) return;
+
     modalBody.innerHTML = `
         <span class="card-tag">${project.categoryLabel} — ${project.date}</span>
-        <h2 style="margin: 10px 0; font-family: var(--font-head);">${project.title}</h2>
-        <p style="margin-bottom: 20px; color: var(--text-sub);">${project.details}</p>
-        <div class="card-img-ph" style="height: 200px; margin-bottom: 20px;">${project.imagePh}</div>
-        <p>[ADICIONAR MAIS INFORMAÇÃO, GALERIA OU VÍDEO COMPLETO PARA ESTE PROJETO]</p>
+        <h2 style="margin: 10px 0; font-family: var(--font-head); font-size: 1.4rem;">${project.title}</h2>
+        <p style="margin-bottom: 15px; color: var(--text-sub); font-size: 0.9rem;">${project.details}</p>
+        <div class="card-img-ph" style="height: 180px; margin-bottom: 15px;">${project.imagePh}</div>
+        <p style="font-size: 0.8rem; color: var(--text-sub);">[ADICIONAR MAIS INFORMAÇÕES OU GALERIA PARA ESTE PROJETO]</p>
     `;
 
     modal.classList.add('active');
