@@ -1,4 +1,4 @@
-// DADOS DOS PROJETOS
+// DADOS DOS PROJETOS ATUALIZADOS INTEGRALMENTE COM O CURRÍCULO 2026
 const projetos = [
     {
         id: 1,
@@ -7,80 +7,145 @@ const projetos = [
         titulo: "Medalha de Ouro — Skills Portugal 2024",
         mesAno: "Novembro 2024",
         cargo: "Jornalista / Repórter TV",
-        local: "Europarque, Santa Maria da Feira",
+        local: "Santa Maria da Feira",
         capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) no formato de Reportagem de Televisão, cobrindo provas de elevada exigência técnica em ambiente real de produção.",
+        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV, realizado sob condições de elevada exigência técnica e prazos de produção reais.",
         links: [
-            { texto: "Ver no Vimeo", url: "https://vimeo.com", icone: "video" },
-            { texto: "Notícia Oficial", url: "https://worldskillsportugal.iefp.pt", icone: "external-link" }
+            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
         ]
     },
     {
         id: 2,
         destaque: true,
         hashtag: "#televisao",
-        titulo: "E Agora, Algarve?",
-        mesAno: "Julho 2020",
-        cargo: "Jornalista Estagiário",
-        local: "RTP Algarve — Faro",
-        capa: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=600&q=80",
-        resumo: "Grande reportagem de televisão desenvolvida para a RTP Algarve, abordando os desafios socioeconómicos do ecossistema regional e o impacto nas comunidades locais.",
+        titulo: "Medalha de Excelência — Skills Portugal 2023",
+        mesAno: "Março 2023",
+        cargo: "Editor de Vídeo",
+        local: "Portimão",
+        capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
+        resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023, desempenhando as funções de Editor de Vídeo na produção de Reportagem de Televisão.",
         links: [
-            { texto: "Assistir no Vimeo", url: "https://vimeo.com", icone: "play-circle" }
+            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
         ]
     },
     {
         id: 3,
         destaque: true,
-        hashtag: "#radio",
-        titulo: "Especial Festival F — RUA FM",
-        mesAno: "Setembro 2023",
-        cargo: "Locutor / Entrevistador",
-        local: "Vila Adentro — Faro",
-        capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
-        resumo: "Cobertura integral em direto e condução de entrevistas com diversos artistas do cartaz do Festival F para a emissão especial da RUA - Rádio Universitária do Algarve.",
+        hashtag: "#televisao",
+        titulo: "E agora, Algarve?",
+        mesAno: "Março — Julho 2020",
+        cargo: "Jornalista (Estagiário)",
+        local: "RTP Algarve — Faro",
+        capa: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=600&q=80",
+        resumo: "Grande Reportagem televisiva concebida e editada durante o estágio na RTP Algarve (classificado com 18 valores), abordando as dinâmicas sociais e económicas da região.",
         links: [
-            { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
         ]
     },
     {
         id: 4,
         destaque: true,
-        hashtag: "#digital",
-        titulo: "Projeto ENTR PT — RTP",
-        mesAno: "Maio — Agosto 2024",
-        cargo: "Criador de Conteúdos",
-        local: "RTP — Lisboa",
-        capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
-        resumo: "Criação, produção e edição de formatos curtos de vídeo adaptados ao público jovem para o projeto europeu ENTR PT no ecossistema digital da RTP.",
+        hashtag: "#documentario",
+        titulo: "30 Anos de CC",
+        mesAno: "Fevereiro 2025 — Atualidade",
+        cargo: "Realizador",
+        local: "Universidade do Algarve",
+        capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
+        resumo: "Documentário comemorativo das três décadas do curso de Ciências da Comunicação da Universidade do Algarve, integrando testemunhos históricos e arquivo audiovisual.",
         links: [
-            { texto: "Ver no Behance", url: "https://behance.net", icone: "palette" }
+            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
         ]
     },
     {
         id: 5,
-        destaque: false,
-        hashtag: "#imprensa",
-        titulo: "Reportagens Regionais — Sul Informação",
-        mesAno: "Abril 2021 — Fevereiro 2022",
-        cargo: "Jornalista Redator",
-        local: "Faro / Região do Algarve",
-        capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
-        resumo: "Cobertura diária de atualidade, redação de notícias, entrevistas de fundo e peças multimédia para o jornal regional Sul Informação.",
+        destaque: true,
+        hashtag: "#digital",
+        titulo: "Projeto ENTR PT — RTP",
+        mesAno: "Maio — Agosto 2024",
+        cargo: "Criador de Conteúdos (Freelancer)",
+        local: "RTP — Lisboa",
+        capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
+        resumo: "Criação, captação e edição de formatos curtos de vídeo dinâmicos orientados para o público jovem no âmbito do projeto europeu ENTR PT transmitido pela RTP.",
         links: [
-            { texto: "Ler Peças", url: "https://www.sulinformacao.pt", icone: "globe" }
+            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
         ]
     },
     {
         id: 6,
         destaque: false,
-        hashtag: "#outros",
-        titulo: "Investigação Académica Mestrado",
+        hashtag: "#radio",
+        titulo: "Coberturas de Festivais — RUA FM",
+        mesAno: "2022 — 2025",
+        cargo: "Jornalista / Animador",
+        local: "RUA - Rádio Universitária do Algarve",
+        capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
+        resumo: "Locução, gravação de marcadores/spots e cobertura integral em direto de grandes eventos culturais: SA do Algarve, Festival F, Festival MED, Albufeira Sea Fest e Albufeira Sounds.",
+        links: [
+            { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+        ]
+    },
+    {
+        id: 7,
+        destaque: false,
+        hashtag: "#cinema",
+        titulo: "Segunda Opção (Curta-Metragem)",
+        mesAno: "Março 2018 — Junho 2019",
+        cargo: "Realizador, Editor, Cameraman",
+        local: "Tavira / Faro",
+        capa: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=600&q=80",
+        resumo: "Curta-metragem académica independente onde assumi a direção de fotografia, captação de imagem, realização e montagem final.",
+        links: [
+            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+        ]
+    },
+    {
+        id: 8,
+        destaque: false,
+        hashtag: "#investigacao",
+        titulo: "Dissertação de Mestrado (ESCS)",
         mesAno: "2022 — 2024",
         cargo: "Investigador",
-        local: "ESCS — Lisboa",
+        local: "Escola Superior de Comunicação Social",
         capa: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
-        resumo: "Dissertação de Mestrado em Jornalismo focada nas rotinas de produção de televisão e na visibilidade técnica das redações nacionais.",
+        resumo: "Trabalho de investigação final do Mestrado em Jornalismo (concluído com 17 valores): 'Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)'.",
+        links: []
+    },
+    {
+        id: 9,
+        destaque: false,
+        hashtag: "#imprensa",
+        titulo: "Reportagens e Peças Multimédia — Sul Informação",
+        mesAno: "Abril 2021 — Fevereiro 2022",
+        cargo: "Jornalista (Estágio Profissional)",
+        local: "Sul Informação (Faro)",
+        capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
+        resumo: "Escrita diária de notícias, breves e entrevistas, acompanhada pela produção integral de peças jornalísticas em vídeo (gravação, voz off e edição).",
+        links: [
+            { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt", icone: "globe" }
+        ]
+    },
+    {
+        id: 10,
+        destaque: false,
+        hashtag: "#comunicacao",
+        titulo: "Política (NÃO) Importa",
+        mesAno: "Setembro 2020 — Novembro 2022",
+        cargo: "Coordenador de Comunicação",
+        local: "Projeto Independente",
+        capa: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=600&q=80",
+        resumo: "Coordenação de comunicação e estratégias digitais de desmistificação do envolvimento político para a comunidade jovem.",
+        links: []
+    },
+    {
+        id: 11,
+        destaque: false,
+        hashtag: "#imprensa",
+        titulo: "Redação no 5º Congresso dos Jornalistas",
+        mesAno: "Janeiro 2024",
+        cargo: "Jornalista Redator",
+        local: "ESCS / Lisboa",
+        capa: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80",
+        resumo: "Integração na equipa de redação da ESCS responsável pela cobertura jornalística em tempo real do 5º Congresso dos Jornalistas Portugueses.",
         links: []
     }
 ];
@@ -145,12 +210,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Configurar setas após renderizar
         setupCarouselNavigation("slider-destaque", "btn-left-destaque", "btn-right-destaque");
         setupCarouselNavigation("slider-outros", "btn-left-outros", "btn-right-outros");
     }
 
-    // 4. LÓGICA DE ABERTURA DO POPOVER (COM LARGURA AUMENTADA A 500px)
+    // 4. LÓGICA DE ABERTURA DO POPOVER
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
@@ -165,8 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let metaHTML = '';
         if (proj.mesAno) metaHTML += `<p><strong>Mês / Ano:</strong> ${proj.mesAno}</p>`;
-        if (proj.cargo) metaHTML += `<p><strong>Cargo:</strong> ${proj.cargo}</p>`;
-        if (proj.local) metaHTML += `<p><strong>Local / Empresa:</strong> ${proj.local}</p>`;
+        if (proj.cargo) metaHTML += `<p><strong>Cargo / Função:</strong> ${proj.cargo}</p>`;
+        if (proj.local) metaHTML += `<p><strong>Local / Organização:</strong> ${proj.local}</p>`;
 
         let popoverHTML = `
             <button id="popover-close" class="popover-close-btn" aria-label="Fechar">&times;</button>
@@ -243,14 +307,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const scrollLeft = slider.scrollLeft;
             const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
-            // Mostrar botão esquerdo se houver scroll efetuado
             if (scrollLeft > 10) {
                 btnLeft.classList.add("visible");
             } else {
                 btnLeft.classList.remove("visible");
             }
 
-            // Mostrar botão direito apenas se existirem conteúdos ocultos à direita
             if (maxScrollLeft - scrollLeft > 10) {
                 btnRight.classList.add("visible");
             } else {
@@ -271,7 +333,6 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.addEventListener("scroll", updateButtons);
         window.addEventListener("resize", updateButtons);
         
-        // Executar verificação inicial
         setTimeout(updateButtons, 100);
     }
 
@@ -287,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 7. EVENTOS PARA FECHAR POPOVER NO CLIQUE OUTSIDE OU SCROLL
+    // 7. EVENTOS PARA FECHAR POPOVER
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
