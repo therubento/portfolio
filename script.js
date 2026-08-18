@@ -1,4 +1,4 @@
-// DADOS DOS PROJETOS COM SUPORTE A MÚLTIPLOS LINKS
+// ESTRUTURA DE DADOS COMPLETA DOS CONTEÚDOS COM MÊS/ANO, CARGO, LOCAL, RESUMO E LINKS
 const projetos = [
     {
         id: 1,
@@ -6,9 +6,10 @@ const projetos = [
         categoriaNome: "Reportagem TV",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
         data: "Novembro 2024",
-        duracao: "Reportagem de Televisão",
+        cargo: "Jornalista / Repórter TV",
+        local: "IEFP / EuroSkills Portugal",
         capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
-        descricao: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) no formato de Reportagem de Televisão.",
+        descricao: "Trabalho de reportagem televisiva galardoado com a Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024), demonstrando excelência técnica em jornalismo de emissão.",
         links: [
             { texto: "Ver na Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" },
             { texto: "Notícia Oficial", url: "https://worldskillsportugal.iefp.pt", icone: "external-link" }
@@ -19,10 +20,11 @@ const projetos = [
         categoria: "tv",
         categoriaNome: "Grande Reportagem",
         titulo: "E Agora, Algarve?",
-        data: "2020",
-        duracao: "20 minutos",
+        data: "Julho 2020",
+        cargo: "Jornalista (Estagiário)",
+        local: "RTP Centro Regional do Algarve",
         capa: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=600&q=80",
-        descricao: "Grande reportagem desenvolvida no âmbito do estágio na RTP Centro Regional do Algarve, analisando os impactos económicos e sociais no ecossistema regional.",
+        descricao: "Grande reportagem de investigação e análise social e económica sobre os desafios futuros da região algarvia, concebida e produzida integralmente durante a experiência na RTP.",
         links: [
             { texto: "Assistir Vídeo Completo", url: "https://vimeo.com/rubenbento243", icone: "play-circle" }
         ]
@@ -33,11 +35,12 @@ const projetos = [
         categoriaNome: "Cobertura / Entrevista",
         titulo: "Especial Festival F — RUA FM",
         data: "Setembro 2023",
-        duracao: "Emissão On-Air",
+        cargo: "Animador & Repórter On-Air",
+        local: "Vila Adentro, Faro",
         capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
-        descricao: "Cobertura em direto e condução de entrevistas com artistas no Festival F em Faro para a RUA - Rádio Universitária do Algarve.",
+        descricao: "Cobertura direta e condução de entrevistas de fundo com artistas do panorama musical português nos bastidores do Festival F em Faro para a rádio universitária.",
         links: [
-            { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+            { texto: "Ouvir Emissão", url: "https://www.rua.pt", icone: "radio" }
         ]
     },
     {
@@ -46,9 +49,10 @@ const projetos = [
         categoriaNome: "Conteúdo Digital",
         titulo: "Projeto ENTR PT — RTP",
         data: "Maio — Agosto 2024",
-        duracao: "Formatos Sociais / Vídeo Short",
+        cargo: "Criador de Conteúdos (Freelancer)",
+        local: "RTP Lisboa / Digital",
         capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
-        descricao: "Criação de conteúdos inovadores e edições dinâmicas para a plataforma europeia ENTR PT no âmbito do ecossistema RTP.",
+        descricao: "Desenvolvimento, recolha e edição de formatos de vídeo adaptados às novas linguagens digitais e redes jovens para a plataforma europeia ENTR Portugal.",
         links: [
             { texto: "Visitar ENTR / RTP", url: "https://www.rtp.pt", icone: "globe" }
         ]
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. RENDERING DOS SLIDERS DA SECÇÃO DE CONTEÚDOS
+    // 2. RENDERING DOS SLIDERS DE CONTEÚDOS
     const containerTv = document.getElementById("slider-tv");
     const containerRadio = document.getElementById("slider-radio");
     const containerDigital = document.getElementById("slider-digital");
@@ -99,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. LÓGICA DO POPOVER LATERAL FLUTUANTE (DIREITA OU ESQUERDA)
+    // 4. LÓGICA DO POPOVER ADJACENTE (MESMA ALTURA DO CARTÃO)
     const popover = document.getElementById("inline-popover");
     const closeBtn = document.getElementById("popover-close");
     let activeCard = null;
@@ -110,25 +114,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const item = projetos.find(p => p.id === id);
         if (!item) return;
 
-        // Se clicar no mesmo cartão já aberto, fecha
+        // Se clicar no cartão ativo, fecha o painel
         if (activeCard === clickedCard && popover.classList.contains("visible")) {
             closePopover();
             return;
         }
 
-        // Remover destaque anterior
+        // Destaque visual no cartão selecionado
         if (activeCard) activeCard.classList.remove("active-card");
         activeCard = clickedCard;
         activeCard.classList.add("active-card");
 
-        // Preencher dados do popover
+        // Preenchimento dos dados do projeto
         document.getElementById("pop-category").innerText = item.categoriaNome;
         document.getElementById("pop-title").innerText = item.titulo;
         document.getElementById("pop-date").innerText = item.data;
-        document.getElementById("pop-duration").innerText = item.duracao;
+        document.getElementById("pop-role").innerText = item.cargo;
+        document.getElementById("pop-location").innerText = item.local;
         document.getElementById("pop-description").innerText = item.descricao;
 
-        // Gerar Múltiplos Botões Dinamicamente
+        // Gerar Múltiplos Botões/Links Dinâmicos
         const actionsContainer = document.getElementById("pop-actions");
         actionsContainer.innerHTML = "";
         
@@ -144,22 +149,20 @@ document.addEventListener("DOMContentLoaded", () => {
             if (window.lucide) lucide.createIcons();
         }
 
-        // POSICIONAMENTO DINÂMICO (DIREITA OU ESQUERDA)
+        // CÁLCULO DINÂMICO DE ESPAÇO NO ECRÃ (DIREITA OU ESQUERDA)
         if (window.innerWidth > 850) {
             const cardRect = clickedCard.getBoundingClientRect();
-            const gap = 12; // Espaço entre o cartão e o popover
-            const popoverWidth = 320;
+            const popoverWidth = 340; // Largura do pop-over
+            const gap = 14; // Distância entre cartão e pop-over
             const windowWidth = window.innerWidth;
 
-            // Verificar se há espaço suficiente à direita
             const spaceRight = windowWidth - cardRect.right;
             let leftPos;
 
+            // Se existir espaço livre à direita, abre à direita. Caso contrário, à esquerda.
             if (spaceRight >= popoverWidth + gap) {
-                // Abre à DIREITA
                 leftPos = cardRect.right + gap + window.scrollX;
             } else {
-                // Abre à ESQUERDA
                 leftPos = cardRect.left - popoverWidth - gap + window.scrollX;
             }
 
@@ -182,14 +185,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (closeBtn) closeBtn.addEventListener("click", closePopover);
 
-    // Fechar ao clicar fora
+    // Fechar se o utilizador clicar fora do painel pop-over
     document.addEventListener("click", (e) => {
         if (popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
         }
     });
 
-    // Recalcular ou fechar no scroll/resize do slider
+    // Fechar ao redimensionar a janela ou ao fazer scroll horizontal no slider
     window.addEventListener("resize", closePopover);
     document.querySelectorAll(".netflix-slider").forEach(slider => {
         slider.addEventListener("scroll", closePopover);
