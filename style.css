@@ -104,7 +104,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .live-pulse { width: 7px; height: 7px; background-color: var(--primary-red); border-radius: 50%; box-shadow: 0 0 8px var(--primary-red); }
 
 .hero-details h1 { font-size: 3rem; font-weight: 800; margin-bottom: 12px; color: #fff; }
-.hero-quote { font-style: italic; color: var(--text-muted); border-left: 2px solid var(--primary-red); padding-left: 16px; margin-bottom: 18px; font-size: 0.95rem; line-height: 1.5; }
+.hero-quote { font-style: italic; color: var(--text-muted); border-left: 2px solid var(--primary-red); padding-left: 16px; margin-bottom: 18px; font-size: 0.88rem; line-height: 1.5; letter-spacing: 0.3px; }
 .hero-bio { line-height: 1.7; color: #d1d5db; font-size: 0.95rem; margin-bottom: 24px; }
 
 /* CONTACTOS */
@@ -148,19 +148,17 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
     align-items: center;
 }
 
-/* OCULTAR A BARRA DE SCROLL PADRÃO */
 .netflix-slider {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding: 10px 5px 20px 5px;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE e Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-.netflix-slider::-webkit-scrollbar { display: none; } /* Chrome, Safari e Opera */
+.netflix-slider::-webkit-scrollbar { display: none; }
 
-/* BOTÕES / SETAS DE NAVEGAÇÃO */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -224,7 +222,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .card-company { font-size: 0.78rem; color: #d1d5db; font-weight: 500; margin: 0 0 4px 0; }
 .card-date { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
 
-/* POPOVER LATERAL AUMENTADO (500px DE LARGURA) */
+/* POPOVER LATERAL 500px */
 .inline-popover {
     position: absolute;
     width: 500px;
@@ -298,6 +296,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .timeline-logo-container { height: 38px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 6px; display: flex; align-items: center; }
 .timeline-company-logo { max-height: 100%; max-width: 140px; object-fit: contain; }
 .timeline-date { color: var(--primary-red); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.academic-thesis { font-size: 0.85rem; color: #d1d5db; margin-top: 10px; line-height: 1.5; background: rgba(255, 255, 255, 0.02); padding: 10px; border-radius: 6px; border-left: 2px solid var(--primary-red); }
 .corner-arrow-link { position: absolute; bottom: 16px; right: 18px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; border-radius: 50%; background: rgba(255, 255, 255, 0.03); }
 .corner-arrow-link:hover { color: #ffffff; background: var(--primary-red); }
 
