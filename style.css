@@ -1,138 +1,161 @@
-/* ==========================================================================
-   PAINEL POPUP CONTEXTUAL (ADAPTÁVEL AO CARTÃO E RESPONSIVO)
-   ========================================================================== */
-.project-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2000;
-    pointer-events: none;
-    visibility: hidden;
-    transition: visibility 0.3s;
+:root {
+    --bg-main: #0c0d10;
+    --bg-card: #14161d;
+    --primary-red: #ff1e27;
+    --primary-glow: rgba(255, 30, 39, 0.35);
+    --text-main: #f0f2f5;
+    --text-muted: #8c94a0;
+    --border-color: #222630;
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.project-sidebar.active {
-    pointer-events: auto;
-    visibility: visible;
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    margin: 0;
+    overflow-x: hidden;
 }
 
-/* Fundo escurecido */
-.sidebar-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-sidebar.active .sidebar-overlay {
-    opacity: 1;
-}
-
-/* Caixa do Painel Contextual em Desktop */
-.sidebar-content {
-    position: absolute;
-    width: 380px;
-    max-height: 85vh;
-    background: #181818;
-    border: 1px solid #333;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
-    overflow-y: auto;
-    opacity: 0;
-    transform: scale(0.92);
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+/* NAVBAR */
+.navbar {
     display: flex;
-    flex-direction: column;
-    z-index: 2001;
-}
-
-.project-sidebar.active .sidebar-content {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Botão de Fechar */
-.sidebar-close-btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    z-index: 10;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    transition: 0.2s;
+    padding: 15px 40px;
+    background: rgba(12, 13, 16, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
 }
+.logo { font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; }
+.logo span { color: var(--primary-red); }
+.nav-links { list-style: none; display: flex; gap: 24px; margin: 0; }
+.nav-links a { color: var(--text-main); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
+.nav-links a:hover { color: var(--primary-red); }
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
 
-.sidebar-close-btn:hover {
+/* HERO SECTION */
+.section-hero {
+    padding: 80px 40px;
+    background: radial-gradient(circle at top right, rgba(255, 30, 39, 0.08), transparent 50%);
+}
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.hero-card-press {
+    position: relative;
+    flex: 0 0 280px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    text-align: center;
+}
+.press-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--primary-red);
-    border-color: var(--primary-red);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 0 12px var(--primary-glow);
+    white-space: nowrap;
 }
+.hero-img { width: 100%; height: 320px; object-fit: cover; border-radius: 12px; }
+.press-id { margin-top: 12px; font-size: 0.8rem; color: var(--text-muted); }
+.press-id strong { display: block; color: #fff; font-size: 1.1rem; }
 
-.sidebar-header-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+.hero-details { flex: 1; }
+.hero-tag { color: var(--primary-red); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+.hero-details h1 { font-size: 3.2rem; font-weight: 900; margin: 10px 0; letter-spacing: -1px; }
+.hero-quote { font-style: italic; color: var(--text-muted); border-left: 3px solid var(--primary-red); padding-left: 15px; margin-bottom: 20px; }
+.hero-bio { line-height: 1.7; color: #cbd5e1; font-size: 1rem; }
+
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+.btn-hero {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: 0.2s;
 }
+.btn-hero.primary { background: var(--primary-red); color: #fff; box-shadow: 0 4px 15px var(--primary-glow); }
+.btn-hero.primary:hover { transform: translateY(-2px); }
+.btn-hero.outline { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); }
+.btn-hero.outline:hover { border-color: var(--primary-red); color: var(--primary-red); }
 
-.sidebar-body {
-    padding: 20px;
+/* CATÁLOGO NETFLIX */
+.section-catalogo { padding: 60px 40px; }
+.section-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px; }
+.row-container { margin-bottom: 45px; }
+.row-title { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+
+.netflix-slider { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 10px; }
+.netflix-card {
+    flex: 0 0 230px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
 }
+.netflix-card:hover { transform: translateY(-6px) scale(1.02); border-color: var(--primary-red); box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+.netflix-card-cover { width: 100%; height: 280px; object-fit: cover; }
+.netflix-card-body { padding: 12px; }
+.netflix-card-title { font-weight: 700; font-size: 0.95rem; margin: 0 0 4px 0; }
+.netflix-card-sub { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
 
-.side-meta {
-    background: #222;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin: 12px 0;
-    font-size: 0.85rem;
+/* PAINEL CONTEXTUAL SLIDE */
+.project-sidebar { position: fixed; inset: 0; z-index: 2000; visibility: hidden; pointer-events: none; }
+.project-sidebar.active { visibility: visible; pointer-events: auto; }
+.sidebar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); opacity: 0; transition: 0.3s; }
+.project-sidebar.active .sidebar-overlay { opacity: 1; }
+
+.sidebar-content {
+    position: absolute; width: 380px; max-height: 85vh; background: var(--bg-card);
+    border: 1px solid var(--border-color); border-radius: 16px; overflow-y: auto; opacity: 0; transform: scale(0.95); transition: 0.3s;
 }
+.project-sidebar.active .sidebar-content { opacity: 1; transform: scale(1); }
+.sidebar-close-btn { position: absolute; top: 12px; right: 12px; background: #000; border: none; color: #fff; font-size: 1.5rem; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; }
+.sidebar-header-img img { width: 100%; height: 180px; object-fit: cover; }
+.sidebar-body { padding: 20px; }
 
-.side-meta p {
-    margin: 3px 0;
-    color: #ccc;
-}
+/* LINHA TEMPORAL */
+.section-percurso { padding: 60px 40px; background: #0f1014; }
+.timeline { max-width: 850px; margin: 0 auto; border-left: 2px solid var(--border-color); padding-left: 25px; }
+.timeline-item { position: relative; margin-bottom: 35px; }
+.timeline-dot { position: absolute; left: -32px; top: 5px; width: 12px; height: 12px; background: var(--primary-red); border-radius: 50%; box-shadow: 0 0 10px var(--primary-glow); }
+.timeline-content { background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); }
+.timeline-date { color: var(--primary-red); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.timeline-content h3 { margin: 5px 0; font-size: 1.2rem; }
+.timeline-institution { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px; }
 
-.side-description-text {
-    line-height: 1.5;
-    color: #ddd;
-    font-size: 0.92rem;
-}
+/* COMPETÊNCIAS & CARDS */
+.section-grid-info { padding: 60px 40px; }
+.container-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+.grid-card { background: var(--bg-card); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color); }
+.grid-card.glow { border-color: rgba(255, 30, 39, 0.4); }
+.tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tag-item { background: #1a1d26; padding: 6px 12px; border-radius: 6px; font-size: 0.85rem; border: 1px solid var(--border-color); }
+.tag-item.red { border-color: var(--primary-red); color: #fff; }
+.info-list { list-style: none; padding: 0; margin-top: 12px; }
+.info-list li { margin-bottom: 10px; font-size: 0.9rem; color: #cbd5e1; }
 
-.side-actions {
-    margin-top: 20px;
-}
+.footer { text-align: center; padding: 30px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; }
 
-/* RESPONSIVIDADE PARA SMARTPHONES (MODO BOTTOM-SHEET) */
 @media (max-width: 768px) {
-    .sidebar-content {
-        position: absolute !important;
-        top: auto !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        max-height: 80vh !important;
-        border-radius: 16px 16px 0 0 !important;
-        border-bottom: none !important;
-        transform: translateY(100%) !important;
-    }
-
-    .project-sidebar.active .sidebar-content {
-        transform: translateY(0) !important;
-    }
+    .hero-container { flex-direction: column; text-align: center; }
+    .hero-actions { justify-content: center; }
+    .sidebar-content { width: 100% !important; bottom: 0 !important; top: auto !important; left: 0 !important; border-radius: 20px 20px 0 0 !important; transform: translateY(100%) !important; }
+    .project-sidebar.active .sidebar-content { transform: translateY(0) !important; }
 }
