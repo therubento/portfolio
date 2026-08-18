@@ -3,114 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio & Catálogo de Conteúdos</title>
+    <title>Rúben Bento — Portfólio & Catálogo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Ícones Lucide para Contactos e Redes Sociais -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGAÇÃO STREAMING -->
-    <header class="navbar">
-        <div class="logo">PORTFÓLIO<span>FLIX</span></div>
-        <nav>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#tv">Televisão</a></li>
-                <li><a href="#radio">Rádio</a></li>
-                <li><a href="#digital">Digital</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-    </header>
+    <!-- NAVEGAÇÃO -->
+    <nav class="navbar">
+        <div class="logo">Rúben Bento</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#sobre">Sobre Rúben Bento</a></li>
+            <li><a href="#catalogo">Catálogo de Conteúdos</a></li>
+            <li><a href="#contactos">Contactos</a></li>
+        </ul>
+    </nav>
 
-    <!-- SECÇÃO HERO: PERFIL CV SLIM & COMPACTO -->
-    <section id="perfil" class="hero-compact">
-        <div class="hero-container">
-            <div class="hero-avatar">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Foto de Perfil">
+    <!-- SECÇÃO: SOBRE RÚBEN BENTO -->
+    <section id="sobre" class="section-sobre">
+        <div class="container-sobre">
+            <div class="sobre-foto-wrapper">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="sobre-foto">
             </div>
-            <div class="hero-info">
-                <div class="badge-accent">Jornalista & Criador de Conteúdos</div>
-                <h1>O Teu Nome Aqui</h1>
-                <p class="hero-bio">
-                    Jornalista, animador na RUA FM e realizador. Vencedor da Medalha de Ouro no Skills Portugal 2024 em Reportagem de TV, com trabalhos na RTP, Sul Informação e imprensa digital.
+            
+            <div class="sobre-info">
+                <span class="badge-tag">Jornalista & Criador de Conteúdos</span>
+                <h1>Rúben Bento</h1>
+                <p class="sobre-resumo">
+                    Licenciado em Ciências da Comunicação pela Universidade do Algarve e com percurso em Reportagem de Televisão, Locução de Rádio e Imprensa Digital. Vencedor da Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem de TV) e com passagem pela RTP, RUA FM e Sul Informação. Especializado na criação de narrativas audiovisuais, cobertura de grandes eventos e produção multiplataforma.
                 </p>
-                <div class="hero-pills">
-                    <span class="pill">🥇 Medalha de Ouro (Skills Portugal '24)</span>
-                    <span class="pill">📻 Locução & Rádio (RUA FM)</span>
-                    <span class="pill">📺 Reportagem de TV (RTP)</span>
+
+                <!-- CONTACTOS DIRETO -->
+                <div class="contactos-grid">
+                    <a href="mailto:rubenbento@exemplo.com" class="contacto-card">
+                        <i data-lucide="mail"></i>
+                        <span>rubenbento@exemplo.com</span>
+                    </a>
+                    <a href="tel:+351910000000" class="contacto-card">
+                        <i data-lucide="phone"></i>
+                        <span>+351 910 000 000</span>
+                    </a>
                 </div>
-            </div>
-            <div class="hero-actions">
-                <a href="mailto:teuemail@exemplo.com" class="btn btn-primary">✉️ Contactar</a>
+
+                <!-- REDES SOCIAIS -->
+                <div class="redes-sociais">
+                    <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-btn" title="X / Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="https://spotify.com" target="_blank" class="social-btn" title="Podcast / Spotify"><i data-lucide="radio"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CATÁLOGO DE CONTEÚDOS (CARROSSÉIS HORIZONTAIS) -->
-    <main class="catalog-container">
+    <!-- SECÇÃO: CATÁLOGO DE CONTEÚDOS (ESTILO NETFLIX) -->
+    <section id="catalogo" class="section-catalogo">
+        <h2 class="catalogo-titulo-principal">Catálogo de Conteúdos</h2>
 
-        <!-- LINHA 1: TELEVISÃO -->
-        <section id="tv" class="stream-row">
-            <h2 class="row-title">📺 Televisão & Broadcast</h2>
-            <div class="slider-wrapper">
-                <button class="scroll-btn left" onclick="scrollCarousel('slider-tv', -300)">&#10094;</button>
-                <div id="slider-tv" class="netflix-slider"></div>
-                <button class="scroll-btn right" onclick="scrollCarousel('slider-tv', 300)">&#10095;</button>
+        <!-- CARROSSEL 1: TV & BROADCAST -->
+        <div class="row-container">
+            <h3 class="row-title">📺 Televisão & Broadcast</h3>
+            <div id="slider-tv" class="netflix-slider"></div>
+        </div>
+
+        <!-- CARROSSEL 2: RÁDIO & ON AIR -->
+        <div class="row-container">
+            <h3 class="row-title">🎙️ Rádio & Audio (On Air)</h3>
+            <div id="slider-radio" class="netflix-slider"></div>
+        </div>
+
+        <!-- CARROSSEL 3: DIGITAL & IMPRENSA -->
+        <div class="row-container">
+            <h3 class="row-title">📰 Digital & Imprensa</h3>
+            <div id="slider-digital" class="netflix-slider"></div>
+        </div>
+    </section>
+
+    <!-- PAINEL LATERAL DE DETALHES DO PROJETO (SLIDE-OVER SIDEBAR) -->
+    <div id="project-sidebar" class="project-sidebar">
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <div class="sidebar-content">
+            <button id="sidebar-close" class="sidebar-close-btn">&times;</button>
+            
+            <div class="sidebar-header-img">
+                <img id="side-cover-img" src="" alt="Capa do Projeto">
             </div>
-        </section>
 
-        <!-- LINHA 2: RÁDIO -->
-        <section id="radio" class="stream-row">
-            <h2 class="row-title">🎙️ Rádio & Audio (On Air)</h2>
-            <div class="slider-wrapper">
-                <button class="scroll-btn left" onclick="scrollCarousel('slider-radio', -300)">&#10094;</button>
-                <div id="slider-radio" class="netflix-slider"></div>
-                <button class="scroll-btn right" onclick="scrollCarousel('slider-radio', 300)">&#10095;</button>
-            </div>
-        </section>
+            <div class="sidebar-body">
+                <span id="side-category" class="badge-tag"></span>
+                <h2 id="side-title"></h2>
+                
+                <div class="side-meta">
+                    <p><strong>Período:</strong> <span id="side-date"></span></p>
+                    <p><strong>Duração / Formato:</strong> <span id="side-duration"></span></p>
+                </div>
 
-        <!-- LINHA 3: DIGITAL -->
-        <section id="digital" class="stream-row">
-            <h2 class="row-title">📰 Digital & Imprensa</h2>
-            <div class="slider-wrapper">
-                <button class="scroll-btn left" onclick="scrollCarousel('slider-digital', -300)">&#10094;</button>
-                <div id="slider-digital" class="netflix-slider"></div>
-                <button class="scroll-btn right" onclick="scrollCarousel('slider-digital', 300)">&#10095;</button>
-            </div>
-        </section>
+                <h3>Sobre o Projeto</h3>
+                <p id="side-description" class="side-description-text"></p>
 
-    </main>
+                <!-- REPRODUTOR DE MÍDIA INCORPORADA -->
+                <div id="side-media-container" class="side-media-container"></div>
 
-    <!-- POPUP MODAL ESTILO STREAMING -->
-    <div id="netflix-modal" class="modal">
-        <div class="modal-content">
-            <span id="netflix-modal-close" class="close">&times;</span>
-            <div class="modal-header-img">
-                <img id="modal-cover-img" src="" alt="Capa">
-                <div class="modal-img-gradient"></div>
-            </div>
-            <div class="modal-body">
-                <span id="modal-category-badge" class="netflix-badge"></span>
-                <h2 id="modal-title"></h2>
-                <p id="modal-date" class="modal-date-text"></p>
-                <p id="modal-description" class="modal-desc-text"></p>
-                <div id="modal-media-container"></div>
-                <a id="modal-external-link" href="#" target="_blank" class="btn btn-primary btn-sm" style="display:none; margin-top:20px;">
-                    🔗 Ver Conteúdo Original
-                </a>
+                <!-- LINK EXTERNO -->
+                <div class="side-actions">
+                    <a id="side-link" href="#" target="_blank" class="btn-primary">
+                        <i data-lucide="external-link"></i> Ver Conteúdo Completo
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="stream-footer">
-        <p>© 2026 — Portfólio Profissional de Comunicação & Conteúdos</p>
-    </footer>
-
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
