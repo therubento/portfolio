@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rúben Bento — RB. STUDIO</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO -->
+    <!-- NAVEGAÇÃO GLASSMORPHISM -->
     <nav class="navbar">
-        <div class="logo">
-            RB<span>. STUDIO</span>
-        </div>
+        <a href="#perfil" class="logo-link" id="brand-logo">
+            <div class="logo">
+                RB<span class="dot">.</span><span class="studio">STUDIO</span>
+            </div>
+        </a>
         <div class="hamburger" id="hamburger">&#9776;</div>
         <ul class="nav-links" id="nav-links">
             <li><a href="#perfil">Credencial</a></li>
@@ -30,11 +36,17 @@
     <section id="perfil" class="section-hero">
         <div class="hero-container">
             <div class="hero-card-press">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="hero-img">
+                <div class="avatar-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="hero-img">
+                </div>
             </div>
 
             <div class="hero-details">
-                <span class="hero-tag"><i data-lucide="radio"></i> Jornalismo • Docência • Produção Audiovisual</span>
+                <div class="hero-tag-badge">
+                    <span class="live-pulse"></span>
+                    <span>Jornalismo • Docência • Produção Audiovisual</span>
+                </div>
+                
                 <h1>Rúben Bento</h1>
                 
                 <p class="hero-quote">
@@ -42,7 +54,7 @@
                 </p>
 
                 <p class="hero-bio">
-                    Mestre em Jornalismo pela Escola Superior de Comunicação Social (17 Valores)[cite: 3] e Licenciado em Ciências da Comunicação pela UAlg. Assistente Convidado na Universidade do Algarve (Docente de Produção e Edição de Vídeo e Cursos Livres Impulso Mais Digital). Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem TV) e Medalha de Excelência em 2023. Percurso transversal em Televisão (RTP), Rádio (RUA FM, Rádio Gilão), Imprensa e Média Digital (Sul Informação, ENTR PT, Portugal Rotário).
+                    Mestre em Jornalismo pela ESCS (17 Valores)[cite: 3] e Licenciado em Ciências da Comunicação pela UAlg. Assistente Convidado na Universidade do Algarve (Docente de Produção e Edição de Vídeo e Cursos Livres Impulso Mais Digital). Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem TV) e Medalha de Excelência em 2023. Percurso transversal em Televisão (RTP), Rádio (RUA FM, Rádio Gilão), Imprensa e Média Digital.
                 </p>
 
                 <!-- CONTACTOS & CARTÃO DA CARTEIRA DE JORNALISTA -->
@@ -56,10 +68,12 @@
                         </a>
                     </div>
                     <div class="press-card-inline">
-                        <i data-lucide="id-card"></i>
+                        <div class="press-icon-wrap">
+                            <i data-lucide="id-card"></i>
+                        </div>
                         <div>
-                            <span>CARTEIRA PROFISSIONAL DE JORNALISTA N.º</span>
-                            <strong>C 8964</strong>
+                            <span class="press-label">CARTEIRA PROFISSIONAL DE JORNALISTA</span>
+                            <strong class="press-number">N.º C 8964</strong>
                         </div>
                     </div>
                 </div>
@@ -94,13 +108,13 @@
         </div>
     </section>
 
-    <!-- PAINEL CONTEXTUAL SLIDE -->
+    <!-- PAINEL CONTEXTUAL SLIDE (SIDEBAR) -->
     <div id="project-sidebar" class="project-sidebar">
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <div class="sidebar-content">
             <button id="sidebar-close" class="sidebar-close-btn">&times;</button>
             <div class="sidebar-header-img">
-                <img id="side-cover-img" src="" alt="Capa">
+                <img id="side-cover-img" src="" alt="Capa do Projeto">
             </div>
             <div class="sidebar-body">
                 <span id="side-category" class="badge-tag"></span>
@@ -123,14 +137,15 @@
         <h2 class="section-title centered-title">Experiência</h2>
 
         <div class="timeline">
-            
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo UAlg" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Outubro 2024 — Atualidade</span>
                     </div>
-                    <span class="timeline-date">Outubro 2024 — Atualidade</span>
                     <h3>Assistente Convidado</h3>
                     <p class="timeline-institution">Universidade do Algarve — Faculdade de Ciências Humanas e Sociais (Faro)</p>
                     <ul>
@@ -145,10 +160,12 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo RTP / ENTR" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_RTP.svg" alt="Logo RTP / ENTR" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Maio 2024 — Agosto 2024</span>
                     </div>
-                    <span class="timeline-date">Maio 2024 — Agosto 2024</span>
                     <h3>Criador de Conteúdos (Freelancer)</h3>
                     <p class="timeline-institution">ENTR PT — RTP (Lisboa)</p>
                     <ul>
@@ -161,15 +178,17 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo RUA FM" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_RUA.svg" alt="Logo RUA FM" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Março 2022 — Atualidade</span>
                     </div>
-                    <span class="timeline-date">Março 2022 — Atualidade</span>
                     <h3>Jornalista / Animador</h3>
                     <p class="timeline-institution">RUA - Rádio Universitária do Algarve (Faro)</p>
                     <ul>
                         <li>Voz de rádio, gravação de marcadores, spots e comerciais.</li>
-                        <li>Entrevistas a artistas e cobertura de grandes festivais (Semana Académica, Festival F, Festival MED, Albufeira Sea Fest, Albufeira Sounds).</li>
+                        <li>Entrevistas a artistas e cobertura de grandes festivais (Semana Académica, Festival F, Festival MED, Albufeira Sea Fest).</li>
                     </ul>
                     <a href="https://www.rua.pt" target="_blank" class="btn-timeline-link"><i data-lucide="external-link"></i> Visitar Website</a>
                 </div>
@@ -178,10 +197,12 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo Portugal Rotário" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_ROTARIO.svg" alt="Logo Portugal Rotário" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Março 2021 — Atualidade</span>
                     </div>
-                    <span class="timeline-date">Março 2021 — Atualidade</span>
                     <h3>Editor / Jornalista (Colaborador)</h3>
                     <p class="timeline-institution">Portugal Rotário (Revista)</p>
                     <ul>
@@ -194,10 +215,12 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo Sul Informação" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_SUL.svg" alt="Logo Sul Informação" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Abril 2021 — Fevereiro 2022</span>
                     </div>
-                    <span class="timeline-date">Abril 2021 — Fevereiro 2022</span>
                     <h3>Jornalista (Estágio Profissional)</h3>
                     <p class="timeline-institution">Sul Informação (Jornal Online - Faro)</p>
                     <ul>
@@ -211,10 +234,12 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo RTP" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_RTP.svg" alt="Logo RTP" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Março 2020 — Julho 2020</span>
                     </div>
-                    <span class="timeline-date">Março 2020 — Julho 2020</span>
                     <h3>Jornalista (Estágio Curricular - 18 Valores)</h3>
                     <p class="timeline-institution">RTP — Centro Regional do Algarve (Faro)</p>
                     <ul>
@@ -228,10 +253,12 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo Rádio Gilão" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_GICAO.svg" alt="Logo Rádio Gilão" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Junho 2018 — Set 2018 / Junho 2019 — Set 2019</span>
                     </div>
-                    <span class="timeline-date">Junho 2018 — Set 2018 / Junho 2019 — Set 2019</span>
                     <h3>Locutor (Colaborador de Verão)</h3>
                     <p class="timeline-institution">Rádio Gilão (Tavira)</p>
                     <ul>
@@ -240,7 +267,6 @@
                     <a href="#" target="_blank" class="btn-timeline-link"><i data-lucide="external-link"></i> Visitar Website</a>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -249,17 +275,18 @@
         <h2 class="section-title centered-title">Formação Académica</h2>
 
         <div class="timeline">
-            
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo ESCS" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_ESCS.svg" alt="Logo ESCS" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">2022 — 2024</span>
                     </div>
-                    <span class="timeline-date">2022 — 2024</span>
                     <h3>Mestrado em Jornalismo (Média Final: 17 Valores)</h3>
                     <p class="timeline-institution">Escola Superior de Comunicação Social (ESCS - IPL)</p>
-                    <p><strong>Trabalho de Investigação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</p>
+                    <p class="academic-thesis"><strong>Trabalho de Investigação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</p>
                     <a href="https://www.escs.ipl.pt" target="_blank" class="btn-timeline-link"><i data-lucide="external-link"></i> Visitar Website</a>
                 </div>
             </div>
@@ -267,13 +294,15 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo UAlg" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">2017 — 2020</span>
                     </div>
-                    <span class="timeline-date">2017 — 2020</span>
                     <h3>Licenciatura em Ciências da Comunicação</h3>
                     <p class="timeline-institution">Universidade do Algarve — FCHS (Faro)</p>
-                    <p>Especialização em comunicação multimédia, jornalismo audiovisual, assessoria e produção técnica.</p>
+                    <p class="academic-desc">Especialização em comunicação multimédia, jornalismo audiovisual, assessoria e produção técnica.</p>
                     <a href="https://www.ualg.pt" target="_blank" class="btn-timeline-link"><i data-lucide="external-link"></i> Visitar Website</a>
                 </div>
             </div>
@@ -281,16 +310,17 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-logo-container">
-                        <img src="URL_DO_LOGO_AQUI.svg" alt="Logo Secundária Tavira" class="timeline-company-logo">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="URL_DO_LOGO_SECUNDARIA.svg" alt="Logo Secundária Tavira" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">2014 — 2017</span>
                     </div>
-                    <span class="timeline-date">2014 — 2017</span>
                     <h3>Ensino Secundário em Línguas e Humanidades</h3>
                     <p class="timeline-institution">Escola Secundária Dr. Jorge Augusto Correia (Tavira)</p>
                     <a href="#" target="_blank" class="btn-timeline-link"><i data-lucide="external-link"></i> Visitar Website</a>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -299,30 +329,29 @@
         <h2 class="section-title centered-title">Conhecimentos</h2>
         
         <div class="container-grid-top">
-            <!-- IDIOMAS -->
             <div class="grid-card">
                 <h3><i data-lucide="globe"></i> Idiomas</h3>
                 <ul class="info-list">
-                    <li><strong>Português:</strong> Língua Materna / Fluente</li>
-                    <li><strong>Espanhol:</strong> Nível C2 (Avançado / Língua Mãe)</li>
-                    <li><strong>Inglês:</strong> Nível B2 (Utilizador Independente)</li>
+                    <li><span class="lang-flag">PT</span> <div><strong>Português:</strong> Língua Materna / Fluente</div></li>
+                    <li><span class="lang-flag">ES</span> <div><strong>Espanhol:</strong> Nível C2 (Avançado / Língua Mãe)</div></li>
+                    <li><span class="lang-flag">EN</span> <div><strong>Inglês:</strong> Nível B2 (Utilizador Independente)</div></li>
                 </ul>
             </div>
 
-            <!-- LOGÍSTICA & MOBILIDADE -->
             <div class="grid-card">
                 <h3><i data-lucide="car"></i> Logística & Deslocações</h3>
                 <ul class="info-list">
-                    <li><strong>Carta de Condução:</strong> Categorias B e B1</li>
-                    <li><strong>Viatura Própria:</strong> Sim</li>
-                    <li><strong>Mobilidade:</strong> Total disponibilidade para deslocações nacionais e internacionais.</li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Carta de Condução:</strong> Categorias B e B1</div></li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Viatura Própria:</strong> Sim</div></li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Mobilidade:</strong> Total disponibilidade para deslocações.</div></li>
                 </ul>
             </div>
         </div>
 
-        <!-- CONHECIMENTOS DE SOFTWARE & FERRAMENTAS -->
         <div class="grid-card-fullwidth">
-            <h3><i data-lucide="cpu"></i> Software, Ferramentas & Soft Skills</h3>
+            <div class="fullwidth-card-header">
+                <h3><i data-lucide="cpu"></i> Software, Ferramentas & Competências</h3>
+            </div>
             
             <div class="software-categories-grid">
                 <div class="software-group">
@@ -360,7 +389,7 @@
                     </div>
                 </div>
 
-                <div class="software-group">
+                <div class="software-group software-group-wide">
                     <h4><i data-lucide="user-check"></i> Perfil & Soft Skills</h4>
                     <div class="tags-container">
                         <span class="tag-item">Liderança</span>
@@ -381,66 +410,75 @@
         <h2 class="section-title centered-title">Licenças & Projetos Comunitários</h2>
 
         <div class="container-grid-compact">
-            
-            <!-- CARGOS DE LIDERANÇA -->
             <div class="grid-card compact-card">
                 <h3><i data-lucide="users"></i> Cargos de Liderança</h3>
                 <ul class="compact-list">
                     <li>
-                        <img src="URL_DO_LOGO_ROTARACT.svg" alt="Logo Rotaract" class="compact-item-logo">
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_ROTARACT.svg" alt="Logo Rotaract" class="compact-item-logo">
+                        </div>
                         <div>
-                            <strong>Rotaract Club de Tavira:</strong>
-                            <br>• 25/26: Representante Distrital (Dist. 1960)
-                            <br>• 24/25: Dir. Comunicação | 23/24 & 20/21: Presidente
-                            <br>• 22/23: Tesoureiro & Dir. Comunicação
+                            <strong>Rotaract Club de Tavira</strong>
+                            <span class="sub-role">• 25/26: Representante Distrital (Dist. 1960)</span>
+                            <span class="sub-role">• 24/25: Dir. Comunicação | 23/24 & 20/21: Pres.</span>
+                            <span class="sub-role">• 22/23: Tesoureiro & Dir. Comunicação</span>
                         </div>
                     </li>
                     <li>
-                        <img src="URL_DO_LOGO_INTERACT.svg" alt="Logo Interact" class="compact-item-logo">
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_INTERACT.svg" alt="Logo Interact" class="compact-item-logo">
+                        </div>
                         <div><strong>Interact Club de Tavira:</strong> Membro Ativo (2016–2018)</div>
                     </li>
                     <li>
-                        <img src="URL_DO_LOGO_ESCOTEIROS.svg" alt="Logo Escoteiros" class="compact-item-logo">
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_ESCOTEIROS.svg" alt="Logo Escoteiros" class="compact-item-logo">
+                        </div>
                         <div><strong>AEP (Grupo 273):</strong> Elemento Ativo (2018–2023)</div>
                     </li>
                     <li>
-                        <img src="URL_DO_LOGO_NECC.svg" alt="Logo NECC" class="compact-item-logo">
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_NECC.svg" alt="Logo NECC" class="compact-item-logo">
+                        </div>
                         <div><strong>NECC UAlg:</strong> Coord. Mercado de Trabalho (2022–2023)</div>
                     </li>
                 </ul>
             </div>
 
-            <!-- PROJETOS COMUNITÁRIOS -->
             <div class="grid-card compact-card">
                 <h3><i data-lucide="heart"></i> Projetos Comunitários</h3>
                 <ul class="compact-list">
                     <li>
-                        <img src="URL_DO_LOGO_REFOOD.svg" alt="Logo Refood" class="compact-item-logo">
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_REFOOD.svg" alt="Logo Refood" class="compact-item-logo">
+                        </div>
                         <div><strong>Refood Tavira:</strong> Voluntário ativo no apoio comunitário e distribuição alimentar.</div>
                     </li>
                     <li>
-                        <img src="URL_DO_LOGO_BANCO_ALIMENTAR.svg" alt="Logo Banco Alimentar" class="compact-item-logo">
-                        <div><strong>Banco Alimentar:</strong> Apoio logístico em campanhas de recolha.</div>
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_BANCO.svg" alt="Logo Banco Alimentar" class="compact-item-logo">
+                        </div>
+                        <div><strong>Banco Alimentar:</strong> Apoio logístico em campanhas de recolha de alimentos.</div>
                     </li>
                     <li>
-                        <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="compact-item-logo">
-                        <div><strong>Dia Aberto UAlg:</strong> Apoio aos novos estudantes (2017/18 e 2018/19).</div>
+                        <div class="compact-logo-box">
+                            <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="compact-item-logo">
+                        </div>
+                        <div><strong>Dia Aberto UAlg:</strong> Acolhimento e apoio aos novos estudantes (2017/18 e 2018/19).</div>
                     </li>
                 </ul>
             </div>
-
         </div>
 
-        <!-- LICENÇAS E CERTIFICADOS (AGRUPADOS POR EMISSOR) -->
         <div class="container-grid-issuers">
             <h3 class="issuers-main-title"><i data-lucide="award"></i> Licenças & Certificações</h3>
             
             <div class="issuers-grid">
-                
-                <!-- EMISSOR 1: POLIS LSE -->
                 <div class="issuer-card">
                     <div class="issuer-header">
-                        <img src="URL_DO_LOGO_POLIS.svg" alt="Logo Polis LSE" class="issuer-logo">
+                        <div class="issuer-logo-box">
+                            <img src="URL_DO_LOGO_POLIS.svg" alt="Logo Polis LSE" class="issuer-logo">
+                        </div>
                         <strong>Polis LSE</strong>
                     </div>
                     <ul>
@@ -448,10 +486,11 @@
                     </ul>
                 </div>
 
-                <!-- EMISSOR 2: CONGRESSO DOS JORNALISTAS / ESCS -->
                 <div class="issuer-card">
                     <div class="issuer-header">
-                        <img src="URL_DO_LOGO_CONGRESSO.svg" alt="Logo Congresso Jornalistas" class="issuer-logo">
+                        <div class="issuer-logo-box">
+                            <img src="URL_DO_LOGO_CONGRESSO.svg" alt="Logo Congresso Jornalistas" class="issuer-logo">
+                        </div>
                         <strong>Congresso dos Jornalistas</strong>
                     </div>
                     <ul>
@@ -459,59 +498,74 @@
                     </ul>
                 </div>
 
-                <!-- EMISSOR 3: WORLDSKILLS PORTUGAL -->
                 <div class="issuer-card">
                     <div class="issuer-header">
-                        <img src="URL_DO_LOGO_WORLDSKILLS.svg" alt="Logo Worldskills" class="issuer-logo">
+                        <div class="issuer-logo-box">
+                            <img src="URL_DO_LOGO_WORLDSKILLS.svg" alt="Logo Worldskills" class="issuer-logo">
+                        </div>
                         <strong>Worldskills Portugal</strong>
                     </div>
                     <ul>
-                        <li><strong>Skills Portugal 2024:</strong> Medalha de Ouro em Reportagem de TV (Nov 2024)</li>
+                        <li><strong>Skills Portugal 2024:</strong> Medalha de Ouro em Reportagem TV (Nov 2024)</li>
                         <li><strong>Skills Portugal 2023:</strong> Medalha de Excelência em Edição de Vídeo (Mar 2023)</li>
                         <li><strong>Ateliê de Jornalismo Televisivo:</strong> Formação Técnica (Set 2022)</li>
                     </ul>
                 </div>
 
-                <!-- EMISSOR 4: CENJOR -->
                 <div class="issuer-card">
                     <div class="issuer-header">
-                        <img src="URL_DO_LOGO_CENJOR.svg" alt="Logo CENJOR" class="issuer-logo">
+                        <div class="issuer-logo-box">
+                            <img src="URL_DO_LOGO_CENJOR.svg" alt="Logo CENJOR" class="issuer-logo">
+                        </div>
                         <strong>CENJOR</strong>
                     </div>
                     <ul>
-                        <li><strong>Fake News - Não se deixe enganar:</strong> Formação (Dezembro 2020)</li>
+                        <li><strong>Fake News - Não se deixe enganar:</strong> Formação Especializada (Dez 2020)</li>
                     </ul>
                 </div>
 
-                <!-- EMISSOR 5: LUSA / NAU -->
                 <div class="issuer-card">
                     <div class="issuer-header">
-                        <img src="URL_DO_LOGO_LUSA.svg" alt="Logo Lusa/NAU" class="issuer-logo">
-                        <strong>Agência LUSA / Plataforma NAU</strong>
+                        <div class="issuer-logo-box">
+                            <img src="URL_DO_LOGO_LUSA.svg" alt="Logo Lusa/NAU" class="issuer-logo">
+                        </div>
+                        <strong>LUSA / Plataforma NAU</strong>
                     </div>
                     <ul>
-                        <li><strong>Cidadão Ciberinformado:</strong> Certificação (Outubro 2020)</li>
-                        <li><strong>Introdução à Comunicação Digital:</strong> Conceção, Produção e Publicação (Jan 2021)</li>
+                        <li><strong>Cidadão Ciberinformado:</strong> Certificação Oficial (Outubro 2020)</li>
+                        <li><strong>Comunicação Digital:</strong> Conceção, Produção e Publicação (Jan 2021)</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- FOOTER COM CONTACTOS -->
+    <!-- FOOTER ULTRA-ELEGANTE -->
     <footer class="footer">
-        <div class="footer-contacts">
-            <h3>Contactos Diretos</h3>
-            <p><i data-lucide="mail"></i> <a href="mailto:rubenbento243@gmail.com">rubenbento243@gmail.com</a></p>
-            <p><i data-lucide="phone"></i> <a href="tel:+351924245184">+351 924 245 184</a></p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">RB<span class="dot">.</span><span class="studio">STUDIO</span></div>
+                <p>Jornalismo, Produção Audiovisual & Comunicação Multimédia.</p>
+            </div>
+
+            <div class="footer-contacts">
+                <h4>Contactos Diretos</h4>
+                <a href="mailto:rubenbento243@gmail.com" class="footer-link"><i data-lucide="mail"></i> rubenbento243@gmail.com</a>
+                <a href="tel:+351924245184" class="footer-link"><i data-lucide="phone"></i> +351 924 245 184</a>
+            </div>
+
             <div class="footer-socials">
-                <a href="https://linkedin.com/in/rubento243" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
-                <a href="https://behance.net/rmdaqb243" target="_blank"><i data-lucide="palette"></i> Behance</a>
-                <a href="https://vimeo.com/rubenbento243" target="_blank"><i data-lucide="video"></i> Vimeo</a>
+                <h4>Canais</h4>
+                <div class="social-chips">
+                    <a href="https://linkedin.com/in/rubento243" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://behance.net/rmdaqb243" target="_blank"><i data-lucide="palette"></i></a>
+                    <a href="https://vimeo.com/rubenbento243" target="_blank"><i data-lucide="video"></i></a>
+                </div>
             </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Rúben Bento — RB. STUDIO. Todos os direitos reservados.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rúben Bento — RB. STUDIO. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
