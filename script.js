@@ -1,4 +1,4 @@
-// BASE DE DADOS DOS PROJETOS DE CONTEÚDO
+// DADOS DOS PROJETOS DE CONTEÚDO
 const projetos = [
     {
         id: 1,
@@ -46,38 +46,6 @@ const projetos = [
     }
 ];
 
-// FUNÇÃO GLOBAL DE ABERTURA DO PAINEL (Acessível pelos cliques)
-window.openSidebar = function(id) {
-    const item = projetos.find(p => p.id === id);
-    if (!item) return;
-
-    const sidebar = document.getElementById("project-sidebar");
-    
-    document.getElementById("side-cover-img").src = item.capa;
-    document.getElementById("side-category").innerText = item.categoriaNome;
-    document.getElementById("side-title").innerText = item.titulo;
-    document.getElementById("side-date").innerText = item.data;
-    document.getElementById("side-duration").innerText = item.duracao;
-    document.getElementById("side-description").innerText = item.descricao;
-    document.getElementById("side-link").href = item.link;
-
-    sidebar.classList.add("active");
-    document.body.style.overflow = "hidden"; // Impede scroll do fundo enquanto o painel está aberto
-
-    if (window.lucide) {
-        window.lucide.createIcons();
-    }
-};
-
-// FUNÇÃO GLOBAL DE FECHO DO PAINEL
-window.closeSidebar = function() {
-    const sidebar = document.getElementById("project-sidebar");
-    if (sidebar) {
-        sidebar.classList.remove("active");
-        document.body.style.overflow = ""; // Restaura scroll da página
-    }
-};
-
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. SCROLL SUAVE AO CLICAR NO LOGÓTIPO
@@ -92,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. INJEÇÃO DOS CARTÕES DE CONTEÚDO NOS RESPECTIVOS SLIDERS
+    // 2. RENDERING DOS SLIDERS DA SECÇÃO DE CONTEÚDOS
     const containerTv = document.getElementById("slider-tv");
     const containerRadio = document.getElementById("slider-radio");
     const containerDigital = document.getElementById("slider-digital");
 
     projetos.forEach(proj => {
         const cardHtml = `
-            <div class="netflix-card" onclick="window.openSidebar(${proj.id})">
+            <div class="netflix-card" onclick="openSidebar(${proj.id})">
                 <img src="${proj.capa}" alt="${proj.titulo}" class="netflix-card-cover">
                 <div class="netflix-card-body">
                     <span class="card-category">${proj.categoriaNome}</span>
@@ -124,15 +92,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. EVENTOS DE FECHO DO PAINEL LATERAL
+    // 4. LÓGICA DO PAINEL LATERAL (SLIDE-OVER NETFLIX)
+    const sidebar = document.getElementById("project-sidebar");
     const closeBtn = document.getElementById("sidebar-close");
     const overlay = document.getElementById("sidebar-overlay");
 
-    if (closeBtn) closeBtn.addEventListener("click", window.closeSidebar);
-    if (overlay) overlay.addEventListener("click", window.closeSidebar);
+    window.openSidebar = function(id) {
+        const item = projetos.find(p => p.id === id);
+        if (!item) return;
 
-    // Fechar painel ao pressionar a tecla ESC
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") window.closeSidebar();
-    });
+        document.getElementById("side-cover-img").src = item.capa;
+        document.getElementById("side-category").innerText = item.categoriaNome;
+        document.getElementById("side-title").innerText = item.titulo;
+        document.getElementById("side-date").innerText = item.data;
+        document.getElementById("side-duration").innerText = item.duracao;
+        document.getElementById("side-description").innerText = item.descricao;
+        
+        const sideLink = document.getElementById("side-link");
+        if (item.link) {
+            sideLink.href = item.link;
+            sideLink.style.display = "inline-flex";
+        } else {
+            sideLink.style.display = "none";
+        }
+
+        sidebar.classList.add("active");
+    };
+
+    function closeSidebar() {
+        sidebar.classList.remove("active");
+    }
+
+    if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
+    if (overlay) overlay.addEventListener("click", closeSidebar);
 });
