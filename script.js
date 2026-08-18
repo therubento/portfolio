@@ -1,3 +1,4 @@
+// DADOS DOS PROJETOS
 const projetos = [
     {
         id: 1,
@@ -86,7 +87,7 @@ const projetos = [
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // SCROLL LOGÓTIPO
+    // 1. SCROLL SUAVE NO LOGÓTIPO
     const brandLogo = document.getElementById("brand-logo");
     if (brandLogo) {
         brandLogo.addEventListener("click", (e) => {
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ELEMENTOS POPOVER
+    // 2. ELEMENTOS DO POPOVER
     const popover = document.getElementById("inline-popover");
     let activeCard = null;
 
@@ -110,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // RENDERIZAR CARTÕES FECHADOS
+    // 3. RENDERING DOS CARTÕES FECHADOS
     const containerDestaque = document.getElementById("slider-destaque");
     const containerOutros = document.getElementById("slider-outros");
 
@@ -143,9 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 containerOutros.appendChild(card);
             }
         });
+
+        // Configurar setas após renderizar
+        setupCarouselNavigation("slider-destaque", "btn-left-destaque", "btn-right-destaque");
+        setupCarouselNavigation("slider-outros", "btn-left-outros", "btn-right-outros");
     }
 
-    // ABRIR POPOVER E POSICIONAR (500px)
+    // 4. LÓGICA DE ABERTURA DO POPOVER (COM LARGURA AUMENTADA A 500px)
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
@@ -226,47 +231,54 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // CONTROLO DE SETAS DOS CARROSSÉIS
-    function setupCarouselControls(sliderId, prevBtnId, nextBtnId) {
+    // 5. LÓGICA DE CONTROLO DAS SETAS DOS CARROSSEIS
+    function setupCarouselNavigation(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
-        const prevBtn = document.getElementById(prevBtnId);
-        const nextBtn = document.getElementById(nextBtnId);
+        const btnLeft = document.getElementById(btnLeftId);
+        const btnRight = document.getElementById(btnRightId);
 
-        if (!slider || !prevBtn || !nextBtn) return;
+        if (!slider || !btnLeft || !btnRight) return;
 
-        function updateArrowVisibility() {
-            if (window.innerWidth <= 850) {
-                prevBtn.style.display = "none";
-                nextBtn.style.display = "none";
-                return;
+        function updateButtons() {
+            const scrollLeft = slider.scrollLeft;
+            const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+            // Mostrar botão esquerdo se houver scroll efetuado
+            if (scrollLeft > 10) {
+                btnLeft.classList.add("visible");
+            } else {
+                btnLeft.classList.remove("visible");
             }
 
-            const hasOverflow = slider.scrollWidth > slider.clientWidth;
-            
-            if (hasOverflow) {
-                prevBtn.style.display = slider.scrollLeft > 10 ? "flex" : "none";
-                nextBtn.style.display = (slider.scrollLeft + slider.clientWidth) < (slider.scrollWidth - 10) ? "flex" : "none";
+            // Mostrar botão direito apenas se existirem conteúdos ocultos à direita
+            if (maxScrollLeft - scrollLeft > 10) {
+                btnRight.classList.add("visible");
             } else {
-                prevBtn.style.display = "none";
-                nextBtn.style.display = "none";
+                btnRight.classList.remove("visible");
             }
         }
 
-        prevBtn.addEventListener("click", () => slider.scrollBy({ left: -320, behavior: "smooth" }));
-        nextBtn.addEventListener("click", () => slider.scrollBy({ left: 320, behavior: "smooth" }));
+        btnLeft.addEventListener("click", () => {
+            closePopover();
+            slider.scrollBy({ left: -320, behavior: "smooth" });
+        });
 
-        slider.addEventListener("scroll", updateArrowVisibility);
-        window.addEventListener("resize", updateArrowVisibility);
+        btnRight.addEventListener("click", () => {
+            closePopover();
+            slider.scrollBy({ left: 320, behavior: "smooth" });
+        });
 
-        setTimeout(updateArrowVisibility, 100);
+        slider.addEventListener("scroll", updateButtons);
+        window.addEventListener("resize", updateButtons);
+        
+        // Executar verificação inicial
+        setTimeout(updateButtons, 100);
     }
 
-    // INICIALIZAÇÃO
+    // Inicialização
     renderCards();
-    setupCarouselControls("slider-destaque", "prev-destaque", "next-destaque");
-    setupCarouselControls("slider-outros", "prev-outros", "next-outros");
 
-    // MENU MOBILE
+    // 6. MENU HAMBÚRGUER MOBILE
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     if (hamburger && navLinks) {
@@ -275,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // EVENTOS DE FECHO
+    // 7. EVENTOS PARA FECHAR POPOVER NO CLIQUE OUTSIDE OU SCROLL
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
@@ -283,8 +295,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("resize", closePopover);
-    
-    document.querySelectorAll(".netflix-slider").forEach(slider => {
-        slider.addEventListener("scroll", closePopover);
-    });
 });
