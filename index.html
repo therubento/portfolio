@@ -3,51 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rúben Bento — Portfólio & Percurso Profissional</title>
+    <title>Rúben Bento — Broadcast & Creative Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- NAV BAR -->
+    <!-- NAVEGAÇÃO -->
     <nav class="navbar">
-        <div class="logo">RB<span>.</span></div>
+        <div class="logo">
+            <span class="live-dot"></span> LIVE // RB<span>. STUDIO</span>
+        </div>
         <div class="hamburger" id="hamburger">&#9776;</div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="#sobre">Perfil</a></li>
-            <li><a href="#catalogo">Catálogo</a></li>
-            <li><a href="#percurso">Percurso</a></li>
-            <li><a href="#competencias">Competências</a></li>
-            <li><a href="#voluntariado">Atividades & Cursos</a></li>
+            <li><a href="#perfil">01. Credencial</a></li>
+            <li><a href="#catalogo">02. Conteúdos</a></li>
+            <li><a href="#experiencia">03. Alinhamento</a></li>
+            <li><a href="#educacao">04. Formação Académica</a></li>
+            <li><a href="#competencias">05. Stack & Idiomas</a></li>
+            <li><a href="#certificados-voluntariado">06. Licenças & Projetos</a></li>
         </ul>
     </nav>
 
-    <!-- HEROBANNER / PERFIL DE IMPACTO -->
-    <section id="sobre" class="section-hero">
+    <!-- SECÇÃO 1: CREDENCIAL -->
+    <section id="perfil" class="section-hero">
         <div class="hero-container">
+            <!-- CRACHÁ DE IMPRENSA / PRESS PASS -->
             <div class="hero-card-press">
                 <div class="press-badge">
                     <i data-lucide="award"></i> Ouro Skills Portugal '24
                 </div>
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="hero-img">
                 <div class="press-id">
-                    <span>Jornalista Carteira N.º</span>
+                    <span>CARTEIRA DE JORNALISTA N.º</span>
                     <strong>C 8964</strong>
                 </div>
             </div>
 
+            <!-- DETALHES DA CREDENCIAL -->
             <div class="hero-details">
-                <span class="hero-tag">Jornalismo | Docência | Produção Audiovisual</span>
+                <span class="hero-tag"><i data-lucide="radio"></i> Emissão Ativa | Jornalismo • Docência • Produção Audiovisual</span>
                 <h1>Rúben Bento</h1>
-                <p class="hero-quote">"Um rapaz que sonha. Sonha em ser feliz. Indeciso mas confiante com o seu futuro. Gostava de se encontrar no mundo do jornalismo, da televisão, da realização ou da produção."</p>
-
-                <p class="hero-bio">
-                    Mestre em Jornalismo pela ESCS (Média 17) e Licenciado pela Universidade do Algarve[cite: 3]. Assistente Convidado na UAlg em Produção e Edição de Vídeo[cite: 3]. Vencedor da Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem de TV)[cite: 3]. Experiência diversificada em Televisão (RTP), Rádio (RUA FM, Rádio Gilão) e Imprensa Digital (Sul Informação, Portugal Rotário)[cite: 3].
+                
+                <p class="hero-quote">
+                    "Um rapaz que sonha. Sonha em ser feliz. Indeciso mas confiante com o seu futuro. Gostava de se encontrar no mundo do jornalismo, da televisão, da realização ou da produção."
                 </p>
 
+                <p class="hero-bio">
+                    Mestre em Jornalismo pela Escola Superior de Comunicação Social (17 Valores)[cite: 3] e Licenciado em Ciências da Comunicação pela UAlg. Assistente Convidado na Universidade do Algarve (Docente de Produção e Edição de Vídeo e Cursos Livres Impulso Mais Digital). Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem TV) e Medalha de Excelência em 2023. Percurso transversal em Televisão (RTP), Rádio (RUA FM, Rádio Gilão), Imprensa e Média Digital (Sul Informação, ENTR PT, Portugal Rotário).
+                </p>
+
+                <!-- CONTACTOS -->
+                <div class="contactos-grid">
+                    <a href="mailto:rubenbento243@gmail.com" class="contacto-chip">
+                        <i data-lucide="mail"></i> rubenbento243@gmail.com
+                    </a>
+                    <a href="tel:+351924245184" class="contacto-chip">
+                        <i data-lucide="phone"></i> +351 924 245 184
+                    </a>
+                </div>
+
+                <!-- REDES / PORTFÓLIOS -->
                 <div class="hero-actions">
-                    <a href="mailto:rubenbento243@gmail.com" class="btn-hero primary"><i data-lucide="mail"></i> Contactar</a>
                     <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline"><i data-lucide="linkedin"></i> LinkedIn</a>
                     <a href="https://behance.net/rmdaqb243" target="_blank" class="btn-hero outline"><i data-lucide="palette"></i> Behance</a>
                     <a href="https://vimeo.com/rubenbento243" target="_blank" class="btn-hero outline"><i data-lucide="video"></i> Vimeo</a>
@@ -56,27 +74,30 @@
         </div>
     </section>
 
-    <!-- CATÁLOGO NETFLIX -->
+    <!-- SECÇÃO 2: CONTEÚDOS -->
     <section id="catalogo" class="section-catalogo">
-        <h2 class="section-title">Catálogo de Trabalhos</h2>
+        <h2 class="section-title">Conteúdos</h2>
 
+        <!-- CARROSSEL 1: TV & TELEVISÃO -->
         <div class="row-container">
-            <h3 class="row-title"><i data-lucide="tv"></i> Televisão & Cinema</h3>
+            <h3 class="row-title"><i data-lucide="tv"></i> Broadcast, Televisão & Cinema</h3>
             <div id="slider-tv" class="netflix-slider"></div>
         </div>
 
+        <!-- CARROSSEL 2: RÁDIO & AUDIO -->
         <div class="row-container">
-            <h3 class="row-title"><i data-lucide="radio"></i> Rádio & Coberturas Live</h3>
+            <h3 class="row-title"><i data-lucide="radio"></i> Rádio, Audio & Emissão On-Air</h3>
             <div id="slider-radio" class="netflix-slider"></div>
         </div>
 
+        <!-- CARROSSEL 3: DIGITAL & IMPRENSA -->
         <div class="row-container">
-            <h3 class="row-title"><i data-lucide="newspaper"></i> Digital, Docência & Imprensa</h3>
+            <h3 class="row-title"><i data-lucide="newspaper"></i> Digital, Imprensa & Projetos Académicos</h3>
             <div id="slider-digital" class="netflix-slider"></div>
         </div>
     </section>
 
-    <!-- POPUP CONTEXTUAL FLUTUANTE -->
+    <!-- PAINEL CONTEXTUAL SLIDE -->
     <div id="project-sidebar" class="project-sidebar">
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <div class="sidebar-content">
@@ -88,32 +109,34 @@
                 <span id="side-category" class="badge-tag"></span>
                 <h2 id="side-title"></h2>
                 <div class="side-meta">
-                    <p><strong>Período:</strong> <span id="side-date"></span></p>
-                    <p><strong>Formato:</strong> <span id="side-duration"></span></p>
+                    <p><strong>Período de Produção:</strong> <span id="side-date"></span></p>
+                    <p><strong>Formato / Destaque:</strong> <span id="side-duration"></span></p>
                 </div>
-                <h3>Detalhes do Projeto</h3>
+                <h3>Sinopse da Produção</h3>
                 <p id="side-description" class="side-description-text"></p>
                 <div class="side-actions">
-                    <a id="side-link" href="#" target="_blank" class="btn-hero primary"><i data-lucide="external-link"></i> Abrir Link</a>
+                    <a id="side-link" href="#" target="_blank" class="btn-hero primary"><i data-lucide="external-link"></i> Reproduzir / Aceder</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- LINHA TEMPORAL / PERCURSO -->
-    <section id="percurso" class="section-percurso">
-        <h2 class="section-title">Percurso Profissional & Académico</h2>
+    <!-- SECÇÃO 3: ALINHAMENTO -->
+    <section id="experiencia" class="section-percurso">
+        <h2 class="section-title">Alinhamento</h2>
 
         <div class="timeline">
+            
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">Outubro 2024 — Atualidade</span>
                     <h3>Assistente Convidado</h3>
-                    <p class="timeline-institution">Universidade do Algarve (Faro)</p>
+                    <p class="timeline-institution">Universidade do Algarve — Faculdade de Ciências Humanas e Sociais (Faro)</p>
                     <ul>
-                        <li>Docente de "Produção e Edição de Vídeo" no 3º ano da Licenciatura em Design de Comunicação.</li>
-                        <li>Docente responsável pelos Cursos Livres em Pré-Produção e Produção Audiovisual (Impulso Mais Digital).</li>
+                        <li>Docente da UC "Produção e Edição de Vídeo" (3º ano de Design de Comunicação).</li>
+                        <li>Docente dos Cursos Livres de Pré-Produção e Produção Audiovisual (Impulso Mais Digital).</li>
+                        <li>Colaborador no Dia Aberto 2025 da UAlg e eventos de divulgação académica.</li>
                     </ul>
                 </div>
             </div>
@@ -121,20 +144,12 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <span class="timeline-date">2022 — 2024</span>
-                    <h3>Mestrado em Jornalismo (Média: 17 Valores)</h3>
-                    <p class="timeline-institution">Escola Superior de Comunicação Social (ESCS)</p>
-                    <p>Dissertação: <em>"Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)"</em>.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Maio — Agosto 2024</span>
+                    <span class="timeline-date">Maio 2024 — Agosto 2024</span>
                     <h3>Criador de Conteúdos (Freelancer)</h3>
                     <p class="timeline-institution">ENTR PT — RTP (Lisboa)</p>
-                    <p>Criação e produção de conteúdos para o projeto europeu ENTR PT focado no público jovem.</p>
+                    <ul>
+                        <li>Criação, produção e edição de conteúdos audiovisuais para o público jovem no projeto europeu ENTR PT.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -143,8 +158,17 @@
                 <div class="timeline-content">
                     <span class="timeline-date">Março 2022 — Atualidade</span>
                     <h3>Jornalista / Animador</h3>
-                    <p class="timeline-institution">RUA FM (Rádio Universitária do Algarve)</p>
-                    <p>Locução, produção de spots e cobertura de festivais (Semana Académica, Festival F, MED, Albufeira Sea Fest).</p>
+                    <p class="timeline-institution">RUA - Rádio Universitária do Algarve (Faro)</p>
+                    <ul>
+                        <li>Voz de rádio, gravação de marcadores, spots e comerciais.</li>
+                        <li>Entrevistas a artistas e cobertura de grandes festivais:
+                            <ul>
+                                <li>Semana Académica do Algarve (2022–2025)</li>
+                                <li>Festival F (2022–2025) & Festival MED (2024–2025)</li>
+                                <li>Albufeira Sea Fest & Albufeira Sounds (2025)</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -152,9 +176,11 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">Março 2021 — Atualidade</span>
-                    <h3>Editor / Jornalista Colaborador</h3>
-                    <p class="timeline-institution">Revista Portugal Rotário</p>
-                    <p>Escrita e edição de artigos para publicação impressa e digital.</p>
+                    <h3>Editor / Jornalista (Colaborador)</h3>
+                    <p class="timeline-institution">Portugal Rotário (Revista)</p>
+                    <ul>
+                        <li>Redação, edição e revisão de peças para suporte impresso e digital.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -163,18 +189,55 @@
                 <div class="timeline-content">
                     <span class="timeline-date">Abril 2021 — Fevereiro 2022</span>
                     <h3>Jornalista (Estágio Profissional)</h3>
-                    <p class="timeline-institution">Sul Informação (Jornal Online)</p>
-                    <p>Reportagens de vídeo, voz-off, edição e redação de notícias regionais.</p>
+                    <p class="timeline-institution">Sul Informação (Jornal Online - Faro)</p>
+                    <ul>
+                        <li>Reportagens em vídeo (imagem, narração e edição final).</li>
+                        <li>Escrita diária de notícias, artigos de fundo e entrevistas.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <span class="timeline-date">Março — Julho 2020</span>
-                    <h3>Jornalista Estagiário (Nota: 18 Valores)</h3>
-                    <p class="timeline-institution">RTP — Rádio e Televisão de Portugal (Faro)</p>
-                    <p>Redação e edição da Grande Reportagem "E agora, Algarve?".</p>
+                    <span class="timeline-date">Março 2020 — Julho 2020</span>
+                    <h3>Jornalista (Estágio Curricular - 18 Valores)</h3>
+                    <p class="timeline-institution">RTP — Centro Regional do Algarve (Faro)</p>
+                    <ul>
+                        <li>Acompanhamento de atualidade regional e redação jornalística.</li>
+                        <li>Autoria integral da Grande Reportagem Televisiva "E agora, Algarve?".</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Junho 2018 — Set 2018 / Junho 2019 — Set 2019</span>
+                    <h3>Locutor (Colaborador de Verão)</h3>
+                    <p class="timeline-institution">Rádio Gilão (Tavira)</p>
+                    <ul>
+                        <li>Locução em direto e condução de grelha de emissão musical.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECÇÃO 4: FORMAÇÃO ACADÉMICA -->
+    <section id="educacao" class="section-percurso bg-alt">
+        <h2 class="section-title">Formação Académica</h2>
+
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2022 — 2024</span>
+                    <h3>Mestrado em Jornalismo (Média Final: 17 Valores)</h3>
+                    <p class="timeline-institution">Escola Superior de Comunicação Social (ESCS - IPL)</p>
+                    <p><strong>Trabalho de Investigação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</p>
                 </div>
             </div>
 
@@ -183,81 +246,139 @@
                 <div class="timeline-content">
                     <span class="timeline-date">2017 — 2020</span>
                     <h3>Licenciatura em Ciências da Comunicação</h3>
-                    <p class="timeline-institution">Universidade do Algarve</p>
+                    <p class="timeline-institution">Universidade do Algarve — FCHS (Faro)</p>
+                    <p>Especialização em comunicação multimédia, jornalismo audiovisual, assessoria e produção técnica.</p>
                 </div>
             </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2014 — 2017</span>
+                    <h3>Ensino Secundário em Línguas e Humanidades</h3>
+                    <p class="timeline-institution">Escola Secundária Dr. Jorge Augusto Correia (Tavira)</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- COMPETÊNCIAS & TÉCNICA -->
+    <!-- SECÇÃO 5: COMPETÊNCIAS, SOFTWARE & IDIOMAS -->
     <section id="competencias" class="section-grid-info">
-        <h2 class="section-title">Skills & Idiomas</h2>
+        <h2 class="section-title">Stack Técnico, Ferramentas & Idiomas</h2>
+        
         <div class="container-grid">
-            <div class="grid-card glow">
-                <h3><i data-lucide="sliders"></i> Softwares de Edição</h3>
+            
+            <!-- SOFT SKILLS -->
+            <div class="grid-card">
+                <h3><i data-lucide="user-check"></i> Perfil Profissional</h3>
                 <div class="tags-container">
-                    <span class="tag-item red">Adobe Premiere</span>
-                    <span class="tag-item red">DaVinci Resolve</span>
-                    <span class="tag-item red">EDIUS</span>
-                    <span class="tag-item red">Sony Vegas</span>
-                    <span class="tag-item">Photoshop</span>
-                    <span class="tag-item">After Effects</span>
-                    <span class="tag-item">Illustrator</span>
-                    <span class="tag-item">Audacity</span>
+                    <span class="tag-item">Liderança</span>
+                    <span class="tag-item">Pensamento Criativo</span>
+                    <span class="tag-item">Comunicação Clara</span>
+                    <span class="tag-item">Proatividade</span>
+                    <span class="tag-item">Trabalho sob Pressão</span>
+                    <span class="tag-item">Dedicado</span>
+                    <span class="tag-item">Organizado</span>
+                    <span class="tag-item">Inovação Audiovisual</span>
                 </div>
             </div>
 
+            <!-- IDIOMAS -->
             <div class="grid-card">
                 <h3><i data-lucide="globe"></i> Idiomas</h3>
                 <ul class="info-list">
-                    <li><strong>Português:</strong> Nativo</li>
-                    <li><strong>Espanhol:</strong> C2 (Avançado/Mãe)</li>
-                    <li><strong>Inglês:</strong> B2 (Independente)</li>
+                    <li><strong>Português:</strong> Língua Materna / Fluente</li>
+                    <li><strong>Espanhol:</strong> Nível C2 (Avançado / Língua Mãe)</li>
+                    <li><strong>Inglês:</strong> Nível B2 (Utilizador Independente)</li>
                 </ul>
             </div>
 
-            <div class="grid-card">
-                <h3><i data-lucide="sparkles"></i> Soft Skills</h3>
+            <!-- SOFTWARES DE EDIÇÃO -->
+            <div class="grid-card glow">
+                <h3><i data-lucide="laptop"></i> Suite de Edição & Produção</h3>
                 <div class="tags-container">
-                    <span class="tag-item">Criativo</span>
-                    <span class="tag-item">Líder</span>
-                    <span class="tag-item">Comunicativo</span>
-                    <span class="tag-item">Proativo</span>
-                    <span class="tag-item">Organizado</span>
-                    <span class="tag-item">Inovador</span>
+                    <span class="tag-item red">Adobe Premiere Pro</span>
+                    <span class="tag-item red">DaVinci Resolve</span>
+                    <span class="tag-item red">EDIUS</span>
+                    <span class="tag-item red">Sony Vegas</span>
+                    <span class="tag-item">Adobe Photoshop</span>
+                    <span class="tag-item">Adobe After Effects</span>
+                    <span class="tag-item">Adobe Illustrator</span>
+                    <span class="tag-item">Audacity</span>
+                    <span class="tag-item">Office 365</span>
                 </div>
             </div>
+
+            <!-- LOGÍSTICA & MOBILIDADE -->
+            <div class="grid-card">
+                <h3><i data-lucide="car"></i> Logística & Deslocações</h3>
+                <ul class="info-list">
+                    <li><strong>Carta de Condução:</strong> Categorias B e B1</li>
+                    <li><strong>Viatura Própria:</strong> Sim</li>
+                    <li><strong>Mobilidade:</strong> Total disponibilidade para deslocações nacionais e internacionais.</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
-    <!-- VOLUNTARIADO & CERTIFICADOS -->
-    <section id="voluntariado" class="section-grid-info bg-alt">
-        <h2 class="section-title">Voluntariado, Certificados & Organizações</h2>
+    <!-- SECÇÃO 6: LICENÇAS, PROJETOS COMUNITÁRIOS & ORGANIZAÇÕES -->
+    <section id="certificados-voluntariado" class="section-grid-info bg-alt">
+        <h2 class="section-title">Licenças, Projetos Comunitários & Liderança</h2>
+
         <div class="container-grid">
+            
+            <!-- LIDERANÇA & ORGANIZAÇÕES -->
             <div class="grid-card">
-                <h3><i data-lucide="users"></i> Liderança & Cargos</h3>
+                <h3><i data-lucide="users"></i> Cargos de Liderança</h3>
                 <ul class="info-list">
-                    <li><strong>Rotaract Club de Tavira:</strong> Representante Distrital D.1960 (25/26), Presidente (23/24, 20/21)</li>
-                    <li><strong>Núcleo Ciências da Comunicação (UAlg):</strong> Coordenador do Mercado de Trabalho</li>
+                    <li><strong>Rotaract Club de Tavira:</strong>
+                        <br>• 2025/2026: Representante Distrital (Distrito 1960)
+                        <br>• 2024/2025: Diretor de Comunicação
+                        <br>• 2023/2024 & 2020/2021: Presidente
+                        <br>• 2022/2023: Tesoureiro & Diretor de Comunicação
+                    </li>
+                    <li><strong>Interact Club de Tavira:</strong> Membro Ativo (2016–2018)</li>
+                    <li><strong>Associação de Escoteiros de Portugal (Grupo 273):</strong> Elemento Ativo (2018–2023)</li>
+                    <li><strong>NECC UAlg:</strong> Coordenador do Mercado de Trabalho (2022–2023)</li>
                 </ul>
             </div>
 
+            <!-- PROJETOS COMUNITÁRIOS -->
             <div class="grid-card">
-                <h3><i data-lucide="award"></i> Certificados de Destaque</h3>
+                <h3><i data-lucide="heart"></i> Projetos Comunitários</h3>
                 <ul class="info-list">
-                    <li><strong>JornalismoAI Discovery:</strong> Inteligência Artificial no Jornalismo (Polis LSE - 2025)</li>
-                    <li><strong>Fake News / CENJOR:</strong> Formação em Verificação de Factos (2020)</li>
-                    <li><strong>Ciderinformado / LUSA:</strong> Formação de Navegação e Informação (2020)</li>
+                    <li><strong>Refood Tavira:</strong> Voluntário ativo no apoio comunitário e distribuição alimentar.</li>
+                    <li><strong>Banco Alimentar contra a Fome:</strong> Apoio logístico em campanhas de recolha.</li>
+                    <li><strong>Dia Aberto UAlg:</strong> Apoio e acolhimento aos novos estudantes (2017/18 e 2018/19).</li>
                 </ul>
             </div>
+
+            <!-- LICENÇAS E CERTIFICADOS -->
+            <div class="grid-card grid-span-2">
+                <h3><i data-lucide="award"></i> Licenças & Certificações</h3>
+                <ul class="info-list">
+                    <li><strong>JornalismoAI Discovery:</strong> Princípios de Inteligência Artificial aplicada ao Jornalismo (Polis LSE - Julho 2025).</li>
+                    <li><strong>Redação do 5.º Congresso dos Jornalistas:</strong> Cobertura jornalística oficial do evento (Lisboa, Jan 2024).</li>
+                    <li><strong>Ateliê de Jornalismo Televisivo:</strong> Worldskills Portugal (Setembro 2022).</li>
+                    <li><strong>Comunicação Digital (Conceção, Produção e Publicação):</strong> Emitido em Janeiro 2021.</li>
+                    <li><strong>Fake News - Não se deixe enganar:</strong> CENJOR (Dezembro 2020).</li>
+                    <li><strong>Cidadão Ciberinformado:</strong> LUSA / NAU (Outubro 2020).</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2026, Rúben Bento.</p>
+        <p>&copy; 2026, Rúben Bento — Direitos Reservados.</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
