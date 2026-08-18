@@ -1,4 +1,3 @@
-// DADOS DOS PROJETOS COM ESTRUTURA REORGANIZADA
 const projetos = [
     {
         id: 1,
@@ -87,7 +86,7 @@ const projetos = [
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. SCROLL SUAVE NO LOGÓTIPO
+    // SCROLL LOGÓTIPO
     const brandLogo = document.getElementById("brand-logo");
     if (brandLogo) {
         brandLogo.addEventListener("click", (e) => {
@@ -96,12 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. ELEMENTOS DO POPOVER
+    // ELEMENTOS POPOVER
     const popover = document.getElementById("inline-popover");
-    const closeBtn = document.getElementById("popover-close");
     let activeCard = null;
 
-    // 3. FECHAR POPOVER
     function closePopover() {
         if (popover) {
             popover.classList.remove("visible");
@@ -113,14 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    if (closeBtn) {
-        closeBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            closePopover();
-        });
-    }
-
-    // 4. RENDERING DOS CARTÕES ("Em Destaque" vs "Todos os Conteúdos")
+    // RENDERIZAR CARTÕES FECHADOS
     const containerDestaque = document.getElementById("slider-destaque");
     const containerOutros = document.getElementById("slider-outros");
 
@@ -137,14 +127,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${proj.capa}" alt="${proj.titulo}" class="netflix-card-cover">
                 <div class="netflix-card-body">
                     <div>
-                        <span class="card-category">${proj.hashtag}</span>
-                        <h4 class="card-title">${proj.titulo}</h4>
+                        <span class="card-category">${proj.hashtag || ''}</span>
+                        <h4 class="card-title">${proj.titulo || ''}</h4>
+                        ${proj.local ? `<p class="card-company">${proj.local}</p>` : ''}
                     </div>
-                    <p class="card-date">${proj.mesAno}</p>
+                    ${proj.mesAno ? `<p class="card-date">${proj.mesAno}</p>` : ''}
                 </div>
             `;
 
-            // Evento para abrir Popover no clique
             card.addEventListener("click", (e) => openPopover(e, proj, card));
 
             if (proj.destaque && containerDestaque) {
@@ -155,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 5. LÓGICA DE ABERTURA E POSICIONAMENTO DO POPOVER
+    // ABRIR POPOVER E POSICIONAR (500px)
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
@@ -168,38 +158,45 @@ document.addEventListener("DOMContentLoaded", () => {
         activeCard = card;
         activeCard.classList.add("active-card");
 
-        // Preenchimento dos dados do projeto
-        const elCategory = document.getElementById("pop-category");
-        const elTitle = document.getElementById("pop-title");
-        const elDate = document.getElementById("pop-date");
-        const elRole = document.getElementById("pop-role");
-        const elLocation = document.getElementById("pop-location");
-        const elDesc = document.getElementById("pop-description");
+        let metaHTML = '';
+        if (proj.mesAno) metaHTML += `<p><strong>Mês / Ano:</strong> ${proj.mesAno}</p>`;
+        if (proj.cargo) metaHTML += `<p><strong>Cargo:</strong> ${proj.cargo}</p>`;
+        if (proj.local) metaHTML += `<p><strong>Local / Empresa:</strong> ${proj.local}</p>`;
 
-        if (elCategory) elCategory.innerText = proj.hashtag;
-        if (elTitle) elTitle.innerText = proj.titulo;
-        if (elDate) elDate.innerText = proj.mesAno;
-        if (elRole) elRole.innerText = proj.cargo || "N/A";
-        if (elLocation) elLocation.innerText = proj.local || "N/A";
-        if (elDesc) elDesc.innerText = proj.resumo;
+        let popoverHTML = `
+            <button id="popover-close" class="popover-close-btn" aria-label="Fechar">&times;</button>
+            <div class="popover-inner">
+                ${proj.hashtag ? `<span class="pop-hashtag-small">${proj.hashtag}</span>` : ''}
+                <h3 class="pop-title-highlight">${proj.titulo}</h3>
+                
+                ${metaHTML ? `<div class="pop-meta">${metaHTML}</div>` : ''}
+                ${proj.resumo ? `<p class="pop-description-text">${proj.resumo}</p>` : ''}
+                
+                <div id="pop-actions" class="pop-actions-container"></div>
+            </div>
+        `;
 
-        // Inserção dos Links
+        popover.innerHTML = popoverHTML;
+
+        document.getElementById("popover-close").addEventListener("click", (e) => {
+            e.stopPropagation();
+            closePopover();
+        });
+
         const actionsContainer = document.getElementById("pop-actions");
-        if (actionsContainer) {
-            actionsContainer.innerHTML = "";
-            if (proj.links && proj.links.length > 0) {
-                proj.links.forEach(l => {
-                    const btn = document.createElement("a");
-                    btn.href = l.url;
-                    btn.target = "_blank";
-                    btn.className = "pop-action-btn";
-                    btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
-                    actionsContainer.appendChild(btn);
-                });
-            }
+        if (proj.links && proj.links.length > 0) {
+            proj.links.forEach(l => {
+                const btn = document.createElement("a");
+                btn.href = l.url;
+                btn.target = "_blank";
+                btn.className = "pop-action-btn";
+                btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
+                actionsContainer.appendChild(btn);
+            });
+        } else {
+            actionsContainer.style.display = "none";
         }
 
-        // Atualizar ícones do Lucide em segurança
         if (window.lucide && typeof window.lucide.createIcons === "function") {
             window.lucide.createIcons();
         }
@@ -207,11 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
         popover.style.display = "block";
         popover.classList.add("visible");
 
-        // Cálculo de Posicionamento (Direita vs Esquerda)
         if (window.innerWidth > 850) {
             const cardRect = card.getBoundingClientRect();
-            const gap = 12;
-            const popoverWidth = 340;
+            const gap = 14;
+            const popoverWidth = 500;
             const windowWidth = window.innerWidth;
 
             const spaceRight = windowWidth - cardRect.right;
@@ -230,10 +226,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Inicializar os cartões na página
-    renderCards();
+    // CONTROLO DE SETAS DOS CARROSSÉIS
+    function setupCarouselControls(sliderId, prevBtnId, nextBtnId) {
+        const slider = document.getElementById(sliderId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
 
-    // 6. MENU HAMBÚRGUER (MOBILE)
+        if (!slider || !prevBtn || !nextBtn) return;
+
+        function updateArrowVisibility() {
+            if (window.innerWidth <= 850) {
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+                return;
+            }
+
+            const hasOverflow = slider.scrollWidth > slider.clientWidth;
+            
+            if (hasOverflow) {
+                prevBtn.style.display = slider.scrollLeft > 10 ? "flex" : "none";
+                nextBtn.style.display = (slider.scrollLeft + slider.clientWidth) < (slider.scrollWidth - 10) ? "flex" : "none";
+            } else {
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+            }
+        }
+
+        prevBtn.addEventListener("click", () => slider.scrollBy({ left: -320, behavior: "smooth" }));
+        nextBtn.addEventListener("click", () => slider.scrollBy({ left: 320, behavior: "smooth" }));
+
+        slider.addEventListener("scroll", updateArrowVisibility);
+        window.addEventListener("resize", updateArrowVisibility);
+
+        setTimeout(updateArrowVisibility, 100);
+    }
+
+    // INICIALIZAÇÃO
+    renderCards();
+    setupCarouselControls("slider-destaque", "prev-destaque", "next-destaque");
+    setupCarouselControls("slider-outros", "prev-outros", "next-outros");
+
+    // MENU MOBILE
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     if (hamburger && navLinks) {
@@ -242,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 7. EVENTOS PARA FECHAR POPOVER
+    // EVENTOS DE FECHO
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
