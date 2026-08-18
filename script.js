@@ -1,6 +1,6 @@
-// DADOS DOS PROJETOS ATUALIZADOS INTEGRALMENTE COM O CURRÍCULO 2026
+// DADOS DOS PROJETOS COM EXATAMENTE 4 ITENS EM DESTAQUE E TODOS OS RESTANTES EM CONTEÚDOS / PROJETOS
 const projetos = [
-    // ---------------- DESTAQUES (APENAS 4 ITENS) ----------------
+    // 4 CONTEÚDOS EM DESTAQUE
     {
         id: 1,
         destaque: true,
@@ -58,7 +58,7 @@ const projetos = [
         ]
     },
 
-    // ---------------- CONTEÚDOS / PROJETOS ----------------
+    // OUTROS PROJETOS (CONTEÚDOS / PROJETOS)
     {
         id: 5,
         destaque: false,
@@ -155,7 +155,22 @@ const projetos = [
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. SCROLL SUAVE NO LOGÓTIPO
+    // 1. ANIMAÇÕES NO SCROLL (SCROLL REVEAL)
+    const reveals = document.querySelectorAll(".reveal");
+    function handleScrollReveal() {
+        const windowHeight = window.innerHeight;
+        reveals.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 80;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add("active");
+            }
+        });
+    }
+    window.addEventListener("scroll", handleScrollReveal);
+    handleScrollReveal(); // Trigger inicial
+
+    // 2. SCROLL SUAVE NO LOGÓTIPO
     const brandLogo = document.getElementById("brand-logo");
     if (brandLogo) {
         brandLogo.addEventListener("click", (e) => {
@@ -164,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. ELEMENTOS DO POPOVER
+    // 3. POPOVER FLUTUANTE
     const popover = document.getElementById("inline-popover");
     let activeCard = null;
 
@@ -179,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 3. RENDERING DOS CARTÕES FECHADOS
+    // 4. RENDERING DOS CARTÕES FECHADOS
     const containerDestaque = document.getElementById("slider-destaque");
     const containerOutros = document.getElementById("slider-outros");
 
@@ -217,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setupCarouselNavigation("slider-outros", "btn-left-outros", "btn-right-outros");
     }
 
-    // 4. LÓGICA DE ABERTURA DO POPOVER
+    // 5. ABERTURA DO POPOVER
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
@@ -278,8 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (window.innerWidth > 850) {
             const cardRect = card.getBoundingClientRect();
-            const gap = 14;
-            const popoverWidth = 500;
+            const gap = 12;
+            const popoverWidth = 460;
             const windowWidth = window.innerWidth;
 
             const spaceRight = windowWidth - cardRect.right;
@@ -298,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 5. LÓGICA DE CONTROLO DAS SETAS DOS CARROSSEIS
+    // 6. NAVEGAÇÃO DOS CARROSSEIS
     function setupCarouselNavigation(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
         const btnLeft = document.getElementById(btnLeftId);
@@ -325,12 +340,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnLeft.addEventListener("click", () => {
             closePopover();
-            slider.scrollBy({ left: -320, behavior: "smooth" });
+            slider.scrollBy({ left: -300, behavior: "smooth" });
         });
 
         btnRight.addEventListener("click", () => {
             closePopover();
-            slider.scrollBy({ left: 320, behavior: "smooth" });
+            slider.scrollBy({ left: 300, behavior: "smooth" });
         });
 
         slider.addEventListener("scroll", updateButtons);
@@ -339,10 +354,9 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateButtons, 100);
     }
 
-    // Inicialização
     renderCards();
 
-    // 6. MENU HAMBÚRGUER MOBILE
+    // 7. MENU HAMBÚRGUER MOBILE
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     if (hamburger && navLinks) {
@@ -351,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 7. EVENTOS PARA FECHAR POPOVER
+    // 8. FECHAR POPOVER FORA DO ELEMENTO
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
