@@ -57,7 +57,7 @@
                     Mestre em Jornalismo pela ESCS (17 Valores) e Licenciado em Ciências da Comunicação pela UAlg. Assistente Convidado na Universidade do Algarve (Docente de Produção e Edição de Vídeo e Cursos Livres Impulso Mais Digital). Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem TV) e Medalha de Excelência em 2023. Percurso transversal em Televisão (RTP), Rádio (RUA FM, Rádio Gilão), Imprensa e Média Digital.
                 </p>
 
-                <!-- CONTACTOS & CARTÃO DA CARTEIRA DE JORNALISTA -->
+                <!-- CONTACTOS & CARTEIRA PROFISSIONAL -->
                 <div class="contactos-container">
                     <div class="contactos-grid">
                         <a href="mailto:rubenbento243@gmail.com" class="contacto-chip">
@@ -78,9 +78,11 @@
                     </div>
                 </div>
 
-                <!-- REDES SOCIAIS / PORTFÓLIOS (APENAS LINKEDIN) -->
+                <!-- REDES SOCIAIS / PORTFÓLIOS -->
                 <div class="hero-actions">
                     <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline" title="LinkedIn"><i data-lucide="linkedin"></i> LinkedIn</a>
+                    <a href="https://behance.net" target="_blank" class="btn-hero outline" title="Behance"><i data-lucide="palette"></i> Behance</a>
+                    <a href="https://vimeo.com" target="_blank" class="btn-hero outline" title="Vimeo"><i data-lucide="video"></i> Vimeo</a>
                 </div>
             </div>
         </div>
@@ -90,55 +92,33 @@
     <section id="catalogo" class="section-catalogo section-padded">
         <h2 class="section-title centered-title">Conteúdos</h2>
 
+        <!-- EM DESTAQUE -->
         <div class="row-container">
-            <h3 class="row-title"><i data-lucide="tv"></i> Broadcast, Televisão & Cinema</h3>
-            <div id="slider-tv" class="netflix-slider"></div>
+            <h3 class="row-title"><i data-lucide="sparkles"></i> Em Destaque</h3>
+            <div id="slider-destaque" class="netflix-slider"></div>
         </div>
 
+        <!-- TODOS OS CONTEÚDOS -->
         <div class="row-container">
-            <h3 class="row-title"><i data-lucide="radio"></i> Rádio, Audio & Emissão On-Air</h3>
-            <div id="slider-radio" class="netflix-slider"></div>
-        </div>
-
-        <div class="row-container">
-            <h3 class="row-title"><i data-lucide="newspaper"></i> Digital, Imprensa & Projetos Académicos</h3>
-            <div id="slider-digital" class="netflix-slider"></div>
+            <h3 class="row-title"><i data-lucide="folder-open"></i> Todos os Conteúdos</h3>
+            <div id="slider-outros" class="netflix-slider"></div>
         </div>
     </section>
 
-    <!-- POPOVER LATERAL FLUTUANTE (MESMA ALTURA DO CARTÃO) -->
+    <!-- POPOVER FLUTUANTE ADJACENTE AO CARTÃO (ALTURA IGUAL AO CARTÃO) -->
     <div id="inline-popover" class="inline-popover">
         <button id="popover-close" class="popover-close-btn" aria-label="Fechar">&times;</button>
         <div class="popover-inner">
             <span id="pop-category" class="badge-tag"></span>
             <h3 id="pop-title"></h3>
             
-            <div class="pop-meta-grid">
-                <div class="pop-meta-item">
-                    <i data-lucide="calendar"></i>
-                    <div>
-                        <span class="meta-label">Data:</span>
-                        <strong id="pop-date"></strong>
-                    </div>
-                </div>
-                <div class="pop-meta-item">
-                    <i data-lucide="briefcase"></i>
-                    <div>
-                        <span class="meta-label">Cargo:</span>
-                        <strong id="pop-role"></strong>
-                    </div>
-                </div>
-                <div class="pop-meta-item">
-                    <i data-lucide="map-pin"></i>
-                    <div>
-                        <span class="meta-label">Local:</span>
-                        <strong id="pop-location"></strong>
-                    </div>
-                </div>
+            <div class="pop-meta">
+                <p><strong>Mês / Ano:</strong> <span id="pop-date"></span></p>
+                <p><strong>Cargo:</strong> <span id="pop-role"></span></p>
+                <p><strong>Local:</strong> <span id="pop-location"></span></p>
             </div>
-
-            <p id="pop-description" class="pop-description-text"></p>
             
+            <p id="pop-description" class="pop-description-text"></p>
             <div id="pop-actions" class="pop-actions-container"></div>
         </div>
     </div>
@@ -150,7 +130,7 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
+                <div class="timeline-content has-corner-link">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="timeline-company-logo">
@@ -172,7 +152,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
+                <div class="timeline-content has-corner-link">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_RTP.svg" alt="Logo RTP / ENTR" class="timeline-company-logo">
@@ -192,7 +172,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
+                <div class="timeline-content has-corner-link">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_RUA.svg" alt="Logo RUA FM" class="timeline-company-logo">
@@ -210,82 +190,6 @@
                     </a>
                 </div>
             </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="URL_DO_LOGO_ROTARIO.svg" alt="Logo Portugal Rotário" class="timeline-company-logo">
-                        </div>
-                        <span class="timeline-date">Março 2021 — Atualidade</span>
-                    </div>
-                    <h3>Editor / Jornalista (Colaborador)</h3>
-                    <p class="timeline-institution">Portugal Rotário (Revista)</p>
-                    <ul>
-                        <li>Redação, edição e revisão de peças para suporte impresso e digital.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="URL_DO_LOGO_SUL.svg" alt="Logo Sul Informação" class="timeline-company-logo">
-                        </div>
-                        <span class="timeline-date">Abril 2021 — Fevereiro 2022</span>
-                    </div>
-                    <h3>Jornalista (Estágio Profissional)</h3>
-                    <p class="timeline-institution">Sul Informação (Jornal Online - Faro)</p>
-                    <ul>
-                        <li>Reportagens em vídeo (imagem, narração e edição final).</li>
-                        <li>Escrita diária de notícias, artigos de fundo e entrevistas.</li>
-                    </ul>
-                    <a href="https://www.sulinformacao.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="URL_DO_LOGO_RTP.svg" alt="Logo RTP" class="timeline-company-logo">
-                        </div>
-                        <span class="timeline-date">Março 2020 — Julho 2020</span>
-                    </div>
-                    <h3>Jornalista (Estágio Curricular - 18 Valores)</h3>
-                    <p class="timeline-institution">RTP — Centro Regional do Algarve (Faro)</p>
-                    <ul>
-                        <li>Acompanhamento de atualidade regional e redação jornalística.</li>
-                        <li>Autoria integral da Grande Reportagem Televisiva "E agora, Algarve?".</li>
-                    </ul>
-                    <a href="https://www.rtp.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="URL_DO_LOGO_GICAO.svg" alt="Logo Rádio Gilão" class="timeline-company-logo">
-                        </div>
-                        <span class="timeline-date">Junho 2018 — Set 2018 / Junho 2019 — Set 2019</span>
-                    </div>
-                    <h3>Locutor (Colaborador de Verão)</h3>
-                    <p class="timeline-institution">Rádio Gilão (Tavira)</p>
-                    <ul>
-                        <li>Locução em direto e condução de grelha de emissão musical.</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -296,7 +200,7 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
+                <div class="timeline-content has-corner-link">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_ESCS.svg" alt="Logo ESCS" class="timeline-company-logo">
@@ -314,7 +218,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
+                <div class="timeline-content has-corner-link">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="timeline-company-logo">
@@ -327,20 +231,6 @@
                     <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="URL_DO_LOGO_SECUNDARIA.svg" alt="Logo Secundária Tavira" class="timeline-company-logo">
-                        </div>
-                        <span class="timeline-date">2014 — 2017</span>
-                    </div>
-                    <h3>Ensino Secundário em Línguas e Humanidades</h3>
-                    <p class="timeline-institution">Escola Secundária Dr. Jorge Augusto Correia (Tavira)</p>
                 </div>
             </div>
         </div>
@@ -369,197 +259,6 @@
                 </ul>
             </div>
         </div>
-
-        <div class="grid-card-fullwidth">
-            <div class="fullwidth-card-header">
-                <h3><i data-lucide="cpu"></i> Software, Ferramentas & Competências</h3>
-            </div>
-            
-            <div class="software-categories-grid">
-                <div class="software-group">
-                    <h4><i data-lucide="video"></i> Edição de Vídeo</h4>
-                    <div class="tags-container">
-                        <span class="tag-item">Adobe Premiere Pro</span>
-                        <span class="tag-item">DaVinci Resolve</span>
-                        <span class="tag-item">EDIUS</span>
-                        <span class="tag-item">Sony Vegas</span>
-                    </div>
-                </div>
-
-                <div class="software-group">
-                    <h4><i data-lucide="image"></i> Design & Grafismo</h4>
-                    <div class="tags-container">
-                        <span class="tag-item">Adobe Photoshop</span>
-                        <span class="tag-item">Adobe After Effects</span>
-                        <span class="tag-item">Adobe Illustrator</span>
-                    </div>
-                </div>
-
-                <div class="software-group">
-                    <h4><i data-lucide="mic"></i> Áudio & Produção</h4>
-                    <div class="tags-container">
-                        <span class="tag-item">Audacity</span>
-                    </div>
-                </div>
-
-                <div class="software-group">
-                    <h4><i data-lucide="file-text"></i> Produtividade</h4>
-                    <div class="tags-container">
-                        <span class="tag-item">Microsoft Word</span>
-                        <span class="tag-item">Microsoft PowerPoint</span>
-                        <span class="tag-item">Microsoft Excel</span>
-                    </div>
-                </div>
-
-                <div class="software-group software-group-wide">
-                    <h4><i data-lucide="user-check"></i> Perfil & Soft Skills</h4>
-                    <div class="tags-container">
-                        <span class="tag-item">Liderança</span>
-                        <span class="tag-item">Pensamento Criativo</span>
-                        <span class="tag-item">Comunicação Clara</span>
-                        <span class="tag-item">Proatividade</span>
-                        <span class="tag-item">Trabalho sob Pressão</span>
-                        <span class="tag-item">Dedicado</span>
-                        <span class="tag-item">Organizado</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECÇÃO 6: LICENÇAS & PROJETOS COMUNITÁRIOS -->
-    <section id="certificados-voluntariado" class="section-grid-info bg-alt section-padded">
-        <h2 class="section-title centered-title">Licenças & Projetos Comunitários</h2>
-
-        <div class="container-grid-compact">
-            <div class="grid-card compact-card">
-                <h3><i data-lucide="users"></i> Cargos de Liderança</h3>
-                <ul class="compact-list">
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_ROTARACT.svg" alt="Logo Rotaract" class="compact-item-logo">
-                        </div>
-                        <div>
-                            <strong>Rotaract Club de Tavira</strong>
-                            <span class="sub-role">• 25/26: Representante Distrital (Dist. 1960)</span>
-                            <span class="sub-role">• 24/25: Dir. Comunicação | 23/24 & 20/21: Pres.</span>
-                            <span class="sub-role">• 22/23: Tesoureiro & Dir. Comunicação</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_INTERACT.svg" alt="Logo Interact" class="compact-item-logo">
-                        </div>
-                        <div><strong>Interact Club de Tavira:</strong> Membro Ativo (2016–2018)</div>
-                    </li>
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_ESCOTEIROS.svg" alt="Logo Escoteiros" class="compact-item-logo">
-                        </div>
-                        <div><strong>AEP (Grupo 273):</strong> Elemento Ativo (2018–2023)</div>
-                    </li>
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_NECC.svg" alt="Logo NECC" class="compact-item-logo">
-                        </div>
-                        <div><strong>NECC UAlg:</strong> Coord. Mercado de Trabalho (2022–2023)</div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="grid-card compact-card">
-                <h3><i data-lucide="heart"></i> Projetos Comunitários</h3>
-                <ul class="compact-list">
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_REFOOD.svg" alt="Logo Refood" class="compact-item-logo">
-                        </div>
-                        <div><strong>Refood Tavira:</strong> Voluntário ativo no apoio comunitário e distribuição alimentar.</div>
-                    </li>
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_BANCO.svg" alt="Logo Banco Alimentar" class="compact-item-logo">
-                        </div>
-                        <div><strong>Banco Alimentar:</strong> Apoio logístico em campanhas de recolha de alimentos.</div>
-                    </li>
-                    <li>
-                        <div class="compact-logo-box">
-                            <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="compact-item-logo">
-                        </div>
-                        <div><strong>Dia Aberto UAlg:</strong> Acolhimento e apoio aos novos estudantes (2017/18 e 2018/19).</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container-grid-issuers">
-            <h3 class="issuers-main-title"><i data-lucide="award"></i> Licenças & Certificações</h3>
-            
-            <div class="issuers-grid">
-                <div class="issuer-card">
-                    <div class="issuer-header">
-                        <div class="issuer-logo-box">
-                            <img src="URL_DO_LOGO_POLIS.svg" alt="Logo Polis LSE" class="issuer-logo">
-                        </div>
-                        <strong>Polis LSE</strong>
-                    </div>
-                    <ul>
-                        <li><strong>JornalismoAI Discovery:</strong> Princípios de IA Aplicada ao Jornalismo (Julho 2025)</li>
-                    </ul>
-                </div>
-
-                <div class="issuer-card">
-                    <div class="issuer-header">
-                        <div class="issuer-logo-box">
-                            <img src="URL_DO_LOGO_CONGRESSO.svg" alt="Logo Congresso Jornalistas" class="issuer-logo">
-                        </div>
-                        <strong>Congresso dos Jornalistas</strong>
-                    </div>
-                    <ul>
-                        <li><strong>Redação do 5.º Congresso dos Jornalistas:</strong> Cobertura Jornalística Oficial (Jan 2024)</li>
-                    </ul>
-                </div>
-
-                <div class="issuer-card">
-                    <div class="issuer-header">
-                        <div class="issuer-logo-box">
-                            <img src="URL_DO_LOGO_WORLDSKILLS.svg" alt="Logo Worldskills" class="issuer-logo">
-                        </div>
-                        <strong>Worldskills Portugal</strong>
-                    </div>
-                    <ul>
-                        <li><strong>Skills Portugal 2024:</strong> Medalha de Ouro em Reportagem TV (Nov 2024)</li>
-                        <li><strong>Skills Portugal 2023:</strong> Medalha de Excelência em Edição de Vídeo (Mar 2023)</li>
-                        <li><strong>Ateliê de Jornalismo Televisivo:</strong> Formação Técnica (Set 2022)</li>
-                    </ul>
-                </div>
-
-                <div class="issuer-card">
-                    <div class="issuer-header">
-                        <div class="issuer-logo-box">
-                            <img src="URL_DO_LOGO_CENJOR.svg" alt="Logo CENJOR" class="issuer-logo">
-                        </div>
-                        <strong>CENJOR</strong>
-                    </div>
-                    <ul>
-                        <li><strong>Fake News - Não se deixe enganar:</strong> Formação Especializada (Dez 2020)</li>
-                    </ul>
-                </div>
-
-                <div class="issuer-card">
-                    <div class="issuer-header">
-                        <div class="issuer-logo-box">
-                            <img src="URL_DO_LOGO_LUSA.svg" alt="Logo Lusa/NAU" class="issuer-logo">
-                        </div>
-                        <strong>LUSA / Plataforma NAU</strong>
-                    </div>
-                    <ul>
-                        <li><strong>Cidadão Ciberinformado:</strong> Certificação Oficial (Outubro 2020)</li>
-                        <li><strong>Comunicação Digital:</strong> Conceção, Produção e Publicação (Jan 2021)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- FOOTER -->
@@ -577,9 +276,11 @@
             </div>
 
             <div class="footer-socials">
-                <h4>Redes Profissionais</h4>
+                <h4>Portfólio & Redes</h4>
                 <div class="social-chips">
                     <a href="https://linkedin.com/in/rubento243" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://behance.net" target="_blank" title="Behance"><i data-lucide="palette"></i></a>
+                    <a href="https://vimeo.com" target="_blank" title="Vimeo"><i data-lucide="video"></i></a>
                 </div>
             </div>
         </div>
