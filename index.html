@@ -3,94 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio & Curriculo</title>
+    <title>Rúben Bento — RB. STUDIO</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones Lucide -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" id="brand-logo" class="brand-logo">Rúben Bento</a>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <i data-lucide="menu"></i>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#catalogo">Conteúdos</a></li>
-                <li><a href="#ferramentas">Software</a></li>
-                <li><a href="#certificados-voluntariado">Licenças & Projetos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </header>
+    <!-- NAVEGAÇÃO GLASSMORPHISM -->
+    <nav class="navbar">
+        <a href="#perfil" class="logo-link" id="brand-logo">
+            <div class="logo">
+                RB<span class="dot">.</span><span class="studio">STUDIO</span>
+            </div>
+        </a>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#perfil">Credencial</a></li>
+            <li><a href="#catalogo">Conteúdos</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#educacao">Formação Académica</a></li>
+            <li><a href="#ferramentas">Software</a></li>
+            <li><a href="#certificados-voluntariado">Licenças & Projetos</a></li>
+        </ul>
+    </nav>
 
-    <!-- HERO SECTION -->
-    <section id="sobre" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Rúben Bento</h1>
-            <p class="hero-subtitle">Jornalista & Criador de Conteúdos Audiovisuais</p>
-            <p class="hero-description">
-                Especializado em reportagem de televisão, produção radiofónica e criação de conteúdos multimédia para plataformas digitais.
-            </p>
-            <div class="hero-buttons">
-                <a href="#catalogo" class="btn-hero primary">Ver Conteúdos</a>
-                <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline" title="LinkedIn">
-                    <i data-lucide="linkedin"></i>
-                </a>
+    <!-- SECÇÃO 1: CREDENCIAL -->
+    <section id="perfil" class="section-hero">
+        <div class="hero-container">
+            <div class="hero-card-press">
+                <div class="avatar-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="hero-img">
+                </div>
+            </div>
+
+            <div class="hero-details">
+                <div class="hero-tag-badge">
+                    <span class="live-pulse"></span>
+                    <span>Jornalismo • Docência • Produção Audiovisual</span>
+                </div>
+                
+                <h1>Rúben Bento</h1>
+                
+                <p class="hero-quote">
+                    "Um rapaz que sonha. Sonha em ser feliz. Indeciso mas confiante com o seu futuro. Gostava de se encontrar no mundo do jornalismo, da televisão, da realização ou da produção."
+                </p>
+
+                <p class="hero-bio">
+                    Mestre em Jornalismo pela ESCS (17 Valores) e Licenciado em Ciências da Comunicação pela UAlg. Assistente Convidado na Universidade do Algarve (Docente de Produção e Edição de Vídeo e Cursos Livres Impulso Mais Digital). Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem TV) e Medalha de Excelência em 2023. Percurso transversal em Televisão (RTP), Rádio (RUA FM, Rádio Gilão), Imprensa e Média Digital.
+                </p>
+
+                <!-- CONTACTOS & CARTEIRA PROFISSIONAL -->
+                <div class="contactos-container">
+                    <div class="contactos-grid">
+                        <a href="mailto:rubenbento243@gmail.com" class="contacto-chip">
+                            <i data-lucide="mail"></i> rubenbento243@gmail.com
+                        </a>
+                        <a href="tel:+351924245184" class="contacto-chip">
+                            <i data-lucide="phone"></i> +351 924 245 184
+                        </a>
+                    </div>
+                    <div class="press-card-inline">
+                        <div class="press-icon-wrap">
+                            <i data-lucide="id-card"></i>
+                        </div>
+                        <div>
+                            <span class="press-label">CARTEIRA PROFISSIONAL DE JORNALISTA</span>
+                            <strong class="press-number">N.º C 8964</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REDES SOCIAIS / PORTFÓLIOS -->
+                <div class="hero-actions">
+                    <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline" title="LinkedIn">
+                        <i data-lucide="linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://behance.net" target="_blank" class="btn-hero outline" title="Behance">
+                        <i data-lucide="palette"></i> Behance
+                    </a>
+                    <a href="https://vimeo.com" target="_blank" class="btn-hero outline" title="Vimeo">
+                        <i data-lucide="video"></i> Vimeo
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO: FORMAÇÃO ACADÉMICA -->
-    <section id="formacao" class="section-padded bg-alt">
-        <h2 class="section-title centered-title">Formação Académica</h2>
-
-        <div class="education-grid">
-            
-            <!-- NOVA FCSH -->
-            <div class="education-card">
-                <div class="edu-header">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Log%C3%B3tipo_NOVA_FCSH.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo NOVA FCSH" class="edu-logo">
-                    <div>
-                        <h3 class="edu-degree">Doutoramento em Ciências da Comunicação</h3>
-                        <p class="edu-institution">NOVA FCSH — Faculdade de Ciências Sociais e Humanas (Lisboa)</p>
-                    </div>
-                </div>
-                <span class="edu-date"><i data-lucide="calendar" class="icon-inline"></i> Em frequência</span>
-            </div>
-
-            <!-- ESCS -->
-            <div class="education-card">
-                <div class="edu-header">
-                    <img src="https://www.escs.ipl.pt/sites/default/files/ESCS-Logo.png" alt="Logo ESCS" class="edu-logo">
-                    <div>
-                        <h3 class="edu-degree">Mestrado em Jornalismo</h3>
-                        <p class="edu-institution">ESCS — Escola Superior de Comunicação Social (Lisboa)</p>
-                    </div>
-                </div>
-                <span class="edu-date"><i data-lucide="calendar" class="icon-inline"></i> 2022 — 2024</span>
-            </div>
-
-            <!-- UALG -->
-            <div class="education-card">
-                <div class="edu-header">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo UAlg" class="edu-logo">
-                    <div>
-                        <h3 class="edu-degree">Licenciatura em Ciências da Comunicação</h3>
-                        <p class="edu-institution">UAlg — Universidade do Algarve (Faro)</p>
-                    </div>
-                </div>
-                <span class="edu-date"><i data-lucide="calendar" class="icon-inline"></i> 2019 — 2022</span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECÇÃO: CONTEÚDOS E CARROSSÉIS -->
+    <!-- SECÇÃO 2: CONTEÚDOS -->
     <section id="catalogo" class="section-catalogo section-padded">
         <h2 class="section-title centered-title">Conteúdos</h2>
 
@@ -98,13 +102,9 @@
         <div class="row-container">
             <h3 class="row-title"><i data-lucide="sparkles"></i> Em Destaque</h3>
             <div class="carousel-wrapper">
-                <button class="carousel-arrow prev" id="prev-destaque" aria-label="Anterior">
-                    <i data-lucide="chevron-left"></i>
-                </button>
+                <button class="carousel-btn btn-left" id="btn-left-destaque" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
                 <div id="slider-destaque" class="netflix-slider"></div>
-                <button class="carousel-arrow next" id="next-destaque" aria-label="Seguinte">
-                    <i data-lucide="chevron-right"></i>
-                </button>
+                <button class="carousel-btn btn-right" id="btn-right-destaque" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
             </div>
         </div>
 
@@ -112,28 +112,139 @@
         <div class="row-container">
             <h3 class="row-title"><i data-lucide="folder-open"></i> Todos os Conteúdos</h3>
             <div class="carousel-wrapper">
-                <button class="carousel-arrow prev" id="prev-outros" aria-label="Anterior">
-                    <i data-lucide="chevron-left"></i>
-                </button>
+                <button class="carousel-btn btn-left" id="btn-left-outros" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
                 <div id="slider-outros" class="netflix-slider"></div>
-                <button class="carousel-arrow next" id="next-outros" aria-label="Seguinte">
-                    <i data-lucide="chevron-right"></i>
-                </button>
+                <button class="carousel-btn btn-right" id="btn-right-outros" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO: SOFTWARE & FERRAMENTAS -->
-    <section id="ferramentas" class="section-grid-info bg-alt section-padded">
+    <!-- POPOVER FLUTUANTE ADJACENTE AO CARTÃO -->
+    <div id="inline-popover" class="inline-popover"></div>
+
+    <!-- SECÇÃO 3: EXPERIÊNCIA -->
+    <section id="experiencia" class="section-percurso section-padded">
+        <h2 class="section-title centered-title">Experiência</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content has-corner-link">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="https://via.placeholder.com/120x35/13151c/ffffff?text=UAlg" alt="Logo UAlg" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Outubro 2024 — Atualidade</span>
+                    </div>
+                    <h3>Assistente Convidado</h3>
+                    <p class="timeline-institution">Universidade do Algarve — Faculdade de Ciências Humanas e Sociais (Faro)</p>
+                    <ul>
+                        <li>Docente da UC "Produção e Edição de Vídeo" (3º ano de Design de Comunicação).</li>
+                        <li>Docente dos Cursos Livres de Pré-Produção e Produção Audiovisual (Impulso Mais Digital).</li>
+                        <li>Colaborador no Dia Aberto 2025 da UAlg e eventos de divulgação académica.</li>
+                    </ul>
+                    <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content has-corner-link">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="https://via.placeholder.com/120x35/13151c/ffffff?text=RTP" alt="Logo RTP / ENTR" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Maio 2024 — Agosto 2024</span>
+                    </div>
+                    <h3>Criador de Conteúdos (Freelancer)</h3>
+                    <p class="timeline-institution">ENTR PT — RTP (Lisboa)</p>
+                    <ul>
+                        <li>Criação, produção e edição de conteúdos audiovisuais para o público jovem no projeto europeu ENTR PT.</li>
+                    </ul>
+                    <a href="https://www.rtp.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content has-corner-link">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="https://via.placeholder.com/120x35/13151c/ffffff?text=RUA+FM" alt="Logo RUA FM" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">Março 2022 — Atualidade</span>
+                    </div>
+                    <h3>Jornalista / Animador</h3>
+                    <p class="timeline-institution">RUA - Rádio Universitária do Algarve (Faro)</p>
+                    <ul>
+                        <li>Voz de rádio, gravação de marcadores, spots e comerciais.</li>
+                        <li>Entrevistas a artistas e cobertura de grandes festivais.</li>
+                    </ul>
+                    <a href="https://www.rua.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 4: FORMAÇÃO ACADÉMICA -->
+    <section id="educacao" class="section-percurso bg-alt section-padded">
+        <h2 class="section-title centered-title">Formação Académica</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content has-corner-link">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="https://via.placeholder.com/120x35/13151c/ffffff?text=ESCS" alt="Logo ESCS" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">2022 — 2024</span>
+                    </div>
+                    <h3>Mestrado em Jornalismo (Média Final: 17 Valores)</h3>
+                    <p class="timeline-institution">Escola Superior de Comunicação Social (ESCS - IPL)</p>
+                    <p class="academic-thesis"><strong>Trabalho de Investigação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores”</p>
+                    <a href="https://www.escs.ipl.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content has-corner-link">
+                    <div class="timeline-header">
+                        <div class="timeline-logo-container">
+                            <img src="https://via.placeholder.com/120x35/13151c/ffffff?text=UAlg" alt="Logo UAlg" class="timeline-company-logo">
+                        </div>
+                        <span class="timeline-date">2017 — 2020</span>
+                    </div>
+                    <h3>Licenciatura em Ciências da Comunicação</h3>
+                    <p class="timeline-institution">Universidade do Algarve — FCHS (Faro)</p>
+                    <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 5: SOFTWARE & FERRAMENTAS -->
+    <section id="ferramentas" class="section-grid-info section-padded">
         <h2 class="section-title centered-title">Software & Ferramentas</h2>
 
         <div class="skills-grid">
             <div class="grid-card">
                 <h3><i data-lucide="video"></i> Edição de Vídeo & Pós-Produção</h3>
                 <ul class="info-list">
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe Premiere Pro:</strong> Edição avançada e fluxo de trabalho multi-câmara</div></li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe Premiere Pro:</strong> Edição avançada e fluxo multi-câmara</div></li>
                     <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Final Cut Pro:</strong> Montagem e renderização ágil</div></li>
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe After Effects:</strong> Motion graphics, titilagem e pós-produção</div></li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe After Effects:</strong> Motion graphics e pós-produção</div></li>
                     <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>DaVinci Resolve:</strong> Correção de cor e gradação cromática</div></li>
                 </ul>
             </div>
@@ -141,34 +252,16 @@
             <div class="grid-card">
                 <h3><i data-lucide="mic"></i> Áudio & Produção Radiofónica</h3>
                 <ul class="info-list">
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe Audition:</strong> Edição multipista, limpeza de ruído e masterização</div></li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe Audition:</strong> Edição multipista e limpeza de ruído</div></li>
                     <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Audacity:</strong> Captação rápida e corte direto</div></li>
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Sistemas de Emissão / Automação:</strong> Operação de mesa de mistura e estúdio de rádio</div></li>
-                </ul>
-            </div>
-
-            <div class="grid-card">
-                <h3><i data-lucide="layout"></i> Design, Imagem & Web</h3>
-                <ul class="info-list">
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Adobe Photoshop & Illustrator:</strong> Tratamento de imagem e grafismos</div></li>
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>WordPress / Gestão de Conteúdos:</strong> Publicação e otimização SEO para web</div></li>
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Redes Sociais & Analytics:</strong> Gestão de publicações e métricas de desempenho</div></li>
-                </ul>
-            </div>
-
-            <div class="grid-card">
-                <h3><i data-lucide="award"></i> Competências Técnicas & Pessoais</h3>
-                <ul class="info-list">
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Operação de Câmara:</strong> Equipamento ENG, DSLRs e captação de áudio externo</div></li>
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Comunicação e Apresentação:</strong> Locução, reportagem em direto e moderação</div></li>
-                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Trabalho sob Pressão:</strong> Gestão rigorosa de deadlines de redação</div></li>
+                    <li><i data-lucide="check-circle-2" class="icon-inline"></i> <div><strong>Sistemas de Emissão:</strong> Operação de mesa de mistura de estúdio</div></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO: LICENÇAS & PROJETOS COMUNITÁRIOS -->
-    <section id="certificados-voluntariado" class="section-padded">
+    <!-- SECÇÃO 6: LICENÇAS & PROJETOS COMUNITÁRIOS -->
+    <section id="certificados-voluntariado" class="section-padded bg-alt">
         <h2 class="section-title centered-title">Licenças & Projetos Comunitários</h2>
 
         <div class="container-grid-top">
@@ -179,41 +272,27 @@
                         <i data-lucide="award" class="icon-inline"></i>
                         <div>
                             <strong>Carteira Profissional de Jornalista</strong><br>
-                            <span class="text-subtle">N.º C 8964 — Comissão para a Carteira Profissional de Jornalista</span>
+                            <span class="text-subtle">N.º C 8964 — CCPJ</span>
                         </div>
                     </li>
                     <li>
                         <i data-lucide="award" class="icon-inline"></i>
                         <div>
                             <strong>Medalha de Ouro em Reportagem TV</strong><br>
-                            <span class="text-subtle">Skills Portugal 2024 (WorldSkills Portugal)</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i data-lucide="award" class="icon-inline"></i>
-                        <div>
-                            <strong>Medalha de Excelência em Reportagem TV</strong><br>
-                            <span class="text-subtle">Skills Portugal 2023</span>
+                            <span class="text-subtle">Skills Portugal 2024</span>
                         </div>
                     </li>
                 </ul>
             </div>
 
             <div class="grid-card">
-                <h3><i data-lucide="heart-handshake"></i> Projetos Comunitários & Voluntariado</h3>
+                <h3><i data-lucide="heart-handshake"></i> Projetos Comunitários</h3>
                 <ul class="info-list">
                     <li>
                         <i data-lucide="users" class="icon-inline"></i>
                         <div>
                             <strong>Colaborador no Dia Aberto UAlg</strong><br>
-                            <span class="text-subtle">Apoio na dinamização de workshops de produção audiovisual para jovens estudantes.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i data-lucide="radio" class="icon-inline"></i>
-                        <div>
-                            <strong>Apoio à Rádio Comunitária & Associativismo</strong><br>
-                            <span class="text-subtle">Dinamização de programas culturais de apoio aos artistas locais e à comunidade académica do Algarve.</span>
+                            <span class="text-subtle">Dinamização de workshops de produção audiovisual.</span>
                         </div>
                     </li>
                 </ul>
@@ -221,14 +300,37 @@
         </div>
     </section>
 
-    <!-- POPOVER FLUTUANTE -->
-    <div id="inline-popover" class="inline-popover"></div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">RB<span class="dot">.</span><span class="studio">STUDIO</span></div>
+                <p>Jornalismo, Produção Audiovisual & Comunicação Multimédia.</p>
+            </div>
 
-    <!-- FOOTER / CONTACTO -->
-    <footer id="contacto" class="footer">
-        <p>&copy; 2026 Rúben Bento. Todos os direitos reservados.</p>
+            <div class="footer-contacts">
+                <h4>Contactos Diretos</h4>
+                <a href="mailto:rubenbento243@gmail.com" class="footer-link"><i data-lucide="mail"></i> rubenbento243@gmail.com</a>
+                <a href="tel:+351924245184" class="footer-link"><i data-lucide="phone"></i> +351 924 245 184</a>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Portfólio & Redes</h4>
+                <div class="social-chips">
+                    <a href="https://linkedin.com/in/rubento243" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://behance.net" target="_blank" title="Behance"><i data-lucide="palette"></i></a>
+                    <a href="https://vimeo.com" target="_blank" title="Vimeo"><i data-lucide="video"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rúben Bento — RB. STUDIO. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
