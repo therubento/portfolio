@@ -78,11 +78,9 @@
                     </div>
                 </div>
 
-                <!-- REDES SOCIAIS / PORTFÓLIOS -->
+                <!-- REDES SOCIAIS / PORTFÓLIOS (APENAS LINKEDIN) -->
                 <div class="hero-actions">
                     <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline" title="LinkedIn"><i data-lucide="linkedin"></i> LinkedIn</a>
-                    <a href="https://instagram.com" target="_blank" class="btn-hero outline" title="Instagram"><i data-lucide="instagram"></i> Instagram</a>
-                    <a href="https://facebook.com" target="_blank" class="btn-hero outline" title="Facebook"><i data-lucide="facebook"></i> Facebook</a>
                 </div>
             </div>
         </div>
@@ -108,17 +106,39 @@
         </div>
     </section>
 
-    <!-- POPOVER FLUTUANTE ADJACENTE AO CARTÃO (ALTURA IGUAL AO CARTÃO) -->
+    <!-- POPOVER LATERAL FLUTUANTE (MESMA ALTURA DO CARTÃO) -->
     <div id="inline-popover" class="inline-popover">
-        <button id="popover-close" class="popover-close-btn">&times;</button>
+        <button id="popover-close" class="popover-close-btn" aria-label="Fechar">&times;</button>
         <div class="popover-inner">
             <span id="pop-category" class="badge-tag"></span>
             <h3 id="pop-title"></h3>
-            <div class="pop-meta">
-                <p><strong>Data / Ano:</strong> <span id="pop-date"></span></p>
-                <p><strong>Formato:</strong> <span id="pop-duration"></span></p>
+            
+            <div class="pop-meta-grid">
+                <div class="pop-meta-item">
+                    <i data-lucide="calendar"></i>
+                    <div>
+                        <span class="meta-label">Data:</span>
+                        <strong id="pop-date"></strong>
+                    </div>
+                </div>
+                <div class="pop-meta-item">
+                    <i data-lucide="briefcase"></i>
+                    <div>
+                        <span class="meta-label">Cargo:</span>
+                        <strong id="pop-role"></strong>
+                    </div>
+                </div>
+                <div class="pop-meta-item">
+                    <i data-lucide="map-pin"></i>
+                    <div>
+                        <span class="meta-label">Local:</span>
+                        <strong id="pop-location"></strong>
+                    </div>
+                </div>
             </div>
+
             <p id="pop-description" class="pop-description-text"></p>
+            
             <div id="pop-actions" class="pop-actions-container"></div>
         </div>
     </div>
@@ -130,7 +150,7 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="timeline-company-logo">
@@ -152,7 +172,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_RTP.svg" alt="Logo RTP / ENTR" class="timeline-company-logo">
@@ -172,7 +192,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_RUA.svg" alt="Logo RUA FM" class="timeline-company-logo">
@@ -210,7 +230,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_SUL.svg" alt="Logo Sul Informação" class="timeline-company-logo">
@@ -231,7 +251,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_RTP.svg" alt="Logo RTP" class="timeline-company-logo">
@@ -276,7 +296,7 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_ESCS.svg" alt="Logo ESCS" class="timeline-company-logo">
@@ -294,7 +314,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content has-corner-link">
+                <div class="timeline-content">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="URL_DO_LOGO_UALG.svg" alt="Logo UAlg" class="timeline-company-logo">
@@ -557,11 +577,9 @@
             </div>
 
             <div class="footer-socials">
-                <h4>Redes Sociais</h4>
+                <h4>Redes Profissionais</h4>
                 <div class="social-chips">
                     <a href="https://linkedin.com/in/rubento243" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="https://instagram.com" target="_blank" title="Instagram"><i data-lucide="instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" title="Facebook"><i data-lucide="facebook"></i></a>
                 </div>
             </div>
         </div>
