@@ -3,122 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rúben Bento — Portfólio & Catálogo</title>
+    <title>Rúben Bento — Portfólio & Percurso Profissional</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones Lucide para Contactos e Redes Sociais -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- NAVEGAÇÃO -->
+    <!-- NAV BAR -->
     <nav class="navbar">
-        <div class="logo">Rúben Bento</div>
+        <div class="logo">RB<span>.</span></div>
         <div class="hamburger" id="hamburger">&#9776;</div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="#sobre">Sobre Rúben Bento</a></li>
-            <li><a href="#catalogo">Catálogo de Conteúdos</a></li>
-            <li><a href="#contactos">Contactos</a></li>
+            <li><a href="#sobre">Perfil</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#percurso">Percurso</a></li>
+            <li><a href="#competencias">Competências</a></li>
+            <li><a href="#voluntariado">Atividades & Cursos</a></li>
         </ul>
     </nav>
 
-    <!-- SECÇÃO: SOBRE RÚBEN BENTO -->
-    <section id="sobre" class="section-sobre">
-        <div class="container-sobre">
-            <div class="sobre-foto-wrapper">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="sobre-foto">
+    <!-- HEROBANNER / PERFIL DE IMPACTO -->
+    <section id="sobre" class="section-hero">
+        <div class="hero-container">
+            <div class="hero-card-press">
+                <div class="press-badge">
+                    <i data-lucide="award"></i> Ouro Skills Portugal '24
+                </div>
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Rúben Bento" class="hero-img">
+                <div class="press-id">
+                    <span>Jornalista Carteira N.º</span>
+                    <strong>C 8964</strong>
+                </div>
             </div>
-            
-            <div class="sobre-info">
-                <span class="badge-tag">Jornalista & Criador de Conteúdos</span>
+
+            <div class="hero-details">
+                <span class="hero-tag">Jornalismo | Docência | Produção Audiovisual</span>
                 <h1>Rúben Bento</h1>
-                <p class="sobre-resumo">
-                    Licenciado em Ciências da Comunicação pela Universidade do Algarve e com percurso em Reportagem de Televisão, Locução de Rádio e Imprensa Digital. Vencedor da Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem de TV) e com passagem pela RTP, RUA FM e Sul Informação. Especializado na criação de narrativas audiovisuais, cobertura de grandes eventos e produção multiplataforma.
+                <p class="hero-quote">"Um rapaz que sonha. Sonha em ser feliz. Indeciso mas confiante com o seu futuro. Gostava de se encontrar no mundo do jornalismo, da televisão, da realização ou da produção."</p>
+
+                <p class="hero-bio">
+                    Mestre em Jornalismo pela ESCS (Média 17) e Licenciado pela Universidade do Algarve[cite: 3]. Assistente Convidado na UAlg em Produção e Edição de Vídeo[cite: 3]. Vencedor da Medalha de Ouro no <strong>Skills Portugal 2024</strong> (Reportagem de TV)[cite: 3]. Experiência diversificada em Televisão (RTP), Rádio (RUA FM, Rádio Gilão) e Imprensa Digital (Sul Informação, Portugal Rotário)[cite: 3].
                 </p>
 
-                <!-- CONTACTOS DIRETO -->
-                <div class="contactos-grid">
-                    <a href="mailto:rubenbento@exemplo.com" class="contacto-card">
-                        <i data-lucide="mail"></i>
-                        <span>rubenbento@exemplo.com</span>
-                    </a>
-                    <a href="tel:+351910000000" class="contacto-card">
-                        <i data-lucide="phone"></i>
-                        <span>+351 910 000 000</span>
-                    </a>
-                </div>
-
-                <!-- REDES SOCIAIS -->
-                <div class="redes-sociais">
-                    <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="social-btn" title="Instagram"><i data-lucide="instagram"></i></a>
-                    <a href="https://twitter.com" target="_blank" class="social-btn" title="X / Twitter"><i data-lucide="twitter"></i></a>
-                    <a href="https://spotify.com" target="_blank" class="social-btn" title="Podcast / Spotify"><i data-lucide="radio"></i></a>
+                <div class="hero-actions">
+                    <a href="mailto:rubenbento243@gmail.com" class="btn-hero primary"><i data-lucide="mail"></i> Contactar</a>
+                    <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline"><i data-lucide="linkedin"></i> LinkedIn</a>
+                    <a href="https://behance.net/rmdaqb243" target="_blank" class="btn-hero outline"><i data-lucide="palette"></i> Behance</a>
+                    <a href="https://vimeo.com/rubenbento243" target="_blank" class="btn-hero outline"><i data-lucide="video"></i> Vimeo</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO: CATÁLOGO DE CONTEÚDOS (ESTILO NETFLIX) -->
+    <!-- CATÁLOGO NETFLIX -->
     <section id="catalogo" class="section-catalogo">
-        <h2 class="catalogo-titulo-principal">Catálogo de Conteúdos</h2>
+        <h2 class="section-title">Catálogo de Trabalhos</h2>
 
-        <!-- CARROSSEL 1: TV & BROADCAST -->
         <div class="row-container">
-            <h3 class="row-title">📺 Televisão & Broadcast</h3>
+            <h3 class="row-title"><i data-lucide="tv"></i> Televisão & Cinema</h3>
             <div id="slider-tv" class="netflix-slider"></div>
         </div>
 
-        <!-- CARROSSEL 2: RÁDIO & ON AIR -->
         <div class="row-container">
-            <h3 class="row-title">🎙️ Rádio & Audio (On Air)</h3>
+            <h3 class="row-title"><i data-lucide="radio"></i> Rádio & Coberturas Live</h3>
             <div id="slider-radio" class="netflix-slider"></div>
         </div>
 
-        <!-- CARROSSEL 3: DIGITAL & IMPRENSA -->
         <div class="row-container">
-            <h3 class="row-title">📰 Digital & Imprensa</h3>
+            <h3 class="row-title"><i data-lucide="newspaper"></i> Digital, Docência & Imprensa</h3>
             <div id="slider-digital" class="netflix-slider"></div>
         </div>
     </section>
 
-    <!-- PAINEL LATERAL DE DETALHES DO PROJETO (SLIDE-OVER SIDEBAR) -->
+    <!-- POPUP CONTEXTUAL FLUTUANTE -->
     <div id="project-sidebar" class="project-sidebar">
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <div class="sidebar-content">
             <button id="sidebar-close" class="sidebar-close-btn">&times;</button>
-            
             <div class="sidebar-header-img">
-                <img id="side-cover-img" src="" alt="Capa do Projeto">
+                <img id="side-cover-img" src="" alt="Capa">
             </div>
-
             <div class="sidebar-body">
                 <span id="side-category" class="badge-tag"></span>
                 <h2 id="side-title"></h2>
-                
                 <div class="side-meta">
                     <p><strong>Período:</strong> <span id="side-date"></span></p>
-                    <p><strong>Duração / Formato:</strong> <span id="side-duration"></span></p>
+                    <p><strong>Formato:</strong> <span id="side-duration"></span></p>
                 </div>
-
-                <h3>Sobre o Projeto</h3>
+                <h3>Detalhes do Projeto</h3>
                 <p id="side-description" class="side-description-text"></p>
-
-                <!-- REPRODUTOR DE MÍDIA INCORPORADA -->
-                <div id="side-media-container" class="side-media-container"></div>
-
-                <!-- LINK EXTERNO -->
                 <div class="side-actions">
-                    <a id="side-link" href="#" target="_blank" class="btn-primary">
-                        <i data-lucide="external-link"></i> Ver Conteúdo Completo
-                    </a>
+                    <a id="side-link" href="#" target="_blank" class="btn-hero primary"><i data-lucide="external-link"></i> Abrir Link</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- LINHA TEMPORAL / PERCURSO -->
+    <section id="percurso" class="section-percurso">
+        <h2 class="section-title">Percurso Profissional & Académico</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Outubro 2024 — Atualidade</span>
+                    <h3>Assistente Convidado</h3>
+                    <p class="timeline-institution">Universidade do Algarve (Faro)</p>
+                    <ul>
+                        <li>Docente de "Produção e Edição de Vídeo" no 3º ano da Licenciatura em Design de Comunicação.</li>
+                        <li>Docente responsável pelos Cursos Livres em Pré-Produção e Produção Audiovisual (Impulso Mais Digital).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2022 — 2024</span>
+                    <h3>Mestrado em Jornalismo (Média: 17 Valores)</h3>
+                    <p class="timeline-institution">Escola Superior de Comunicação Social (ESCS)</p>
+                    <p>Dissertação: <em>"Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)"</em>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Maio — Agosto 2024</span>
+                    <h3>Criador de Conteúdos (Freelancer)</h3>
+                    <p class="timeline-institution">ENTR PT — RTP (Lisboa)</p>
+                    <p>Criação e produção de conteúdos para o projeto europeu ENTR PT focado no público jovem.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Março 2022 — Atualidade</span>
+                    <h3>Jornalista / Animador</h3>
+                    <p class="timeline-institution">RUA FM (Rádio Universitária do Algarve)</p>
+                    <p>Locução, produção de spots e cobertura de festivais (Semana Académica, Festival F, MED, Albufeira Sea Fest).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Março 2021 — Atualidade</span>
+                    <h3>Editor / Jornalista Colaborador</h3>
+                    <p class="timeline-institution">Revista Portugal Rotário</p>
+                    <p>Escrita e edição de artigos para publicação impressa e digital.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Abril 2021 — Fevereiro 2022</span>
+                    <h3>Jornalista (Estágio Profissional)</h3>
+                    <p class="timeline-institution">Sul Informação (Jornal Online)</p>
+                    <p>Reportagens de vídeo, voz-off, edição e redação de notícias regionais.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Março — Julho 2020</span>
+                    <h3>Jornalista Estagiário (Nota: 18 Valores)</h3>
+                    <p class="timeline-institution">RTP — Rádio e Televisão de Portugal (Faro)</p>
+                    <p>Redação e edição da Grande Reportagem "E agora, Algarve?".</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2017 — 2020</span>
+                    <h3>Licenciatura em Ciências da Comunicação</h3>
+                    <p class="timeline-institution">Universidade do Algarve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPETÊNCIAS & TÉCNICA -->
+    <section id="competencias" class="section-grid-info">
+        <h2 class="section-title">Skills & Idiomas</h2>
+        <div class="container-grid">
+            <div class="grid-card glow">
+                <h3><i data-lucide="sliders"></i> Softwares de Edição</h3>
+                <div class="tags-container">
+                    <span class="tag-item red">Adobe Premiere</span>
+                    <span class="tag-item red">DaVinci Resolve</span>
+                    <span class="tag-item red">EDIUS</span>
+                    <span class="tag-item red">Sony Vegas</span>
+                    <span class="tag-item">Photoshop</span>
+                    <span class="tag-item">After Effects</span>
+                    <span class="tag-item">Illustrator</span>
+                    <span class="tag-item">Audacity</span>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <h3><i data-lucide="globe"></i> Idiomas</h3>
+                <ul class="info-list">
+                    <li><strong>Português:</strong> Nativo</li>
+                    <li><strong>Espanhol:</strong> C2 (Avançado/Mãe)</li>
+                    <li><strong>Inglês:</strong> B2 (Independente)</li>
+                </ul>
+            </div>
+
+            <div class="grid-card">
+                <h3><i data-lucide="sparkles"></i> Soft Skills</h3>
+                <div class="tags-container">
+                    <span class="tag-item">Criativo</span>
+                    <span class="tag-item">Líder</span>
+                    <span class="tag-item">Comunicativo</span>
+                    <span class="tag-item">Proativo</span>
+                    <span class="tag-item">Organizado</span>
+                    <span class="tag-item">Inovador</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOLUNTARIADO & CERTIFICADOS -->
+    <section id="voluntariado" class="section-grid-info bg-alt">
+        <h2 class="section-title">Voluntariado, Certificados & Organizações</h2>
+        <div class="container-grid">
+            <div class="grid-card">
+                <h3><i data-lucide="users"></i> Liderança & Cargos</h3>
+                <ul class="info-list">
+                    <li><strong>Rotaract Club de Tavira:</strong> Representante Distrital D.1960 (25/26), Presidente (23/24, 20/21)</li>
+                    <li><strong>Núcleo Ciências da Comunicação (UAlg):</strong> Coordenador do Mercado de Trabalho</li>
+                </ul>
+            </div>
+
+            <div class="grid-card">
+                <h3><i data-lucide="award"></i> Certificados de Destaque</h3>
+                <ul class="info-list">
+                    <li><strong>JornalismoAI Discovery:</strong> Inteligência Artificial no Jornalismo (Polis LSE - 2025)</li>
+                    <li><strong>Fake News / CENJOR:</strong> Formação em Verificação de Factos (2020)</li>
+                    <li><strong>Ciderinformado / LUSA:</strong> Formação de Navegação e Informação (2020)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026, Rúben Bento.</p>
+    </footer>
+
     <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
