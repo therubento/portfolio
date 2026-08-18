@@ -57,7 +57,7 @@ ul {
 .page-centered {
     max-width: 1040px;
     margin: 0 auto;
-    padding: 80px 40px;
+    padding: 70px 40px;
     text-align: center;
 }
 
@@ -82,7 +82,7 @@ ul {
     font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     position: relative;
     letter-spacing: -0.5px;
     color: #ffffff;
@@ -103,7 +103,7 @@ ul {
     font-size: 1.35rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -186,10 +186,10 @@ ul {
 }
 
 /* ==========================================================================
-   4. SECÇÃO CREDENCIAL (HERO)
+   4. SECÇÃO CREDENCIAL (HERO) & MANIFESTO
    ========================================================================== */
 .section-hero {
-    padding: 140px 40px 80px 40px;
+    padding: 140px 40px 70px 40px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -197,7 +197,7 @@ ul {
 .hero-container {
     display: flex;
     gap: 48px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .hero-photo-wrapper {
@@ -249,7 +249,7 @@ ul {
 .hero-details h1 {
     font-size: 3rem;
     font-weight: 900;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     line-height: 1.1;
     letter-spacing: -1px;
     background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
@@ -257,23 +257,27 @@ ul {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-quote {
-    font-style: italic;
-    color: var(--text-muted);
+.hero-manifesto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-left: 18px;
     border-left: 3px solid var(--primary-red);
-    padding-left: 16px;
-    margin-bottom: 18px;
-    font-size: 0.95rem;
-    line-height: 1.5;
 }
 
-.hero-bio {
+.hero-manifesto p {
+    font-size: 0.96rem;
     color: var(--text-main);
-    font-size: 0.95rem;
-    margin-bottom: 24px;
+    line-height: 1.7;
+    font-weight: 400;
 }
 
-/* CARTEIRA DE JORNALISTA & CONTACTOS */
+.hero-manifesto p strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
 .hero-cards-row {
     display: flex;
     flex-wrap: wrap;
@@ -339,7 +343,7 @@ ul {
 .hero-actions {
     display: flex;
     gap: 12px;
-    margin-top: 18px;
+    margin-top: 24px;
 }
 
 .btn-hero {
@@ -379,26 +383,25 @@ ul {
 }
 
 /* ==========================================================================
-   5. SECÇÃO CONTEÚDOS (SLIDERS MULTIMÉDIA)
+   5. SECÇÃO CONTEÚDOS (FORMATO ORIGINAL RESTAURADO)
    ========================================================================== */
 .section-catalogo {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .row-container {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     text-align: left;
 }
 
 .row-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #fff;
 }
 
 .row-title i {
@@ -407,9 +410,9 @@ ul {
 
 .netflix-slider {
     display: flex;
-    gap: 18px;
+    gap: 15px;
     overflow-x: auto;
-    padding: 10px 5px 20px 5px;
+    padding-bottom: 15px;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-red) var(--bg-card);
 }
@@ -422,7 +425,7 @@ ul {
     width: 100%;
     height: 100vh;
     z-index: 2000;
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .project-sidebar.active {
@@ -435,49 +438,37 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
 }
 
 .sidebar-content {
     position: absolute;
     top: 0;
     right: 0;
-    width: 460px;
+    width: 450px;
     max-width: 100%;
     height: 100%;
     background: var(--bg-alt);
     border-left: 1px solid var(--border-color);
-    padding: 35px;
+    padding: 30px;
     overflow-y: auto;
-    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
 }
 
 .sidebar-close-btn {
     position: absolute;
-    top: 18px;
-    right: 22px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
     color: var(--text-main);
-    font-size: 1.4rem;
+    font-size: 2rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.sidebar-close-btn:hover {
-    background: var(--primary-red);
-    border-color: var(--primary-red);
 }
 
 /* ==========================================================================
-   6. CARTOES DE LISTA COM LOGÓTIPOS (ALINHAMENTO, FORMAÇÃO, CARGOS, LICENÇAS)
+   6. ALINHAMENTO E FORMAÇÃO (LOGÓTIPO BRANCO NO TOPO DOS DADOS)
    ========================================================================== */
 .list-container {
     display: flex;
@@ -488,12 +479,13 @@ ul {
 
 .custom-card-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 14px;
     padding: 22px;
-    gap: 22px;
+    gap: 14px;
     box-shadow: var(--shadow-card);
     transition: var(--transition);
     position: relative;
@@ -505,8 +497,8 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3px;
-    height: 100%;
+    width: 100%;
+    height: 3px;
     background: transparent;
     transition: var(--transition);
 }
@@ -522,47 +514,41 @@ ul {
     background: var(--primary-red);
 }
 
-/* CAIXA DE LOGÓTIPO DAS ORGANIZAÇÕES */
-.logo-holder {
-    background: #08090c;
+.logo-holder-top {
+    background: rgba(255, 255, 255, 0.03);
     border: 1px dashed rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-dim);
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    flex-shrink: 0;
-    overflow: hidden;
+    padding: 6px 14px;
+    height: 48px;
+    max-width: 180px;
+    margin-bottom: 2px;
     transition: var(--transition);
 }
 
-.custom-card-item:hover .logo-holder {
+.custom-card-item:hover .logo-holder-top {
     border-color: var(--primary-red);
-    color: var(--text-muted);
+    background: rgba(229, 9, 20, 0.05);
 }
 
-.logo-holder img {
-    width: 100%;
-    height: 100%;
+/* TORNA QUALQUER IMAGEM PNG/SVG EM BRANCO AUTOMATICAMENTE */
+.logo-holder-top img {
+    max-width: 100%;
+    max-height: 34px;
     object-fit: contain;
-    padding: 4px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: var(--transition);
 }
 
-.vertical-logo {
-    width: 72px;
-    height: 105px;
-}
-
-.square-logo {
-    width: 72px;
-    height: 72px;
+.custom-card-item:hover .logo-holder-top img {
+    opacity: 1;
 }
 
 .card-info {
-    flex: 1;
+    width: 100%;
 }
 
 .card-info h3 {
@@ -597,108 +583,145 @@ ul {
 }
 
 .card-info ul li {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 /* ==========================================================================
-   7. STACK TÉCNICO, SUÍTE DE EDIÇÃO & IDIOMAS
+   7. LICENÇAS, PROJETOS COMUNITÁRIOS & CARGOS (COMPACTOS COM LOGO BRANCO)
    ========================================================================== */
-.container-grid-two {
+.compact-list-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
     text-align: left;
 }
 
-.grid-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-    padding: 26px;
-    box-shadow: var(--shadow-card);
-}
-
-.grid-card h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 18px;
+.compact-card-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: var(--transition);
 }
 
-.grid-card h3 i {
-    color: var(--primary-red);
+.compact-card-item:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
 }
 
-.info-list {
+.logo-holder-small {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 6px;
+    transition: var(--transition);
+}
+
+.compact-card-item:hover .logo-holder-small {
+    border-color: var(--primary-red);
+    background: rgba(229, 9, 20, 0.05);
+}
+
+/* TORNA QUALQUER IMAGEM PNG/SVG EM BRANCO AUTOMATICAMENTE */
+.logo-holder-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: var(--transition);
+}
+
+.compact-card-item:hover .logo-holder-small img {
+    opacity: 1;
+}
+
+.compact-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.compact-info h4 {
     font-size: 0.92rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.info-list li {
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-    color: var(--text-main);
+.compact-info p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
 }
 
-.info-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
+.compact-info .date-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    text-transform: uppercase;
 }
 
-.full-width-card {
+/* ==========================================================================
+   8. SECÇÃO CONHECIMENTOS
+   ========================================================================== */
+.conhecimentos-container {
     width: 100%;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 14px;
-    padding: 28px;
+    padding: 22px 26px;
     text-align: left;
     box-shadow: var(--shadow-card);
+    margin-bottom: 25px;
 }
 
-.glow {
+.conhecimentos-container.glow {
     border-color: rgba(229, 9, 20, 0.3);
-    box-shadow: 0 0 25px rgba(229, 9, 20, 0.08);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.08);
 }
 
-.margin-top-card { margin-top: 25px; }
-.margin-bottom-card { margin-bottom: 35px; }
-
-/* CATEGORIAS DE SOFTWARE */
-.software-categories-grid {
+.software-categories-compact {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 22px;
-    margin-top: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 14px;
 }
 
 .software-group h4 {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     color: var(--primary-red);
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.6px;
 }
 
 .tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
 .tag-item {
     background: #0e1017;
     border: 1px solid var(--border-color);
-    padding: 7px 13px;
-    border-radius: 8px;
-    font-size: 0.82rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
     font-weight: 500;
     color: var(--text-main);
     transition: var(--transition);
@@ -720,30 +743,76 @@ ul {
     border-color: var(--primary-red);
 }
 
+.container-grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    text-align: left;
+}
+
+.grid-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+}
+
+.grid-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grid-card h3 i {
+    color: var(--primary-red);
+}
+
+.info-list {
+    font-size: 0.88rem;
+}
+
+.info-list li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+    color: var(--text-main);
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 /* ==========================================================================
-   8. SECÇÃO FINAL DE CONTACTOS & FOOTER
+   9. SECÇÃO FINAL DE CONTACTOS & FOOTER
    ========================================================================== */
 .section-contactos {
-    padding: 80px 40px;
+    padding: 70px 40px;
     text-align: center;
 }
 
 .contactos-sub {
     color: var(--text-muted);
-    font-size: 0.98rem;
-    margin-bottom: 32px;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
 }
 
 .contactos-bar {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
 .footer {
     border-top: 1px solid var(--border-color);
-    padding: 35px;
+    padding: 30px;
     text-align: center;
     font-size: 0.82rem;
     color: var(--text-dim);
@@ -751,7 +820,7 @@ ul {
 }
 
 /* ==========================================================================
-   9. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS & TABLETS)
+   10. RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 950px) {
     .hero-container {
@@ -764,11 +833,11 @@ ul {
         text-align: center;
     }
 
-    .hero-quote {
+    .hero-manifesto {
         border-left: none;
         border-top: 2px solid var(--primary-red);
         padding-left: 0;
-        padding-top: 12px;
+        padding-top: 18px;
     }
 
     .hero-cards-row, .hero-actions, .contactos-grid {
@@ -798,15 +867,8 @@ ul {
         display: block;
     }
 
-    .custom-card-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-    }
-
-    .vertical-logo, .square-logo {
-        width: 100%;
-        height: 60px;
+    .compact-list-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-img {
