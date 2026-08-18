@@ -4,28 +4,28 @@ const projetos = [
         id: 1,
         destaque: true,
         hashtag: "#televisao",
-        titulo: "Medalha de Ouro — Skills Portugal 2024",
+        titulo: "Medalha de Ouro",
         mesAno: "Novembro 2024",
-        cargo: "Jornalista / Repórter TV",
-        local: "Santa Maria da Feira",
-        capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
+        cargo: "Editor de Vídeo",
+        local: "Skills Portugal 2024 - Santa Maria da Feira",
+        capa: "https://worldskillsportugal.iefp.pt/wp-content/uploads/2024/01/SP2024_1920x1080-1.jpg",
         resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV, realizado sob condições de elevada exigência técnica e prazos de produção reais.",
         links: [
-            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "globe" }
         ]
     },
     {
         id: 2,
         destaque: true,
         hashtag: "#televisao",
-        titulo: "Medalha de Excelência — Skills Portugal 2023",
+        titulo: "Medalha de Excelência",
         mesAno: "Março 2023",
         cargo: "Editor de Vídeo",
-        local: "Portimão",
-        capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
+        local: "Skills Portugal 2023 - Portimão",
+        capa: "https://maiseducativa.com/wp-content/uploads/2023/03/vsdgsg-750x375-1-750x375.jpeg",
         resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023, desempenhando as funções de Editor de Vídeo na produção de Reportagem de Televisão.",
         links: [
-            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "globe" }
         ]
     },
     {
