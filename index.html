@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio & Catálogo de Conteúdos</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fontes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -17,7 +16,7 @@
         <div class="logo">PORTFÓLIO<span>FLIX</span></div>
         <nav>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#perfil">Sobre Mim</a></li>
+                <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#tv">Televisão</a></li>
                 <li><a href="#radio">Rádio</a></li>
                 <li><a href="#digital">Digital</a></li>
@@ -28,72 +27,66 @@
         </div>
     </header>
 
-    <!-- SECÇÃO HERO: PERFIL / CV DE APRESENTAÇÃO -->
-    <section id="perfil" class="hero-cv">
-        <div class="hero-overlay"></div>
+    <!-- SECÇÃO HERO: PERFIL CV SLIM & COMPACTO -->
+    <section id="perfil" class="hero-compact">
         <div class="hero-container">
-            <div class="hero-bio">
-                <span class="badge-accent">Jornalista & Criador de Conteúdos</span>
+            <div class="hero-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Foto de Perfil">
+            </div>
+            <div class="hero-info">
+                <div class="badge-accent">Jornalista & Criador de Conteúdos</div>
                 <h1>O Teu Nome Aqui</h1>
-                <p class="hero-description">
-                    Jornalista, animador de rádio e criador de conteúdos audiovisuais. Vencedor da Medalha de Ouro no Skills Portugal em Reportagem de TV, com experiência em grande reportagem, emissão em direto na RUA FM, trabalhos com a RTP e imprensa digital.
+                <p class="hero-bio">
+                    Jornalista, animador na RUA FM e realizador. Vencedor da Medalha de Ouro no Skills Portugal 2024 em Reportagem de TV, com trabalhos na RTP, Sul Informação e imprensa digital.
                 </p>
-
-                <!-- Destaques Rápidos / Estatísticas de Perfil -->
-                <div class="cv-highlights">
-                    <div class="cv-stat">
-                        <span class="stat-num">🥇</span>
-                        <span class="stat-text">Medalha de Ouro (Skills Portugal '24)</span>
-                    </div>
-                    <div class="cv-stat">
-                        <span class="stat-num">📻</span>
-                        <span class="stat-text">Animador RUA FM (102.7)</span>
-                    </div>
-                    <div class="cv-stat">
-                        <span class="stat-num">📺</span>
-                        <span class="stat-text">Reportagem RTP / ENTR PT</span>
-                    </div>
-                </div>
-
-                <div class="hero-actions">
-                    <a href="mailto:teuemail@exemplo.com" class="btn btn-primary">✉️ Contactar</a>
-                    <a href="#tv" class="btn btn-secondary">▶️ Ver Catálogo</a>
+                <div class="hero-pills">
+                    <span class="pill">🥇 Medalha de Ouro (Skills Portugal '24)</span>
+                    <span class="pill">📻 Locução & Rádio (RUA FM)</span>
+                    <span class="pill">📺 Reportagem de TV (RTP)</span>
                 </div>
             </div>
-
-            <!-- Cartão / Foto de Perfil CV -->
-            <div class="hero-avatar-card">
-                <div class="avatar-wrapper">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Foto de Perfil">
-                </div>
+            <div class="hero-actions">
+                <a href="mailto:teuemail@exemplo.com" class="btn btn-primary">✉️ Contactar</a>
             </div>
         </div>
     </section>
 
-    <!-- CATÁLOGO DE CONTEÚDOS (LINHAS ESTILO NETFLIX) -->
+    <!-- CATÁLOGO DE CONTEÚDOS (CARROSSÉIS HORIZONTAIS) -->
     <main class="catalog-container">
 
         <!-- LINHA 1: TELEVISÃO -->
         <section id="tv" class="stream-row">
             <h2 class="row-title">📺 Televisão & Broadcast</h2>
-            <div id="slider-tv" class="netflix-slider"></div>
+            <div class="slider-wrapper">
+                <button class="scroll-btn left" onclick="scrollCarousel('slider-tv', -300)">&#10094;</button>
+                <div id="slider-tv" class="netflix-slider"></div>
+                <button class="scroll-btn right" onclick="scrollCarousel('slider-tv', 300)">&#10095;</button>
+            </div>
         </section>
 
         <!-- LINHA 2: RÁDIO -->
         <section id="radio" class="stream-row">
             <h2 class="row-title">🎙️ Rádio & Audio (On Air)</h2>
-            <div id="slider-radio" class="netflix-slider"></div>
+            <div class="slider-wrapper">
+                <button class="scroll-btn left" onclick="scrollCarousel('slider-radio', -300)">&#10094;</button>
+                <div id="slider-radio" class="netflix-slider"></div>
+                <button class="scroll-btn right" onclick="scrollCarousel('slider-radio', 300)">&#10095;</button>
+            </div>
         </section>
 
         <!-- LINHA 3: DIGITAL -->
         <section id="digital" class="stream-row">
             <h2 class="row-title">📰 Digital & Imprensa</h2>
-            <div id="slider-digital" class="netflix-slider"></div>
+            <div class="slider-wrapper">
+                <button class="scroll-btn left" onclick="scrollCarousel('slider-digital', -300)">&#10094;</button>
+                <div id="slider-digital" class="netflix-slider"></div>
+                <button class="scroll-btn right" onclick="scrollCarousel('slider-digital', 300)">&#10095;</button>
+            </div>
         </section>
 
     </main>
 
-    <!-- JANELA MODAL ESTILO STREAMING (POPUP DE CONTEÚDO) -->
+    <!-- POPUP MODAL ESTILO STREAMING -->
     <div id="netflix-modal" class="modal">
         <div class="modal-content">
             <span id="netflix-modal-close" class="close">&times;</span>
@@ -108,13 +101,12 @@
                 <p id="modal-description" class="modal-desc-text"></p>
                 <div id="modal-media-container"></div>
                 <a id="modal-external-link" href="#" target="_blank" class="btn btn-primary btn-sm" style="display:none; margin-top:20px;">
-                    🔗 Abrir Conteúdo / Link Original
+                    🔗 Ver Conteúdo Original
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- RODAPÉ -->
     <footer class="stream-footer">
         <p>© 2026 — Portfólio Profissional de Comunicação & Conteúdos</p>
     </footer>
