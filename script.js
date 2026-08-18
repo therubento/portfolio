@@ -6,7 +6,7 @@ const projetos = [
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
         mesAno: "Novembro 2024",
-        cargo: "Jornalista / Reporter TV",
+        cargo: "Jornalista / Repórter TV",
         local: "Europarque, Santa Maria da Feira",
         capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
         resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) no formato de Reportagem de Televisão, cobrindo provas de elevada exigência técnica em ambiente real de produção.",
@@ -96,12 +96,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. POPOVER ELEMENTOS
+    // 2. ELEMENTOS DO POPOVER
     const popover = document.getElementById("inline-popover");
     const closeBtn = document.getElementById("popover-close");
     let activeCard = null;
 
-    // 3. POPOVER FECHAR
+    // 3. FECHAR POPOVER
     function closePopover() {
         if (popover) {
             popover.classList.remove("visible");
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. RENDERING DOS SLIDERS ("Em Destaque" vs "Todos os Conteúdos")
+    // 4. RENDERING DOS CARTÕES ("Em Destaque" vs "Todos os Conteúdos")
     const containerDestaque = document.getElementById("slider-destaque");
     const containerOutros = document.getElementById("slider-outros");
 
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            // Evento de clique para abrir popover
+            // Evento para abrir Popover no clique
             card.addEventListener("click", (e) => openPopover(e, proj, card));
 
             if (proj.destaque && containerDestaque) {
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 5. LÓGICA DE ABERTURA E POSICIONAMENTO DO POPOVER (DIREITA OU ESQUERDA)
+    // 5. LÓGICA DE ABERTURA E POSICIONAMENTO DO POPOVER
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
@@ -168,34 +168,46 @@ document.addEventListener("DOMContentLoaded", () => {
         activeCard = card;
         activeCard.classList.add("active-card");
 
-        // Preencher informações
-        document.getElementById("pop-category").innerText = proj.hashtag;
-        document.getElementById("pop-title").innerText = proj.titulo;
-        document.getElementById("pop-date").innerText = proj.mesAno;
-        document.getElementById("pop-role").innerText = proj.cargo || "N/A";
-        document.getElementById("pop-location").innerText = proj.local || "N/A";
-        document.getElementById("pop-description").innerText = proj.resumo;
+        // Preenchimento dos dados do projeto
+        const elCategory = document.getElementById("pop-category");
+        const elTitle = document.getElementById("pop-title");
+        const elDate = document.getElementById("pop-date");
+        const elRole = document.getElementById("pop-role");
+        const elLocation = document.getElementById("pop-location");
+        const elDesc = document.getElementById("pop-description");
 
-        // Renderizar Links
+        if (elCategory) elCategory.innerText = proj.hashtag;
+        if (elTitle) elTitle.innerText = proj.titulo;
+        if (elDate) elDate.innerText = proj.mesAno;
+        if (elRole) elRole.innerText = proj.cargo || "N/A";
+        if (elLocation) elLocation.innerText = proj.local || "N/A";
+        if (elDesc) elDesc.innerText = proj.resumo;
+
+        // Inserção dos Links
         const actionsContainer = document.getElementById("pop-actions");
-        actionsContainer.innerHTML = "";
+        if (actionsContainer) {
+            actionsContainer.innerHTML = "";
+            if (proj.links && proj.links.length > 0) {
+                proj.links.forEach(l => {
+                    const btn = document.createElement("a");
+                    btn.href = l.url;
+                    btn.target = "_blank";
+                    btn.className = "pop-action-btn";
+                    btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
+                    actionsContainer.appendChild(btn);
+                });
+            }
+        }
 
-        if (proj.links && proj.links.length > 0) {
-            proj.links.forEach(l => {
-                const btn = document.createElement("a");
-                btn.href = l.url;
-                btn.target = "_blank";
-                btn.className = "pop-action-btn";
-                btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
-                actionsContainer.appendChild(btn);
-            });
-            if (window.lucide) lucide.createIcons();
+        // Atualizar ícones do Lucide em segurança
+        if (window.lucide && typeof window.lucide.createIcons === "function") {
+            window.lucide.createIcons();
         }
 
         popover.style.display = "block";
         popover.classList.add("visible");
 
-        // POSICIONAMENTO DINÂMICO
+        // Cálculo de Posicionamento (Direita vs Esquerda)
         if (window.innerWidth > 850) {
             const cardRect = card.getBoundingClientRect();
             const gap = 12;
@@ -205,7 +217,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const spaceRight = windowWidth - cardRect.right;
             let leftPos;
 
-            // Se couber à direita, abre à direita. Senão, abre à esquerda.
             if (spaceRight >= popoverWidth + gap) {
                 leftPos = cardRect.right + gap + window.scrollX;
             } else {
@@ -219,10 +230,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Inicializar cartões
+    // Inicializar os cartões na página
     renderCards();
 
-    // 6. MENU HAMBÚRGUER MOBILE
+    // 6. MENU HAMBÚRGUER (MOBILE)
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     if (hamburger && navLinks) {
@@ -231,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 7. EVENTOS PARA FECHAR POPOVER NO CLIQUE FORA OU NO SCROLL
+    // 7. EVENTOS PARA FECHAR POPOVER
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
@@ -239,6 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("resize", closePopover);
+    
     document.querySelectorAll(".netflix-slider").forEach(slider => {
         slider.addEventListener("scroll", closePopover);
     });
