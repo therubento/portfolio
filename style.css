@@ -1,431 +1,138 @@
 /* ==========================================================================
-   RESET & VARIÁVEIS NETFLIX STREAMING
+   PAINEL POPUP CONTEXTUAL (ADAPTÁVEL AO CARTÃO E RESPONSIVO)
    ========================================================================== */
-:root {
-    --bg-dark: #141414;
-    --bg-card: #1f1f1f;
-    --bg-card-hover: #2a2a2a;
-    --red-accent: #E50914;
-    --red-hover: #f40612;
-    --text-main: #FFFFFF;
-    --text-muted: #AAAAAA;
-    --border-color: #333333;
-    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: var(--font-family);
-    line-height: 1.5;
-    overflow-x: hidden;
-}
-
-/* ==========================================================================
-   BARRA DE NAVEGAÇÃO
-   ========================================================================== */
-.navbar {
+.project-sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 70px;
-    padding: 0 4%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(20,20,20,0) 100%);
-    background-color: rgba(20, 20, 20, 0.85);
-    backdrop-filter: blur(10px);
-    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    pointer-events: none;
+    visibility: hidden;
+    transition: visibility 0.3s;
 }
 
-.logo {
-    font-weight: 900;
-    font-size: 1.6rem;
-    letter-spacing: 1px;
-    color: #fff;
+.project-sidebar.active {
+    pointer-events: auto;
+    visibility: visible;
 }
 
-.logo span {
-    color: var(--red-accent);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: var(--text-main);
-}
-
-/* ==========================================================================
-   HERO / PERFIL CV (AMPLIADO NO TOPO)
-   ========================================================================== */
-.hero-cv {
-    position: relative;
-    min-height: 80vh;
-    padding: 120px 4% 60px 4%;
-    display: flex;
-    align-items: center;
-    background: radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.15) 0%, transparent 50%),
-                linear-gradient(180deg, #181818 0%, var(--bg-dark) 100%);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 40px;
-    align-items: center;
-    z-index: 2;
-}
-
-.badge-accent {
-    display: inline-block;
-    background: rgba(229, 9, 20, 0.2);
-    color: var(--red-accent);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.hero-bio h1 {
-    font-size: 3.2rem;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.hero-description {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 650px;
-    margin-bottom: 30px;
-}
-
-/* Estatísticas Rápidas */
-.cv-highlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 35px;
-}
-
-.cv-stat {
-    background: var(--bg-card);
-    padding: 10px 16px;
-    border-radius: 8px;
-    border: 1px solid #2c2c2c;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.stat-num {
-    font-size: 1.2rem;
-}
-
-.stat-text {
-    font-size: 0.88rem;
-    font-weight: 600;
-}
-
-/* Botões */
-.hero-actions {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 26px;
-    border-radius: 6px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-primary {
-    background-color: var(--red-accent);
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background-color: var(--red-hover);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.btn-sm {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-}
-
-/* Cartão do Avatar */
-.hero-avatar-card {
-    display: flex;
-    justify-content: center;
-}
-
-.avatar-wrapper {
-    width: 280px;
-    height: 350px;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 2px solid #333;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-}
-
-.avatar-wrapper img {
+/* Fundo escurecido */
+.sidebar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* ==========================================================================
-   CATÁLOGO DE CONTEÚDOS (CARROSSÉIS ESTILO STREAMING)
-   ========================================================================== */
-.catalog-container {
-    padding: 40px 4%;
+.project-sidebar.active .sidebar-overlay {
+    opacity: 1;
 }
 
-.stream-row {
-    margin-bottom: 50px;
+/* Caixa do Painel Contextual em Desktop */
+.sidebar-content {
+    position: absolute;
+    width: 380px;
+    max-height: 85vh;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    z-index: 2001;
 }
 
-.row-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-    color: #e5e5e5;
+.project-sidebar.active .sidebar-content {
+    opacity: 1;
+    transform: scale(1);
 }
 
-.netflix-slider {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.netflix-card {
-    background: var(--bg-card);
-    border-radius: 8px;
-    overflow: hidden;
+/* Botão de Fechar */
+.sidebar-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
-    border: 1px solid #282828;
-    position: relative;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
 }
 
-.netflix-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
-    background: var(--bg-card-hover);
-    border-color: #444;
+.sidebar-close-btn:hover {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
 }
 
-.netflix-card-cover {
+.sidebar-header-img img {
     width: 100%;
-    height: 160px;
+    height: 200px;
     object-fit: cover;
     display: block;
 }
 
-.netflix-card-body {
-    padding: 15px;
-}
-
-.netflix-badge {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--red-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.netflix-card-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 6px 0 4px 0;
-    line-height: 1.3;
-}
-
-.netflix-card-sub {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-/* ==========================================================================
-   JANELA MODAL
-   ========================================================================== */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+.sidebar-body {
     padding: 20px;
 }
 
-.modal.active {
-    display: flex;
-}
-
-.modal-content {
-    background: #181818;
-    width: 100%;
-    max-width: 650px;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
-    border: 1px solid #333;
-    animation: modalFadeIn 0.25s ease-out;
-}
-
-@keyframes modalFadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 10;
-    width: 36px;
-    height: 36px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-header-img {
-    position: relative;
-    height: 240px;
-}
-
-.modal-header-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.modal-img-gradient {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(180deg, transparent 0%, #181818 100%);
-}
-
-.modal-body {
-    padding: 25px;
-}
-
-.modal-date-text {
-    color: var(--text-muted);
+.side-meta {
+    background: #222;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 12px 0;
     font-size: 0.85rem;
-    margin-bottom: 12px;
 }
 
-.modal-desc-text {
-    font-size: 0.95rem;
+.side-meta p {
+    margin: 3px 0;
+    color: #ccc;
+}
+
+.side-description-text {
+    line-height: 1.5;
     color: #ddd;
-    line-height: 1.6;
+    font-size: 0.92rem;
 }
 
-/* ==========================================================================
-   RODAPÉ
-   ========================================================================== */
-.stream-footer {
-    text-align: center;
-    padding: 30px 4%;
-    color: #666;
-    font-size: 0.85rem;
-    border-top: 1px solid #222;
-    margin-top: 40px;
+.side-actions {
+    margin-top: 20px;
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE (MOBILE)
-   ========================================================================== */
-@media (max-width: 900px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* RESPONSIVIDADE PARA SMARTPHONES (MODO BOTTOM-SHEET) */
+@media (max-width: 768px) {
+    .sidebar-content {
+        position: absolute !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-height: 80vh !important;
+        border-radius: 16px 16px 0 0 !important;
+        border-bottom: none !important;
+        transform: translateY(100%) !important;
     }
 
-    .hero-description {
-        margin: 0 auto 25px auto;
-    }
-
-    .cv-highlights {
-        justify-content: center;
-    }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    .avatar-wrapper {
-        width: 220px;
-        height: 280px;
-    }
-
-    .hero-bio h1 {
-        font-size: 2.3rem;
+    .project-sidebar.active .sidebar-content {
+        transform: translateY(0) !important;
     }
 }
