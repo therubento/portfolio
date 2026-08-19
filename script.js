@@ -43,7 +43,7 @@ const projetos = [
             { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
         ]
     },
-     {
+    {
         id: 4,
         destaque: true,
         hashtag: "#televisao",
@@ -153,6 +153,27 @@ const projetos = [
     }
 ];
 
+// --- FUNÇÕES GLOBAIS (SUPORTE AO HTML) ---
+
+// Alternar gaveta de média (experiência/formação)
+window.toggleMediaDrawer = function(btn) {
+    btn.classList.toggle('open');
+    const drawer = btn.nextElementSibling;
+    if (drawer && drawer.classList.contains('media-drawer')) {
+        drawer.style.display = drawer.style.display === 'none' || drawer.style.display === '' ? 'block' : 'none';
+    }
+};
+
+// Alternar expansão dos cartões grandes de destaque (se usados fora do carrossel)
+window.togglePushCard = function(element) {
+    const isExpanded = element.classList.contains('expanded');
+    document.querySelectorAll('.destaque-card-full').forEach(card => card.classList.remove('expanded'));
+    if (!isExpanded) {
+        element.classList.add('expanded');
+    }
+};
+
+
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. ANIMAÇÕES NO SCROLL (SCROLL REVEAL)
@@ -168,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     window.addEventListener("scroll", handleScrollReveal);
-    handleScrollReveal(); // Trigger inicial
+    handleScrollReveal();
 
     // 2. SCROLL SUAVE NO LOGÓTIPO
     const brandLogo = document.getElementById("brand-logo");
@@ -179,7 +200,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. POPOVER FLUTUANTE
+    // 3. RENDERIZAÇÃO DAS BARRAS DE NÍVEL DE SOFTWARE (0 a 5)
+    document.querySelectorAll('.level-bar').forEach(bar => {
+        const level = parseInt(bar.getAttribute('data-level')) || 0;
+        bar.innerHTML = '';
+        for (let i = 1; i <= 5; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('level-dot');
+            if (i <= level) dot.classList.add('active');
+            bar.appendChild(dot);
+        }
+    });
+
+    // 4. POPOVER FLUTUANTE
     const popover = document.getElementById("inline-popover");
     let activeCard = null;
 
@@ -194,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 4. RENDERING DOS CARTÕES FECHADOS
+    // 5. RENDERING DOS CARTÕES FECHADOS
     const containerDestaque = document.getElementById("slider-destaque");
     const containerOutros = document.getElementById("slider-outros");
 
@@ -232,11 +265,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setupCarouselNavigation("slider-outros", "btn-left-outros", "btn-right-outros");
     }
 
-    // 5. ABERTURA DO POPOVER
+    // 6. ABERTURA DO POPOVER
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
-        if (activeCard === card && popover.classList.contains("visible")) {
+        if (activeCard === card && popover && popover.classList.contains("visible")) {
             closePopover();
             return;
         }
@@ -263,57 +296,62 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
 
-        popover.innerHTML = popoverHTML;
+        if (popover) {
+            popover.innerHTML = popoverHTML;
 
-        document.getElementById("popover-close").addEventListener("click", (e) => {
-            e.stopPropagation();
-            closePopover();
-        });
-
-        const actionsContainer = document.getElementById("pop-actions");
-        if (proj.links && proj.links.length > 0) {
-            proj.links.forEach(l => {
-                const btn = document.createElement("a");
-                btn.href = l.url;
-                btn.target = "_blank";
-                btn.className = "pop-action-btn";
-                btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
-                actionsContainer.appendChild(btn);
-            });
-        } else {
-            actionsContainer.style.display = "none";
-        }
-
-        if (window.lucide && typeof window.lucide.createIcons === "function") {
-            window.lucide.createIcons();
-        }
-
-        popover.style.display = "block";
-        popover.classList.add("visible");
-
-        if (window.innerWidth > 850) {
-            const cardRect = card.getBoundingClientRect();
-            const gap = 12;
-            const popoverWidth = 460;
-            const windowWidth = window.innerWidth;
-
-            const spaceRight = windowWidth - cardRect.right;
-            let leftPos;
-
-            if (spaceRight >= popoverWidth + gap) {
-                leftPos = cardRect.right + gap + window.scrollX;
-            } else {
-                leftPos = cardRect.left - popoverWidth - gap + window.scrollX;
+            const closeBtn = document.getElementById("popover-close");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    closePopover();
+                });
             }
 
-            const topPos = cardRect.top + window.scrollY;
+            const actionsContainer = document.getElementById("pop-actions");
+            if (proj.links && proj.links.length > 0 && actionsContainer) {
+                proj.links.forEach(l => {
+                    const btn = document.createElement("a");
+                    btn.href = l.url;
+                    btn.target = "_blank";
+                    btn.className = "pop-action-btn";
+                    btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
+                    actionsContainer.appendChild(btn);
+                });
+            } else if (actionsContainer) {
+                actionsContainer.style.display = "none";
+            }
 
-            popover.style.top = `${topPos}px`;
-            popover.style.left = `${leftPos}px`;
+            if (window.lucide && typeof window.lucide.createIcons === "function") {
+                window.lucide.createIcons();
+            }
+
+            popover.style.display = "block";
+            popover.classList.add("visible");
+
+            if (window.innerWidth > 850) {
+                const cardRect = card.getBoundingClientRect();
+                const gap = 12;
+                const popoverWidth = 460;
+                const windowWidth = window.innerWidth;
+
+                const spaceRight = windowWidth - cardRect.right;
+                let leftPos;
+
+                if (spaceRight >= popoverWidth + gap) {
+                    leftPos = cardRect.right + gap + window.scrollX;
+                } else {
+                    leftPos = cardRect.left - popoverWidth - gap + window.scrollX;
+                }
+
+                const topPos = cardRect.top + window.scrollY;
+
+                popover.style.top = `${topPos}px`;
+                popover.style.left = `${leftPos}px`;
+            }
         }
     }
 
-    // 6. NAVEGAÇÃO DOS CARROSSEIS
+    // 7. NAVEGAÇÃO DOS CARROSSEIS
     function setupCarouselNavigation(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
         const btnLeft = document.getElementById(btnLeftId);
@@ -356,7 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderCards();
 
-    // 7. MENU HAMBÚRGUER MOBILE
+    // 8. MENU HAMBÚRGUER MOBILE
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     if (hamburger && navLinks) {
@@ -365,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 8. FECHAR POPOVER FORA DO ELEMENTO
+    // 9. FECHAR POPOVER FORA DO ELEMENTO
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
