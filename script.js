@@ -155,16 +155,15 @@ const projetos = [
 
 // --- FUNÇÕES GLOBAIS (SUPORTE AO HTML) ---
 
-// Alternar gaveta de média (experiência/formação)
 window.toggleMediaDrawer = function(btn) {
     btn.classList.toggle('open');
     const drawer = btn.nextElementSibling;
     if (drawer && drawer.classList.contains('media-drawer')) {
-        drawer.style.display = drawer.style.display === 'none' || drawer.style.display === '' ? 'block' : 'none';
+        const isHidden = drawer.style.display === 'none' || drawer.style.display === '';
+        drawer.style.display = isHidden ? 'block' : 'none';
     }
 };
 
-// Alternar expansão dos cartões grandes de destaque (se usados fora do carrossel)
 window.togglePushCard = function(element) {
     const isExpanded = element.classList.contains('expanded');
     document.querySelectorAll('.destaque-card-full').forEach(card => card.classList.remove('expanded'));
@@ -176,40 +175,50 @@ window.togglePushCard = function(element) {
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. ANIMAÇÕES NO SCROLL (SCROLL REVEAL)
+    // 1. ANIMAÇÕES NO SCROLL (Otimizado com requestAnimationFrame)
     const reveals = document.querySelectorAll(".reveal");
+    let isScrolling = false;
+
     function handleScrollReveal() {
         const windowHeight = window.innerHeight;
+        const elementVisible = 80;
+        
         reveals.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
-            const elementVisible = 80;
             if (elementTop < windowHeight - elementVisible) {
                 el.classList.add("active");
             }
         });
+        isScrolling = false;
     }
-    window.addEventListener("scroll", handleScrollReveal);
-    handleScrollReveal();
+
+    window.addEventListener("scroll", () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(handleScrollReveal);
+            isScrolling = true;
+        }
+    });
+    handleScrollReveal(); // Check on load
 
     // 2. SCROLL SUAVE NO LOGÓTIPO
     const brandLogo = document.getElementById("brand-logo");
-    if (brandLogo) {
-        brandLogo.addEventListener("click", (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    }
+    brandLogo?.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-    // 3. RENDERIZAÇÃO DAS BARRAS DE NÍVEL DE SOFTWARE (0 a 5)
+    // 3. RENDERIZAÇÃO DAS BARRAS DE NÍVEL (Uso de DocumentFragment para otimizar DOM)
     document.querySelectorAll('.level-bar').forEach(bar => {
-        const level = parseInt(bar.getAttribute('data-level')) || 0;
-        bar.innerHTML = '';
+        const level = parseInt(bar.getAttribute('data-level'), 10) || 0;
+        bar.innerHTML = ''; 
+        
+        const fragment = document.createDocumentFragment();
         for (let i = 1; i <= 5; i++) {
             const dot = document.createElement('span');
-            dot.classList.add('level-dot');
-            if (i <= level) dot.classList.add('active');
-            bar.appendChild(dot);
+            dot.className = `level-dot ${i <= level ? 'active' : ''}`.trim();
+            fragment.appendChild(dot);
         }
+        bar.appendChild(fragment);
     });
 
     // 4. POPOVER FLUTUANTE
@@ -219,7 +228,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function closePopover() {
         if (popover) {
             popover.classList.remove("visible");
-            popover.style.display = "none";
+            // Dá tempo para a transição CSS (se existir) atuar antes de esconder
+            setTimeout(() => { if (!popover.classList.contains("visible")) popover.style.display = "none"; }, 200);
         }
         if (activeCard) {
             activeCard.classList.remove("active-card");
@@ -232,8 +242,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerOutros = document.getElementById("slider-outros");
 
     function renderCards() {
-        if (containerDestaque) containerDestaque.innerHTML = "";
-        if (containerOutros) containerOutros.innerHTML = "";
+        const fragmentDestaque = document.createDocumentFragment();
+        const fragmentOutros = document.createDocumentFragment();
 
         projetos.forEach(proj => {
             const card = document.createElement("div");
@@ -241,10 +251,10 @@ document.addEventListener("DOMContentLoaded", () => {
             card.setAttribute("data-id", proj.id);
 
             card.innerHTML = `
-                <img src="${proj.capa}" alt="${proj.titulo}" class="netflix-card-cover">
+                <img src="${proj.capa}" alt="${proj.titulo}" class="netflix-card-cover" loading="lazy">
                 <div class="netflix-card-body">
                     <div>
-                        <span class="card-category">${proj.hashtag || ''}</span>
+                        ${proj.hashtag ? `<span class="card-category">${proj.hashtag}</span>` : ''}
                         <h4 class="card-title">${proj.titulo || ''}</h4>
                         ${proj.local ? `<p class="card-company">${proj.local}</p>` : ''}
                     </div>
@@ -254,18 +264,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
             card.addEventListener("click", (e) => openPopover(e, proj, card));
 
-            if (proj.destaque && containerDestaque) {
-                containerDestaque.appendChild(card);
-            } else if (containerOutros) {
-                containerOutros.appendChild(card);
+            if (proj.destaque) {
+                fragmentDestaque.appendChild(card);
+            } else {
+                fragmentOutros.appendChild(card);
             }
         });
+
+        if (containerDestaque) containerDestaque.appendChild(fragmentDestaque);
+        if (containerOutros) containerOutros.appendChild(fragmentOutros);
 
         setupCarouselNavigation("slider-destaque", "btn-left-destaque", "btn-right-destaque");
         setupCarouselNavigation("slider-outros", "btn-left-outros", "btn-right-outros");
     }
 
-    // 6. ABERTURA DO POPOVER
+    // 6. ABERTURA E CÁLCULO DO POPOVER
     function openPopover(event, proj, card) {
         event.stopPropagation();
 
@@ -278,12 +291,13 @@ document.addEventListener("DOMContentLoaded", () => {
         activeCard = card;
         activeCard.classList.add("active-card");
 
-        let metaHTML = '';
-        if (proj.mesAno) metaHTML += `<p><strong>Mês / Ano:</strong> ${proj.mesAno}</p>`;
-        if (proj.cargo) metaHTML += `<p><strong>Cargo / Função:</strong> ${proj.cargo}</p>`;
-        if (proj.local) metaHTML += `<p><strong>Local / Organização:</strong> ${proj.local}</p>`;
+        const metaHTML = [
+            proj.mesAno ? `<p><strong>Mês / Ano:</strong> ${proj.mesAno}</p>` : '',
+            proj.cargo ? `<p><strong>Cargo / Função:</strong> ${proj.cargo}</p>` : '',
+            proj.local ? `<p><strong>Local / Organização:</strong> ${proj.local}</p>` : ''
+        ].join('');
 
-        let popoverHTML = `
+        const popoverHTML = `
             <button id="popover-close" class="popover-close-btn" aria-label="Fechar">&times;</button>
             <div class="popover-inner">
                 ${proj.hashtag ? `<span class="pop-hashtag-small">${proj.hashtag}</span>` : ''}
@@ -297,26 +311,27 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         if (popover) {
+            popover.style.display = "block";
             popover.innerHTML = popoverHTML;
 
-            const closeBtn = document.getElementById("popover-close");
-            if (closeBtn) {
-                closeBtn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    closePopover();
-                });
-            }
+            document.getElementById("popover-close")?.addEventListener("click", (e) => {
+                e.stopPropagation();
+                closePopover();
+            });
 
             const actionsContainer = document.getElementById("pop-actions");
             if (proj.links && proj.links.length > 0 && actionsContainer) {
+                const linksFragment = document.createDocumentFragment();
                 proj.links.forEach(l => {
                     const btn = document.createElement("a");
                     btn.href = l.url;
                     btn.target = "_blank";
+                    btn.rel = "noopener noreferrer"; // Segurança para links externos
                     btn.className = "pop-action-btn";
                     btn.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
-                    actionsContainer.appendChild(btn);
+                    linksFragment.appendChild(btn);
                 });
+                actionsContainer.appendChild(linksFragment);
             } else if (actionsContainer) {
                 actionsContainer.style.display = "none";
             }
@@ -325,63 +340,53 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.lucide.createIcons();
             }
 
-            popover.style.display = "block";
-            popover.classList.add("visible");
-
+            // Lógica ajustada de Posicionamento
             if (window.innerWidth > 850) {
                 const cardRect = card.getBoundingClientRect();
                 const gap = 12;
                 const popoverWidth = 460;
-                const windowWidth = window.innerWidth;
+                
+                const spaceRight = window.innerWidth - cardRect.right;
+                const leftPos = spaceRight >= (popoverWidth + gap) 
+                    ? cardRect.right + gap + window.scrollX 
+                    : cardRect.left - popoverWidth - gap + window.scrollX;
 
-                const spaceRight = windowWidth - cardRect.right;
-                let leftPos;
-
-                if (spaceRight >= popoverWidth + gap) {
-                    leftPos = cardRect.right + gap + window.scrollX;
-                } else {
-                    leftPos = cardRect.left - popoverWidth - gap + window.scrollX;
-                }
-
-                const topPos = cardRect.top + window.scrollY;
-
-                popover.style.top = `${topPos}px`;
+                popover.style.top = `${cardRect.top + window.scrollY}px`;
                 popover.style.left = `${leftPos}px`;
+                popover.style.bottom = "auto";
+            } else {
+                // Limpa estilos inline em mobile para não interferir com Media Queries no CSS
+                popover.style.top = "";
+                popover.style.left = "";
             }
+            
+            // Microtask para aplicar a animação de entrada com CSS
+            setTimeout(() => popover.classList.add("visible"), 10);
         }
     }
 
-    // 7. NAVEGAÇÃO DOS CARROSSEIS
+    // 7. NAVEGAÇÃO DOS CARROSSEIS (Lógica de botões mais limpa)
     function setupCarouselNavigation(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
         const btnLeft = document.getElementById(btnLeftId);
         const btnRight = document.getElementById(btnRightId);
 
-        if (!slider || !btnLeft || !btnRight) return;
+        if (!slider) return;
 
         function updateButtons() {
             const scrollLeft = slider.scrollLeft;
             const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
-            if (scrollLeft > 10) {
-                btnLeft.classList.add("visible");
-            } else {
-                btnLeft.classList.remove("visible");
-            }
-
-            if (maxScrollLeft - scrollLeft > 10) {
-                btnRight.classList.add("visible");
-            } else {
-                btnRight.classList.remove("visible");
-            }
+            if (btnLeft) btnLeft.classList.toggle("visible", scrollLeft > 10);
+            if (btnRight) btnRight.classList.toggle("visible", (maxScrollLeft - scrollLeft) > 10);
         }
 
-        btnLeft.addEventListener("click", () => {
+        btnLeft?.addEventListener("click", () => {
             closePopover();
             slider.scrollBy({ left: -300, behavior: "smooth" });
         });
 
-        btnRight.addEventListener("click", () => {
+        btnRight?.addEventListener("click", () => {
             closePopover();
             slider.scrollBy({ left: 300, behavior: "smooth" });
         });
@@ -389,7 +394,8 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.addEventListener("scroll", updateButtons);
         window.addEventListener("resize", updateButtons);
         
-        setTimeout(updateButtons, 100);
+        // Garante a verificação correta logo após o paint inicial do browser
+        setTimeout(updateButtons, 200);
     }
 
     renderCards();
@@ -397,18 +403,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // 8. MENU HAMBÚRGUER MOBILE
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
-    if (hamburger && navLinks) {
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-    }
+    hamburger?.addEventListener("click", () => {
+        navLinks?.classList.toggle("active");
+    });
 
-    // 9. FECHAR POPOVER FORA DO ELEMENTO
+    // 9. EVENTOS DE JANELA E CLIQUES EXTERNOS
     document.addEventListener("click", (e) => {
         if (popover && popover.classList.contains("visible") && !popover.contains(e.target)) {
             closePopover();
         }
     });
 
-    window.addEventListener("resize", closePopover);
+    window.addEventListener("resize", () => {
+        closePopover();
+        // Reseta o posicionamento se a tela for redimensionada entre Desktop/Mobile
+        if (popover) {
+            popover.style.top = "";
+            popover.style.left = "";
+        }
+    });
 });
