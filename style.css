@@ -406,3 +406,105 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
     .carousel-btn { display: none !important; }
     .netflix-slider { scrollbar-width: thin; }
 }
+
+/* --- BARRAS DE NÍVEL DE SOFTWARE (0 a 5) --- */
+.software-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.82rem;
+    color: #d1d5db;
+}
+
+.level-bar {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.level-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.level-dot.active {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    box-shadow: 0 0 6px var(--primary-glow);
+}
+
+/* --- SETA E GAVETA DE MÉDIA NAS TIMELINES --- */
+.toggle-media-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.2s ease;
+    border-radius: 50%;
+}
+
+.toggle-media-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.toggle-media-btn.open {
+    transform: rotate(180deg);
+    color: var(--primary-red);
+}
+
+.media-drawer {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CARTÕES EMPURRÁVEIS EM GRELHA (SE USADOS FORA DO SLIDER) --- */
+.destaque-card-full {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.destaque-card-full:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.destaque-card-full.expanded {
+    grid-column: span 2;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.card-expanded-content {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.destaque-card-full.expanded .card-expanded-content {
+    display: block;
+}
