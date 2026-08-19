@@ -6,7 +6,7 @@ const projetos = [
         destaque: true,
         hashtag: "#digital #radio",
         titulo: "Confissões de Um Universitário",
-        mesAno: "Março 2024 - Atualidade",
+        mesAno: "Março 2026 - Atualidade",
         cargo: "Realizador / Pós-Produção",
         local: "Rádio Universitária do Algarve / Universidade do Algarve",
         capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
