@@ -16,8 +16,8 @@ const projetos = [
         ]
     },
     {
-        id: 3,
-        destaque: true,
+        id: 2,
+        destaque: false,
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
         mesAno: "Março 2023",
@@ -45,7 +45,7 @@ const projetos = [
     },
     {
         id: 4,
-        destaque: true,
+        destaque: false,
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
         mesAno: "Novembro 2024",
