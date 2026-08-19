@@ -508,3 +508,98 @@ h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .destaque-card-full.expanded .card-expanded-content {
     display: block;
 }
+
+/* --- MENU DE NAVEGAÇÃO COMPACTO E ELEGANTE --- */
+.navbar {
+    padding: 12px 6%;
+    background: rgba(11, 12, 16, 0.95);
+}
+.nav-links {
+    gap: 12px;
+}
+.nav-links a {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-main);
+}
+.nav-links a:hover {
+    background: rgba(255, 46, 56, 0.15);
+    border-color: var(--primary-red);
+    color: #fff;
+}
+
+/* --- FOTO DE PERFIL AMPLIADA --- */
+.hero-card-press {
+    flex: 0 0 320px; /* Aumentado de 240px para 320px */
+}
+.hero-img {
+    height: 420px; /* Aumentado para manter proporção */
+}
+
+/* --- PROJETOS EM DESTAQUE (2 CARTÕES HORIZONTAIS LADO A LADO) --- */
+.grid-destaques-duo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.destaque-card-horizontal {
+    display: flex;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 220px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+.destaque-card-horizontal:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-glow);
+}
+.destaque-card-img {
+    width: 42%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.destaque-card-body {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --- GALERIA DE FOTOS EM LINHA NAS TIMELINES --- */
+.timeline-photos-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding-bottom: 6px;
+}
+.timeline-photo-item {
+    width: 110px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+.timeline-photo-item:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-red);
+}
+
+@media (max-width: 900px) {
+    .grid-destaques-duo { grid-template-columns: 1fr; }
+    .destaque-card-horizontal { height: auto; flex-direction: column; }
+    .destaque-card-img { width: 100%; height: 180px; }
+    .hero-card-press { flex: 0 0 auto; width: 100%; max-width: 280px; }
+}
