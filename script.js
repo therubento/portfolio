@@ -4,19 +4,19 @@ const projetos = [
     {
         id: 1,
         destaque: true,
-        hashtag: "#televisao",
-        titulo: "Medalha de Ouro — Skills Portugal 2024",
-        mesAno: "Novembro 2024",
-        cargo: "Jornalista / Repórter TV",
-        local: "Santa Maria da Feira",
-        capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV, realizado sob condições de elevada exigência técnica e prazos de produção reais.",
+        hashtag: "#digital #radio",
+        titulo: "Confissões de Um Universitário",
+        mesAno: "Março 2024 - Atualidade",
+        cargo: "Realizador / Pós-Produção",
+        local: "Rádio Universitária do Algarve / Universidade do Algarve",
+        capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
+        resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
         links: [
-            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+            { texto: "Ver Episódios no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "video" }
         ]
     },
     {
-        id: 2,
+        id: 3,
         destaque: true,
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
@@ -30,21 +30,7 @@ const projetos = [
         ]
     },
     {
-        id: 3,
-        destaque: true,
-        hashtag: "#televisao",
-        titulo: "E agora, Algarve?",
-        mesAno: "Março — Julho 2020",
-        cargo: "Jornalista (Estagiário)",
-        local: "RTP Algarve — Faro",
-        capa: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=600&q=80",
-        resumo: "Grande Reportagem televisiva concebida e editada durante o estágio na RTP Algarve (classificado com 18 valores), abordando as dinâmicas sociais e económicas da região.",
-        links: [
-            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
-        ]
-    },
-    {
-        id: 4,
+        id: 2,
         destaque: true,
         hashtag: "#documentario",
         titulo: "30 Anos de CC",
@@ -55,6 +41,20 @@ const projetos = [
         resumo: "Documentário comemorativo das três décadas do curso de Ciências da Comunicação da Universidade do Algarve, integrando testemunhos históricos e arquivo audiovisual.",
         links: [
             { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
+        ]
+    },
+     {
+        id: 4,
+        destaque: true,
+        hashtag: "#televisao",
+        titulo: "Medalha de Ouro — Skills Portugal 2024",
+        mesAno: "Novembro 2024",
+        cargo: "Jornalista / Repórter TV",
+        local: "Santa Maria da Feira",
+        capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
+        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV, realizado sob condições de elevada exigência técnica e prazos de produção reais.",
+        links: [
+            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
         ]
     },
 
