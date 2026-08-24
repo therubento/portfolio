@@ -13,9 +13,11 @@ const projetos = [
         resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
         links: [
             { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" }
+            { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
+
         ],
         media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Gravação em Estúdio" }
+            { tipo: "", url: "", titulo: "" }
         ]
     },
     {
@@ -30,15 +32,15 @@ const projetos = [
         capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
         resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
         links: [
-            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
+            { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
         ],
         media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
+            { tipo: "foto", url: "", titulo: "Rodagem da Entrevista" }
         ]
     },
     {
         id: 4,
-        destaque: true,
+        destaque: false,
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
@@ -162,7 +164,7 @@ const projetos = [
     },
     {
         id: 11,
-        destaque: false,
+        destaque: true,
         categoria: "OUTROS",
         hashtag: "#imprensa",
         titulo: "Redação no 5º Congresso dos Jornalistas",
