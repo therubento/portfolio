@@ -12,12 +12,11 @@ const projetos = [
         capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
         resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
         links: [
-            { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" }
+            { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" },
             { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
-
         ],
         media: [
-            { tipo: "", url: "", titulo: "" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Gravação em Estúdio" }
         ]
     },
     {
@@ -35,12 +34,12 @@ const projetos = [
             { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
         ],
         media: [
-            { tipo: "foto", url: "", titulo: "Rodagem da Entrevista" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
         ]
     },
     {
         id: 4,
-        destaque: false,
+        destaque: true,
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
@@ -164,7 +163,7 @@ const projetos = [
     },
     {
         id: 11,
-        destaque: true,
+        destaque: false,
         categoria: "OUTROS",
         hashtag: "#imprensa",
         titulo: "Redação no 5º Congresso dos Jornalistas",
@@ -211,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 4. CONSTRUÇÃO E NAVEGAÇÃO DOS DESTAQUES (3 CARTÕES)
+    // 4. CONSTRUÇÃO E NAVEGAÇÃO DOS DESTAQUES (3 CARTÕES COM SETAS)
     const containerDestaque = document.getElementById("grid-destaques-trio");
     const drawerDestaque = document.getElementById("drawer-destaque");
     const itensDestaque = projetos.filter(p => p.destaque).slice(0, 3);
@@ -228,7 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="destaque-prime-overlay">
                     <span class="card-category">${proj.hashtag}</span>
                     <h3 class="card-title">${proj.titulo}</h3>
-                    <p class="card-date">${proj.mesAno}</p>
                 </div>
                 <button class="destaque-arrow-btn" title="Expandir"><i data-lucide="chevron-down"></i></button>
             `;
@@ -237,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 5. CARROSSEIS POR CATEGORIA (16:9)
+    // 5. CARROSSEIS POR CATEGORIA (PROPORÇÃO 16:9 COM FUNDO TOTAL)
     const categoriasMap = {
         "JORNALISMO & MEDIA": { slider: "slider-jornalismo", drawer: "drawer-jornalismo", btnL: "btn-left-jornalismo", btnR: "btn-right-jornalismo" },
         "AUDIOVISUAL": { slider: "slider-audiovisual", drawer: "drawer-audiovisual", btnL: "btn-left-audiovisual", btnR: "btn-right-audiovisual" },
@@ -274,22 +272,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. ABA EXPANSÍVEL (NETFLIX/PRIME VIDEO DRAWER)
+    // 6. ABA EXPANSÍVEL (NETFLIX/PRIME VIDEO DRAWER - CENTRADO E TOTAL LARGURA)
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
-        // Guardar a posição de scroll para restaurar ao fechar
         scrollStateBeforeDrawer = window.scrollY;
 
-        // Fechar todos os drawers abertos
         document.querySelectorAll('.netflix-drawer').forEach(d => {
             d.classList.remove('active');
             d.innerHTML = '';
         });
 
-        // Marcar cartão ativo
         document.querySelectorAll('.destaque-card-prime, .netflix-card-16-9').forEach(c => c.classList.remove('active-card'));
         triggerElement.classList.add('active-card');
 
-        // Construir HTML dos links
         let linksHTML = "";
         if (proj.links && proj.links.length > 0) {
             linksHTML = proj.links.map(l => `
@@ -299,7 +293,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `).join('');
         }
 
-        // Construir HTML da galeria de mini-cartões de media
         let mediaHTML = "";
         if (proj.media && proj.media.length > 0) {
             mediaHTML = `
@@ -329,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="card-category">${proj.hashtag}</span>
                         <h2>${proj.titulo}</h2>
                         <div class="drawer-meta-info">
-                            <p><strong>Mês / Ano:</strong> ${proj.mesAno}</p>
+                            <p><strong>Período:</strong> ${proj.mesAno}</p>
                             <p><strong>Cargo:</strong> ${proj.cargo}</p>
                             <p><strong>Local:</strong> ${proj.local}</p>
                         </div>
@@ -345,12 +338,10 @@ document.addEventListener("DOMContentLoaded", () => {
         targetDrawer.classList.add('active');
         if (window.lucide) window.lucide.createIcons();
 
-        // Scroll suave e centragem na página
         setTimeout(() => {
             targetDrawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 100);
 
-        // Evento de fechar
         targetDrawer.querySelector('.drawer-close-btn').addEventListener('click', () => {
             closeNetflixDrawer(targetDrawer, triggerElement);
         });
@@ -360,8 +351,6 @@ document.addEventListener("DOMContentLoaded", () => {
         drawer.classList.remove('active');
         drawer.innerHTML = '';
         if (triggerElement) triggerElement.classList.remove('active-card');
-        
-        // Voltar à posição de scroll em que estava antes de abrir
         window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
     }
 
@@ -388,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO (MINI CARTÕES & DRAWERS)
+    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO (MINI-CARTÕES E DRAWERS)
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
@@ -430,6 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="drawer-flex-container">
                                 <div class="drawer-left-media">
                                     <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img">
+                                    <div class="drawer-img-gradient"></div>
                                 </div>
                                 <div class="drawer-right-details">
                                     <span class="card-category">${proj.hashtag}</span>
@@ -457,7 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 9. SETAS CONDICIONAIS PARA ORGANIZAÇÕES E VOLUNTARIADO
+    // 9. SETAS DINÂMICAS PARA ORGANIZAÇÕES E VOLUNTARIADO (APENAS SE HOUVER LINK)
     function setupConditionalArrows() {
         document.querySelectorAll('.card-item-with-logo[data-link]').forEach(item => {
             const linkUrl = item.getAttribute('data-link');
