@@ -13,6 +13,8 @@ const projetos = [
         resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
         links: [
             { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "headphones" }
+            { texto: "Ver no Youtube", url: "https://www.youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn", icone: "video" }
+
         ],
         galeria: [
             "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY"
