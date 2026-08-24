@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rúben Bento — RB. STUDIO</title>
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,18 +14,18 @@
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR SEM MENU - APENAS LOGO E ÍCONES DE CONTACTO -->
+    <!-- BARRA SUPERIOR (NAVBAR SEM MENU) -->
     <nav class="navbar">
         <a href="#perfil" class="logo-link" id="brand-logo">
             <div class="logo">
                 RB<span class="dot">.</span><span class="studio">STUDIO</span>
             </div>
         </a>
-        <div class="header-contacts-icons">
-            <a href="mailto:rubenbento243@gmail.com" class="icon-contact-link" title="Enviar E-mail">
+        <div class="nav-contacts-right">
+            <a href="mailto:rubenbento243@gmail.com" class="nav-contact-icon" title="Enviar E-mail">
                 <i data-lucide="mail"></i>
             </a>
-            <a href="tel:+351924245184" class="icon-contact-link" title="Ligar">
+            <a href="tel:+351924245184" class="nav-contact-icon" title="Ligar">
                 <i data-lucide="phone"></i>
             </a>
         </div>
@@ -58,6 +58,7 @@
                     <strong>A sua experiência cruza a reportagem, produção e edição de vídeo, escrita jornalística, comunicação digital, rádio e produção de conteúdos, procurando sempre aproximar a informação das pessoas através de narrativas rigorosas, criativas e relevantes.</strong>
                 </p>
 
+                <!-- CONTACTOS & CARTEIRA PROFISSIONAL -->
                 <div class="contactos-container">
                     <div class="contactos-grid">
                         <a href="mailto:rubenbento243@gmail.com" class="contacto-chip">
@@ -78,15 +79,16 @@
                     </div>
                 </div>
 
+                <!-- REDES SOCIAIS -->
                 <div class="hero-actions">
                     <a href="https://instagram.com" target="_blank" class="btn-hero outline" title="Instagram">
-                        <i data-lucide="photography"></i> Instagram
+                        <i data-lucide="instagram"></i> Instagram
                     </a>
                     <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline" title="LinkedIn">
-                        <i data-lucide="wallet"></i> LinkedIn
+                        <i data-lucide="linkedin"></i> LinkedIn
                     </a>
                     <a href="https://youtube.com" target="_blank" class="btn-hero outline" title="YouTube">
-                        <i data-lucide="video"></i> YouTube
+                        <i data-lucide="youtube"></i> YouTube
                     </a>
                     <a href="https://behance.net/rmdaqb243" target="_blank" class="btn-hero outline" title="Behance">
                         <i data-lucide="palette"></i> Behance
@@ -103,347 +105,95 @@
     <section id="catalogo" class="section-catalogo section-padded reveal">
         <h2 class="section-title centered-title">Conteúdos</h2>
 
-        <!-- EM DESTAQUE (3 CARTÕES COM ESTILO NETFLIX / PRIME VIDEO) -->
-        <div class="row-container margin-bottom-md">
+        <!-- EM DESTAQUE (3 CARTÕES) -->
+        <div class="row-container margin-bottom-sm">
             <h3 class="row-title"><i data-lucide="sparkles"></i> Em Destaque</h3>
-            <div id="grid-destaques" class="grid-destaques-trio">
-                <!-- Inserido Dinamicamente via JavaScript -->
+            <div class="carousel-wrapper">
+                <button class="carousel-btn btn-left" id="btn-left-destaque" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                <div id="slider-destaque" class="netflix-slider"></div>
+                <button class="carousel-btn btn-right" id="btn-right-destaque" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
             </div>
-            <div id="destaque-expand-slot" class="netflix-expand-drawer"></div>
+            <div id="drawer-destaque" class="netflix-drawer"></div>
         </div>
 
-        <!-- CONTEÚDOS / PROJETOS POR CATEGORIAS (16:9) -->
+        <!-- CONTEÚDOS / PROJETOS CATEGORIZADOS -->
         <div class="row-container">
             <h3 class="row-title"><i data-lucide="folder-open"></i> Conteúdos / Projetos</h3>
-            
-            <!-- 1. JORNALISMO & MEDIA -->
+
+            <!-- JORNALISMO & MEDIA -->
             <div class="category-block">
-                <h4 class="category-title">JORNALISMO & MEDIA</h4>
+                <h4 class="category-subtitle">JORNALISMO & MEDIA</h4>
                 <div class="carousel-wrapper">
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-jornalismo', -300)"><i data-lucide="chevron-left"></i></button>
-                    <div id="slider-jornalismo" class="netflix-slider grid-16-9"></div>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-jornalismo', 300)"><i data-lucide="chevron-right"></i></button>
+                    <button class="carousel-btn btn-left" id="btn-left-jornalismo" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-jornalismo" class="netflix-slider"></div>
+                    <button class="carousel-btn btn-right" id="btn-right-jornalismo" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
                 </div>
-                <div id="expand-jornalismo" class="netflix-expand-drawer"></div>
+                <div id="drawer-jornalismo" class="netflix-drawer"></div>
             </div>
 
-            <!-- 2. AUDIOVISUAL -->
+            <!-- AUDIOVISUAL -->
             <div class="category-block">
-                <h4 class="category-title">AUDIOVISUAL</h4>
+                <h4 class="category-subtitle">AUDIOVISUAL</h4>
                 <div class="carousel-wrapper">
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-audiovisual', -300)"><i data-lucide="chevron-left"></i></button>
-                    <div id="slider-audiovisual" class="netflix-slider grid-16-9"></div>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-audiovisual', 300)"><i data-lucide="chevron-right"></i></button>
+                    <button class="carousel-btn btn-left" id="btn-left-audiovisual" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-audiovisual" class="netflix-slider"></div>
+                    <button class="carousel-btn btn-right" id="btn-right-audiovisual" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
                 </div>
-                <div id="expand-audiovisual" class="netflix-expand-drawer"></div>
+                <div id="drawer-audiovisual" class="netflix-drawer"></div>
             </div>
 
-            <!-- 3. RÁDIO & ÁUDIO -->
+            <!-- RÁDIO & ÁUDIO -->
             <div class="category-block">
-                <h4 class="category-title">RÁDIO & ÁUDIO</h4>
+                <h4 class="category-subtitle">RÁDIO & ÁUDIO</h4>
                 <div class="carousel-wrapper">
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-radio', -300)"><i data-lucide="chevron-left"></i></button>
-                    <div id="slider-radio" class="netflix-slider grid-16-9"></div>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-radio', 300)"><i data-lucide="chevron-right"></i></button>
+                    <button class="carousel-btn btn-left" id="btn-left-radio" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-radio" class="netflix-slider"></div>
+                    <button class="carousel-btn btn-right" id="btn-right-radio" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
                 </div>
-                <div id="expand-radio" class="netflix-expand-drawer"></div>
+                <div id="drawer-radio" class="netflix-drawer"></div>
             </div>
 
-            <!-- 4. DIGITAL & COMUNICAÇÃO -->
+            <!-- DIGITAL & COMUNICAÇÃO -->
             <div class="category-block">
-                <h4 class="category-title">DIGITAL & COMUNICAÇÃO</h4>
+                <h4 class="category-subtitle">DIGITAL & COMUNICAÇÃO</h4>
                 <div class="carousel-wrapper">
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-digital', -300)"><i data-lucide="chevron-left"></i></button>
-                    <div id="slider-digital" class="netflix-slider grid-16-9"></div>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-digital', 300)"><i data-lucide="chevron-right"></i></button>
+                    <button class="carousel-btn btn-left" id="btn-left-digital" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-digital" class="netflix-slider"></div>
+                    <button class="carousel-btn btn-right" id="btn-right-digital" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
                 </div>
-                <div id="expand-digital" class="netflix-expand-drawer"></div>
+                <div id="drawer-digital" class="netflix-drawer"></div>
             </div>
 
-            <!-- 5. OUTROS -->
+            <!-- OUTROS -->
             <div class="category-block">
-                <h4 class="category-title">OUTROS</h4>
+                <h4 class="category-subtitle">OUTROS</h4>
                 <div class="carousel-wrapper">
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-outros', -300)"><i data-lucide="chevron-left"></i></button>
-                    <div id="slider-outros" class="netflix-slider grid-16-9"></div>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-outros', 300)"><i data-lucide="chevron-right"></i></button>
+                    <button class="carousel-btn btn-left" id="btn-left-outros" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-outros" class="netflix-slider"></div>
+                    <button class="carousel-btn btn-right" id="btn-right-outros" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
                 </div>
-                <div id="expand-outros" class="netflix-expand-drawer"></div>
+                <div id="drawer-outros" class="netflix-drawer"></div>
             </div>
-
         </div>
     </section>
 
     <!-- SECÇÃO 3: EXPERIÊNCIA PROFISSIONAL -->
     <section id="experiencia" class="section-percurso section-padded reveal">
         <h2 class="section-title centered-title">Experiência Profissional</h2>
-
-        <div class="timeline">
-            
-            <div class="timeline-item" data-exp-id="ualg">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png" alt="Logo UAlg" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Outubro 2024 — Atualidade</span>
-                    </div>
-                    <h3>Assistente Convidado</h3>
-                    <p class="timeline-institution">Universidade do Algarve (Faro)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Docente da Unidade Curricular "Produção e Edição de Vídeo" (3º ano da Licenciatura em Design de Comunicação).</li>
-                            <li>Docente responsável pelo Curso Livre em Pré-Produção Audiovisual e pelo Curso Livre em Produção Audiovisual (Impulso Mais Digital).</li>
-                            <li>Colaboração no Dia Aberto 2025 e noutras iniciativas universitárias.</li>
-                        </ul>
-                    </div>
-
-                    <!-- PROJETOS ASSOCIADOS (MINI CARTÕES REFORMATADOS SEM TÍTULO) -->
-                    <div class="associated-projects-container" data-project-ids="1,2"></div>
-
-                    <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item" data-exp-id="entr">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://media.rtp.pt/entr/wp-content/themes/entr/includes/img/logo-white.png" alt="Logo RTP / ENTR" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Maio 2024 — Agosto 2024</span>
-                    </div>
-                    <h3>Criador de Conteúdos (Freelancer)</h3>
-                    <p class="timeline-institution">ENTR PT — RTP (Lisboa)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Criação, produção e edição de conteúdos digitais e formatos de vídeo curtos para a plataforma europeia ENTR PT no ecossistema RTP.</li>
-                        </ul>
-                    </div>
-
-                    <div class="associated-projects-container" data-project-ids="5"></div>
-
-                    <a href="https://media.rtp.pt/entr/" target="_blank" class="corner-arrow-link" title="Visitar Website ENTR PT">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item" data-exp-id="rua">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://rua.pt/wp-content/uploads/2021/10/Rua2.svg" alt="Logo RUA FM" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Março 2022 — Atualidade</span>
-                    </div>
-                    <h3>Jornalista / Animador</h3>
-                    <p class="timeline-institution">RUA - Rádio Universitária do Algarve (Faro)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Animador de rádio: gravação de spots, marcadores e anúncios comerciais.</li>
-                            <li>Condução de entrevistas a artistas regionais e nacionais.</li>
-                            <li>Cobertura de grandes eventos: SA do Algarve (2022 a 2025), Festival F (2022 a 2025), Festival MED (2024 e 2025), Albufeira Sea Fest (2025) e Albufeira Sounds (2025).</li>
-                        </ul>
-                    </div>
-
-                    <div class="associated-projects-container" data-project-ids="6"></div>
-
-                    <a href="https://www.rua.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://revistarotaryportugal.pt/wp-content/uploads/2025/04/logo_nobg-e1746010110400.png" alt="Logo Portugal Rotário" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Março 2021 — Atualidade</span>
-                    </div>
-                    <h3>Editor / Jornalista (Colaborador)</h3>
-                    <p class="timeline-institution">Revista Rotary Portugal (Híbrido)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Colaboração na edição de peças jornalísticas e redação de conteúdos informativos.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://www.sulinformacao.pt/wp-content/uploads/2023/12/logo.png" alt="Logo Sul Informação" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Abril 2021 — Fevereiro 2022</span>
-                    </div>
-                    <h3>Jornalista (Estágio Profissional)</h3>
-                    <p class="timeline-institution">Sul Informação (Faro)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Escrita de notícias, breves, entrevistas e reportagens.</li>
-                            <li>Elaboração de várias reportagens jornalísticas em vídeo com gravação de imagem, narração de voz off e edição completa de peças.</li>
-                        </ul>
-                    </div>
-
-                    <div class="associated-projects-container" data-project-ids="9"></div>
-
-                    <a href="https://www.sulinformacao.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/RTP_2026.svg" alt="Logo RTP" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Março 2020 — Julho 2020</span>
-                    </div>
-                    <h3>Jornalista (Estágio Curricular)</h3>
-                    <p class="timeline-institution">Rádio e Televisão de Portugal (Faro)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Escrita e edição de reportagens jornalísticas sobre variados temas com acompanhamento aos vários jornalistas da redação.</li>
-                            <li>Escrita e edição da Grande Reportagem "E agora, Algarve?".</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://www.rtp.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://www.radiogilao.com/templates/radiogilao/images/blue/logo.png" alt="Logo Rádio Gilão" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">Junho — Setembro (2018 e 2019)</span>
-                    </div>
-                    <h3>Locutor (Colaborador)</h3>
-                    <p class="timeline-institution">Rádio Gilão (Tavira)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Escrita e edição de reportagens jornalísticas e locução de emissão.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-        </div>
+        <div class="timeline" id="timeline-experiencia"></div>
     </section>
 
     <!-- SECÇÃO 4: FORMAÇÃO ACADÉMICA -->
     <section id="educacao" class="section-percurso bg-alt section-padded reveal">
         <h2 class="section-title centered-title">Formação Académica</h2>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Log%C3%B3tipo_NOVA_FCSH.png" alt="Logo NOVA FCSH" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">2026 - Atualmente</span>
-                    </div>
-                    <h3>Ciências da Comunicação</h3>
-                    <p class="timeline-institution">Doutoramento - Faculdade de Ciências Sociais e Humanas (NOVA, Lisboa)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Escrita e edição de reportagens jornalísticas e locução de emissão.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://www.escs.ipl.pt/sites/default/files/ESCS-Logo.png" alt="Logo ESCS" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">2022 — 2024</span>
-                    </div>
-                    <h3>Jornalismo</h3>
-                    <p class="timeline-institution">Mestrado - Escola Superior de Comunicação Social (IPL, Lisboa)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>O mestrado em Jornalismo conjuga componente de formação cultural e de investigação aplicada a uma componente de formação profissional e experimental. Pretende-se aprofundar as problemáticas dos estudos sobre os media e o jornalismo e dotar os estudantes de competências específicas em áreas de especialização jornalística.</li>
-                        </ul>
-                        <p class="academic-thesis"><strong>Dissertação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</p>
-                    </div>
-
-                    <div class="associated-projects-container" data-project-ids="8"></div>
-
-                    <a href="https://www.escs.ipl.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
-                    <div class="timeline-header">
-                        <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png" alt="Logo UAlg" class="timeline-company-logo logo-white-bg">
-                        </div>
-                        <span class="timeline-date">2017 — 2020</span>
-                    </div>
-                    <h3>Ciências da Comunicação</h3>
-                    <p class="timeline-institution">Licenciatura - Escola Superior de Educação e Comunicação (UAlg, Faro)</p>
-                    <div class="timeline-description">
-                        <ul>
-                            <li><strong>Média Final</strong> - 17 valores.</li>
-                            <li>• O ciclo de estudos tem como principal objetivo proporcionar uma formação humanista e tecnológica nas facetas mais gerais da comunicação.</li>
-                            <li>• Ao longo da sua estrutura curricular são abordados problemas teóricos e práticos de contextualização mais geral...</li>
-                        </ul>
-                    </div>
-
-                    <div class="associated-projects-container" data-project-ids="7"></div>
-
-                    <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
-                        <i data-lucide="arrow-up-right"></i>
-                    </a>
-                </div>
-                <div class="timeline-expand-slot"></div>
-            </div>
-        </div>
+        <div class="timeline" id="timeline-educacao"></div>
     </section>
 
-    <!-- SECÇÃO 5: COMPETÊNCIAS, SOFTWARE & GALERIA -->
+    <!-- SECÇÃO 5: COMPETÊNCIAS & SOFTWARE -->
     <section id="competencias" class="section-padded reveal">
         <h2 class="section-title centered-title">Competências & Ferramentas</h2>
 
-        <div class="grid-two-columns margin-bottom-md">
+        <div class="grid-two-columns margin-bottom-sm">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="sparkles"></i> Capacidades</h3>
                 <div class="tag-cloud">
@@ -480,11 +230,9 @@
             </div>
         </div>
 
-        <!-- CONHECIMENTOS DE SOFTWARES (LARGURA COMPLETA) -->
-        <div class="grid-card hover-card width-full margin-bottom-md">
+        <div class="grid-card hover-card width-full margin-bottom-sm">
             <h3><i data-lucide="cpu"></i> Conhecimentos de Softwares</h3>
             <div class="software-grid">
-                
                 <div class="software-group">
                     <h4><i data-lucide="video" class="icon-inline"></i> Edição de Vídeo & Pós-Produção</h4>
                     <div class="software-bars">
@@ -513,32 +261,37 @@
                         <div class="software-item"><span>Microsoft Office</span><div class="level-bar" data-level="4"></div></div>
                     </div>
                 </div>
-
             </div>
         </div>
 
-        <!-- GALERIA INTERMÉDIA (ENTRE SOFTWARES E CONTACTOS) -->
-        <div class="width-full margin-bottom-md">
-            <h3 class="row-title"><i data-lucide="image"></i> Galeria Multimédia</h3>
+        <!-- GALERIA MULTIMÉDIA -->
+        <div class="grid-card hover-card width-full">
+            <h3><i data-lucide="image"></i> Galeria Multimédia</h3>
             <div class="media-gallery-grid">
-                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Galeria 1"></div>
-                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Galeria 2"></div>
-                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Galeria 3"></div>
-                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80" alt="Galeria 4"></div>
+                <div class="media-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Fotografia 1" loading="lazy">
+                </div>
+                <div class="media-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Fotografia 2" loading="lazy">
+                </div>
+                <div class="media-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Fotografia 3" loading="lazy">
+                </div>
+                <div class="media-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80" alt="Fotografia 4" loading="lazy">
+                </div>
             </div>
         </div>
-
     </section>
 
     <!-- SECÇÃO 6: FORMAÇÃO & REDES COMUNITÁRIAS -->
     <section id="formacao-certificados" class="section-padded bg-alt reveal">
         <h2 class="section-title centered-title">Formação & Redes Comunitárias</h2>
 
-        <!-- CURSOS E FORMAÇÕES COM SETAS PADRONIZADAS -->
-        <div class="width-full margin-bottom-md">
+        <div class="width-full margin-bottom-sm">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="book-open"></i> Cursos e Formações</h3>
-                <ul class="info-list space-y-md">
+                <ul class="info-list">
                     <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
                             <img src="https://images.squarespace-cdn.com/content/v1/64d60527c01ae7106f2646e9/7e92df26-40a8-4a6b-b353-26c19f58a939/JAI-white%2Bfor%2Bwebsite.png" alt="Logo LSE" class="item-logo logo-white-bg">
@@ -547,7 +300,7 @@
                             <strong>JornalismoAI Discovery: Aprendendo os princípios-chave da IA no jornalismo</strong><br>
                             <span class="text-subtle">Polis LSE (julho 2025)</span>
                         </div>
-                        <a href="https://exemplo.com/diploma" target="_blank" class="course-link-arrow" title="Ver Diploma">
+                        <a href="https://exemplo.com/diploma" target="_blank" class="corner-arrow-link inline-arrow" title="Ver Diploma">
                             <i data-lucide="arrow-up-right"></i>
                         </a>
                     </li>
@@ -568,7 +321,7 @@
                             <strong>Introdução à Comunicação Digital: conceção, produção e publicação</strong><br>
                             <span class="text-subtle">CENJOR / NAU (janeiro 2021)</span>
                         </div>
-                        <a href="https://exemplo.com/diploma" target="_blank" class="course-link-arrow" title="Ver Diploma">
+                        <a href="https://exemplo.com/diploma" target="_blank" class="corner-arrow-link inline-arrow" title="Ver Diploma">
                             <i data-lucide="arrow-up-right"></i>
                         </a>
                     </li>
@@ -583,7 +336,7 @@
                     </li>
                     <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Logo_LUSA.svg/3840px-Logo_LUSA.svg.png" alt="Logo Lusa" class="item-logo logo-white-bg">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Logo_LUSA.svg/3840px-Logo_LUSA.svg.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Logo Lusa" class="item-logo logo-white-bg">
                         </div>
                         <div class="item-info">
                             <strong>Cidadão Ciberinformado</strong><br>
@@ -594,10 +347,10 @@
             </div>
         </div>
 
-        <div class="grid-two-columns margin-bottom-md">
+        <div class="grid-two-columns margin-bottom-sm">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="award"></i> Medalhas & Prémios</h3>
-                <ul class="info-list space-y-md">
+                <ul class="info-list">
                     <li>
                         <i data-lucide="award" class="icon-inline"></i>
                         <div>
@@ -617,7 +370,7 @@
 
             <div class="grid-card hover-card">
                 <h3><i data-lucide="id-card"></i> Credenciais & Habilitações</h3>
-                <ul class="info-list space-y-md">
+                <ul class="info-list">
                     <li>
                         <i data-lucide="id-card" class="icon-inline"></i>
                         <div>
@@ -636,66 +389,20 @@
             </div>
         </div>
 
-        <!-- ORGANIZAÇÕES & VOLUNTARIADO (COM SETA APENAS SE HOUVER LINK) -->
         <div class="grid-two-columns">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="users"></i> Organizações</h3>
-                <ul class="info-list space-y-md">
-                    <li class="card-item-with-logo" data-link="https://rotary1960.pt">
-                        <div class="item-logo-wrapper">
-                            <img src="https://08e1925027.clvaw-cdnwnd.com/22ede87b6b01d2470b79e8c0fa9a4da6/200004970-8bb798bb7c/D1960-c%C3%B3pia.png?ph=08e1925027" alt="Logo Rotary1960" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Rotary D.1960</strong><br>
-                            <span class="text-subtle">Presidente da Comissão de Imagem Pública</span>
-                        </div>
-                    </li>
-                    <li class="card-item-with-logo" data-link="https://rotaract1960.pt">
-                        <div class="item-logo-wrapper">
-                            <img src="https://ee96551bed.clvaw-cdnwnd.com/2027cd87e2b06b513f783c4b4826badc/200000001-a759da759f/Rotaract%20Logo%20Distrito%201960.webp?ph=ee96551bed" alt="Logo Rotaract1960" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Rotaract D.1960</strong><br>
-                            <span class="text-subtle">Representante Distrital D.1960 (AR 2025/2026)</span>
-                        </div>
-                    </li>
-                    <li class="card-item-with-logo" data-link="">
-                        <div class="item-logo-wrapper">
-                            <img src="https://via.placeholder.com/40/transparent/ffffff?text=RTC" alt="Logo Rotaract" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Rotaract Club de Tavira (2018 — Atualidade)</strong><br>
-                            <span class="text-subtle">Diretor de Comunicação (AR 2024/2025, 2025/2026 e 2026/2027), Presidente (AR 2023/2024 e AR 2020/2021), Tesoureiro (AR 2022/2023).</span>
-                        </div>
-                    </li>
-                </ul>
+                <ul class="info-list" id="list-organizacoes"></ul>
             </div>
 
             <div class="grid-card hover-card">
                 <h3><i data-lucide="heart-handshake"></i> Voluntariado</h3>
-                <ul class="info-list space-y-md">
-                    <li class="card-item-with-logo" data-link="https://re-food.org">
-                        <div class="item-logo-wrapper">
-                            <img src="https://re-food.org/wp-content/uploads/2020/02/RE-FOOD-logo-02.png" alt="Logo Refood" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Voluntário na Refood Tavira</strong>
-                        </div>
-                    </li>
-                    <li class="card-item-with-logo" data-link="">
-                        <div class="item-logo-wrapper">
-                            <img src="https://iconape.com/download/244649/png/" alt="Logo Banco Alimentar" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Voluntário no Banco Alimentar</strong>
-                        </div>
-                    </li>
-                </ul>
+                <ul class="info-list" id="list-voluntariado"></ul>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO 7: DESTAQUE / CONTACTO -->
+    <!-- SECÇÃO 7: DESTAQUE ABERTO A PROJETOS / CONTACTO -->
     <section id="contacto-destaque" class="section-padded section-open-projects reveal">
         <div class="open-projects-card hover-card">
             <div class="open-badge">
