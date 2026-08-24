@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .row-title { font-size: 1.1rem; color: var(--text-main); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 .row-title i { color: var(--primary-red); }
 
-/* DESTAQUES TRIO (3 CARTÕES COM SETAS) */
+/* DESTAQUES TRIO (3 CARTÕES COM SETA) */
 .grid-destaques-trio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -222,12 +222,15 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .destaque-prime-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(11, 12, 16, 0.95) 0%, rgba(11, 12, 16, 0.3) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(11, 12, 16, 0.95) 0%, rgba(11, 12, 16, 0.2) 60%, transparent 100%);
     padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
+.destaque-prime-overlay .card-category { font-size: 0.6rem; opacity: 0.8; }
+.destaque-prime-overlay .card-title { font-size: 1.15rem; font-weight: 800; line-height: 1.2; margin-top: 2px; }
+
 .destaque-arrow-btn {
     position: absolute;
     bottom: 12px;
@@ -248,7 +251,7 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
     border-color: var(--primary-red);
 }
 
-/* CARROSSEIS NA PROPORÇÃO 16:9 */
+/* CARROSSEIS NA PROPORÇÃO 16:9 COM FUNDO DE IMAGEM INTEGRAL */
 .carousel-wrapper { position: relative; display: flex; align-items: center; }
 .netflix-slider.ratio-16-9 {
     display: flex;
@@ -310,14 +313,14 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .btn-left { left: -16px; }
 .btn-right { right: -16px; }
 
-/* ABA EXPANSÍVEL ESTILO NETFLIX / PRIME VIDEO */
+/* ABA EXPANSÍVEL ESTILO NETFLIX / PRIME VIDEO À LARGURA TOTAL */
 .netflix-drawer {
     width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
     opacity: 0;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 .netflix-drawer.active {
     max-height: 900px;
@@ -346,24 +349,22 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
     align-items: flex-start;
 }
 .drawer-left-media {
-    flex: 0 0 40%;
+    flex: 0 0 38%;
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
 }
 .drawer-cover-img {
     width: 100%;
-    height: 260px;
+    height: 270px;
     object-fit: cover;
     display: block;
 }
 .drawer-img-gradient {
     position: absolute; inset: 0;
-    background: linear-gradient(to right, transparent 60%, var(--bg-card) 100%);
+    background: linear-gradient(to right, transparent 50%, var(--bg-card) 100%);
 }
-.drawer-right-details {
-    flex: 1;
-}
+.drawer-right-details { flex: 1; }
 .drawer-right-details h2, .drawer-right-details h3 {
     font-size: 1.5rem;
     color: #fff;
@@ -431,8 +432,8 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .corner-arrow-link { position: absolute; bottom: 14px; right: 14px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; border-radius: 50%; background: rgba(255, 255, 255, 0.03); }
 .corner-arrow-link:hover { color: #ffffff; background: var(--primary-red); }
 
-/* PROJETOS ASSOCIADOS COMPACTOS NAS TIMELINES */
-.associated-project-wrapper { margin-top: 14px; width: 220px; }
+/* PROJETOS ASSOCIADOS COMPACTOS SEM TÍTULO GENÉRICO */
+.associated-project-wrapper { margin-top: 14px; width: 210px; }
 .mini-project-chip {
     display: flex;
     align-items: center;
@@ -572,7 +573,7 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .social-chips a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: #fff; text-decoration: none; }
 .footer-bottom { text-align: center; border-top: 1px solid var(--border-color); padding-top: 18px; color: var(--text-dim); font-size: 0.75rem; }
 
-/* ADAPTAÇÃO SMARTPHONE / RESPONSIVIDADE */
+/* RESPONSIVIDADE PARA SMARTPHONES */
 @media (max-width: 850px) {
     .section-padded, .section-hero { padding-left: 5%; padding-right: 5%; }
     .hero-container { flex-direction: column; text-align: center; }
