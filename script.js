@@ -1,46 +1,44 @@
-// DADOS DE TODOS OS PROJETOS / CONTEÚDOS COM ATRIBUIÇÃO ACADÉMICA / PROFISSIONAL
+// DADOS DOS PROJETOS COM CATEGORIZAÇÃO E ITENS EM DESTAQUE
 const projetos = [
     {
         id: 1,
-        categoria: "RÁDIO & ÁUDIO",
+        categoria: "radio",
         destaque: true,
         hashtag: "#digital #radio",
         titulo: "Confissões de Um Universitário",
         mesAno: "Março 2026 - Atualidade",
         cargo: "Realizador / Pós-Produção",
-        local: "Rádio Universitária do Algarve / UAlg",
+        local: "RUA FM / Universidade do Algarve",
         capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
         resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
-        experienciaId: "exp-rua",
-        academicId: "",
-        links: [
-            { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH", icone: "headphones" }
+        galeria: [
+            "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY"
         ],
-        media: [
-            { tipo: "foto", url: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY" }
+        links: [
+            { texto: "Ver Episódios no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" }
         ]
     },
     {
         id: 2,
-        categoria: "AUDIOVISUAL",
+        categoria: "audiovisual",
         destaque: true,
         hashtag: "#documentario",
-        titulo: "Sala 31",
-        mesAno: "2026",
+        titulo: "Documentário: 30 Anos de CC",
+        mesAno: "Fevereiro 2025 — Atualidade",
         cargo: "Realizador",
         local: "Universidade do Algarve",
         capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
-        resumo: "Documentário intimista e de arquivo audiovisual focado na memória coletiva e nos bastidores académicos da Universidade do Algarve.",
-        experienciaId: "exp-ualg",
-        academicId: "acad-licenciatura",
-        links: [
-            { texto: "Ver Trailer", url: "https://vimeo.com/rubenbento243", icone: "video" }
+        resumo: "Documentário comemorativo das três décadas do curso de Ciências da Comunicação da Universidade do Algarve, integrando testemunhos históricos e arquivo audiovisual.",
+        galeria: [
+            "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80"
         ],
-        media: []
+        links: [
+            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
+        ]
     },
     {
-        id: 3,
-        categoria: "JORNALISMO & MEDIA",
+        id: 4,
+        categoria: "jornalismo",
         destaque: true,
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
@@ -48,32 +46,33 @@ const projetos = [
         cargo: "Jornalista / Repórter TV",
         local: "Santa Maria da Feira",
         capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
-        experienciaId: "exp-sul",
-        academicId: "acad-mestrado",
-        links: [
-            { texto: "Ver Reportagem no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV, realizado sob condições de elevada exigência técnica e prazos de produção reais.",
+        galeria: [
+            "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80"
         ],
-        media: []
+        links: [
+            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+        ]
     },
     {
-        id: 4,
-        categoria: "JORNALISMO & MEDIA",
+        id: 3,
+        categoria: "jornalismo",
         destaque: false,
         hashtag: "#televisao",
-        titulo: "Medalha de Excelência — Skills Portugal 2023",
+        titulo: "Medalha de Excelência — Skills 2023",
         mesAno: "Março 2023",
         cargo: "Editor de Vídeo",
         local: "Portimão",
         capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023 na função de Editor de Vídeo.",
-        experienciaId: "exp-sul",
-        academicId: "acad-mestrado",
-        links: []
+        resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023, desempenhando as funções de Editor de Vídeo na produção de Reportagem de Televisão.",
+        galeria: [],
+        links: [
+            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+        ]
     },
     {
         id: 5,
-        categoria: "DIGITAL & COMUNICAÇÃO",
+        categoria: "digital",
         destaque: false,
         hashtag: "#digital",
         titulo: "Projeto ENTR PT — RTP",
@@ -81,67 +80,112 @@ const projetos = [
         cargo: "Criador de Conteúdos (Freelancer)",
         local: "RTP — Lisboa",
         capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
-        resumo: "Criação e edição de formatos curtos de vídeo para a plataforma europeia ENTR PT transmitida pela RTP.",
-        experienciaId: "exp-rtp-entr",
-        academicId: "",
+        resumo: "Criação, captação e edição de formatos curtos de vídeo dinâmicos orientados para o público jovem no âmbito do projeto europeu ENTR PT transmitido pela RTP.",
+        galeria: [],
         links: [
-            { texto: "Visitar ENTR PT", url: "https://media.rtp.pt/entr/", icone: "globe" }
+            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
         ]
     },
     {
         id: 6,
-        categoria: "RÁDIO & ÁUDIO",
+        categoria: "radio",
         destaque: false,
         hashtag: "#radio",
         titulo: "Coberturas de Festivais — RUA FM",
         mesAno: "2022 — 2025",
         cargo: "Jornalista / Animador",
-        local: "RUA FM",
+        local: "RUA - Rádio Universitária do Algarve",
         capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
-        resumo: "Cobertura integral de grandes eventos culturais: Festival F, Festival MED e Albufeira Sounds.",
-        experienciaId: "exp-rua",
-        academicId: "",
-        links: []
+        resumo: "Locução, gravação de marcadores/spots e cobertura integral em direto de grandes eventos culturais: SA do Algarve, Festival F, Festival MED, Albufeira Sea Fest e Albufeira Sounds.",
+        galeria: [],
+        links: [
+            { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+        ]
     },
     {
         id: 7,
-        categoria: "AUDIOVISUAL",
+        categoria: "audiovisual",
         destaque: false,
         hashtag: "#cinema",
         titulo: "Segunda Opção (Curta-Metragem)",
-        mesAno: "2018 — 2019",
-        cargo: "Realizador / Editor",
+        mesAno: "Março 2018 — Junho 2019",
+        cargo: "Realizador, Editor, Cameraman",
         local: "Tavira / Faro",
         capa: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=600&q=80",
-        resumo: "Curta-metragem académica independente assumindo direção de fotografia e montagem final.",
-        experienciaId: "",
-        academicId: "acad-licenciatura",
-        links: []
+        resumo: "Curta-metragem académica independente onde assumi a direção de fotografia, captação de imagem, realização e montagem final.",
+        galeria: [],
+        links: [
+            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+        ]
     },
     {
         id: 8,
-        categoria: "OUTROS",
+        categoria: "jornalismo",
         destaque: false,
         hashtag: "#investigacao",
         titulo: "Dissertação de Mestrado (ESCS)",
         mesAno: "2022 — 2024",
         cargo: "Investigador",
-        local: "ESCS Lisboa",
+        local: "Escola Superior de Comunicação Social",
         capa: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
-        resumo: "Investigação final do Mestrado em Jornalismo concluída com 17 valores.",
-        experienciaId: "",
-        academicId: "acad-mestrado",
+        resumo: "Trabalho de investigação final do Mestrado em Jornalismo (concluído com 17 valores): 'Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)'.",
+        galeria: [],
+        links: []
+    },
+    {
+        id: 9,
+        categoria: "jornalismo",
+        destaque: false,
+        hashtag: "#imprensa",
+        titulo: "Peças Multimédia — Sul Informação",
+        mesAno: "Abril 2021 — Fevereiro 2022",
+        cargo: "Jornalista (Estágio Profissional)",
+        local: "Sul Informação (Faro)",
+        capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
+        resumo: "Escrita diária de notícias, breves e entrevistas, acompanhada pela produção integral de peças jornalísticas em vídeo (gravação, voz off e edição).",
+        galeria: [],
+        links: [
+            { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt", icone: "globe" }
+        ]
+    },
+    {
+        id: 10,
+        categoria: "digital",
+        destaque: false,
+        hashtag: "#comunicacao",
+        titulo: "Política (NÃO) Importa",
+        mesAno: "Setembro 2020 — Novembro 2022",
+        cargo: "Coordenador de Comunicação",
+        local: "Projeto Independente",
+        capa: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=600&q=80",
+        resumo: "Coordenação de comunicação e estratégias digitais de desmistificação do envolvimento político para a comunidade jovem.",
+        galeria: [],
+        links: []
+    },
+    {
+        id: 11,
+        categoria: "outros",
+        destaque: false,
+        hashtag: "#imprensa",
+        titulo: "Redação no 5º Congresso dos Jornalistas",
+        mesAno: "Janeiro 2024",
+        cargo: "Jornalista Redator",
+        local: "ESCS / Lisboa",
+        capa: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80",
+        resumo: "Integração na equipa de redação da ESCS responsável pela cobertura jornalística em tempo real do 5º Congresso dos Jornalistas Portugueses.",
+        galeria: [],
         links: []
     }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. SCROLL REVEAL
+    // 1. ANIMAÇÕES SCROLL REVEAL
     const reveals = document.querySelectorAll(".reveal");
     function handleScrollReveal() {
+        const windowHeight = window.innerHeight;
         reveals.forEach(el => {
-            if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+            if (el.getBoundingClientRect().top < windowHeight - 80) {
                 el.classList.add("active");
             }
         });
@@ -149,16 +193,16 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScrollReveal);
     handleScrollReveal();
 
-    // 2. SCROLL LOGO
+    // 2. SCROLL SUAVE LOGO
     document.getElementById("brand-logo")?.addEventListener("click", (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // 3. BARRAS DE NÍVEL DE SOFTWARE
+    // 3. BARRAS DE SOFTWARE
     document.querySelectorAll('.level-bar').forEach(bar => {
         const level = parseInt(bar.getAttribute('data-level'), 10) || 0;
-        bar.innerHTML = '';
+        bar.innerHTML = ''; 
         for (let i = 1; i <= 5; i++) {
             const dot = document.createElement('span');
             dot.className = `level-dot ${i <= level ? 'active' : ''}`;
@@ -166,205 +210,200 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 4. RENDERIZAÇÃO DOS CARTÕES EM DESTAQUE E SUB-CATEGORIAS
-    renderDestaques();
-    renderSubcategorias();
-
-    // 5. ATRIBUIÇÃO DE MINI CARTÕES À EXPERIÊNCIA E FORMAÇÃO ACADÉMICA
-    renderAssociatedProjects();
-
-    // 6. ADICIONAR SETAS COM LINKS A ORGANIZAÇÕES E VOLUNTARIADO
-    setupOrgLinks();
-
-    // 7. MODAL NETFLIX CONTROLOS
-    setupModalEvents();
-});
-
-// POP-UP NETFLIX / PRIME VIDEO
-function openNetflixModal(proj) {
-    const backdrop = document.getElementById("netflix-modal");
-    
-    document.getElementById("modal-cover-img").src = proj.capa;
-    document.getElementById("modal-hashtag").textContent = proj.hashtag || '';
-    document.getElementById("modal-title").textContent = proj.titulo || '';
-    document.getElementById("modal-date").textContent = proj.mesAno || '';
-    document.getElementById("modal-role").textContent = proj.cargo ? `Cargo: ${proj.cargo}` : '';
-    document.getElementById("modal-location").textContent = proj.local ? `Local: ${proj.local}` : '';
-    document.getElementById("modal-description").textContent = proj.resumo || '';
-
-    // Links
-    const linksContainer = document.getElementById("modal-links");
-    linksContainer.innerHTML = '';
-    if (proj.links && proj.links.length > 0) {
-        proj.links.forEach(l => {
-            const a = document.createElement("a");
-            a.href = l.url;
-            a.target = "_blank";
-            a.className = "pop-action-btn";
-            a.innerHTML = `<i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}`;
-            linksContainer.appendChild(a);
-        });
-    }
-
-    // Galeria de Média
-    const mediaContainer = document.getElementById("modal-media-gallery");
-    mediaContainer.innerHTML = '';
-    if (proj.media && proj.media.length > 0) {
-        proj.media.forEach(m => {
-            const div = document.createElement("div");
-            div.className = "modal-media-card";
-            div.innerHTML = `<img src="${m.url}" alt="Média">`;
-            mediaContainer.appendChild(div);
-        });
-    }
-
-    if (window.lucide) window.lucide.createIcons();
-    backdrop.classList.add("active");
-}
-
-function setupModalEvents() {
-    const backdrop = document.getElementById("netflix-modal");
-    const closeBtn = document.getElementById("modal-close-btn");
-
-    closeBtn?.addEventListener("click", () => backdrop.classList.remove("active"));
-    backdrop?.addEventListener("click", (e) => {
-        if (e.target === backdrop) backdrop.classList.remove("active");
-    });
-}
-
-// RENDER DESTAQUES (3 CARTÕES)
-function renderDestaques() {
-    const container = document.getElementById("grid-destaques-container");
-    if (!container) return;
-    container.innerHTML = '';
-
-    const destaques = projetos.filter(p => p.destaque).slice(0, 3);
-    destaques.forEach(proj => {
+    // 4. CRIAÇÃO DE CARTÕES NETFLIX (FULL BACKGROUND IMAGE)
+    function createCardElement(proj, isSpecialDestaque = false) {
         const card = document.createElement("div");
-        card.className = "destaque-card-highlight";
-        card.onclick = () => openNetflixModal(proj);
+        card.className = `netflix-card ${isSpecialDestaque ? 'card-destaque-special' : ''}`;
+        card.setAttribute("data-id", proj.id);
+        card.style.backgroundImage = `url('${proj.capa}')`;
 
         card.innerHTML = `
-            <div class="destaque-card-cover-wrap">
-                <span class="destaque-badge">EM DESTAQUE</span>
-                <img src="${proj.capa}" alt="${proj.titulo}" class="destaque-card-img">
+            <div class="netflix-card-overlay"></div>
+            <div class="netflix-card-content">
+                <span class="card-category-tag">${proj.hashtag}</span>
+                <h4 class="card-title-text">${proj.titulo}</h4>
             </div>
-            <div class="destaque-card-body">
-                <div>
-                    <span class="card-category">${proj.hashtag}</span>
-                    <h3 class="card-title">${proj.titulo}</h3>
-                    <p class="card-company">${proj.resumo}</p>
-                </div>
-                <span class="card-date">${proj.mesAno}</span>
-            </div>
-            <div class="card-arrow-bottom-right">
+            <div class="card-corner-arrow">
                 <i data-lucide="arrow-up-right"></i>
             </div>
         `;
-        container.appendChild(card);
-    });
-}
 
-// RENDER SUB-CATEGORIAS
-function renderSubcategorias() {
-    const map = {
-        "JORNALISMO & MEDIA": "slider-jornalismo",
-        "AUDIOVISUAL": "slider-audiovisual",
-        "RÁDIO & ÁUDIO": "slider-radio",
-        "DIGITAL & COMUNICAÇÃO": "slider-digital",
-        "OUTROS": "slider-outros"
+        card.addEventListener("click", () => handleCardClick(proj, card));
+        return card;
+    }
+
+    // 5. GESTÃO DO EXPANDABLE DRAWER (STYLE NETFLIX/PRIME VIDEO)
+    let currentActiveCard = null;
+
+    function handleCardClick(proj, cardElement) {
+        // Encontrar o contentor de gaveta correspondente na linha
+        const parentRow = cardElement.closest('.row-container');
+        if (!parentRow) return;
+        
+        const drawer = parentRow.querySelector('.netflix-expandable-drawer');
+        if (!drawer) return;
+
+        // Se clicar no mesmo cartão que já está aberto, fecha a gaveta
+        if (currentActiveCard === cardElement && drawer.style.display === "block") {
+            closeAllDrawers();
+            return;
+        }
+
+        closeAllDrawers();
+
+        currentActiveCard = cardElement;
+        cardElement.classList.add("active-card");
+
+        // Construir HTML interno da gaveta
+        const linksHTML = proj.links.map(l => `
+            <a href="${l.url}" target="_blank" class="drawer-action-btn">
+                <i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}
+            </a>
+        `).join('');
+
+        const galleryHTML = (proj.galeria && proj.galeria.length > 0) ? `
+            <div class="drawer-media-section">
+                <div class="drawer-media-title">Fotografias e Conteúdos</div>
+                <div class="drawer-media-grid">
+                    ${proj.galeria.map(imgUrl => `<img src="${imgUrl}" class="drawer-media-thumb" alt="Media">`).join('')}
+                </div>
+            </div>
+        ` : '';
+
+        drawer.innerHTML = `
+            <div class="drawer-inner-grid">
+                <button class="drawer-close-btn" aria-label="Fechar">&times;</button>
+                <div class="drawer-image-wrap">
+                    <img src="${proj.capa}" alt="${proj.titulo}">
+                </div>
+                <div class="drawer-details-wrap">
+                    <div>
+                        <div class="drawer-header">
+                            <span class="drawer-hashtag">${proj.hashtag}</span>
+                            <h3 class="drawer-title">${proj.titulo}</h3>
+                        </div>
+                        <div class="drawer-meta">
+                            ${proj.mesAno ? `<span><strong>Data:</strong> ${proj.mesAno}</span>` : ''}
+                            ${proj.cargo ? `<span><strong>Função:</strong> ${proj.cargo}</span>` : ''}
+                            ${proj.local ? `<span><strong>Local:</strong> ${proj.local}</span>` : ''}
+                        </div>
+                        <p class="drawer-description">${proj.resumo}</p>
+                        ${galleryHTML}
+                    </div>
+                    <div class="drawer-actions-row">
+                        ${linksHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        drawer.style.display = "block";
+        if (window.lucide) window.lucide.createIcons();
+
+        // Scroll centralizado suave até ao pop-up expansível
+        setTimeout(() => {
+            drawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+
+        drawer.querySelector('.drawer-close-btn')?.addEventListener('click', closeAllDrawers);
+    }
+
+    function closeAllDrawers() {
+        document.querySelectorAll('.netflix-expandable-drawer').forEach(d => {
+            d.style.display = "none";
+            d.innerHTML = "";
+        });
+        document.querySelectorAll('.netflix-card').forEach(c => c.classList.remove('active-card'));
+        currentActiveCard = null;
+    }
+
+    // 6. RENDERIZAÇÃO DAS CATEGORIAS
+    const destaquesContainer = document.getElementById("destaques-container");
+    const sliders = {
+        jornalismo: document.getElementById("slider-jornalismo"),
+        audiovisual: document.getElementById("slider-audiovisual"),
+        radio: document.getElementById("slider-radio"),
+        digital: document.getElementById("slider-digital"),
+        outros: document.getElementById("slider-outros")
     };
 
-    projetos.filter(p => !p.destaque).forEach(proj => {
-        const sliderId = map[proj.categoria] || "slider-outros";
+    projetos.forEach(proj => {
+        // Em Destaque
+        if (proj.destaque && destaquesContainer) {
+            const destCard = createCardElement(proj, true);
+            destaquesContainer.appendChild(destCard);
+        }
+
+        // Categorias Gerais
+        const targetSlider = sliders[proj.categoria] || sliders.outros;
+        if (targetSlider) {
+            const card = createCardElement(proj, false);
+            targetSlider.appendChild(card);
+        }
+    });
+
+    // 7. CONFIGURAÇÃO DE SETAS NOS CARROSSEIS
+    function setupCarouselNav(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
+        const btnLeft = document.getElementById(btnLeftId);
+        const btnRight = document.getElementById(btnRightId);
         if (!slider) return;
 
-        const card = document.createElement("div");
-        card.className = "netflix-card";
-        card.onclick = () => openNetflixModal(proj);
+        function updateButtons() {
+            const scrollLeft = slider.scrollLeft;
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
+            if (btnLeft) btnLeft.classList.toggle("visible", scrollLeft > 10);
+            if (btnRight) btnRight.classList.toggle("visible", (maxScroll - scrollLeft) > 10);
+        }
 
-        card.innerHTML = `
-            <img src="${proj.capa}" alt="${proj.titulo}" class="netflix-card-cover" loading="lazy">
-            <div class="netflix-card-body">
-                <div>
-                    <span class="card-category">${proj.hashtag}</span>
-                    <h4 class="card-title">${proj.titulo}</h4>
-                    <p class="card-company">${proj.local}</p>
-                </div>
-                <p class="card-date">${proj.mesAno}</p>
-            </div>
-            <div class="card-arrow-bottom-right">
-                <i data-lucide="arrow-up-right"></i>
-            </div>
-        `;
-        slider.appendChild(card);
-    });
+        btnLeft?.addEventListener("click", () => slider.scrollBy({ left: -280, behavior: "smooth" }));
+        btnRight?.addEventListener("click", () => slider.scrollBy({ left: 280, behavior: "smooth" }));
+        slider.addEventListener("scroll", updateButtons);
+        setTimeout(updateButtons, 300);
+    }
 
-    setupCarousels();
-}
+    setupCarouselNav("slider-jornalismo", "btn-left-jornalismo", "btn-right-jornalismo");
+    setupCarouselNav("slider-audiovisual", "btn-left-audiovisual", "btn-right-audiovisual");
+    setupCarouselNav("slider-radio", "btn-left-radio", "btn-right-radio");
+    setupCarouselNav("slider-digital", "btn-left-digital", "btn-right-digital");
+    setupCarouselNav("slider-outros", "btn-left-outros", "btn-right-outros");
 
-// CARROSSEIS
-function setupCarousels() {
-    const list = ["jornalismo", "audiovisual", "radio", "digital", "outros"];
-    list.forEach(key => {
-        const slider = document.getElementById(`slider-${key}`);
-        const btnL = document.getElementById(`btn-left-${key}`);
-        const btnR = document.getElementById(`btn-right-${key}`);
-
-        if (!slider) return;
-
-        const checkScroll = () => {
-            if (btnL) btnL.classList.toggle("visible", slider.scrollLeft > 10);
-            if (btnR) btnR.classList.toggle("visible", (slider.scrollWidth - slider.clientWidth - slider.scrollLeft) > 10);
-        };
-
-        btnL?.addEventListener("click", () => slider.scrollBy({ left: -260, behavior: "smooth" }));
-        btnR?.addEventListener("click", () => slider.scrollBy({ left: 260, behavior: "smooth" }));
-        slider.addEventListener("scroll", checkScroll);
-        setTimeout(checkScroll, 300);
-    });
-}
-
-// PROJETOS ASSOCIADOS (MINI CARTÕES NAS TIMELINES)
-function renderAssociatedProjects() {
-    document.querySelectorAll('[data-exp-id], [data-academic-id]').forEach(container => {
-        const expId = container.getAttribute('data-exp-id');
-        const acadId = container.getAttribute('data-academic-id');
-
-        const matches = projetos.filter(p => 
-            (expId && p.experienciaId === expId) || 
-            (acadId && p.academicId === acadId)
-        );
-
-        container.innerHTML = '';
-        matches.forEach(proj => {
-            const mini = document.createElement("div");
-            mini.className = "mini-project-card";
-            mini.onclick = (e) => {
-                e.stopPropagation();
-                openNetflixModal(proj);
-            };
-            mini.innerHTML = `
-                <img src="${proj.capa}" alt="${proj.titulo}" class="mini-project-img">
-                <span class="mini-project-title">${proj.titulo}</span>
-            `;
-            container.appendChild(mini);
+    // 8. MAPEAMENTO DE PROJETOS NAS EXPERIÊNCIAS E FORMAÇÃO
+    document.querySelectorAll('.associated-projects-container').forEach(container => {
+        const ids = container.getAttribute('data-project-ids')?.split(',').map(Number) || [];
+        ids.forEach(id => {
+            const proj = projetos.find(p => p.id === id);
+            if (proj) {
+                const chip = document.createElement('div');
+                chip.className = 'mini-project-chip';
+                chip.innerHTML = `
+                    <img src="${proj.capa}" class="mini-project-thumb" alt="${proj.titulo}">
+                    <span class="mini-project-title">${proj.titulo}</span>
+                `;
+                chip.addEventListener('click', () => {
+                    const cardOnPage = document.querySelector(`.netflix-card[data-id="${proj.id}"]`);
+                    if (cardOnPage) {
+                        cardOnPage.click();
+                    }
+                });
+                container.appendChild(chip);
+            }
         });
     });
-}
 
-// SETAS PARA ORGANIZAÇÕES E VOLUNTARIADO
-function setupOrgLinks() {
-    document.querySelectorAll('.card-item-with-logo[data-link]').forEach(item => {
-        const url = item.getAttribute('data-link');
-        if (url && url.trim() !== "") {
-            const arrow = document.createElement("a");
-            arrow.href = url;
+    // 9. CONDICIONAMENTO DE SETAS EM CURSOS, ORGANIZAÇÕES E VOLUNTARIADO
+    document.querySelectorAll('.card-item-with-logo').forEach(item => {
+        const link = item.getAttribute('data-link');
+        if (link && link.trim() !== "") {
+            const arrow = document.createElement('a');
+            arrow.href = link;
             arrow.target = "_blank";
-            arrow.className = "course-link-arrow";
+            arrow.className = "item-link-arrow";
+            arrow.title = "Visitar Website";
             arrow.innerHTML = `<i data-lucide="arrow-up-right"></i>`;
             item.appendChild(arrow);
         }
     });
-}
+
+    if (window.lucide) window.lucide.createIcons();
+});
