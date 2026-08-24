@@ -1,9 +1,8 @@
 // DADOS DOS PROJETOS COM EXATAMENTE 4 ITENS EM DESTAQUE E TODOS OS RESTANTES EM CONTEÚDOS / PROJETOS
 const projetos = [
-    // 4 CONTEÚDOS EM DESTAQUE
     {
         id: 1,
-        destaque: true,
+        destaque: false,
         hashtag: "#digital #radio",
         titulo: "Confissões de Um Universitário",
         mesAno: "Março 2026 - Atualidade",
@@ -17,7 +16,7 @@ const projetos = [
     },
     {
         id: 3,
-        destaque: true,
+        destaque: false,
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
         mesAno: "Março 2023",
@@ -31,7 +30,7 @@ const projetos = [
     },
     {
         id: 2,
-        destaque: true,
+        destaque: false,
         hashtag: "#documentario",
         titulo: "30 Anos de CC",
         mesAno: "Fevereiro 2025 — Atualidade",
@@ -45,7 +44,7 @@ const projetos = [
     },
     {
         id: 4,
-        destaque: true,
+        destaque: false,
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
         mesAno: "Novembro 2024",
@@ -57,8 +56,6 @@ const projetos = [
             { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
         ]
     },
-
-    // OUTROS PROJETOS (CONTEÚDOS / PROJETOS)
     {
         id: 5,
         destaque: false,
