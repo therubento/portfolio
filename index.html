@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rúben Bento — RB. STUDIO</title>
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,18 +14,18 @@
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR (SEM MENU, COM APENAS LOGO E SÍMBOLOS DE CONTACTO À DIREITA) -->
+    <!-- BARRA SUPERIOR SEM MENU - APENAS LOGO E ÍCONES DE CONTACTO -->
     <nav class="navbar">
         <a href="#perfil" class="logo-link" id="brand-logo">
             <div class="logo">
                 RB<span class="dot">.</span><span class="studio">STUDIO</span>
             </div>
         </a>
-        <div class="header-contacts">
-            <a href="mailto:rubenbento243@gmail.com" class="icon-contact-btn" title="Enviar E-mail">
+        <div class="header-contacts-icons">
+            <a href="mailto:rubenbento243@gmail.com" class="icon-contact-link" title="Enviar E-mail">
                 <i data-lucide="mail"></i>
             </a>
-            <a href="tel:+351924245184" class="icon-contact-btn" title="Ligar">
+            <a href="tel:+351924245184" class="icon-contact-link" title="Ligar">
                 <i data-lucide="phone"></i>
             </a>
         </div>
@@ -53,8 +53,8 @@
                 </p>
 
                 <p class="hero-bio">
-                    <strong>Doutorando em Ciências da Comunicação na NOVA FCSH, mestre em Jornalismo pela ESCS e licenciado em Ciências da Comunicação pela UAlg. É Assistente Convidado na Universidade do Algarve, onde leciona no curso de Design de Comunicação e no CTeSP de Design e Tecnologias Multimédia.</strong><br><br>
-                    <strong>Com um percurso profissional construído entre o jornalismo, a produção audiovisual, a rádio, a televisão e os meios digitais, tem experiência em diferentes formatos e linguagens de comunicação. Passou pela RTP, pela RUA FM e pela Rádio Gilão, tendo também colaborado com o Sul Informação, a Revista Rotary Portugal e outros projetos de comunicação e média digital.</strong><br><br>
+                    <strong>Doutorando em Ciências da Comunicação na NOVA FCSH, mestre em Jornalismo pela ESCS e licenciado em Ciências da Comunicação pela UAlg. É Assistente Convidado na Universidade do Algarve, onde leciona no curso de Design de Comunicação e no CTeSP de Design e Tecnologias Multimédia.</strong>
+                    <strong>Com um percurso profissional construído entre o jornalismo, a produção audiovisual, a rádio, a televisão e os meios digitais, tem experiência em diferentes formatos e linguagens de comunicação. Passou pela RTP, pela RUA FM e pela Rádio Gilão, tendo também colaborado com o Sul Informação, a Revista Rotary Portugal e outros projetos de comunicação e média digital.</strong>
                     <strong>A sua experiência cruza a reportagem, produção e edição de vídeo, escrita jornalística, comunicação digital, rádio e produção de conteúdos, procurando sempre aproximar a informação das pessoas através de narrativas rigorosas, criativas e relevantes.</strong>
                 </p>
 
@@ -72,7 +72,7 @@
                             <i data-lucide="id-card"></i>
                         </div>
                         <div>
-                            <span class="press-label">CARTEIRA DE JORNALISTA</span>
+                            <span class="press-label">CARTEIRA PROFISSIONAL DE JORNALISTA</span>
                             <strong class="press-number">N.º C 8964</strong>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
 
                 <div class="hero-actions">
                     <a href="https://instagram.com" target="_blank" class="btn-hero outline" title="Instagram">
-                        <i data-lucide="photo"></i> Instagram
+                        <i data-lucide="photography"></i> Instagram
                     </a>
                     <a href="https://linkedin.com/in/rubento243" target="_blank" class="btn-hero outline" title="LinkedIn">
                         <i data-lucide="wallet"></i> LinkedIn
@@ -103,66 +103,75 @@
     <section id="catalogo" class="section-catalogo section-padded reveal">
         <h2 class="section-title centered-title">Conteúdos</h2>
 
-        <!-- EM DESTAQUE (3 CARTÕES COM DESTAQUE MAXIMIZADO) -->
+        <!-- EM DESTAQUE (3 CARTÕES COM ESTILO NETFLIX / PRIME VIDEO) -->
         <div class="row-container margin-bottom-md">
             <h3 class="row-title"><i data-lucide="sparkles"></i> Em Destaque</h3>
-            <div id="grid-destaques" class="grid-destaques-trio"></div>
-        </div>
-
-        <!-- DIVISÃO DOS CONTEÚDOS / PROJETOS POR CATEGORIAS -->
-        
-        <!-- CATEGORIA 1: JORNALISMO & MEDIA -->
-        <div class="row-container">
-            <h3 class="row-title"><i data-lucide="newspaper"></i> JORNALISMO & MEDIA</h3>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn btn-left" id="btn-left-jornalismo" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
-                <div id="slider-jornalismo" class="netflix-slider"></div>
-                <button class="carousel-btn btn-right" id="btn-right-jornalismo" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
+            <div id="grid-destaques" class="grid-destaques-trio">
+                <!-- Inserido Dinamicamente via JavaScript -->
             </div>
+            <div id="destaque-expand-slot" class="netflix-expand-drawer"></div>
         </div>
 
-        <!-- CATEGORIA 2: AUDIOVISUAL -->
+        <!-- CONTEÚDOS / PROJETOS POR CATEGORIAS (16:9) -->
         <div class="row-container">
-            <h3 class="row-title"><i data-lucide="clapperboard"></i> AUDIOVISUAL</h3>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn btn-left" id="btn-left-audiovisual" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
-                <div id="slider-audiovisual" class="netflix-slider"></div>
-                <button class="carousel-btn btn-right" id="btn-right-audiovisual" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
+            <h3 class="row-title"><i data-lucide="folder-open"></i> Conteúdos / Projetos</h3>
+            
+            <!-- 1. JORNALISMO & MEDIA -->
+            <div class="category-block">
+                <h4 class="category-title">JORNALISMO & MEDIA</h4>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-jornalismo', -300)"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-jornalismo" class="netflix-slider grid-16-9"></div>
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-jornalismo', 300)"><i data-lucide="chevron-right"></i></button>
+                </div>
+                <div id="expand-jornalismo" class="netflix-expand-drawer"></div>
             </div>
-        </div>
 
-        <!-- CATEGORIA 3: RÁDIO & ÁUDIO -->
-        <div class="row-container">
-            <h3 class="row-title"><i data-lucide="radio"></i> RÁDIO & ÁUDIO</h3>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn btn-left" id="btn-left-radio" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
-                <div id="slider-radio" class="netflix-slider"></div>
-                <button class="carousel-btn btn-right" id="btn-right-radio" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
+            <!-- 2. AUDIOVISUAL -->
+            <div class="category-block">
+                <h4 class="category-title">AUDIOVISUAL</h4>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-audiovisual', -300)"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-audiovisual" class="netflix-slider grid-16-9"></div>
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-audiovisual', 300)"><i data-lucide="chevron-right"></i></button>
+                </div>
+                <div id="expand-audiovisual" class="netflix-expand-drawer"></div>
             </div>
-        </div>
 
-        <!-- CATEGORIA 4: DIGITAL & COMUNICAÇÃO -->
-        <div class="row-container">
-            <h3 class="row-title"><i data-lucide="share-2"></i> DIGITAL & COMUNICAÇÃO</h3>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn btn-left" id="btn-left-digital" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
-                <div id="slider-digital" class="netflix-slider"></div>
-                <button class="carousel-btn btn-right" id="btn-right-digital" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
+            <!-- 3. RÁDIO & ÁUDIO -->
+            <div class="category-block">
+                <h4 class="category-title">RÁDIO & ÁUDIO</h4>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-radio', -300)"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-radio" class="netflix-slider grid-16-9"></div>
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-radio', 300)"><i data-lucide="chevron-right"></i></button>
+                </div>
+                <div id="expand-radio" class="netflix-expand-drawer"></div>
             </div>
-        </div>
 
-        <!-- CATEGORIA 5: OUTROS -->
-        <div class="row-container">
-            <h3 class="row-title"><i data-lucide="folder-open"></i> OUTROS</h3>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn btn-left" id="btn-left-outros" aria-label="Anterior"><i data-lucide="chevron-left"></i></button>
-                <div id="slider-outros" class="netflix-slider"></div>
-                <button class="carousel-btn btn-right" id="btn-right-outros" aria-label="Seguinte"><i data-lucide="chevron-right"></i></button>
+            <!-- 4. DIGITAL & COMUNICAÇÃO -->
+            <div class="category-block">
+                <h4 class="category-title">DIGITAL & COMUNICAÇÃO</h4>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-digital', -300)"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-digital" class="netflix-slider grid-16-9"></div>
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-digital', 300)"><i data-lucide="chevron-right"></i></button>
+                </div>
+                <div id="expand-digital" class="netflix-expand-drawer"></div>
             </div>
-        </div>
 
-        <!-- ABA EXPANSÍVEL ESTILO NETFLIX / PRIME VIDEO CENTRADA -->
-        <div id="netflix-expand-drawer" class="netflix-drawer"></div>
+            <!-- 5. OUTROS -->
+            <div class="category-block">
+                <h4 class="category-title">OUTROS</h4>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('slider-outros', -300)"><i data-lucide="chevron-left"></i></button>
+                    <div id="slider-outros" class="netflix-slider grid-16-9"></div>
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('slider-outros', 300)"><i data-lucide="chevron-right"></i></button>
+                </div>
+                <div id="expand-outros" class="netflix-expand-drawer"></div>
+            </div>
+
+        </div>
     </section>
 
     <!-- SECÇÃO 3: EXPERIÊNCIA PROFISSIONAL -->
@@ -171,12 +180,12 @@
 
         <div class="timeline">
             
-            <div class="timeline-item">
+            <div class="timeline-item" data-exp-id="ualg">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content hover-card">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo UAlg" class="timeline-company-logo logo-white-bg">
+                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png" alt="Logo UAlg" class="timeline-company-logo logo-white-bg">
                         </div>
                         <span class="timeline-date">Outubro 2024 — Atualidade</span>
                     </div>
@@ -190,16 +199,17 @@
                         </ul>
                     </div>
 
-                    <!-- MINI CARTÕES DE PROJETOS ASSOCIADOS (DIMINUÍDOS E SEM TÍTULO) -->
-                    <div class="associated-projects-row" data-assoc-ids="2,1"></div>
+                    <!-- PROJETOS ASSOCIADOS (MINI CARTÕES REFORMATADOS SEM TÍTULO) -->
+                    <div class="associated-projects-container" data-project-ids="1,2"></div>
 
                     <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item" data-exp-id="entr">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content hover-card">
                     <div class="timeline-header">
@@ -216,15 +226,16 @@
                         </ul>
                     </div>
 
-                    <div class="associated-projects-row" data-assoc-ids="5"></div>
+                    <div class="associated-projects-container" data-project-ids="5"></div>
 
                     <a href="https://media.rtp.pt/entr/" target="_blank" class="corner-arrow-link" title="Visitar Website ENTR PT">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item" data-exp-id="rua">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content hover-card">
                     <div class="timeline-header">
@@ -243,12 +254,13 @@
                         </ul>
                     </div>
 
-                    <div class="associated-projects-row" data-assoc-ids="1,6"></div>
+                    <div class="associated-projects-container" data-project-ids="6"></div>
 
                     <a href="https://www.rua.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
             <div class="timeline-item">
@@ -268,6 +280,7 @@
                         </ul>
                     </div>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
             <div class="timeline-item">
@@ -288,12 +301,13 @@
                         </ul>
                     </div>
 
-                    <div class="associated-projects-row" data-assoc-ids="9"></div>
+                    <div class="associated-projects-container" data-project-ids="9"></div>
 
                     <a href="https://www.sulinformacao.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
             <div class="timeline-item">
@@ -301,7 +315,7 @@
                 <div class="timeline-content hover-card">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/RTP_2026.svg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo RTP" class="timeline-company-logo logo-white-bg">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/RTP_2026.svg" alt="Logo RTP" class="timeline-company-logo logo-white-bg">
                         </div>
                         <span class="timeline-date">Março 2020 — Julho 2020</span>
                     </div>
@@ -318,6 +332,7 @@
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
             <div class="timeline-item">
@@ -337,6 +352,7 @@
                         </ul>
                     </div>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
         </div>
     </section>
@@ -351,7 +367,7 @@
                 <div class="timeline-content hover-card">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Log%C3%B3tipo_NOVA_FCSH.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo NOVA FCSH" class="timeline-company-logo logo-white-bg">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Log%C3%B3tipo_NOVA_FCSH.png" alt="Logo NOVA FCSH" class="timeline-company-logo logo-white-bg">
                         </div>
                         <span class="timeline-date">2026 - Atualmente</span>
                     </div>
@@ -359,10 +375,11 @@
                     <p class="timeline-institution">Doutoramento - Faculdade de Ciências Sociais e Humanas (NOVA, Lisboa)</p>
                     <div class="timeline-description">
                         <ul>
-                            <li>Investigação avançada na área dos média, ecossistemas digitais e novos formatos de comunicação.</li>
+                            <li>Escrita e edição de reportagens jornalísticas e locução de emissão.</li>
                         </ul>
                     </div>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
             <div class="timeline-item">
@@ -378,17 +395,18 @@
                     <p class="timeline-institution">Mestrado - Escola Superior de Comunicação Social (IPL, Lisboa)</p>
                     <div class="timeline-description">
                         <ul>
-                            <li>O mestrado em Jornalismo conjuga componente de formação cultural e de investigação aplicada a uma componente de formação profissional e experimental.</li>
+                            <li>O mestrado em Jornalismo conjuga componente de formação cultural e de investigação aplicada a uma componente de formação profissional e experimental. Pretende-se aprofundar as problemáticas dos estudos sobre os media e o jornalismo e dotar os estudantes de competências específicas em áreas de especialização jornalística.</li>
                         </ul>
                         <p class="academic-thesis"><strong>Dissertação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</p>
                     </div>
 
-                    <div class="associated-projects-row" data-assoc-ids="8,11"></div>
+                    <div class="associated-projects-container" data-project-ids="8"></div>
 
                     <a href="https://www.escs.ipl.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
 
             <div class="timeline-item">
@@ -396,7 +414,7 @@
                 <div class="timeline-content hover-card">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo UAlg" class="timeline-company-logo logo-white-bg">
+                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png" alt="Logo UAlg" class="timeline-company-logo logo-white-bg">
                         </div>
                         <span class="timeline-date">2017 — 2020</span>
                     </div>
@@ -405,21 +423,23 @@
                     <div class="timeline-description">
                         <ul>
                             <li><strong>Média Final</strong> - 17 valores.</li>
-                            <li>Formação nas vertentes de Comunicação Social, Multimédia, Produção e Jornalismo.</li>
+                            <li>• O ciclo de estudos tem como principal objetivo proporcionar uma formação humanista e tecnológica nas facetas mais gerais da comunicação.</li>
+                            <li>• Ao longo da sua estrutura curricular são abordados problemas teóricos e práticos de contextualização mais geral...</li>
                         </ul>
                     </div>
 
-                    <div class="associated-projects-row" data-assoc-ids="7"></div>
+                    <div class="associated-projects-container" data-project-ids="7"></div>
 
                     <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
+                <div class="timeline-expand-slot"></div>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO 5: COMPETÊNCIAS & SOFTWARE -->
+    <!-- SECÇÃO 5: COMPETÊNCIAS, SOFTWARE & GALERIA -->
     <section id="competencias" class="section-padded reveal">
         <h2 class="section-title centered-title">Competências & Ferramentas</h2>
 
@@ -460,86 +480,66 @@
             </div>
         </div>
 
-        <!-- CONHECIMENTOS DE SOFTWARES VISUALMENTE APERFEIÇOADOS -->
-        <div class="grid-card hover-card width-full">
+        <!-- CONHECIMENTOS DE SOFTWARES (LARGURA COMPLETA) -->
+        <div class="grid-card hover-card width-full margin-bottom-md">
             <h3><i data-lucide="cpu"></i> Conhecimentos de Softwares</h3>
             <div class="software-grid">
                 
                 <div class="software-group">
                     <h4><i data-lucide="video" class="icon-inline"></i> Edição de Vídeo & Pós-Produção</h4>
                     <div class="software-bars">
-                        <div class="software-item">
-                            <span>Adobe Premiere</span>
-                            <div class="level-bar" data-level="4"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>Adobe After Effects</span>
-                            <div class="level-bar" data-level="3"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>DaVinci Resolve</span>
-                            <div class="level-bar" data-level="4"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>Capcut</span>
-                            <div class="level-bar" data-level="4"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>EDIUS</span>
-                            <div class="level-bar" data-level="3"></div>
-                        </div>
+                        <div class="software-item"><span>Adobe Premiere</span><div class="level-bar" data-level="4"></div></div>
+                        <div class="software-item"><span>Adobe After Effects</span><div class="level-bar" data-level="3"></div></div>
+                        <div class="software-item"><span>DaVinci Resolve</span><div class="level-bar" data-level="4"></div></div>
+                        <div class="software-item"><span>Capcut</span><div class="level-bar" data-level="4"></div></div>
+                        <div class="software-item"><span>EDIUS</span><div class="level-bar" data-level="3"></div></div>
                     </div>
                 </div>
 
                 <div class="software-group">
                     <h4><i data-lucide="mic" class="icon-inline"></i> Áudio & Rádio</h4>
                     <div class="software-bars">
-                        <div class="software-item">
-                            <span>Sony Forge</span>
-                            <div class="level-bar" data-level="2"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>AVA (Emissão de Rádio)</span>
-                            <div class="level-bar" data-level="4"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>Audacity</span>
-                            <div class="level-bar" data-level="4"></div>
-                        </div>
+                        <div class="software-item"><span>Sony Forge</span><div class="level-bar" data-level="2"></div></div>
+                        <div class="software-item"><span>AVA (Emissão de Rádio)</span><div class="level-bar" data-level="4"></div></div>
+                        <div class="software-item"><span>Audacity</span><div class="level-bar" data-level="4"></div></div>
                     </div>
                 </div>
 
                 <div class="software-group">
                     <h4><i data-lucide="palette" class="icon-inline"></i> Design Digital & Produtividade</h4>
                     <div class="software-bars">
-                        <div class="software-item">
-                            <span>Adobe Photoshop</span>
-                            <div class="level-bar" data-level="3"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>Adobe Illustrator</span>
-                            <div class="level-bar" data-level="3"></div>
-                        </div>
-                        <div class="software-item">
-                            <span>Microsoft Office</span>
-                            <div class="level-bar" data-level="4"></div>
-                        </div>
+                        <div class="software-item"><span>Adobe Photoshop</span><div class="level-bar" data-level="3"></div></div>
+                        <div class="software-item"><span>Adobe Illustrator</span><div class="level-bar" data-level="3"></div></div>
+                        <div class="software-item"><span>Microsoft Office</span><div class="level-bar" data-level="4"></div></div>
                     </div>
                 </div>
 
             </div>
         </div>
+
+        <!-- GALERIA INTERMÉDIA (ENTRE SOFTWARES E CONTACTOS) -->
+        <div class="width-full margin-bottom-md">
+            <h3 class="row-title"><i data-lucide="image"></i> Galeria Multimédia</h3>
+            <div class="media-gallery-grid">
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Galeria 1"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Galeria 2"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Galeria 3"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80" alt="Galeria 4"></div>
+            </div>
+        </div>
+
     </section>
 
-    <!-- SECÇÃO 6: FORMAÇÃO & REDES COMUNITÁRIAS (ESPAÇAMENTO AUMENTADO E SETAS DINÂMICAS) -->
+    <!-- SECÇÃO 6: FORMAÇÃO & REDES COMUNITÁRIAS -->
     <section id="formacao-certificados" class="section-padded bg-alt reveal">
         <h2 class="section-title centered-title">Formação & Redes Comunitárias</h2>
 
-        <div class="width-full margin-bottom-lg">
+        <!-- CURSOS E FORMAÇÕES COM SETAS PADRONIZADAS -->
+        <div class="width-full margin-bottom-md">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="book-open"></i> Cursos e Formações</h3>
-                <ul class="info-list spaced-list">
-                    <li class="card-item-with-logo" data-link="https://exemplo.com/diploma">
+                <ul class="info-list space-y-md">
+                    <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
                             <img src="https://images.squarespace-cdn.com/content/v1/64d60527c01ae7106f2646e9/7e92df26-40a8-4a6b-b353-26c19f58a939/JAI-white%2Bfor%2Bwebsite.png" alt="Logo LSE" class="item-logo logo-white-bg">
                         </div>
@@ -547,8 +547,11 @@
                             <strong>JornalismoAI Discovery: Aprendendo os princípios-chave da IA no jornalismo</strong><br>
                             <span class="text-subtle">Polis LSE (julho 2025)</span>
                         </div>
+                        <a href="https://exemplo.com/diploma" target="_blank" class="course-link-arrow" title="Ver Diploma">
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
                     </li>
-                    <li class="card-item-with-logo" data-link="">
+                    <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
                             <img src="https://worldskillsportugal.iefp.pt/wp-content/uploads/2020/03/WSPT_70anos_af3-10-copy.png" alt="Logo WorldSkills" class="item-logo logo-white-bg">
                         </div>
@@ -557,7 +560,7 @@
                             <span class="text-subtle">WorldSkills Portugal 2023 (setembro 2022)</span>
                         </div>
                     </li>
-                    <li class="card-item-with-logo" data-link="https://exemplo.com/diploma">
+                    <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
                             <img src="https://5congresso.jornalistas.eu/wp-content/uploads/2023/10/congresso_parceiro_cenjor.png" alt="Logo NAU" class="item-logo logo-white-bg">
                         </div>
@@ -565,8 +568,11 @@
                             <strong>Introdução à Comunicação Digital: conceção, produção e publicação</strong><br>
                             <span class="text-subtle">CENJOR / NAU (janeiro 2021)</span>
                         </div>
+                        <a href="https://exemplo.com/diploma" target="_blank" class="course-link-arrow" title="Ver Diploma">
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
                     </li>
-                    <li class="card-item-with-logo" data-link="">
+                    <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
                             <img src="https://5congresso.jornalistas.eu/wp-content/uploads/2023/10/congresso_parceiro_cenjor.png" alt="Logo CENJOR" class="item-logo logo-white-bg">
                         </div>
@@ -575,9 +581,9 @@
                             <span class="text-subtle">CENJOR (dezembro 2020)</span>
                         </div>
                     </li>
-                    <li class="card-item-with-logo" data-link="">
+                    <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Logo_LUSA.svg/3840px-Logo_LUSA.svg.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Logo Lusa" class="item-logo logo-white-bg">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Logo_LUSA.svg/3840px-Logo_LUSA.svg.png" alt="Logo Lusa" class="item-logo logo-white-bg">
                         </div>
                         <div class="item-info">
                             <strong>Cidadão Ciberinformado</strong><br>
@@ -588,10 +594,10 @@
             </div>
         </div>
 
-        <div class="grid-two-columns margin-bottom-lg">
+        <div class="grid-two-columns margin-bottom-md">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="award"></i> Medalhas & Prémios</h3>
-                <ul class="info-list spaced-list">
+                <ul class="info-list space-y-md">
                     <li>
                         <i data-lucide="award" class="icon-inline"></i>
                         <div>
@@ -611,7 +617,7 @@
 
             <div class="grid-card hover-card">
                 <h3><i data-lucide="id-card"></i> Credenciais & Habilitações</h3>
-                <ul class="info-list spaced-list">
+                <ul class="info-list space-y-md">
                     <li>
                         <i data-lucide="id-card" class="icon-inline"></i>
                         <div>
@@ -630,11 +636,12 @@
             </div>
         </div>
 
+        <!-- ORGANIZAÇÕES & VOLUNTARIADO (COM SETA APENAS SE HOUVER LINK) -->
         <div class="grid-two-columns">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="users"></i> Organizações</h3>
-                <ul class="info-list spaced-list">
-                    <li class="card-item-with-logo" data-link="https://rotary1960.org">
+                <ul class="info-list space-y-md">
+                    <li class="card-item-with-logo" data-link="https://rotary1960.pt">
                         <div class="item-logo-wrapper">
                             <img src="https://08e1925027.clvaw-cdnwnd.com/22ede87b6b01d2470b79e8c0fa9a4da6/200004970-8bb798bb7c/D1960-c%C3%B3pia.png?ph=08e1925027" alt="Logo Rotary1960" class="item-logo logo-white-bg">
                         </div>
@@ -643,7 +650,7 @@
                             <span class="text-subtle">Presidente da Comissão de Imagem Pública</span>
                         </div>
                     </li>
-                    <li class="card-item-with-logo" data-link="">
+                    <li class="card-item-with-logo" data-link="https://rotaract1960.pt">
                         <div class="item-logo-wrapper">
                             <img src="https://ee96551bed.clvaw-cdnwnd.com/2027cd87e2b06b513f783c4b4826badc/200000001-a759da759f/Rotaract%20Logo%20Distrito%201960.webp?ph=ee96551bed" alt="Logo Rotaract1960" class="item-logo logo-white-bg">
                         </div>
@@ -658,25 +665,7 @@
                         </div>
                         <div class="item-info">
                             <strong>Rotaract Club de Tavira (2018 — Atualidade)</strong><br>
-                            <span class="text-subtle">Diretor de Comunicação e Ex-Presidente.</span>
-                        </div>
-                    </li>
-                    <li class="card-item-with-logo" data-link="">
-                        <div class="item-logo-wrapper">
-                            <img src="https://via.placeholder.com/40/transparent/ffffff?text=INT" alt="Logo Interact" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Interact Club de Tavira (2016 — 2018)</strong><br>
-                            <span class="text-subtle">Membro Ativo</span>
-                        </div>
-                    </li>
-                    <li class="card-item-with-logo" data-link="">
-                        <div class="item-logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/AEP_PT_2016_LOGO.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo Escutistas" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Grupo 273 - Tavira (2018 — 2023)</strong><br>
-                            <span class="text-subtle">Membro do Grupo Escotista</span>
+                            <span class="text-subtle">Diretor de Comunicação (AR 2024/2025, 2025/2026 e 2026/2027), Presidente (AR 2023/2024 e AR 2020/2021), Tesoureiro (AR 2022/2023).</span>
                         </div>
                     </li>
                 </ul>
@@ -684,7 +673,7 @@
 
             <div class="grid-card hover-card">
                 <h3><i data-lucide="heart-handshake"></i> Voluntariado</h3>
-                <ul class="info-list spaced-list">
+                <ul class="info-list space-y-md">
                     <li class="card-item-with-logo" data-link="https://re-food.org">
                         <div class="item-logo-wrapper">
                             <img src="https://re-food.org/wp-content/uploads/2020/02/RE-FOOD-logo-02.png" alt="Logo Refood" class="item-logo logo-white-bg">
@@ -701,21 +690,12 @@
                             <strong>Voluntário no Banco Alimentar</strong>
                         </div>
                     </li>
-                    <li class="card-item-with-logo" data-link="https://www.ualg.pt">
-                        <div class="item-logo-wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Logo UAlg" class="item-logo logo-white-bg">
-                        </div>
-                        <div class="item-info">
-                            <strong>Colaborador no Dia Aberto UAlg</strong><br>
-                            <span class="text-subtle">Anos Letivos 2017/2018, 2018/2019 e 2025</span>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- SECÇÃO 7: CONTACTO / OPORTUNIDADES -->
+    <!-- SECÇÃO 7: DESTAQUE / CONTACTO -->
     <section id="contacto-destaque" class="section-padded section-open-projects reveal">
         <div class="open-projects-card hover-card">
             <div class="open-badge">
