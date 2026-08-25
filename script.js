@@ -178,8 +178,6 @@ const projetos = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    let scrollStateBeforeDrawer = 0;
-
     // 1. SCROLL REVEAL
     const reveals = document.querySelectorAll(".reveal");
     function handleScrollReveal() {
@@ -222,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
         itensDestaque.forEach(proj => {
             const card = document.createElement("div");
             card.className = "destaque-card-prime";
+            card.id = `card-proj-${proj.id}`;
             card.innerHTML = `
                 <img src="${proj.capa}" alt="${proj.titulo}" class="destaque-prime-bg">
                 <div class="destaque-prime-overlay">
@@ -258,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
             items.forEach(proj => {
                 const card = document.createElement("div");
                 card.className = "netflix-card-16-9";
+                card.id = `card-proj-${proj.id}`;
                 card.innerHTML = `
                     <img src="${proj.capa}" alt="${proj.titulo}" class="card-bg-img">
                     <div class="card-gradient-overlay">
@@ -277,15 +277,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 6. ABA EXPANSÍVEL (POP-UP COM GALERIA INTERATIVA QUE SUBSTITUI A CAPA)
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
-        scrollStateBeforeDrawer = window.scrollY;
-
         document.querySelectorAll('.netflix-drawer').forEach(d => {
             d.classList.remove('active');
             d.innerHTML = '';
         });
 
         document.querySelectorAll('.destaque-card-prime, .netflix-card-16-9').forEach(c => c.classList.remove('active-card'));
-        triggerElement.classList.add('active-card');
+        if (triggerElement) triggerElement.classList.add('active-card');
 
         let linksHTML = "";
         if (proj.links && proj.links.length > 0) {
@@ -296,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `).join('');
         }
 
-        // Galeria interativa onde ao clicar a foto passa a ser a capa principal
+        // Galeria interativa onde ao clicar a foto passa a ser a capa principal do pop-up
         let mediaHTML = "";
         const allPhotos = [{ url: proj.capa, titulo: "Capa Principal" }, ...(proj.media || [])];
         
@@ -382,7 +380,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO ACADÉMICA
+    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO ACADÉMICA (MOVER A PÁGINA PARA O CARROSSEL RESPECTIVO)
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
@@ -390,67 +388,38 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!proj) return;
 
             wrapper.innerHTML = `
-                <div class="mini-project-chip" title="Ver conteúdo associado">
+                <div class="mini-project-chip" title="Ver no carrossel de Conteúdos">
                     <img src="${proj.capa}" alt="${proj.titulo}" class="mini-project-img">
-                    <i data-lucide="chevron-down" class="mini-chevron"></i>
+                    <i data-lucide="arrow-right" class="mini-chevron"></i>
                 </div>
             `;
 
-            const timelineItem = wrapper.closest('.timeline-content');
-            const drawer = timelineItem ? timelineItem.querySelector('.timeline-drawer') : null;
-
             wrapper.querySelector('.mini-project-chip').addEventListener('click', (e) => {
                 e.stopPropagation();
-                if (!drawer) return;
-
-                if (drawer.classList.contains('active')) {
-                    drawer.classList.remove('active');
-                    drawer.innerHTML = '';
-                    window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
-                } else {
-                    scrollStateBeforeDrawer = window.scrollY;
-                    document.querySelectorAll('.timeline-drawer').forEach(td => {
-                        td.classList.remove('active');
-                        td.innerHTML = '';
-                    });
-
-                    drawer.innerHTML = `
-                        <div class="timeline-drawer-inner">
-                            <div class="drawer-flex-container">
-                                <div class="drawer-left-media">
-                                    <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img">
-                                    <div class="drawer-img-gradient"></div>
-                                </div>
-                                <div class="drawer-right-details">
-                                    <span class="card-category">${proj.hashtag}</span>
-                                    <h3>${proj.titulo}</h3>
-                                    <div class="drawer-meta-info-compact">
-                                        <div><strong>Duração:</strong> ${proj.mesAno}</div>
-                                        <div><strong>Cargo:</strong> ${proj.cargo}</div>
-                                        <div><strong>Local:</strong> ${proj.local}</div>
-                                    </div>
-                                    <p class="drawer-description">${proj.resumo}</p>
-                                    ${proj.links && proj.links.length ? `
-                                        <div class="drawer-actions">
-                                            ${proj.links.map(l => `<a href="${l.url}" target="_blank" class="drawer-action-btn"><i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}</a>`).join('')}
-                                        </div>
-                                    ` : ''}
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    drawer.classList.add('active');
-                    if (window.lucide) window.lucide.createIcons();
-
-                    setTimeout(() => {
-                        drawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 100);
+                
+                const targetCard = document.getElementById(`card-proj-${proj.id}`);
+                if (targetCard) {
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Abrir o drawer do carrossel correspondente
+                    const catConfig = categoriasMap[proj.categoria];
+                    if (catConfig) {
+                        const drawer = document.getElementById(catConfig.drawer);
+                        if (drawer) {
+                            openNetflixDrawer(drawer, proj, targetCard);
+                        }
+                    } else if (proj.destaque) {
+                        const drawer = document.getElementById("drawer-destaque");
+                        if (drawer) {
+                            openNetflixDrawer(drawer, proj, targetCard);
+                        }
+                    }
                 }
             });
         });
     }
 
-    // 9. SETAS CONDICIONAIS
+    // 9. SETAS CONDICIONAIS EM ELEMENTOS COM ATRIBUTO DATA-LINK
     function setupConditionalArrows() {
         document.querySelectorAll('.card-item-with-logo[data-link]').forEach(item => {
             const linkUrl = item.getAttribute('data-link');
