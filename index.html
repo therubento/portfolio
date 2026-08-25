@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR SEM MENU - APENAS CONTACTOS NO LADO DIREITO -->
+    <!-- BARRA SUPERIOR SEM MENU - APENAS CONTACTOS NO LADO DIREITO (ÍCONES E-MAIL E TELEFONE) -->
     <nav class="navbar">
         <a href="#perfil" class="logo-link" id="brand-logo">
             <div class="logo">
@@ -105,16 +105,19 @@
 
     <!-- SECÇÃO 2: CONTEÚDOS -->
     <section id="catalogo" class="section-catalogo section-padded reveal">
-        <h2 class="section-title centered-title">Conteúdos / Projetos</h2>
+        <h2 class="section-title centered-title">Conteúdos</h2>
 
-        <!-- EM DESTAQUE (3 CARTÕES COM ESTILO NETFLIX/PRIME VIDEO E ABA EXPANSÍVEL) -->
+        <!-- EM DESTAQUE (3 CARTÕES COM ESTILO NETFLIX/PRIME VIDEO E ABA EXPANSÍVEL ABAIXO) -->
         <div class="row-container margin-bottom-lg">
             <h3 class="row-title"><i data-lucide="sparkles"></i> Em Destaque</h3>
-            <div id="grid-destaques-trio" class="grid-destaques-trio"></div>
+            <div id="grid-destaques-trio" class="grid-destaques-trio">
+                <!-- Renderizado via JS com 3 itens em destaque -->
+            </div>
+            <!-- Aba Expansível de Destaque centrada à largura do site -->
             <div id="drawer-destaque" class="netflix-drawer"></div>
         </div>
 
-        <!-- DIVISÃO DOS CONTEÚDOS EM CATEGORIAS (16:9) -->
+        <!-- DIVISÃO DOS CONTEÚDOS EM CATEGORIAS (PROPORÇÃO 16:9 E SETA PARA BAIXO EM CADA CARTÃO) -->
         
         <!-- 1. JORNALISMO & MEDIA -->
         <div class="row-container category-row">
@@ -197,6 +200,7 @@
                         </ul>
                     </div>
 
+                    <!-- PROJETO ASSOCIADO COM LARGURA REDUZIDA E SEM TÍTULO -->
                     <div class="associated-project-wrapper" data-project-id="1"></div>
                     <div class="timeline-drawer"></div>
 
@@ -440,6 +444,7 @@
         <h2 class="section-title centered-title">Competências & Ferramentas</h2>
 
         <div class="grid-two-columns margin-bottom-md">
+            <!-- CAPACIDADES EM TAG CLOUD -->
             <div class="grid-card hover-card">
                 <h3><i data-lucide="sparkles"></i> Capacidades</h3>
                 <div class="tag-cloud">
@@ -457,6 +462,7 @@
                 </div>
             </div>
 
+            <!-- IDIOMAS COM BANDEIRAS EMOJI -->
             <div class="grid-card hover-card">
                 <h3><i data-lucide="languages"></i> Idiomas</h3>
                 <ul class="info-list">
@@ -476,10 +482,12 @@
             </div>
         </div>
 
-        <!-- CONHECIMENTOS DE SOFTWARES -->
+        <!-- CONHECIMENTOS DE SOFTWARES MAIS VISUAL E DA LARGURA DOS RESTANTES CARTÕES DA SECÇÃO -->
         <div class="grid-card hover-card width-full margin-bottom-md">
             <h3><i data-lucide="cpu"></i> Conhecimentos de Softwares</h3>
             <div class="software-grid-wide">
+                
+                <!-- Edição de Vídeo Principal -->
                 <div class="software-group-card">
                     <h4><i data-lucide="video" class="icon-inline"></i> Edição de Vídeo & Pós-Produção</h4>
                     <div class="software-bars">
@@ -491,6 +499,7 @@
                     </div>
                 </div>
 
+                <!-- ÁUDIO & RÁDIO -->
                 <div class="software-group-card">
                     <h4><i data-lucide="mic" class="icon-inline"></i> Áudio & Rádio</h4>
                     <div class="software-bars">
@@ -500,6 +509,7 @@
                     </div>
                 </div>
 
+                <!-- DESIGN DIGITAL -->
                 <div class="software-group-card">
                     <h4><i data-lucide="palette" class="icon-inline"></i> Design & Produtividade</h4>
                     <div class="software-bars">
@@ -508,30 +518,31 @@
                         <div class="software-item"><span>Microsoft Office</span><div class="level-bar" data-level="4"></div></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- GALERIA DE CARTÕES (FOTOGRAFIAS E VÍDEOS) -->
+    <!-- GALERIA COM CARTÕES PARA FOTOGRAFIAS E VÍDEOS (ANTES DE "ABERTO A NOVOS PROJETOS") -->
     <section class="section-padded bg-alt reveal">
         <h2 class="section-title centered-title">Galeria de Registos</h2>
         <div class="media-gallery-grid">
             <div class="media-gallery-card">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Registo de Trabalho 1">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Registo 1">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="camera"></i> Fotografia</span>
                     <h4>Emissão e Estúdio de Televisão</h4>
                 </div>
             </div>
             <div class="media-gallery-card">
-                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80" alt="Registo de Trabalho 2">
+                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80" alt="Registo 2">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="mic"></i> Rádio</span>
                     <h4>Entrevista nos Estúdios da RUA FM</h4>
                 </div>
             </div>
             <div class="media-gallery-card">
-                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Registo de Trabalho 3">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Registo 3">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="video"></i> Reportagem</span>
                     <h4>Cobertura de Eventos em Direto</h4>
@@ -540,10 +551,11 @@
         </div>
     </section>
 
-    <!-- SECÇÃO 6: FORMAÇÃO & REDES COMUNITÁRIAS -->
+    <!-- SECÇÃO 6: FORMAÇÃO & REDES COMUNITÁRIAS (SEM DESFORMATAÇÃO NOS LOGOS) -->
     <section id="formacao-certificados" class="section-padded reveal">
         <h2 class="section-title centered-title">Formação & Redes Comunitárias</h2>
 
+        <!-- CURSOS E FORMAÇÕES COM SETAS PADRONIZADAS -->
         <div class="width-full margin-bottom-md">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="book-open"></i> Cursos e Formações</h3>
@@ -568,9 +580,6 @@
                             <strong>Ateliê de Jornalismo Televisivo</strong>
                             <span class="text-subtle">WorldSkills Portugal 2023 (setembro 2022)</span>
                         </div>
-                        <a href="#" class="course-link-arrow" title="Ver Informações">
-                            <i data-lucide="arrow-up-right"></i>
-                        </a>
                     </li>
                     <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
@@ -592,9 +601,6 @@
                             <strong>Fake News - Não se deixe enganar</strong>
                             <span class="text-subtle">CENJOR (dezembro 2020)</span>
                         </div>
-                        <a href="#" class="course-link-arrow" title="Ver Informações">
-                            <i data-lucide="arrow-up-right"></i>
-                        </a>
                     </li>
                     <li class="card-item-with-logo">
                         <div class="item-logo-wrapper">
@@ -604,9 +610,6 @@
                             <strong>Cidadão Ciberinformado</strong>
                             <span class="text-subtle">LUSA / NAU (outubro 2020)</span>
                         </div>
-                        <a href="#" class="course-link-arrow" title="Ver Informações">
-                            <i data-lucide="arrow-up-right"></i>
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -654,6 +657,7 @@
             </div>
         </div>
 
+        <!-- ORGANIZAÇÕES E VOLUNTARIADO (SETAS APENAS SE HOUVER LINK NO CAMPO) -->
         <div class="grid-two-columns">
             <div class="grid-card hover-card">
                 <h3><i data-lucide="users"></i> Organizações</h3>
@@ -768,9 +772,9 @@
             <div class="footer-socials">
                 <h4>Portfólio & Redes</h4>
                 <div class="social-chips">
-                    <a href="https://linkedin.com/in/rubento243" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="https://linkedin.com/in/rubento243" target="_blank" title="LinkedIn"><i data-lucide="globe"></i></a>
                     <a href="https://instagram.com" target="_blank" title="Instagram"><i data-lucide="camera"></i></a>
-                    <a href="https://youtube.com" target="_blank" title="YouTube"><i data-lucide="youtube"></i></a>
+                    <a href="https://youtube.com" target="_blank" title="YouTube"><i data-lucide="video"></i></a>
                     <a href="https://vimeo.com/rubenbento243" target="_blank" title="Vimeo"><i data-lucide="video"></i></a>
                     <a href="https://behance.net/rmdaqb243" target="_blank" title="Behance"><i data-lucide="palette"></i></a>
                 </div>
