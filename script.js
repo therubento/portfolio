@@ -39,7 +39,7 @@ const projetos = [
     },
     {
         id: 3,
-        destaque: true,
+        destaque: false,
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
@@ -71,17 +71,21 @@ const projetos = [
     },
     {
         id: 5,
-        destaque: false,
+        destaque: true,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#digital",
         titulo: "Projeto ENTR PT — RTP",
         mesAno: "Maio — Agosto 2024",
         cargo: "Criador de Conteúdos (Freelancer)",
         local: "RTP — Lisboa",
-        capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
+        capa: "https://mir-s3-cdn-cf.behance.net/1a1b2268b34887f6e28d46331de9adb0/ceb51930-d0e3-41c4-8517-8177c1f9b52a_rwc_-2x303x1920x265x1920.jpg?h=7927f829cddadb88ab763c78a0bda1d6",
         resumo: "Criação, captação e edição de formatos curtos de vídeo dinâmicos orientados para o público jovem no âmbito do projeto europeu ENTR PT.",
         links: [
-            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
+            { texto: "Episódio 1 - Inclusão no Algarve", url: "https://youtu.be/wulyd-tXRUU?si=C3ZhzHbyi754Lq8I", icone: "video" }
+            { texto: "Episódio 2 - Cultura Jovem", url: "https://youtu.be/mnWeLHyFeyw?si=bwFArhCiovtHWE5o", icone: "video" }
+            { texto: "Episódio 3 - Abstenção Jovem", url: "https://youtu.be/I7O-4KUxeSM?si=xeb64zLO9aDRMk3o", icone: "video" }
+            { texto: "Projeto ENTR PT", url: "https://www.behance.net/gallery/218743551/ENTR-PT-AquiENTReNos", icone: "palette" }
+
         ],
         media: []
     },
