@@ -1,180 +1,516 @@
 const projetos = [
-    {
-        id: 1,
-        destaque: true,
-        categoria: "RÁDIO & ÁUDIO",
-        hashtag: "#digital #radio",
-        titulo: "Confissões de Um Universitário",
-        mesAno: "Março 2026 - Atualidade",
-        cargo: "Realizador / Pós-Produção",
-        local: "RUA (UAlg)",
-        capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
-        resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
-        links: [
-            { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" },
-            { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
-        ],
-        media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
-        ]
-    },
-    {
-        id: 2,
-        destaque: true,
-        categoria: "AUDIOVISUAL",
-        hashtag: "#documentario",
-        titulo: "Sala 31",
-        mesAno: "2026",
-        cargo: "Realizador",
-        local: "Universidade do Algarve",
-        capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
-        resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
-        links: [
-            { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
-        ],
-        media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
-        ]
-    },
-    {
-        id: 3,
-        destaque: false,
-        categoria: "JORNALISMO & MEDIA",
-        hashtag: "#televisao",
-        titulo: "Medalha de Excelência — Skills Portugal 2023",
-        mesAno: "Março 2023",
-        cargo: "Editor de Vídeo",
-        local: "Portimão",
-        capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023, desempenhando as funções de Editor de Vídeo na produção de Reportagem de Televisão.",
-        links: [
-            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
-        ],
-        media: []
-    },
-    {
-        id: 4,
-        destaque: true,
-        categoria: "JORNALISMO & MEDIA",
-        hashtag: "#televisao",
-        titulo: "Medalha de Ouro — Skills Portugal 2024",
-        mesAno: "Novembro 2024",
-        cargo: "Jornalista / Repórter TV",
-        local: "Santa Maria da Feira",
-        capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
-        links: [
-            { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
-        ],
-        media: []
-    },
-    {
-        id: 5,
-        destaque: false,
-        categoria: "DIGITAL & COMUNICAÇÃO",
-        hashtag: "#digital",
-        titulo: "Projeto ENTR PT — RTP",
-        mesAno: "Maio — Agosto 2024",
-        cargo: "Criador de Conteúdos (Freelancer)",
-        local: "RTP — Lisboa",
-        capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
-        resumo: "Criação, captação e edição de formatos curtos de vídeo dinâmicos orientados para o público jovem no âmbito do projeto europeu ENTR PT.",
-        links: [
-            { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
-        ],
-        media: []
-    },
-    {
-        id: 6,
-        destaque: false,
-        categoria: "RÁDIO & ÁUDIO",
-        hashtag: "#radio",
-        titulo: "Coberturas de Festivais — RUA FM",
-        mesAno: "2022 — 2025",
-        cargo: "Jornalista / Animador",
-        local: "RUA - Rádio Universitária do Algarve",
-        capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
-        resumo: "Locução, gravação de marcadores/spots e cobertura integral em direto de grandes eventos culturais.",
-        links: [
-            { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
-        ],
-        media: []
-    },
-    {
-        id: 7,
-        destaque: false,
-        categoria: "AUDIOVISUAL",
-        hashtag: "#cinema",
-        titulo: "Segunda Opção (Curta-Metragem)",
-        mesAno: "Março 2018 — Junho 2019",
-        cargo: "Realizador, Editor, Cameraman",
-        local: "Tavira / Faro",
-        capa: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=600&q=80",
-        resumo: "Curta-metragem académica independente onde assumi a direção de fotografia, captação de imagem e montagem final.",
-        links: [
-            { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
-        ],
-        media: []
-    },
-    {
-        id: 8,
-        destaque: false,
-        categoria: "JORNALISMO & MEDIA",
-        hashtag: "#investigacao",
-        titulo: "Dissertação de Mestrado (ESCS)",
-        mesAno: "2022 — 2024",
-        cargo: "Investigador",
-        local: "Escola Superior de Comunicação Social",
-        capa: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
-        resumo: "Trabalho de investigação final do Mestrado em Jornalismo: 'Nos Bastidores do Jornalismo Televisivo (o caso da RTP, SIC e TVI)'.",
-        links: [],
-        media: []
-    },
-    {
-        id: 9,
-        destaque: false,
-        categoria: "JORNALISMO & MEDIA",
-        hashtag: "#imprensa",
-        titulo: "Reportagens Multimédia — Sul Informação",
-        mesAno: "Abril 2021 — Fevereiro 2022",
-        cargo: "Jornalista (Estágio)",
-        local: "Sul Informação (Faro)",
-        capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
-        resumo: "Escrita diária de notícias, breves e entrevistas, acompanhada pela produção integral de peças jornalísticas em vídeo.",
-        links: [
-            { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt", icone: "globe" }
-        ],
-        media: []
-    },
-    {
-        id: 10,
-        destaque: false,
-        categoria: "DIGITAL & COMUNICAÇÃO",
-        hashtag: "#comunicacao",
-        titulo: "Política (NÃO) Importa",
-        mesAno: "Setembro 2020 — Novembro 2022",
-        cargo: "Coordenador de Comunicação",
-        local: "Projeto Independente",
-        capa: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=600&q=80",
-        resumo: "Coordenação de comunicação e estratégias digitais de desmistificação do envolvimento político para a comunidade jovem.",
-        links: [],
-        media: []
-    },
-    {
-        id: 11,
-        destaque: false,
-        categoria: "OUTROS",
-        hashtag: "#imprensa",
-        titulo: "Redação no 5º Congresso dos Jornalistas",
-        mesAno: "Janeiro 2024",
-        cargo: "Jornalista Redator",
-        local: "ESCS / Lisboa",
-        capa: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80",
-        resumo: "Integração na equipa de redação responsável pela cobertura jornalística do 5º Congresso dos Jornalistas Portugueses.",
-        links: [],
-        media: []
-    }
+  {
+    id: 1,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival MED (2026)",
+    mesAno: "2026",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 2,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival F (2026)",
+    mesAno: "2026",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 3,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#eventos",
+    titulo: "Semana Académica do Algarve (2026)",
+    mesAno: "2026",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 4,
+    destaque: true,
+    categoria: "AUDIOVISUAL",
+    hashtag: "#documentario",
+    titulo: "Sala 31",
+    mesAno: "2026",
+    cargo: "Realizador",
+    local: "Universidade do Algarve",
+    capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
+    resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
+    links: [
+      { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
+    ],
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
+    ]
+  },
+  {
+    id: 5,
+    destaque: true,
+    categoria: "RÁDIO & ÁUDIO",
+    hashtag: "#digital #radio",
+    titulo: "Confissões de Um Universitário",
+    mesAno: "Março 2026 - Atualidade",
+    cargo: "Realizador / Pós-Produção",
+    local: "RUA (UAlg)",
+    capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
+    resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
+    links: [
+      { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" },
+      { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
+    ],
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+    ]
+  },
+  {
+    id: 6,
+    destaque: false,
+    categoria: "CINEMA & AUDIOVISUAL",
+    hashtag: "#documentario",
+    titulo: "30 Anos de CC (Documentário)",
+    mesAno: "Fevereiro 2025 – Atualmente",
+    cargo: "Realizador",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 7,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Albufeira Sounds (2025)",
+    mesAno: "2025",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 8,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Albufeira Sea Fest (2025)",
+    mesAno: "2025",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 9,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival MED (2025)",
+    mesAno: "2025",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 10,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival F (2025)",
+    mesAno: "2025",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 11,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#eventos",
+    titulo: "Semana Académica do Algarve (2025)",
+    mesAno: "2025",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 12,
+    destaque: true,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#televisao",
+    titulo: "Medalha de Ouro — Skills Portugal 2024",
+    mesAno: "Novembro 2024",
+    cargo: "Jornalista / Repórter TV",
+    local: "Santa Maria da Feira",
+    capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
+    resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
+    links: [
+      { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+    ],
+    media: []
+  },
+  {
+    id: 13,
+    destaque: false,
+    categoria: "DIGITAL & COMUNICAÇÃO",
+    hashtag: "#digital",
+    titulo: "Projeto ENTR PT — RTP",
+    mesAno: "Maio — Agosto 2024",
+    cargo: "Criador de Conteúdos (Freelancer)",
+    local: "RTP — Lisboa",
+    capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
+    resumo: "Criação, captação e edição de formatos curtos de vídeo dinâmicos orientados para o público jovem no âmbito do projeto europeu ENTR PT.",
+    links: [
+      { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
+    ],
+    media: []
+  },
+  {
+    id: 14,
+    destaque: false,
+    categoria: "COMUNICAÇÃO & CREATIVIDADE",
+    hashtag: "#freelance",
+    titulo: "Criador de Conteúdos (Freelancer)",
+    mesAno: "Maio 2024 – Agosto 2024",
+    cargo: "Criador de Conteúdos Multimédia/Audiovisuais",
+    local: "Lisboa",
+    capa: "",
+    resumo: "Criação de conteúdos multimédia/audiovisuais em regime freelancer.",
+    links: [],
+    media: []
+  },
+  {
+    id: 15,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival MED (2024)",
+    mesAno: "2024",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 16,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival F (2024)",
+    mesAno: "2024",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 17,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#eventos",
+    titulo: "Semana Académica do Algarve (2024)",
+    mesAno: "2024",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 18,
+    destaque: false,
+    categoria: "OUTROS",
+    hashtag: "#imprensa",
+    titulo: "Redação no 5º Congresso dos Jornalistas",
+    mesAno: "Janeiro 2024",
+    cargo: "Jornalista Redator",
+    local: "ESCS / Lisboa",
+    capa: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80",
+    resumo: "Integração na equipa de redação responsável pela cobertura jornalística do 5º Congresso dos Jornalistas Portugueses.",
+    links: [],
+    media: []
+  },
+  {
+    id: 19,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#investigacao",
+    titulo: "Dissertação de Mestrado (ESCS)",
+    mesAno: "2022 — 2024",
+    cargo: "Investigador",
+    local: "Escola Superior de Comunicação Social",
+    capa: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
+    resumo: "Trabalho de investigação final do Mestrado em Jornalismo: 'Nos Bastidores do Jornalismo Televisivo (o caso da RTP, SIC e TVI)'.",
+    links: [],
+    media: []
+  },
+  {
+    id: 20,
+    destaque: false,
+    categoria: "RÁDIO & ÁUDIO",
+    hashtag: "#radio",
+    titulo: "Coberturas de Festivais — RUA FM",
+    mesAno: "2022 — 2025",
+    cargo: "Jornalista / Animador",
+    local: "RUA - Rádio Universitária do Algarve",
+    capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
+    resumo: "Locução, gravação de marcadores/spots e cobertura integral em direto de grandes eventos culturais.",
+    links: [
+      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+    ],
+    media: []
+  },
+  {
+    id: 21,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#televisao",
+    titulo: "Medalha de Excelência — Skills Portugal 2023",
+    mesAno: "Março 2023",
+    cargo: "Editor de Vídeo",
+    local: "Portimão",
+    capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
+    resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023, desempenhando as funções de Editor de Vídeo na produção de Reportagem de Televisão.",
+    links: [
+      { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+    ],
+    media: []
+  },
+  {
+    id: 22,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival F (2023)",
+    mesAno: "2023",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 23,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#eventos",
+    titulo: "Semana Académica do Algarve (2023)",
+    mesAno: "2023",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 24,
+    destaque: false,
+    categoria: "COMUNICAÇÃO & CREATIVIDADE",
+    hashtag: "#coordenacao",
+    titulo: "Núcleo de Ciências da Comunicação (NECICom) – UAlg",
+    mesAno: "Fevereiro 2022 – Fevereiro 2023",
+    cargo: "Coordenador do Mercado de Trabalho",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 25,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#radio",
+    titulo: "RUA - Rádio Universitária do Algarve",
+    mesAno: "Março 2022 – Atualmente",
+    cargo: "Jornalista e Animador de rádio",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 26,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#festival",
+    titulo: "Festival F (2022)",
+    mesAno: "2022",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 27,
+    destaque: false,
+    categoria: "EVENTOS",
+    hashtag: "#eventos",
+    titulo: "Semana Académica do Algarve (2022)",
+    mesAno: "2022",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 28,
+    destaque: false,
+    categoria: "DIGITAL & COMUNICAÇÃO",
+    hashtag: "#comunicacao",
+    titulo: "Projeto \"Política (NÃO) Importa\"",
+    mesAno: "Setembro 2020 — Novembro 2022",
+    cargo: "Coordenador de Comunicação",
+    local: "Projeto Independente",
+    capa: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=600&q=80",
+    resumo: "Coordenação de comunicação e estratégias digitais de desmistificação do envolvimento político para a comunidade jovem.",
+    links: [],
+    media: []
+  },
+  {
+    id: 29,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#imprensa",
+    titulo: "Reportagens Multimédia — Sul Informação",
+    mesAno: "Abril 2021 — Fevereiro 2022",
+    cargo: "Jornalista (Estágio Profissional)",
+    local: "Sul Informação (Faro)",
+    capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
+    resumo: "Escrita diária de notícias, breves e entrevistas, acompanhada pela produção integral de peças jornalísticas em vídeo.",
+    links: [
+      { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt", icone: "globe" }
+    ],
+    media: []
+  },
+  {
+    id: 30,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#imprensa",
+    titulo: "Revista Portugal Rotário",
+    mesAno: "Março 2021 – Atualmente",
+    cargo: "Editor e Jornalista (Colaborador)",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 31,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#televisao",
+    titulo: "Rádio e Televisão de Portugal (RTP)",
+    mesAno: "Março 2020 – Julho 2020",
+    cargo: "Jornalista (Estágio Curricular)",
+    local: "Faro",
+    capa: "",
+    resumo: "Escrita e edição de reportagens jornalísticas sobre variados temas. Acompanhamento do trabalho de vários jornalistas. Colaboração na edição de peças jornalísticas. Escrita e edição da Grande Reportagem \"E agora, Algarve?\"",
+    links: [],
+    media: []
+  },
+  {
+    id: 32,
+    destaque: false,
+    categoria: "AUDIOVISUAL",
+    hashtag: "#cinema",
+    titulo: "Segunda Opção (Curta-Metragem)",
+    mesAno: "Março 2018 — Junho 2019",
+    cargo: "Realizador, Editor, Cameraman",
+    local: "Tavira / Faro",
+    capa: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=600&q=80",
+    resumo: "Curta-metragem académica independente onde assumi a direção de fotografia, captação de imagem e montagem final.",
+    links: [
+      { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+    ],
+    media: []
+  },
+  {
+    id: 33,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#radio",
+    titulo: "+Jovem - Rádio Gilão",
+    mesAno: "Junho a Setembro 2019",
+    cargo: "Locutor (Colaborador)",
+    local: "Tavira",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 34,
+    destaque: false,
+    categoria: "JORNALISMO & MEDIA",
+    hashtag: "#radio",
+    titulo: "Rádio Gilão",
+    mesAno: "Junho a Setembro 2018",
+    cargo: "Locutor (Colaborador)",
+    local: "Tavira",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  },
+  {
+    id: 35,
+    destaque: false,
+    categoria: "",
+    hashtag: "",
+    titulo: "Outro / Outro ainda / Mais",
+    mesAno: "",
+    cargo: "",
+    local: "",
+    capa: "",
+    resumo: "",
+    links: [],
+    media: []
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
