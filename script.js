@@ -15,8 +15,8 @@ const projetos = [
             { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
         ],
         media: [
-            { tipo: "foto", url: "", titulo: "Estúdio" },
-            { tipo: "foto", url: "", titulo: "Emissão" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
         ]
     },
     {
@@ -178,7 +178,7 @@ const projetos = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. SCROLL REVEAL
+    // 1. SCROLL REVEAL SUAVE
     const reveals = document.querySelectorAll(".reveal");
     function handleScrollReveal() {
         const windowHeight = window.innerHeight;
@@ -191,13 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScrollReveal);
     handleScrollReveal();
 
-    // 2. LOGÓTIPO VOLTA AO TOPO
+    // 2. LOGÓTIPO VOLTA AO TOPO COM MOVIMENTO SUAVE
     document.getElementById("brand-logo")?.addEventListener("click", (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // 3. NÍVEIS DE SOFTWARE (BARRAS VISUAIS)
+    // 3. NÍVEIS DE SOFTWARE (BARRAS VISUAIS DE DENSIDADE)
     document.querySelectorAll('.level-bar').forEach(bar => {
         const level = parseInt(bar.getAttribute('data-level'), 10) || 0;
         bar.innerHTML = ''; 
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 4. CONSTRUÇÃO E NAVEGAÇÃO DOS DESTAQUES
+    // 4. CONSTRUÇÃO DOS DESTAQUES
     const containerDestaque = document.getElementById("grid-destaques-trio");
     const drawerDestaque = document.getElementById("drawer-destaque");
     const itensDestaque = projetos.filter(p => p.destaque).slice(0, 3);
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. ABA EXPANSÍVEL (POP-UP COM GALERIA INTERATIVA QUE SUBSTITUI A CAPA)
+    // 6. POP-UP / DRAWER TOTALMENTE REMODELADO E SUAVE
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
         document.querySelectorAll('.netflix-drawer').forEach(d => {
             d.classList.remove('active');
@@ -294,19 +294,17 @@ document.addEventListener("DOMContentLoaded", () => {
             `).join('');
         }
 
-        // Galeria interativa onde ao clicar a foto passa a ser a capa principal do pop-up
+        // Galeria posicionada exatamente abaixo da imagem de capa, sem descrições
         let mediaHTML = "";
-        const allPhotos = [{ url: proj.capa, titulo: "Capa Principal" }, ...(proj.media || [])];
+        const allPhotos = [{ url: proj.capa, titulo: "" }, ...(proj.media || [])];
         
         if (allPhotos.length > 1) {
             mediaHTML = `
                 <div class="drawer-media-section">
-                    <h5>Galeria de Fotografias (Clique para definir como capa)</h5>
                     <div class="drawer-media-grid">
                         ${allPhotos.map((m, idx) => `
                             <div class="media-mini-card ${idx === 0 ? 'selected-thumb' : ''}" data-img-url="${m.url}">
-                                <img src="${m.url}" alt="${m.titulo || 'Foto'}">
-                                <span>${m.titulo || 'Fotografia'}</span>
+                                <img src="${m.url}" alt="Fotografia">
                             </div>
                         `).join('')}
                     </div>
@@ -317,22 +315,38 @@ document.addEventListener("DOMContentLoaded", () => {
         targetDrawer.innerHTML = `
             <div class="drawer-content-wrapper">
                 <div class="drawer-flex-container">
+                    <!-- ESQUERDA: CAPA + GALERIA EMBAIXO -->
                     <div class="drawer-left-media">
-                        <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img popup-main-img">
-                        <div class="drawer-img-gradient"></div>
+                        <div class="drawer-cover-wrapper">
+                            <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img popup-main-img">
+                            <div class="drawer-img-gradient-bottom"></div>
+                        </div>
+                        ${mediaHTML}
                     </div>
+
+                    <!-- DIREITA: INFORMAÇÕES DO PROJECTO -->
                     <div class="drawer-right-details">
                         <span class="card-category">${proj.hashtag}</span>
                         <h2>${proj.titulo}</h2>
-                        <div class="drawer-meta-info-compact">
-                            <div><strong class="info-label-box">Duração:</strong> <span class="info-value-box">${proj.mesAno}</span></div>
-                            <div><strong class="info-label-box">Cargo:</strong> <span class="info-value-box">${proj.cargo}</span></div>
-                            <div><strong class="info-label-box">Local:</strong> <span class="info-value-box">${proj.local}</span></div>
-                        </div>
-                        <p class="drawer-description">${proj.resumo}</p>
                         
+                        <!-- TRÊS CAIXAS DE INFORMAÇÃO SEPARADAS, LADO A LADO -->
+                        <div class="drawer-meta-boxes">
+                            <div class="meta-box">
+                                <span class="meta-title">Duração</span>
+                                <span class="meta-value">${proj.mesAno}</span>
+                            </div>
+                            <div class="meta-box">
+                                <span class="meta-title">Cargo</span>
+                                <span class="meta-value">${proj.cargo}</span>
+                            </div>
+                            <div class="meta-box">
+                                <span class="meta-title">Local</span>
+                                <span class="meta-value">${proj.local}</span>
+                            </div>
+                        </div>
+
+                        <p class="drawer-description">${proj.resumo}</p>
                         ${linksHTML ? `<div class="drawer-actions">${linksHTML}</div>` : ''}
-                        ${mediaHTML}
                     </div>
                 </div>
             </div>
@@ -341,12 +355,18 @@ document.addEventListener("DOMContentLoaded", () => {
         targetDrawer.classList.add('active');
         if (window.lucide) window.lucide.createIcons();
 
-        // Ativar comportamento da galeria nos mini cartões (substituir imagem de capa)
+        // Ativação da troca suave de imagem de capa ao clicar na galeria
         const mainImg = targetDrawer.querySelector('.popup-main-img');
         targetDrawer.querySelectorAll('.media-mini-card').forEach(thumb => {
             thumb.addEventListener('click', () => {
                 const newUrl = thumb.getAttribute('data-img-url');
-                mainImg.src = newUrl;
+                if (mainImg) {
+                    mainImg.style.opacity = '0.4';
+                    setTimeout(() => {
+                        mainImg.src = newUrl;
+                        mainImg.style.opacity = '1';
+                    }, 150);
+                }
                 targetDrawer.querySelectorAll('.media-mini-card').forEach(t => t.classList.remove('selected-thumb'));
                 thumb.classList.add('selected-thumb');
             });
@@ -380,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO ACADÉMICA (MOVER A PÁGINA PARA O CARROSSEL RESPECTIVO)
+    // 8. MINICARDS DE CONTEÚDOS NAS EXPERIÊNCIAS E FORMAÇÕES
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
@@ -390,6 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
             wrapper.innerHTML = `
                 <div class="mini-project-chip" title="Ver no carrossel de Conteúdos">
                     <img src="${proj.capa}" alt="${proj.titulo}" class="mini-project-img">
+                    <span class="mini-project-title">${proj.titulo}</span>
                     <i data-lucide="arrow-right" class="mini-chevron"></i>
                 </div>
             `;
@@ -401,25 +422,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (targetCard) {
                     targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     
-                    // Abrir o drawer do carrossel correspondente
                     const catConfig = categoriasMap[proj.categoria];
                     if (catConfig) {
                         const drawer = document.getElementById(catConfig.drawer);
-                        if (drawer) {
-                            openNetflixDrawer(drawer, proj, targetCard);
-                        }
+                        if (drawer) openNetflixDrawer(drawer, proj, targetCard);
                     } else if (proj.destaque) {
                         const drawer = document.getElementById("drawer-destaque");
-                        if (drawer) {
-                            openNetflixDrawer(drawer, proj, targetCard);
-                        }
+                        if (drawer) openNetflixDrawer(drawer, proj, targetCard);
                     }
                 }
             });
         });
     }
 
-    // 9. SETAS CONDICIONAIS EM ELEMENTOS COM ATRIBUTO DATA-LINK
+    // 9. SETAS DE HIPERLIGAÇÃO CONDICIONAIS
     function setupConditionalArrows() {
         document.querySelectorAll('.card-item-with-logo[data-link]').forEach(item => {
             const linkUrl = item.getAttribute('data-link');
@@ -428,7 +444,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 arrowBtn.href = linkUrl;
                 arrowBtn.target = "_blank";
                 arrowBtn.className = "course-link-arrow";
-                arrowBtn.title = "Visitar";
+                arrowBtn.title = "Visitar Website";
                 arrowBtn.innerHTML = `<i data-lucide="arrow-up-right"></i>`;
                 item.appendChild(arrowBtn);
             }
