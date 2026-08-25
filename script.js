@@ -1,4 +1,4 @@
-// DADOS DOS PROJETOS DIVIDIDOS NAS CATEGORIAS SOLICITADAS
+// DADOS INTEGRALMENTE CONSERVADOS E CATEGORIZADOS
 const projetos = [
     {
         id: 1,
@@ -15,9 +15,7 @@ const projetos = [
             { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" },
             { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
         ],
-        media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Gravação em Estúdio" }
-        ]
+        media: []
     },
     {
         id: 2,
@@ -199,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // 3. NÍVEIS DE SOFTWARE (BARRAS VISUAIS)
+    // 3. NÍVEIS DE SOFTWARE (BARRAS VISUAIS PONTILHADAS)
     document.querySelectorAll('.level-bar').forEach(bar => {
         const level = parseInt(bar.getAttribute('data-level'), 10) || 0;
         bar.innerHTML = ''; 
@@ -210,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 4. CONSTRUÇÃO E NAVEGAÇÃO DOS DESTAQUES (3 CARTÕES COM SETAS)
+    // 4. EM DESTAQUE ( EXACTAMENTE 3 CARTÕES COM SETA INFERIOR DIREITA )
     const containerDestaque = document.getElementById("grid-destaques-trio");
     const drawerDestaque = document.getElementById("drawer-destaque");
     const itensDestaque = projetos.filter(p => p.destaque).slice(0, 3);
@@ -225,8 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             card.innerHTML = `
                 <img src="${proj.capa}" alt="${proj.titulo}" class="destaque-prime-bg">
                 <div class="destaque-prime-overlay">
-                    <span class="card-category">${proj.hashtag}</span>
-                    <h3 class="card-title">${proj.titulo}</h3>
+                    <h3 class="card-title-prominent">${proj.titulo}</h3>
                 </div>
                 <button class="destaque-arrow-btn" title="Expandir"><i data-lucide="chevron-down"></i></button>
             `;
@@ -235,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 5. CARROSSEIS POR CATEGORIA (PROPORÇÃO 16:9 COM FUNDO TOTAL)
+    // 5. CARROSSEIS DAS 5 CATEGORIAS (PROPORÇÃO 16:9 + SETA PARA BAIXO EM CADA CARTÃO)
     const categoriasMap = {
         "JORNALISMO & MEDIA": { slider: "slider-jornalismo", drawer: "drawer-jornalismo", btnL: "btn-left-jornalismo", btnR: "btn-right-jornalismo" },
         "AUDIOVISUAL": { slider: "slider-audiovisual", drawer: "drawer-audiovisual", btnL: "btn-left-audiovisual", btnR: "btn-right-audiovisual" },
@@ -263,6 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="card-category">${proj.hashtag}</span>
                         <h4 class="card-title">${proj.titulo}</h4>
                     </div>
+                    <button class="destaque-arrow-btn card-inner-down-arrow" title="Expandir"><i data-lucide="chevron-down"></i></button>
                 `;
                 card.addEventListener("click", () => openNetflixDrawer(drawer, proj, card));
                 slider.appendChild(card);
@@ -272,16 +270,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. ABA EXPANSÍVEL (NETFLIX/PRIME VIDEO DRAWER - CENTRADO E TOTAL LARGURA)
+    // 6. EXPANSÃO ESTILO NETFLIX/PRIME VIDEO (SEM BOTÃO "X", FECHA AO CLICAR FORA OU RE-CLICAR)
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
         scrollStateBeforeDrawer = window.scrollY;
+
+        const isActive = triggerElement.classList.contains('active-card');
 
         document.querySelectorAll('.netflix-drawer').forEach(d => {
             d.classList.remove('active');
             d.innerHTML = '';
         });
-
         document.querySelectorAll('.destaque-card-prime, .netflix-card-16-9').forEach(c => c.classList.remove('active-card'));
+
+        if (isActive) {
+            window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
+            return;
+        }
+
         triggerElement.classList.add('active-card');
 
         let linksHTML = "";
@@ -297,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (proj.media && proj.media.length > 0) {
             mediaHTML = `
                 <div class="drawer-media-section">
-                    <h5>Galeria & Conteúdos</h5>
+                    <h5>Galeria & Registrar</h5>
                     <div class="drawer-media-grid">
                         ${proj.media.map(m => `
                             <div class="media-mini-card">
@@ -312,7 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         targetDrawer.innerHTML = `
             <div class="drawer-content-wrapper">
-                <button class="drawer-close-btn" aria-label="Fechar">&times;</button>
                 <div class="drawer-flex-container">
                     <div class="drawer-left-media">
                         <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img">
@@ -322,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="card-category">${proj.hashtag}</span>
                         <h2>${proj.titulo}</h2>
                         <div class="drawer-meta-info">
-                            <p><strong>Período:</strong> ${proj.mesAno}</p>
+                            <p><strong>Duração / Data:</strong> ${proj.mesAno}</p>
                             <p><strong>Cargo:</strong> ${proj.cargo}</p>
                             <p><strong>Local:</strong> ${proj.local}</p>
                         </div>
@@ -341,20 +345,9 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             targetDrawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 100);
-
-        targetDrawer.querySelector('.drawer-close-btn').addEventListener('click', () => {
-            closeNetflixDrawer(targetDrawer, triggerElement);
-        });
     }
 
-    function closeNetflixDrawer(drawer, triggerElement) {
-        drawer.classList.remove('active');
-        drawer.innerHTML = '';
-        if (triggerElement) triggerElement.classList.remove('active-card');
-        window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
-    }
-
-    // 7. BOTÕES DOS CARROSSEIS
+    // 7. BOTÕES DE CARROSSEL
     function setupCarouselButtons(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
         const btnL = document.getElementById(btnLeftId);
@@ -377,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO (MINI-CARTÕES E DRAWERS)
+    // 8. PROJETOS ASSOCIADOS NA TIMELINE (MAIS COMPACTOS E SEM O TÍTULO SOBREPONÍVEL)
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
@@ -385,7 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!proj) return;
 
             wrapper.innerHTML = `
-                <div class="mini-project-chip">
+                <div class="mini-project-chip" title="${proj.titulo}">
                     <img src="${proj.capa}" alt="${proj.titulo}" class="mini-project-img">
                     <div class="mini-project-info">
                         <span class="mini-tag">${proj.hashtag}</span>
@@ -415,11 +408,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     drawer.innerHTML = `
                         <div class="timeline-drawer-inner">
-                            <button class="drawer-close-btn">&times;</button>
                             <div class="drawer-flex-container">
                                 <div class="drawer-left-media">
                                     <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img">
-                                    <div class="drawer-img-gradient"></div>
                                 </div>
                                 <div class="drawer-right-details">
                                     <span class="card-category">${proj.hashtag}</span>
@@ -436,18 +427,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
                     drawer.classList.add('active');
                     if (window.lucide) window.lucide.createIcons();
-
-                    drawer.querySelector('.drawer-close-btn').addEventListener('click', () => {
-                        drawer.classList.remove('active');
-                        drawer.innerHTML = '';
-                        window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
-                    });
                 }
             });
         });
     }
 
-    // 9. SETAS DINÂMICAS PARA ORGANIZAÇÕES E VOLUNTARIADO (APENAS SE HOUVER LINK)
+    // 9. SETAS DINÂMICAS PARA ORGANIZAÇÕES E VOLUNTARIADO (SÓ APARECEM SE HOUVER LINK PREENCHIDO)
     function setupConditionalArrows() {
         document.querySelectorAll('.card-item-with-logo[data-link]').forEach(item => {
             const linkUrl = item.getAttribute('data-link');
@@ -456,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 arrowBtn.href = linkUrl;
                 arrowBtn.target = "_blank";
                 arrowBtn.className = "course-link-arrow";
-                arrowBtn.title = "Visitar";
+                arrowBtn.title = "Visitar Website";
                 arrowBtn.innerHTML = `<i data-lucide="arrow-up-right"></i>`;
                 item.appendChild(arrowBtn);
             }
