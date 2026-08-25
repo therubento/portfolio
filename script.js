@@ -39,7 +39,7 @@ const projetos = [
     },
     {
         id: 3,
-        destaque: false,
+        destaque: true,
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
@@ -71,7 +71,7 @@ const projetos = [
     },
     {
         id: 5,
-        destaque: true,
+        destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#digital",
         titulo: "Projeto ENTR PT — RTP",
@@ -166,7 +166,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 11,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -180,7 +180,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 12,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -194,7 +194,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 13,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -208,7 +208,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 14,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -222,7 +222,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 15,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -236,7 +236,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 16,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -250,7 +250,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 17,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -264,7 +264,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 18,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -278,7 +278,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 19,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -292,7 +292,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 20,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -306,7 +306,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 21,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -320,7 +320,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 22,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -334,7 +334,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 23,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -348,7 +348,7 @@ const projetos = [
         media: []
     },
     {
-        id: 10,
+        id: 24,
         destaque: false,
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
@@ -362,7 +362,7 @@ const projetos = [
         media: []
     },
     {
-        id: ,
+        id: 25,
         destaque: false,
         categoria: "RÁDIO & ÁUDIO",
         hashtag: "#radio",
