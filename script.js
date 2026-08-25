@@ -6,7 +6,8 @@ const projetos = [
         categoria: "RÁDIO & ÁUDIO",
         hashtag: "#digital #radio",
         titulo: "Confissões de Um Universitário",
-        empresaAno: "RÁDIO UNIVERSITÁRIA DO ALGARVE / UNIVERSIDADE DO ALGARVE (2026)",
+        empresaLocal: "Rádio Universitária do Algarve / Universidade do Algarve",
+        ano: "2026",
         mesAno: "Março 2026 - Atualidade",
         cargo: "Realizador / Pós-Produção",
         local: "Rádio Universitária do Algarve / Universidade do Algarve",
@@ -17,8 +18,7 @@ const projetos = [
             { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
         ],
         media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio RUA FM" },
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Gravação de Voz" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio RUA FM" }
         ]
     },
     {
@@ -27,7 +27,8 @@ const projetos = [
         categoria: "AUDIOVISUAL",
         hashtag: "#documentario",
         titulo: "Sala 31 / 30 Anos de CC",
-        empresaAno: "UNIVERSIDADE DO ALGARVE (2026)",
+        empresaLocal: "Universidade do Algarve",
+        ano: "2026",
         mesAno: "2026",
         cargo: "Realizador",
         local: "Universidade do Algarve",
@@ -37,8 +38,7 @@ const projetos = [
             { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
         ],
         media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" },
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80", titulo: "Bastidores da Regia" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
         ]
     },
     {
@@ -47,7 +47,8 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
-        empresaAno: "SKILLS PORTUGAL (2023)",
+        empresaLocal: "Portimão",
+        ano: "2023",
         mesAno: "Março 2023",
         cargo: "Editor de Vídeo",
         local: "Portimão",
@@ -64,7 +65,8 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
-        empresaAno: "SKILLS PORTUGAL (2024)",
+        empresaLocal: "Santa Maria da Feira",
+        ano: "2024",
         mesAno: "Novembro 2024",
         cargo: "Jornalista / Repórter TV",
         local: "Santa Maria da Feira",
@@ -81,7 +83,8 @@ const projetos = [
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#digital",
         titulo: "Projeto ENTR PT — RTP",
-        empresaAno: "ENTR PT / RTP (2024)",
+        empresaLocal: "RTP — Lisboa",
+        ano: "2024",
         mesAno: "Maio — Agosto 2024",
         cargo: "Criador de Conteúdos (Freelancer)",
         local: "RTP — Lisboa",
@@ -98,7 +101,8 @@ const projetos = [
         categoria: "RÁDIO & ÁUDIO",
         hashtag: "#radio",
         titulo: "Coberturas de Festivais — RUA FM",
-        empresaAno: "RUA FM (2022 - 2025)",
+        empresaLocal: "RUA - Rádio Universitária do Algarve",
+        ano: "2025",
         mesAno: "2022 — 2025",
         cargo: "Jornalista / Animador",
         local: "RUA - Rádio Universitária do Algarve",
@@ -115,7 +119,8 @@ const projetos = [
         categoria: "AUDIOVISUAL",
         hashtag: "#cinema",
         titulo: "Segunda Opção (Curta-Metragem)",
-        empresaAno: "UALG (2019)",
+        empresaLocal: "Tavira / Faro",
+        ano: "2019",
         mesAno: "Março 2018 — Junho 2019",
         cargo: "Realizador, Editor, Cameraman",
         local: "Tavira / Faro",
@@ -132,7 +137,8 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#investigacao",
         titulo: "Dissertação de Mestrado (ESCS)",
-        empresaAno: "ESCS (2024)",
+        empresaLocal: "Escola Superior de Comunicação Social",
+        ano: "2024",
         mesAno: "2022 — 2024",
         cargo: "Investigador",
         local: "Escola Superior de Comunicação Social",
@@ -147,7 +153,8 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#imprensa",
         titulo: "Reportagens Multimédia — Sul Informação",
-        empresaAno: "SUL INFORMAÇÃO (2022)",
+        empresaLocal: "Sul Informação (Faro)",
+        ano: "2022",
         mesAno: "Abril 2021 — Fevereiro 2022",
         cargo: "Jornalista (Estágio)",
         local: "Sul Informação (Faro)",
@@ -164,7 +171,8 @@ const projetos = [
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
         titulo: "Política (NÃO) Importa",
-        empresaAno: "PROJETO INDEPENDENTE (2022)",
+        empresaLocal: "Projeto Independente",
+        ano: "2022",
         mesAno: "Setembro 2020 — Novembro 2022",
         cargo: "Coordenador de Comunicação",
         local: "Projeto Independente",
@@ -179,7 +187,8 @@ const projetos = [
         categoria: "OUTROS",
         hashtag: "#imprensa",
         titulo: "Redação no 5º Congresso dos Jornalistas",
-        empresaAno: "ESCS / LISBOA (2024)",
+        empresaLocal: "ESCS / Lisboa",
+        ano: "2024",
         mesAno: "Janeiro 2024",
         cargo: "Jornalista Redator",
         local: "ESCS / Lisboa",
@@ -240,7 +249,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="destaque-prime-overlay">
                     <span class="card-category">${proj.hashtag}</span>
                     <h3 class="card-title-highlight">${proj.titulo}</h3>
-                    <div class="card-sub-info">${proj.empresaAno}</div>
+                    <div class="card-sub-info">
+                        <span>${proj.empresaLocal}</span> • <span>${proj.ano}</span>
+                    </div>
                 </div>
                 <button class="destaque-arrow-btn" title="Expandir"><i data-lucide="chevron-down"></i></button>
             `;
@@ -276,7 +287,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="card-gradient-overlay">
                         <span class="card-category">${proj.hashtag}</span>
                         <h4 class="card-title">${proj.titulo}</h4>
-                        <div class="card-sub-info">${proj.empresaAno}</div>
+                        <div class="card-sub-info">
+                            <span>${proj.empresaLocal}</span> • <span>${proj.ano}</span>
+                        </div>
                     </div>
                     <button class="destaque-arrow-btn" title="Expandir"><i data-lucide="chevron-down"></i></button>
                 `;
@@ -288,82 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // HELPER PARA CONSTRUIR O LAYOUT INTERNO DO POP-UP (REUTILIZADO NOS CONTEÚDOS E NAS TIMELINES)
-    function buildDrawerHTML(proj) {
-        let linksHTML = "";
-        if (proj.links && proj.links.length > 0) {
-            linksHTML = proj.links.map(l => `
-                <a href="${l.url}" target="_blank" class="drawer-action-btn">
-                    <i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}
-                </a>
-            `).join('');
-        }
-
-        let mediaHTML = "";
-        if (proj.media && proj.media.length > 0) {
-            mediaHTML = `
-                <div class="drawer-media-section">
-                    <h5>Galeria de Fotografias (Clique para trocar a capa)</h5>
-                    <div class="drawer-media-grid">
-                        <div class="media-mini-card active" data-img-url="${proj.capa}">
-                            <img src="${proj.capa}" alt="Capa Principal">
-                            <span>Capa</span>
-                        </div>
-                        ${proj.media.map((m, idx) => `
-                            <div class="media-mini-card" data-img-url="${m.url}">
-                                <img src="${m.url}" alt="${m.titulo}">
-                                <span>${m.titulo}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        return `
-            <div class="drawer-content-wrapper">
-                <div class="drawer-flex-container">
-                    <div class="drawer-left-media">
-                        <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img">
-                        <div class="drawer-img-gradient"></div>
-                    </div>
-                    <div class="drawer-right-details">
-                        <span class="card-category">${proj.hashtag}</span>
-                        <h2>${proj.titulo}</h2>
-                        <div class="drawer-meta-info-compact">
-                            <div><strong>Duração:</strong> ${proj.mesAno}</div>
-                            <div><strong>Cargo:</strong> ${proj.cargo}</div>
-                            <div><strong>Local:</strong> ${proj.local}</div>
-                        </div>
-                        <p class="drawer-description">${proj.resumo}</p>
-                        
-                        ${linksHTML ? `<div class="drawer-actions">${linksHTML}</div>` : ''}
-                        ${mediaHTML}
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    // REGISTA OS EVENTOS DE CLIQUE PARA A TROCA DE FOTOS DE CAPA
-    function bindGalleryClickEvents(container) {
-        const coverImg = container.querySelector('.drawer-cover-img');
-        const miniCards = container.querySelectorAll('.media-mini-card');
-
-        miniCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const newUrl = card.getAttribute('data-img-url');
-                if (coverImg && newUrl) {
-                    coverImg.src = newUrl;
-                }
-                miniCards.forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
-            });
-        });
-    }
-
-    // 6. ABA EXPANSÍVEL (POP-UP NETFLIX/PRIME VIDEO)
+    // 6. POP-UP (GALERIA TROCA A CAPA E CAIXA DE INFORMAÇÕES AJUSTA AO TEXTO)
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
         scrollStateBeforeDrawer = window.scrollY;
 
@@ -373,32 +311,78 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         document.querySelectorAll('.destaque-card-prime, .netflix-card-16-9').forEach(c => c.classList.remove('active-card'));
-        triggerElement.classList.add('active-card');
+        if (triggerElement) triggerElement.classList.add('active-card');
 
-        targetDrawer.innerHTML = buildDrawerHTML(proj);
+        let linksHTML = "";
+        if (proj.links && proj.links.length > 0) {
+            linksHTML = proj.links.map(l => `
+                <a href="${l.url}" target="_blank" class="drawer-action-btn">
+                    <i data-lucide="${l.icone || 'external-link'}"></i> ${l.texto}
+                </a>
+            `).join('');
+        }
+
+        // Galeria interativa no Pop-up (Se clicar numa foto, ela assume a foto de capa)
+        const todasAsFotos = [proj.capa, ...(proj.media ? proj.media.map(m => m.url) : [])];
+        let galeriaHTML = "";
+        if (todasAsFotos.length > 1) {
+            galeriaHTML = `
+                <div class="drawer-media-section">
+                    <h5>Galeria de Fotografias</h5>
+                    <div class="drawer-media-grid">
+                        ${todasAsFotos.map((urlFoto, idx) => `
+                            <div class="media-mini-card popup-gallery-thumb ${idx === 0 ? 'active-thumb' : ''}" data-img="${urlFoto}">
+                                <img src="${urlFoto}" alt="Fotografia ${idx + 1}">
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        targetDrawer.innerHTML = `
+            <div class="drawer-content-wrapper">
+                <div class="drawer-flex-container">
+                    <div class="drawer-left-media">
+                        <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img" id="popup-main-cover">
+                        <div class="drawer-img-gradient"></div>
+                    </div>
+                    <div class="drawer-right-details">
+                        <span class="card-category">${proj.hashtag}</span>
+                        <h2>${proj.titulo}</h2>
+                        <div class="drawer-meta-info-compact auto-width-box">
+                            <div><strong>Duração / Época:</strong> ${proj.mesAno}</div>
+                            <div><strong>Cargo:</strong> ${proj.cargo}</div>
+                            <div><strong>Local:</strong> ${proj.local}</div>
+                        </div>
+                        <p class="drawer-description">${proj.resumo}</p>
+                        
+                        ${linksHTML ? `<div class="drawer-actions">${linksHTML}</div>` : ''}
+                        ${galeriaHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+
         targetDrawer.classList.add('active');
-        
-        bindGalleryClickEvents(targetDrawer);
-
         if (window.lucide) window.lucide.createIcons();
+
+        // Lógica de troca da imagem de capa ao clicar na miniatura da galeria
+        targetDrawer.querySelectorAll('.popup-gallery-thumb').forEach(thumb => {
+            thumb.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const newImg = thumb.getAttribute('data-img');
+                const mainCover = targetDrawer.querySelector('#popup-main-cover');
+                if (mainCover) mainCover.src = newImg;
+
+                targetDrawer.querySelectorAll('.popup-gallery-thumb').forEach(t => t.classList.remove('active-thumb'));
+                thumb.classList.add('active-thumb');
+            });
+        });
 
         setTimeout(() => {
             targetDrawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 100);
-
-        const closeHandler = (e) => {
-            if (!targetDrawer.contains(e.target) || e.target.classList.contains('drawer-content-wrapper')) {
-                closeNetflixDrawer(targetDrawer, triggerElement);
-                document.removeEventListener('click', closeHandler);
-            }
-        };
-    }
-
-    function closeNetflixDrawer(drawer, triggerElement) {
-        drawer.classList.remove('active');
-        drawer.innerHTML = '';
-        if (triggerElement) triggerElement.classList.remove('active-card');
-        window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
     }
 
     // 7. BOTÕES DOS CARROSSEIS
@@ -424,7 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. VINCULAR PROJETOS ÀS EXPERIÊNCIAS E FORMAÇÃO (COM FOTO E NOME)
+    // 8. MINI CARTÕES DA EXPERIÊNCIA E FORMAÇÃO (ABREM EM CIMA NA SECÇÃO DOS CONTEÚDOS)
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
@@ -432,41 +416,23 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!proj) return;
 
             wrapper.innerHTML = `
-                <div class="mini-project-chip-named" title="Ver conteúdo associado">
+                <div class="mini-project-chip-full" title="Ver conteúdo associado">
                     <img src="${proj.capa}" alt="${proj.titulo}" class="mini-project-img">
                     <span class="mini-project-title">${proj.titulo}</span>
-                    <i data-lucide="chevron-down" class="mini-chevron-inline"></i>
+                    <i data-lucide="external-link" class="mini-chevron"></i>
                 </div>
             `;
 
-            const timelineItem = wrapper.closest('.timeline-content');
-            const drawer = timelineItem ? timelineItem.querySelector('.timeline-drawer') : null;
-
-            wrapper.querySelector('.mini-project-chip-named').addEventListener('click', (e) => {
+            wrapper.querySelector('.mini-project-chip-full').addEventListener('click', (e) => {
                 e.stopPropagation();
-                if (!drawer) return;
+                const catalogSection = document.getElementById('catalogo');
+                const drawerDestaque = document.getElementById('drawer-destaque');
 
-                if (drawer.classList.contains('active')) {
-                    drawer.classList.remove('active');
-                    drawer.innerHTML = '';
-                    window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
-                } else {
-                    scrollStateBeforeDrawer = window.scrollY;
-                    document.querySelectorAll('.timeline-drawer').forEach(td => {
-                        td.classList.remove('active');
-                        td.innerHTML = '';
-                    });
-
-                    drawer.innerHTML = `<div class="timeline-drawer-inner">${buildDrawerHTML(proj)}</div>`;
-                    drawer.classList.add('active');
-                    
-                    bindGalleryClickEvents(drawer);
-
-                    if (window.lucide) window.lucide.createIcons();
-
+                if (catalogSection && drawerDestaque) {
+                    catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     setTimeout(() => {
-                        drawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }, 100);
+                        openNetflixDrawer(drawerDestaque, proj, null);
+                    }, 500);
                 }
             });
         });
