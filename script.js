@@ -7,7 +7,7 @@ const projetos = [
         titulo: "Confissões de Um Universitário",
         mesAno: "Março 2026 - Atualidade",
         cargo: "Realizador / Pós-Produção",
-        local: "Rádio Universitária do Algarve / Universidade do Algarve",
+        local: "RUA (UAlg)",
         capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
         resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
         links: [
@@ -15,8 +15,8 @@ const projetos = [
             { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
         ],
         media: [
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+            { tipo: "foto", url: "", titulo: "Estúdio" },
+            { tipo: "foto", url: "", titulo: "Emissão" }
         ]
     },
     {
@@ -24,7 +24,7 @@ const projetos = [
         destaque: true,
         categoria: "AUDIOVISUAL",
         hashtag: "#documentario",
-        titulo: "Sala 31 / 30 Anos de CC",
+        titulo: "Sala 31",
         mesAno: "2026",
         cargo: "Realizador",
         local: "Universidade do Algarve",
