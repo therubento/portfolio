@@ -39,7 +39,7 @@ const projetos = [
     },
     {
         id: 3,
-        destaque: true,
+        destaque: false,
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
@@ -55,7 +55,7 @@ const projetos = [
     },
     {
         id: 4,
-        destaque: false,
+        destaque: true,
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
