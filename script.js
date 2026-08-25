@@ -1,4 +1,4 @@
-// PROJETOS COM GALERIA DE FOTOGRAFIAS INCORPORADA
+// DADOS DOS PROJETOS CATEGORIZADOS E COM GALERIA DE FOTOS INTERATIVA NOS POP-UPS
 const projetos = [
     {
         id: 1,
@@ -6,8 +6,7 @@ const projetos = [
         categoria: "RÁDIO & ÁUDIO",
         hashtag: "#digital #radio",
         titulo: "Confissões de Um Universitário",
-        ano: "2026",
-        empresaLocal: "RUA FM / UAlg",
+        empresaAno: "Universidade do Algarve / RUA FM (2026)",
         mesAno: "Março 2026 - Atualidade",
         cargo: "Realizador / Pós-Produção",
         local: "Rádio Universitária do Algarve / Universidade do Algarve",
@@ -18,8 +17,8 @@ const projetos = [
             { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
         ],
         media: [
-            { url: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY", titulo: "Capa Oficial" },
-            { url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Gravação em Estúdio" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Gravação de Voz" },
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio UAlg" }
         ]
     },
     {
@@ -28,8 +27,7 @@ const projetos = [
         categoria: "AUDIOVISUAL",
         hashtag: "#documentario",
         titulo: "Sala 31 / 30 Anos de CC",
-        ano: "2026",
-        empresaLocal: "Universidade do Algarve",
+        empresaAno: "Universidade do Algarve (2026)",
         mesAno: "2026",
         cargo: "Realizador",
         local: "Universidade do Algarve",
@@ -39,8 +37,8 @@ const projetos = [
             { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
         ],
         media: [
-            { url: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80", titulo: "Set de Filmagens" },
-            { url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" },
+            { tipo: "foto", url: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80", titulo: "Montagem de Registo" }
         ]
     },
     {
@@ -49,8 +47,7 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Excelência — Skills Portugal 2023",
-        ano: "2023",
-        empresaLocal: "Skills Portugal",
+        empresaAno: "Skills Portugal (2023)",
         mesAno: "Março 2023",
         cargo: "Editor de Vídeo",
         local: "Portimão",
@@ -59,9 +56,7 @@ const projetos = [
         links: [
             { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
         ],
-        media: [
-            { url: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80", titulo: "Edição de Imagem" }
-        ]
+        media: []
     },
     {
         id: 4,
@@ -69,8 +64,7 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#televisao",
         titulo: "Medalha de Ouro — Skills Portugal 2024",
-        ano: "2024",
-        empresaLocal: "Skills Portugal",
+        empresaAno: "Skills Portugal (2024)",
         mesAno: "Novembro 2024",
         cargo: "Jornalista / Repórter TV",
         local: "Santa Maria da Feira",
@@ -87,8 +81,7 @@ const projetos = [
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#digital",
         titulo: "Projeto ENTR PT — RTP",
-        ano: "2024",
-        empresaLocal: "RTP",
+        empresaAno: "RTP (2024)",
         mesAno: "Maio — Agosto 2024",
         cargo: "Criador de Conteúdos (Freelancer)",
         local: "RTP — Lisboa",
@@ -105,8 +98,7 @@ const projetos = [
         categoria: "RÁDIO & ÁUDIO",
         hashtag: "#radio",
         titulo: "Coberturas de Festivais — RUA FM",
-        ano: "2022 — 2025",
-        empresaLocal: "RUA FM",
+        empresaAno: "RUA FM (2022 — 2025)",
         mesAno: "2022 — 2025",
         cargo: "Jornalista / Animador",
         local: "RUA - Rádio Universitária do Algarve",
@@ -123,8 +115,7 @@ const projetos = [
         categoria: "AUDIOVISUAL",
         hashtag: "#cinema",
         titulo: "Segunda Opção (Curta-Metragem)",
-        ano: "2019",
-        empresaLocal: "UAlg",
+        empresaAno: "UAlg / Produção Independente (2019)",
         mesAno: "Março 2018 — Junho 2019",
         cargo: "Realizador, Editor, Cameraman",
         local: "Tavira / Faro",
@@ -141,8 +132,7 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#investigacao",
         titulo: "Dissertação de Mestrado (ESCS)",
-        ano: "2024",
-        empresaLocal: "ESCS",
+        empresaAno: "ESCS (2024)",
         mesAno: "2022 — 2024",
         cargo: "Investigador",
         local: "Escola Superior de Comunicação Social",
@@ -157,8 +147,7 @@ const projetos = [
         categoria: "JORNALISMO & MEDIA",
         hashtag: "#imprensa",
         titulo: "Reportagens Multimédia — Sul Informação",
-        ano: "2022",
-        empresaLocal: "Sul Informação",
+        empresaAno: "Sul Informação (2022)",
         mesAno: "Abril 2021 — Fevereiro 2022",
         cargo: "Jornalista (Estágio)",
         local: "Sul Informação (Faro)",
@@ -175,8 +164,7 @@ const projetos = [
         categoria: "DIGITAL & COMUNICAÇÃO",
         hashtag: "#comunicacao",
         titulo: "Política (NÃO) Importa",
-        ano: "2022",
-        empresaLocal: "Projeto Independente",
+        empresaAno: "Projeto Independente (2022)",
         mesAno: "Setembro 2020 — Novembro 2022",
         cargo: "Coordenador de Comunicação",
         local: "Projeto Independente",
@@ -191,8 +179,7 @@ const projetos = [
         categoria: "OUTROS",
         hashtag: "#imprensa",
         titulo: "Redação no 5º Congresso dos Jornalistas",
-        ano: "2024",
-        empresaLocal: "ESCS",
+        empresaAno: "ESCS / Congresso Jornalistas (2024)",
         mesAno: "Janeiro 2024",
         cargo: "Jornalista Redator",
         local: "ESCS / Lisboa",
@@ -236,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 4. RENDERING DESTAQUES COM DESTAQUE NO TÍTULO, HASTAGS ACIMA E EMPRESA/ANO ABAIXO
+    // 4. ESTRUTURA DOS CARTÕES COM HASHTAG NO TOPO E EMPRESA/ANO ABAIXO DO TÍTULO
     const containerDestaque = document.getElementById("grid-destaques-trio");
     const drawerDestaque = document.getElementById("drawer-destaque");
     const itensDestaque = projetos.filter(p => p.destaque).slice(0, 3);
@@ -253,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="destaque-prime-overlay">
                     <span class="card-category">${proj.hashtag}</span>
                     <h3 class="card-title-highlight">${proj.titulo}</h3>
-                    <span class="card-company-year">${proj.empresaLocal} • ${proj.ano}</span>
+                    <div class="card-sub-info">${proj.empresaAno}</div>
                 </div>
                 <button class="destaque-arrow-btn" title="Expandir"><i data-lucide="chevron-down"></i></button>
             `;
@@ -262,7 +249,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 5. CARROSSEIS POR CATEGORIA COM FORMATO ATUALIZADO
     const categoriasMap = {
         "JORNALISMO & MEDIA": { slider: "slider-jornalismo", drawer: "drawer-jornalismo", btnL: "btn-left-jornalismo", btnR: "btn-right-jornalismo" },
         "AUDIOVISUAL": { slider: "slider-audiovisual", drawer: "drawer-audiovisual", btnL: "btn-left-audiovisual", btnR: "btn-right-audiovisual" },
@@ -288,8 +274,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="${proj.capa}" alt="${proj.titulo}" class="card-bg-img">
                     <div class="card-gradient-overlay">
                         <span class="card-category">${proj.hashtag}</span>
-                        <h4 class="card-title-highlight" style="font-size: 0.92rem; margin: 2px 0;">${proj.titulo}</h4>
-                        <span class="card-company-year" style="font-size: 0.68rem;">${proj.empresaLocal} • ${proj.ano}</span>
+                        <h4 class="card-title">${proj.titulo}</h4>
+                        <div class="card-sub-info">${proj.empresaAno}</div>
                     </div>
                     <button class="destaque-arrow-btn" title="Expandir"><i data-lucide="chevron-down"></i></button>
                 `;
@@ -301,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. POP-UPS (ALTURA DA CAPA FIXA E TROCA INTERATIVA COM GALERIA)
+    // 5. POP-UP COM GALERIA INTERATIVA QUE SUBSTITUI A FOTO PRINCIPAL
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
         scrollStateBeforeDrawer = window.scrollY;
 
@@ -322,17 +308,17 @@ document.addEventListener("DOMContentLoaded", () => {
             `).join('');
         }
 
-        // Galeria com funcionalidade de trocar a imagem de capa ao clicar nas miniaturas
-        let galleryHTML = "";
-        const allMedia = proj.media && proj.media.length > 0 ? proj.media : [{ url: proj.capa, titulo: "Capa Principal" }];
-
-        if (allMedia.length > 0) {
-            galleryHTML = `
-                <div class="drawer-gallery-interactive">
+        // Galeria com foto de capa original incluída no início
+        const todasFotos = [{ tipo: 'foto', url: proj.capa, titulo: 'Capa' }, ...(proj.media || [])];
+        
+        let mediaHTML = "";
+        if (todasFotos.length > 1) {
+            mediaHTML = `
+                <div class="drawer-media-section">
                     <h5>Galeria de Fotografias</h5>
-                    <div class="drawer-gallery-grid">
-                        ${allMedia.map((m, idx) => `
-                            <div class="gallery-thumb-card ${idx === 0 ? 'active-thumb' : ''}" data-img="${m.url}">
+                    <div class="drawer-media-grid">
+                        ${todasFotos.map((m, idx) => `
+                            <div class="media-mini-card ${idx === 0 ? 'active-thumb' : ''}" data-url="${m.url}">
                                 <img src="${m.url}" alt="${m.titulo}">
                             </div>
                         `).join('')}
@@ -351,30 +337,33 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="drawer-right-details">
                         <span class="card-category">${proj.hashtag}</span>
                         <h2>${proj.titulo}</h2>
+                        
                         <div class="drawer-meta-info-compact">
-                            <div><strong>Duração:</strong> ${proj.mesAno}</div>
-                            <div><strong>Cargo:</strong> ${proj.cargo}</div>
-                            <div><strong>Local:</strong> ${proj.local}</div>
+                            <div class="meta-row"><strong>Duração:</strong> <span>${proj.mesAno}</span></div>
+                            <div class="meta-row"><strong>Cargo:</strong> <span>${proj.cargo}</span></div>
+                            <div class="meta-row"><strong>Local:</strong> <span>${proj.local}</span></div>
                         </div>
+
                         <p class="drawer-description">${proj.resumo}</p>
                         
                         ${linksHTML ? `<div class="drawer-actions">${linksHTML}</div>` : ''}
-                        ${galleryHTML}
+                        ${mediaHTML}
                     </div>
                 </div>
             </div>
         `;
 
-        // Evento de troca de imagem de capa ao clicar na miniatura
-        targetDrawer.querySelectorAll('.gallery-thumb-card').forEach(thumb => {
+        // Lógica para trocar a fotografia de capa ao clicar em qualquer thumb
+        const mainCover = targetDrawer.querySelector('#drawer-main-cover');
+        targetDrawer.querySelectorAll('.media-mini-card').forEach(thumb => {
             thumb.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const newImgUrl = thumb.getAttribute('data-img');
-                const mainCover = targetDrawer.querySelector('#drawer-main-cover');
-                if (mainCover) mainCover.src = newImgUrl;
-
-                targetDrawer.querySelectorAll('.gallery-thumb-card').forEach(t => t.classList.remove('active-thumb'));
-                thumb.classList.add('active-thumb');
+                const newUrl = thumb.getAttribute('data-url');
+                if (mainCover && newUrl) {
+                    mainCover.src = newUrl;
+                    targetDrawer.querySelectorAll('.media-mini-card').forEach(t => t.classList.remove('active-thumb'));
+                    thumb.classList.add('active-thumb');
+                }
             });
         });
 
@@ -384,9 +373,22 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             targetDrawer.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 100);
+
+        const closeHandler = (e) => {
+            if (!targetDrawer.contains(e.target) || e.target.classList.contains('drawer-content-wrapper')) {
+                closeNetflixDrawer(targetDrawer, triggerElement);
+                document.removeEventListener('click', closeHandler);
+            }
+        };
     }
 
-    // 7. BOTÕES DOS CARROSSEIS
+    function closeNetflixDrawer(drawer, triggerElement) {
+        drawer.classList.remove('active');
+        drawer.innerHTML = '';
+        if (triggerElement) triggerElement.classList.remove('active-card');
+        window.scrollTo({ top: scrollStateBeforeDrawer, behavior: 'smooth' });
+    }
+
     function setupCarouselButtons(sliderId, btnLeftId, btnRightId) {
         const slider = document.getElementById(sliderId);
         const btnL = document.getElementById(btnLeftId);
@@ -409,7 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. PROJETOS ASSOCIADOS
+    // 6. PROJETOS ASSOCIADOS NA TIMELINE
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
@@ -445,16 +447,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="timeline-drawer-inner">
                             <div class="drawer-flex-container">
                                 <div class="drawer-left-media">
-                                    <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img">
+                                    <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img" id="timeline-main-cover">
                                     <div class="drawer-img-gradient"></div>
                                 </div>
                                 <div class="drawer-right-details">
                                     <span class="card-category">${proj.hashtag}</span>
                                     <h3>${proj.titulo}</h3>
                                     <div class="drawer-meta-info-compact">
-                                        <div><strong>Duração:</strong> ${proj.mesAno}</div>
-                                        <div><strong>Cargo:</strong> ${proj.cargo}</div>
-                                        <div><strong>Local:</strong> ${proj.local}</div>
+                                        <div class="meta-row"><strong>Duração:</strong> <span>${proj.mesAno}</span></div>
+                                        <div class="meta-row"><strong>Cargo:</strong> <span>${proj.cargo}</span></div>
+                                        <div class="meta-row"><strong>Local:</strong> <span>${proj.local}</span></div>
                                     </div>
                                     <p class="drawer-description">${proj.resumo}</p>
                                     ${proj.links && proj.links.length ? `
@@ -477,7 +479,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 9. SETAS DE ORGANIZAÇÕES E VOLUNTARIADO
+    // 7. SETAS CONDICIONAIS
     function setupConditionalArrows() {
         document.querySelectorAll('.card-item-with-logo[data-link]').forEach(item => {
             const linkUrl = item.getAttribute('data-link');
