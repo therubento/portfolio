@@ -183,8 +183,9 @@ const projetos = [
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
     ],
-    media: []
-  },
+    media: [
+      { tipo: "video", url: "https://youtu.be/Z6IfZJwJBfI", titulo: "Reportagem Skills Portugal 2024 — Santa Maria da Feira" }
+    ]  },
   {
     id: 13,
     destaque: false,
