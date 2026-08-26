@@ -315,7 +315,9 @@ const projetos = [
     links: [
       { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
     ],
-    media: []
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "..." }
+    ]
   },
   {
     id: 22,
