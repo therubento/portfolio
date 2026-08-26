@@ -54,8 +54,8 @@ const projetos = [
     hashtag: "#documentario",
     titulo: "Sala 31",
     mesAno: "Fevereiro 2025 - Atualmente",
-    cargo: "Realizador",
-    local: "Universidade do Algarve",
+    cargo: "Realizador / Pós-Produção",
+    local: "ESEC (UAlg)",
     capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
