@@ -2,8 +2,8 @@ const projetos = [
   {
     id: 1,
     destaque: false,
-    categoria: "EVENTOS",
-    hashtag: "#festival",
+    categoria: "RÁDIO & ÁUDIO",
+    hashtag: "#festival #radio",
     titulo: "Festival MED (RUA FM)",
     mesAno: "Junho 2026",
     cargo: "Radialista",
@@ -16,8 +16,8 @@ const projetos = [
   {
     id: 2,
     destaque: false,
-    categoria: "EVENTOS",
-    hashtag: "#festival",
+    categoria: "RÁDIO & ÁUDIO",
+    hashtag: "#festival #radio",
     titulo: "Festival F (RUA FM)",
     mesAno: "Setembro 2026",
     cargo: "Radialista",
@@ -30,8 +30,8 @@ const projetos = [
   {
     id: 3,
     destaque: false,
-    categoria: "EVENTOS",
-    hashtag: "#eventos",
+    categoria: "RÁDIO & ÁUDIO",
+    hashtag: "#semanaacademica #radio",
     titulo: "Semana Académica do Algarve (2026)",
     mesAno: "Maio 2026",
     cargo: "",
