@@ -27,8 +27,8 @@ const projetos = [
     capa: "https://i.imgur.com/mrTePbs.jpeg",
     resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
-      { texto: "Entrevista - ÁTOA", url: "https://www.rua.pt", icone: "radio" }
-      { texto: "Entrevista - Peculiar", url: "https://www.rua.pt", icone: "radio" }
+      { texto: "Entrevista - ÁTOA", url: "https://www.rua.pt", icone: "micro" }
+      { texto: "Entrevista - Peculiar", url: "https://www.rua.pt", icone: "micro" }
     ],
     media: []
   },
