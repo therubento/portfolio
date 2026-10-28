@@ -63,7 +63,7 @@ const projetos = [
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
       { texto: "IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
-      { texto: "Teaser", url: "", icone: "palette" }
+      { texto: "Teaser", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
