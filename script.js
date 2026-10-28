@@ -178,7 +178,7 @@ const projetos = [
     mesAno: "Novembro 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Santa Maria da Feira",
-    capa: "https://i.imgur.com/im5oPxA.jpeg",
+    capa: "https://i.imgur.com/5Ct7WOu.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
