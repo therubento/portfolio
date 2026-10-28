@@ -59,8 +59,7 @@ const projetos = [
     capa: "https://i.imgur.com/iFBnsa2.jpeg",
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
-      { texto: "IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
-      { texto: "Teaser", url: "https://www.rua.pt", icone: "palette" }
+      { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
@@ -78,8 +77,8 @@ const projetos = [
     capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
     resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
     links: [
-      { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
       { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "radio" },
+      { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
@@ -179,13 +178,13 @@ const projetos = [
     mesAno: "Novembro 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Santa Maria da Feira",
-    capa: "https://i.imgur.com/UWoKqNO.jpeghttps://i.imgur.com/im5oPxA.jpeg",
+    capa: "https://i.imgur.com/im5oPxA.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
     ],
     media: [
-      { tipo: "imagem", url: "https://i.imgur.com/im5oPxA.jpeg", titulo: "Vencedores Nacionais Skills Portugal 2024" }
+      { tipo: "imagem", url: "...", titulo: "Reportagem Skills Portugal 2024 — Santa Maria da Feira" }
     ]  },
   {
     id: 13,
