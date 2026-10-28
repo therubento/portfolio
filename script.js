@@ -56,7 +56,7 @@ const projetos = [
     mesAno: "Fevereiro 2025 - Maio 2026",
     cargo: "Realizador / Pós-Produção",
     local: "ESEC (UAlg)",
-    capa: "https://i.imgur.com/iFBnsa2.jpeg",
+    capa: "https://i.imgur.com/j9Cviko.jpeg",
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
       { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
