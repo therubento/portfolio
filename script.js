@@ -4,15 +4,14 @@ const projetos = [
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
-    titulo: "Festival F (RUA FM)",
-    mesAno: "Setembro 2026",
+    titulo: "Festival MED (RUA FM)",
+    mesAno: "Junho 2026",
     cargo: "Radialista",
-    local: "Faro",
-    capa: "https://i.imgur.com/mrTePbs.jpeg",
-    resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
+    local: "Loulé",
+    capa: "https://i.imgur.com/T4sJbZn.jpeg",
+    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
     links: [
-      { texto: "Entrevista - ÁTOA", url: "https://www.instagram.com/reel/Dc1y5cmMir3/?utm_source=ig_web_copy_link&exln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==", icone: "radio" }
-      { texto: "Entrevista - Peculiar", url: "https://www.instagram.com/reel/Dc7QjmJkWns/?utm_source=ig_web_copy_link&rpxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==", icone: "radio" }
+      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
     media: []
   },
@@ -21,12 +20,12 @@ const projetos = [
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
-    titulo: "Festival MED (RUA FM)",
-    mesAno: "Junho 2026",
+    titulo: "Festival F (RUA FM)",
+    mesAno: "Setembro 2026",
     cargo: "Radialista",
-    local: "Loulé",
-    capa: "https://i.imgur.com/T4sJbZn.jpeg",
-    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
+    local: "Faro",
+    capa: "https://i.imgur.com/mrTePbs.jpeg",
+    resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
