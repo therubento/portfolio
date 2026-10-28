@@ -27,8 +27,7 @@ const projetos = [
     capa: "https://i.imgur.com/mrTePbs.jpeg",
     resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
-      { texto: "Entrevista ÁTOA", url: "https://www.rua.pt", icone: "mic-vocal" }
-      { texto: "Entrevista Peculiar", url: "https://www.rua.pt", icone: "mic-vocal" }
+      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
     media: []
   },
@@ -57,7 +56,7 @@ const projetos = [
     mesAno: "Fevereiro 2025 - Maio 2026",
     cargo: "Realizador / Pós-Produção",
     local: "ESEC (UAlg)",
-    capa: "https://i.imgur.com/j9Cviko.jpeg",
+    capa: "https://i.imgur.com/iFBnsa2.jpeg",
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
       { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
@@ -179,7 +178,7 @@ const projetos = [
     mesAno: "Novembro 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Santa Maria da Feira",
-    capa: "...",
+    capa: "https://i.imgur.com/im5oPxA.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
