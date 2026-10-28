@@ -53,10 +53,10 @@ const projetos = [
     categoria: "AUDIOVISUAL",
     hashtag: "#documentario",
     titulo: "Sala 31",
-    mesAno: "Fevereiro 2025 - Atualmente",
+    mesAno: "Fevereiro 2025 - Maio 2026",
     cargo: "Realizador / Pós-Produção",
     local: "ESEC (UAlg)",
-    capa: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/iFBnsa2.jpeg",
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
       { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
@@ -178,7 +178,7 @@ const projetos = [
     mesAno: "Novembro 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Santa Maria da Feira",
-    capa: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/im5oPxA.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
