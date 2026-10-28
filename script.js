@@ -4,6 +4,22 @@ const projetos = [
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
+    titulo: "Festival MED (RUA FM)",
+    mesAno: "Junho 2026",
+    cargo: "Radialista",
+    local: "Loulé",
+    capa: "https://i.imgur.com/T4sJbZn.jpeg",
+    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
+    links: [
+      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+    ],
+    media: []
+  },
+  {
+    id: 2,
+    destaque: false,
+    categoria: "RÁDIO & ÁUDIO",
+    hashtag: "#festival #radio",
     titulo: "Festival F (RUA FM)",
     mesAno: "Setembro 2026",
     cargo: "Radialista",
@@ -17,22 +33,6 @@ const projetos = [
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
     ]
-  },
-  {
-    id: 2,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival MED (RUA FM)",
-    mesAno: "Junho 2026",
-    cargo: "Radialista",
-    local: "Loulé",
-    capa: "https://i.imgur.com/T4sJbZn.jpeg",
-    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
-    links: [
-      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
-    ],
-    media: []
   },
   {
     id: 3,
