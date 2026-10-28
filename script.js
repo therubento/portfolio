@@ -25,14 +25,11 @@ const projetos = [
     cargo: "Radialista",
     local: "Faro",
     capa: "https://i.imgur.com/mrTePbs.jpeg",
-    resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo na Vila Adentro da cidade de Faro para a RUA FM.",
+    resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
-      { texto: "Entrevista - ATOA", url: "https://www.rua.pt", icone: "radio" }
-      { texto: "Entrevista - Peculiar", url: "https://www.rua.pt", icone: "radio" }
+      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
-    media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
-    ]
+    media: []
   },
   {
     id: 3,
@@ -63,7 +60,7 @@ const projetos = [
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
       { texto: "IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
-      { texto: "Teaser", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
+      { texto: "Teaser", url: "", icone: "palette" }
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
