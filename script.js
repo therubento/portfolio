@@ -75,10 +75,10 @@ const projetos = [
     cargo: "Realizador / Pós-Produção",
     local: "RUA (UAlg)",
     capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
-    resumo: "“Confissões de um Universitário” é uma série que te convida a descobrir, em cada episódio, um curso da Universidade do Algarve pelos olhos de quem o vive no dia a dia: os próprios estudantes da UAlg. Longe de apresentações institucionais ou de planos de estudo enumerados, cada episódio dá lugar a relatos na primeira pessoa, em tom descontraído e autêntico, onde os alunos partilham as razões que os levaram a escolher aquele percurso, as aulas e os projetos que mais os marcaram, os desafios, as dúvidas e as pequenas vitórias do quotidiano académico. Pensada para quem está a decidir o seu futuro, mas também para quem simplesmente tem curiosidade, a série propõe uma visão próxima, honesta e humana da vida universitária, onde cada confissão ajuda a desfazer ideias feitas e a mostrar a diversidade de percursos que a universidade tem para oferecer.",
+    resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
     links: [
-      { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
       { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "book-headphones" },
+      { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
