@@ -13,7 +13,10 @@ const projetos = [
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
-    media: []
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+    ]
   },
   {
     id: 2,
@@ -29,7 +32,10 @@ const projetos = [
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
-    media: []
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+    ]
   },
   {
     id: 3,
@@ -97,7 +103,10 @@ const projetos = [
     capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
     resumo: "Projeto documental comemorativo das três décadas de existência do curso de Ciências da Comunicação na Universidade do Algarve.",
     links: [],
-    media: []
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+    ]
   },
   {
     id: 7,
@@ -153,7 +162,10 @@ const projetos = [
     capa: "https://i.imgur.com/Kvhm093.jpeg",
     resumo: "Cobertura do Festival F de 2025, realizando emissões ao vivo e reportagens de palco para a RUA FM na cidade de Faro.",
     links: [],
-    media: []
+    media: [
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
+      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+    ]
   },
   {
     id: 11,
@@ -184,7 +196,7 @@ const projetos = [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
     ],
     media: [
-      { tipo: "imagem", url: "...", titulo: "Reportagem Skills Portugal 2024 — Santa Maria da Feira" }
+      { tipo: "foto", url: "...", titulo: "Reportagem Skills Portugal 2024 — Santa Maria da Feira" }
     ]  },
   {
     id: 13,
