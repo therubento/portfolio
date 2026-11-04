@@ -1,5 +1,4 @@
 const projetos = [
-[
   {
     id: 1,
     destaques: false,
@@ -316,8 +315,8 @@ const projetos = [
     links: [],
     media: []
   }
-]
-  
+];
+
 document.addEventListener("DOMContentLoaded", () => {
     // 1. SCROLL REVEAL SUAVE
     const reveals = document.querySelectorAll(".reveal");
@@ -435,7 +434,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `).join('');
         }
 
-        // Galeria posicionada exatamente abaixo da imagem de capa, sem descrições
         let mediaHTML = "";
         const allPhotos = [{ url: proj.capa, titulo: "" }, ...(proj.media || [])];
         
@@ -456,7 +454,6 @@ document.addEventListener("DOMContentLoaded", () => {
         targetDrawer.innerHTML = `
             <div class="drawer-content-wrapper">
                 <div class="drawer-flex-container">
-                    <!-- ESQUERDA: CAPA + GALERIA EMBAIXO -->
                     <div class="drawer-left-media">
                         <div class="drawer-cover-wrapper">
                             <img src="${proj.capa}" alt="${proj.titulo}" class="drawer-cover-img popup-main-img">
@@ -465,12 +462,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         ${mediaHTML}
                     </div>
 
-                    <!-- DIREITA: INFORMAÇÕES DO PROJECTO -->
                     <div class="drawer-right-details">
                         <span class="card-category">${proj.hashtag}</span>
                         <h2>${proj.titulo}</h2>
                         
-                        <!-- TRÊS CAIXAS DE INFORMAÇÃO SEPARADAS, LADO A LADO -->
                         <div class="drawer-meta-boxes">
                             <div class="meta-box">
                                 <span class="meta-title">Duração</span>
@@ -496,7 +491,6 @@ document.addEventListener("DOMContentLoaded", () => {
         targetDrawer.classList.add('active');
         if (window.lucide) window.lucide.createIcons();
 
-        // Ativação da troca suave de imagem de capa ao clicar na galeria
         const mainImg = targetDrawer.querySelector('.popup-main-img');
         targetDrawer.querySelectorAll('.media-mini-card').forEach(thumb => {
             thumb.addEventListener('click', () => {
