@@ -1,7 +1,8 @@
 const projetos = [
+[
   {
     id: 1,
-    destaque: false,
+    destaques: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA FM)",
@@ -94,23 +95,6 @@ const projetos = [
   {
     id: 6,
     destaque: false,
-    categoria: "CINEMA & AUDIOVISUAL",
-    hashtag: "#documentario",
-    titulo: "30 Anos de CC (Documentário)",
-    mesAno: "Fevereiro 2025 – Atualmente",
-    cargo: "Realizador",
-    local: "Universidade do Algarve",
-    capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
-    resumo: "Projeto documental comemorativo das três décadas de existência do curso de Ciências da Comunicação na Universidade do Algarve.",
-    links: [],
-    media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
-    ]
-  },
-  {
-    id: 7,
-    destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Albufeira Sounds (2025)",
@@ -123,7 +107,7 @@ const projetos = [
     media: []
   },
   {
-    id: 8,
+    id: 7,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
@@ -137,38 +121,7 @@ const projetos = [
     media: []
   },
   {
-    id: 9,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival MED (2025)",
-    mesAno: "2025",
-    cargo: "Radialista / Repórter",
-    local: "Loulé",
-    capa: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
-    resumo: "Edição de 2025 da cobertura em direto do Festival MED para a RUA FM, realçando a world music e a intervenção cultural em Loulé.",
-    links: [],
-    media: []
-  },
-  {
-    id: 10,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival F (2025)",
-    mesAno: "Setembro 2025",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://i.imgur.com/gV6xywq.jpeg",
-    resumo: "Cobertura do Festival F de 2025, realizando emissões ao vivo e reportagens de palco para a RUA FM na cidade de Faro.",
-    links: [],
-    media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
-    ]
-  },
-  {
-    id: 12,
+    id: 8,
     destaque: true,
     categoria: "OUTROS",
     hashtag: "#worldskillsportugal",
@@ -183,9 +136,10 @@ const projetos = [
     ],
     media: [
       { tipo: "foto", url: "https://i.imgur.com/im5oPxA.jpeg", titulo: "Reportagem Skills Portugal 2024 — Santa Maria da Feira" }
-    ]  },
+    ]
+  },
   {
-    id: 13,
+    id: 9,
     destaque: false,
     categoria: "DIGITAL & COMUNICAÇÃO",
     hashtag: "#digital",
@@ -201,54 +155,12 @@ const projetos = [
     media: []
   },
   {
-    id: 14,
-    destaque: false,
-    categoria: "COMUNICAÇÃO & CREATIVIDADE",
-    hashtag: "#freelance",
-    titulo: "Criador de Conteúdos (Freelancer)",
-    mesAno: "Maio 2024 – Agosto 2024",
-    cargo: "Criador de Conteúdos Multimédia/Audiovisuais",
-    local: "Lisboa",
-    capa: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
-    resumo: "Criação de conteúdos multimédia/audiovisuais em regime freelancer para marcas, plataformas digitais e campanhas de comunicação.",
-    links: [],
-    media: []
-  },
-  {
-    id: 15,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival MED (2024)",
-    mesAno: "2024",
-    cargo: "Radialista",
-    local: "Loulé",
-    capa: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=600&q=80",
-    resumo: "Edição de 2024 da cobertura do Festival MED na RUA FM, valorizando a diversidade cultural e o ambiente único das ruas de Loulé.",
-    links: [],
-    media: []
-  },
-  {
-    id: 16,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival F (2024)",
-    mesAno: "2024",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80",
-    resumo: "Desenvolvimento de diretos rádio e reportagens relativas à edição de 2024 do Festival F na cidade antiga de Faro.",
-    links: [],
-    media: []
-  },
-  {
-    id: 18,
+    id: 10,
     destaque: false,
     categoria: "OUTROS",
     hashtag: "#congressojornalistas",
     titulo: "5º Congresso dos Jornalistas",
-    mesAno: "Janeiro 2024",
+    mesAno: "Janeiro | 2024",
     cargo: "Jornalista Redator (Redação)",
     local: "ESCS / Lisboa",
     capa: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80",
@@ -257,7 +169,7 @@ const projetos = [
     media: []
   },
   {
-    id: 19,
+    id: 11,
     destaque: false,
     categoria: "OUTROS",
     hashtag: "#investigacao",
@@ -271,12 +183,12 @@ const projetos = [
     media: []
   },
   {
-    id: 21,
+    id: 12,
     destaque: false,
     categoria: "OUTROS",
     hashtag: "#worldskillsportugal",
     titulo: "Medalha de Excelência — Skills Portugal 2023",
-    mesAno: "Março 2023",
+    mesAno: "Março | 2023",
     cargo: "Editor de Vídeo",
     local: "Portimão",
     capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
@@ -289,21 +201,7 @@ const projetos = [
     ]
   },
   {
-    id: 22,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival F (2023)",
-    mesAno: "2023",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=600&q=80",
-    resumo: "Participação na cobertura radiofónica do Festival F em 2023, acompanhando os concertos e entrevistando diversos projetos musicais portugueses.",
-    links: [],
-    media: []
-  },
-  {
-    id: 24,
+    id: 13,
     destaque: false,
     categoria: "OUTROS",
     hashtag: "#cienciasdacomunicacao #esec #ualg",
@@ -317,7 +215,7 @@ const projetos = [
     media: []
   },
   {
-    id: 25,
+    id: 14,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#radio",
@@ -331,21 +229,7 @@ const projetos = [
     media: []
   },
   {
-    id: 26,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#festival #radio",
-    titulo: "Festival F (2022)",
-    mesAno: "2022",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
-    resumo: "Estreia na cobertura do Festival F, assegurando diretos rádio e acolhendo os artistas na zona de imprensa.",
-    links: [],
-    media: []
-  },
-  {
-    id: 28,
+    id: 15,
     destaque: false,
     categoria: "DIGITAL & COMUNICAÇÃO",
     hashtag: "#comunicacao",
@@ -359,7 +243,7 @@ const projetos = [
     media: []
   },
   {
-    id: 29,
+    id: 16,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     hashtag: "#imprensa",
@@ -375,7 +259,7 @@ const projetos = [
     media: []
   },
   {
-    id: 30,
+    id: 17,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     hashtag: "#imprensa",
@@ -389,7 +273,7 @@ const projetos = [
     media: []
   },
   {
-    id: 31,
+    id: 18,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     hashtag: "#televisao",
@@ -403,7 +287,7 @@ const projetos = [
     media: []
   },
   {
-    id: 32,
+    id: 19,
     destaque: false,
     categoria: "AUDIOVISUAL",
     hashtag: "#cinema",
@@ -419,7 +303,7 @@ const projetos = [
     media: []
   },
   {
-    id: 33,
+    id: 20,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#radio",
@@ -432,8 +316,8 @@ const projetos = [
     links: [],
     media: []
   }
-];
-
+]
+  
 document.addEventListener("DOMContentLoaded", () => {
     // 1. SCROLL REVEAL SUAVE
     const reveals = document.querySelectorAll(".reveal");
