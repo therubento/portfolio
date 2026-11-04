@@ -5,7 +5,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA FM)",
-    mesAno: "Junho | 2026, 2025, 2024, 2023",
+    mesAno: "Junho | 2026 - 2023",
     cargo: "Radialista",
     local: "Loulé",
     capa: "https://i.imgur.com/yr869TR.jpeg",
@@ -24,7 +24,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival F (RUA FM)",
-    mesAno: "Setembro | 2026, 2025, 2024, 2023, 2022",
+    mesAno: "Setembro | 2026 - 2022",
     cargo: "Radialista",
     local: "Faro",
     capa: "https://i.imgur.com/1LQ3hJW.jpeg",
@@ -34,7 +34,7 @@ const projetos = [
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+      { tipo: "foto", url: "https://i.imgur.com/awy632I.jpeg", titulo: "Entrevista - Dino d'Santiago (2025)" }
     ]
   },
   {
@@ -43,7 +43,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#semanaacademica #radio",
     titulo: "Semana Académica do Algarve",
-    mesAno: "Maio | 2026, 2025, 2024, 2023, 2022",
+    mesAno: "Maio | 2026 - 2022",
     cargo: "Radialista / Repórter",
     local: "Faro",
     capa: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
