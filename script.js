@@ -5,7 +5,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA FM)",
-    mesAno: "Junho 2026",
+    mesAno: "Junho | 2026, 2025, 2024, 2023",
     cargo: "Radialista",
     local: "Loulé",
     capa: "https://i.imgur.com/yr869TR.jpeg",
@@ -24,7 +24,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival F (RUA FM)",
-    mesAno: "Setembro 2026",
+    mesAno: "Setembro | 2026, 2025, 2024, 2023, 2022",
     cargo: "Radialista",
     local: "Faro",
     capa: "https://i.imgur.com/1LQ3hJW.jpeg",
@@ -42,12 +42,12 @@ const projetos = [
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#semanaacademica #radio",
-    titulo: "Semana Académica do Algarve (2026)",
-    mesAno: "Maio 2026",
+    titulo: "Semana Académica do Algarve",
+    mesAno: "Maio | 2026, 2025, 2024, 2023, 2022",
     cargo: "Radialista / Repórter",
     local: "Faro",
     capa: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
-    resumo: "Cobertura integral do recinto da Semana Académica do Algarve com entrevistas a artistas, reação do público e resumos diários para a rádio.",
+    resumo: "Cobertura integral do recinto da Semana Académica do Algarve com entrevistas a artistas, reação do público e pontos de reportagem para a rádio.",
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
     ],
@@ -168,20 +168,6 @@ const projetos = [
     ]
   },
   {
-    id: 11,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#semanaacademica #radio",
-    titulo: "Semana Académica do Algarve (2025)",
-    mesAno: "2025",
-    cargo: "Radialista / Repórter",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
-    resumo: "Transmissão da energia da festa académica do Algarve em 2025, com trabalho de locução em direto e entrevistas na 'País das Maravilhas'.",
-    links: [],
-    media: []
-  },
-  {
     id: 12,
     destaque: true,
     categoria: "OUTROS",
@@ -257,20 +243,6 @@ const projetos = [
     media: []
   },
   {
-    id: 17,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#semanaacademica #radio",
-    titulo: "Semana Académica do Algarve (2024)",
-    mesAno: "2024",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=600&q=80",
-    resumo: "Acompanhamento informativo e emissão em direto a partir do recinto da Semana Académica do Algarve de 2024.",
-    links: [],
-    media: []
-  },
-  {
     id: 18,
     destaque: false,
     categoria: "OUTROS",
@@ -296,22 +268,6 @@ const projetos = [
     capa: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
     resumo: "Trabalho de investigação final do Mestrado em Jornalismo: 'Nos Bastidores do Jornalismo Televisivo (o caso da RTP, SIC e TVI)'.",
     links: [],
-    media: []
-  },
-  {
-    id: 20,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#radio",
-    titulo: "Coberturas de Festivais — RUA FM",
-    mesAno: "2022 — 2025",
-    cargo: "Jornalista / Animador",
-    local: "RUA - Rádio Universitária do Algarve",
-    capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
-    resumo: "Locução, gravação de marcadores/spots e cobertura integral em direto de grandes eventos culturais.",
-    links: [
-      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
-    ],
     media: []
   },
   {
@@ -347,24 +303,10 @@ const projetos = [
     media: []
   },
   {
-    id: 23,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#semanaacademica #radio",
-    titulo: "Semana Académica do Algarve (2023)",
-    mesAno: "2023",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80",
-    resumo: "Trabalho de campo e apresentação de programas especiais no recinto da Semana Académica de 2023 para a RUA FM.",
-    links: [],
-    media: []
-  },
-  {
     id: 24,
     destaque: false,
     categoria: "OUTROS",
-    hashtag: "#worldskillsportugal",
+    hashtag: "#cienciasdacomunicacao #esec #ualg",
     titulo: "Núcleo de Ciências da Comunicação (NECICom) – UAlg",
     mesAno: "Fevereiro 2022 – Fevereiro 2023",
     cargo: "Coordenador do Mercado de Trabalho",
@@ -381,7 +323,7 @@ const projetos = [
     hashtag: "#radio",
     titulo: "RUA - Rádio Universitária do Algarve",
     mesAno: "Março 2022 – Atualmente",
-    cargo: "Jornalista e Animador de rádio",
+    cargo: "Jornalista e Animador de Rádio",
     local: "Faro",
     capa: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80",
     resumo: "Conceção, apresentação e produção técnica de conteúdos radiofónicos, informação diária e rubricas temáticas na rádio universitária regional.",
@@ -399,20 +341,6 @@ const projetos = [
     local: "Faro",
     capa: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
     resumo: "Estreia na cobertura do Festival F, assegurando diretos rádio e acolhendo os artistas na zona de imprensa.",
-    links: [],
-    media: []
-  },
-  {
-    id: 27,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#semanaacademica #radio",
-    titulo: "Semana Académica do Algarve (2022)",
-    mesAno: "2022",
-    cargo: "Radialista",
-    local: "Faro",
-    capa: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
-    resumo: "Acompanhamento da regresso das festividades académicas em Faro, com entrevistas e apontamentos de reportagem em direto.",
     links: [],
     media: []
   },
@@ -482,9 +410,9 @@ const projetos = [
     titulo: "Segunda Opção (Curta-Metragem)",
     mesAno: "Março 2018 — Junho 2019",
     cargo: "Realizador, Editor, Cameraman",
-    local: "Tavira / Faro",
+    local: "Faro",
     capa: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=600&q=80",
-    resumo: "Curta-metragem académica independente onde assumi a direção de fotografia, captação de imagem e montagem final.",
+    resumo: "Curta-metragem académica independente onde assumi a realização, captação de imagem e montagem final.",
     links: [
       { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
     ],
@@ -501,20 +429,6 @@ const projetos = [
     local: "Tavira",
     capa: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80",
     resumo: "Apresentação e animação do programa jovem de verão na Rádio Gilão em Tavira, articulando música, agenda local e entrevistas.",
-    links: [],
-    media: []
-  },
-  {
-    id: 34,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
-    hashtag: "#radio",
-    titulo: "Rádio Gilão",
-    mesAno: "Junho a Setembro 2018",
-    cargo: "Locutor (Colaborador)",
-    local: "Tavira",
-    capa: "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=600&q=80",
-    resumo: "Primeira experiência de emissão e locução radiofónica em rádio local, colaborando na grelha estival e na seleção musical.",
     links: [],
     media: []
   }
