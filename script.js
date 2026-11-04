@@ -8,7 +8,7 @@ const projetos = [
     mesAno: "Junho 2026",
     cargo: "Radialista",
     local: "Loulé",
-    capa: "https://i.imgur.com/T4sJbZn.jpeg",
+    capa: "https://i.imgur.com/gqDwY0Z.jpeg",
     resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
