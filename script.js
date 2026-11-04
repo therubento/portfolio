@@ -8,7 +8,7 @@ const projetos = [
     mesAno: "Junho 2026",
     cargo: "Radialista",
     local: "Loulé",
-    capa: "https://i.imgur.com/gqDwY0Z.jpeg",
+    capa: "https://i.imgur.com/yr869TR.jpeg",
     resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
@@ -27,7 +27,7 @@ const projetos = [
     mesAno: "Setembro 2026",
     cargo: "Radialista",
     local: "Faro",
-    capa: "https://i.imgur.com/mrTePbs.jpeg",
+    capa: "https://i.imgur.com/1LQ3hJW.jpeg",
     resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
@@ -159,7 +159,7 @@ const projetos = [
     mesAno: "Setembro 2025",
     cargo: "Radialista",
     local: "Faro",
-    capa: "https://i.imgur.com/Kvhm093.jpeg",
+    capa: "https://i.imgur.com/gV6xywq.jpeg",
     resumo: "Cobertura do Festival F de 2025, realizando emissões ao vivo e reportagens de palco para a RUA FM na cidade de Faro.",
     links: [],
     media: [
@@ -190,7 +190,7 @@ const projetos = [
     mesAno: "Novembro 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Santa Maria da Feira",
-    capa: "https://i.imgur.com/Wig7WJ3.jpeg",
+    capa: "https://i.imgur.com/MP66E2x.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
