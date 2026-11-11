@@ -35,6 +35,7 @@ const projetos = [
     links: [
       { texto: "Peculiar (2026)", url: "https://www.youtube.com/watch?v=qOP9UpkacNE", icone: "square-play" },
       { texto: "ATOA (2026)", url: "https://www.youtube.com/shorts/RTYjugSwaPM", icone: "square-play" },
+      { texto: "Vizinhos (2025)", url: "https://soundcloud.com/ruafm/entrevista-06set25-festival-f-2025-os-vizinhos?in=ruafm/sets/festival-f-2025-1", icone: "mic-vocal" },
       { texto: "Insert Coin (2025)", url: "https://www.youtube.com/watch?v=2gQ-qG08f7I", icone: "square-play" },
       { texto: "Dino D'Santiago (2025)", url: "https://www.youtube.com/watch?v=HqIGWQC8Bww", icone: "square-play" },
       { texto: "Buba Espinho (2025)", url: "https://www.youtube.com/watch?v=d9_Qm5aSNR4", icone: "square-play" },
@@ -61,7 +62,10 @@ const projetos = [
     capa: "https://i.imgur.com/oPtGLjv.jpeg",
     resumo: "Cobertura integral do recinto da Semana Académica do Algarve com entrevistas a artistas, reação do público e pontos de reportagem para a rádio.",
     links: [
-      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+      { texto: "American House Party (39ª SA)", url: "https://soundcloud.com/ruafm/american-house-party-mp3-1?in=ruafm/sets/semana-academica-do-algarve-2", icone: "mic-vocal" },
+      { texto: "Bandidos do Cante (38ª SA)", url: "https://soundcloud.com/ruafm/entrevista-03mai25-bandidos-do-cante-semana-academica-do-algarve-2025", icone: "mic-vocal" },
+      { texto: "Maninho (38ª SA)", url: "https://soundcloud.com/ruafm/entrevista-06mai25-maninho", icone: "mic-vocal" },
+      { texto: "Toy (35ª SA)", url: "https://soundcloud.com/ruafm/entrevista-03mai22-35a-semana-academica-do-algarve-toy", icone: "square-play" }
     ],
     media: []
   },
@@ -118,7 +122,9 @@ const projetos = [
     local: "RUA (Albufeira)",
     capa: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
     resumo: "Cobertura informativa e gravação de peças de áudio durante o evento Albufeira Sounds, focando no panorama musical da região.",
-    links: [],
+    links: [
+      { texto: "DJ Charlie Spot (2025)", url: "https://soundcloud.com/ruafm/entrevista-08jun25-charlie?in=ruafm/sets/albufeira-sounds-2025", icone: "mic-vocal" },
+    ],
     media: []
   },
   {
