@@ -53,7 +53,7 @@ const projetos = [
     id: 3,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "https://i.imgur.com/cmUCl6T.jpeg",
+    logo: "https://i.imgur.com/oPtGLjv.jpeg",
     hashtag: "#semanaacademica #radio",
     titulo: "Semana Académica do Algarve",
     mesAno: "Maio | 2026 - 2022",
