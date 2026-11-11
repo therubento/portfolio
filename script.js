@@ -70,7 +70,7 @@ const projetos = [
     id: 4,
     destaque: true,
     categoria: "AUDIOVISUAL",
-    logo: "https://i.imgur.com/iFBnsa2.jpeg",
+    logo: "https://i.imgur.com/dcoOUig.jpeg",
     hashtag: "#documentario",
     titulo: "Sala 31",
     mesAno: "Fevereiro 2025 - Maio 2026",
@@ -147,7 +147,7 @@ const projetos = [
     mesAno: "Novembro | 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Skills Portugal",
-    capa: "https://i.imgur.com/MP66E2x.jpeg",
+    capa: "https://i.imgur.com/gP8C58m.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
