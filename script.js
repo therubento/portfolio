@@ -152,7 +152,7 @@ const projetos = [
     mesAno: "Novembro | 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Skills Portugal",
-    capa: "https://i.imgur.com/gP8C58m.jpeg",
+    capa: "https://i.imgur.com/kPhWc3g.jpeg",
     resumo: "Trabalho vencedor da Medalha de Ouro no Campeonato Nacional das Profissões (Skills Portugal 2024) na categoria de Reportagem de TV.",
     links: [
       { texto: "Ver Portfólio no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
@@ -218,7 +218,7 @@ const projetos = [
     mesAno: "Março | 2023",
     cargo: "Editor de Vídeo",
     local: "Skills Portugal",
-    capa: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/D0n2Ekf.jpeg",
     resumo: "Trabalho premiado com a Medalha de Excelência no Skills Portugal 2023, desempenhando as funções de Editor de Vídeo na produção de Reportagem de Televisão.",
     links: [
       { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
