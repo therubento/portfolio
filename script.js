@@ -12,7 +12,9 @@ const projetos = [
     capa: "https://i.imgur.com/yr869TR.jpeg",
     resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
     links: [
-      { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
+      { texto: "Entrevista Teresinha Landeiro (Festival MED 2024)", url: "https://soundcloud.com/ruafm/teresi", icone: "radio" },
+      { texto: "Entrevista Cristina Branco (Festival MED 2024)", url: "https://soundcloud.com/ruafm/crist", icone: "radio" },
+      { texto: "Entrevista Nomad (Festival MED 2024)", url: "https://soundcloud.com/ruafm/nomad", icone: "radio" }
     ],
     media: [
       { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
