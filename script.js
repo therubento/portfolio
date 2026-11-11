@@ -30,7 +30,7 @@ const projetos = [
     mesAno: "Setembro | 2022 - 2026",
     cargo: "Locutor de Rádio",
     local: "RUA (Faro)",
-    capa: "https://i.imgur.com/1LQ3hJW.jpeg",
+    capa: "https://i.imgur.com/GhEf8kI.jpeg",
     resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
       { texto: "Peculiar (2026)", url: "https://www.youtube.com/watch?v=qOP9UpkacNE", icone: "square-play" },
@@ -75,7 +75,7 @@ const projetos = [
     mesAno: "Fevereiro 2025 - Maio 2026",
     cargo: "Realizador / Pós-Produção",
     local: "ESEC (UAlg)",
-    capa: "https://i.imgur.com/iFBnsa2.jpeg",
+    capa: "https://i.imgur.com/XUAyVxv.jpeg",
     resumo: "Documentário de investigação e memória visual sobre os bastidores da criação e expansão das Ciências da Comunicação.",
     links: [
       { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
