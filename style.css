@@ -408,10 +408,23 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .timeline-institution { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; }
 .timeline-content ul { padding-left: 18px; margin: 0; font-size: 0.85rem; color: #d1d5db; line-height: 1.5; }
 .academic-thesis { font-size: 0.82rem; color: #d1d5db; margin-top: 8px; line-height: 1.45; background: rgba(255, 255, 255, 0.02); padding: 8px; border-radius: 6px; border-left: 2px solid var(--primary-red); }
+
+/* BOTÃO DE DISSERTAÇÃO NO MESTRADO */
+.timeline-buttons-row { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-dissertacao {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; background: rgba(255, 46, 56, 0.12); border: 1px solid rgba(255, 46, 56, 0.4);
+    color: var(--primary-red); font-size: 0.8rem; font-weight: 700; border-radius: var(--radius-sm);
+    text-decoration: none; transition: all 0.3s ease;
+}
+.btn-dissertacao:hover {
+    background: var(--primary-red); color: #fff; box-shadow: 0 0 12px var(--primary-glow);
+}
+
 .corner-arrow-link { position: absolute; bottom: 14px; right: 14px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; border-radius: 50%; background: rgba(255, 255, 255, 0.03); }
 .corner-arrow-link:hover { color: #ffffff; background: var(--primary-red); }
 
-/* MINICARDS NAS EXPERIÊNCIAS E FORMAÇÃO (LADO A LADO / EMPILHADOS SE FOREM MUITOS) */
+/* MINICARDS NAS EXPERIÊNCIAS E FORMAÇÃO */
 .associated-project-wrapper { 
     margin-top: 14px; 
     display: flex; 
@@ -437,16 +450,43 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 .level-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.15); }
 .level-dot.active { background: var(--primary-red); box-shadow: 0 0 6px var(--primary-glow); }
 
-/* GALERIA GERAL */
-.media-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
-.media-gallery-card { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); height: 180px; }
-.media-gallery-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* GALERIA GERAL EM ESTILO MASONRY / GRADE MISTA DE MÚLTIPLOS FORMATOS */
+.media-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 16px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.media-gallery-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+}
+.media-gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s var(--smooth-transition);
+}
+.media-gallery-card:hover img {
+    transform: scale(1.04);
+}
 .media-gallery-info {
     position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,12,16,0.95) 0%, transparent 70%);
-    padding: 12px; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 16px; display: flex; flex-direction: column; justify-content: flex-end;
+    pointer-events: none;
 }
-.media-badge { font-size: 0.65rem; color: var(--primary-red); text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 4px; }
-.media-gallery-info h4 { font-size: 0.85rem; color: #fff; margin-top: 2px; }
+.media-badge { font-size: 0.65rem; color: var(--primary-red); text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 4px; margin-bottom: 4px; }
+.media-gallery-info h4 { font-size: 0.9rem; color: #fff; }
+
+/* Classes utilitárias para tamanhos dinâmicos na grelha da galeria */
+.span-col-2 { grid-column: span 2; }
+.span-row-2 { grid-row: span 2; }
 
 /* ESTRUTURA DOS CURSOS EM 2 COLUNAS */
 .courses-two-columns {
@@ -530,6 +570,8 @@ h1, h2, h3, h4, h5 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
     .grid-destaques-trio, .software-grid-wide, .media-gallery-grid, .grid-two-columns, .footer-container, .courses-two-columns { 
         grid-template-columns: 1fr; 
     }
+    .media-gallery-grid { grid-auto-rows: 240px; }
+    .span-col-2, .span-row-2 { grid-column: span 1; grid-row: span 1; }
     
     .drawer-flex-container { flex-direction: column; }
     .drawer-left-media { flex: 0 0 100%; width: 100%; }
