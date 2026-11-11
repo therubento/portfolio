@@ -163,7 +163,7 @@ const projetos = [
     mesAno: "Janeiro | 2024",
     cargo: "Jornalista Redator (Redação)",
     local: "ESCS / Lisboa",
-    capa: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/3YL18sR.jpeg",
     resumo: "Integração na equipa de redação responsável pela cobertura jornalística do 5º Congresso dos Jornalistas Portugueses.",
     links: [],
     media: []
