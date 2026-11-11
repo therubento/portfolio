@@ -3,7 +3,7 @@ const projetos = [
     id: 1,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "https://i.imgur.com/MGRAfcF.jpeg",
+    logo: "",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA)",
     mesAno: "Junho | 2026 - 2023",
@@ -369,6 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Renderizar logo do cartão (se existir)
     function renderCardLogo(logoUrl) {
         if (!logoUrl || logoUrl.trim() === "") return "";
         return `<div class="card-logo-badge"><img src="${logoUrl}" alt="Logo Conteúdo"></div>`;
@@ -443,7 +444,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. POP-UP / DRAWER TOTALMENTE REMODELADO E SUAVE
+    // 6. POP-UP / DRAWER
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
         document.querySelectorAll('.netflix-drawer').forEach(d => {
             d.classList.remove('active');
@@ -563,7 +564,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateVisibility, 200);
     }
 
-    // 8. MINICARDS DE CONTEÚDOS NAS EXPERIÊNCIAS E FORMAÇÕES
+    // 8. MINICARDS NAS EXPERIÊNCIAS E FORMAÇÕES
     function setupAssociatedProjects() {
         document.querySelectorAll('.associated-project-wrapper').forEach(wrapper => {
             const projId = parseInt(wrapper.getAttribute('data-project-id'), 10);
