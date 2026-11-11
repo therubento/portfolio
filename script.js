@@ -3,7 +3,7 @@ const projetos = [
     id: 1,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "https://i.imgur.com/MGRAfcF.jpeg", // Exemplo de imagem circular (podes preencher ou deixar em branco / null se não quiseres logo)
+    logo: "https://i.imgur.com/MGRAfcF.jpeg",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA)",
     mesAno: "Junho | 2026 - 2023",
@@ -23,7 +23,7 @@ const projetos = [
     id: 2,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "", // Se estiver vazio/null, a imagem não aparecerá no cartão
+    logo: "",
     hashtag: "#festival #radio",
     titulo: "Festival F (RUA)",
     mesAno: "Setembro | 2026 - 2022",
@@ -231,7 +231,7 @@ const projetos = [
     id: 14,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "https://rua.pt/wp-content/uploads/2024/02/Logo_rua_fm7-1024x724.jpg",
+    logo: "",
     hashtag: "#radio",
     titulo: "RUA - Rádio Universitária do Algarve",
     mesAno: "Março 2022 – Atualmente",
@@ -369,7 +369,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Função auxiliar para gerar o HTML do logo circular condicional (acima da hashtag)
     function renderCardLogo(logoUrl) {
         if (!logoUrl || logoUrl.trim() === "") return "";
         return `<div class="card-logo-badge"><img src="${logoUrl}" alt="Logo Conteúdo"></div>`;
