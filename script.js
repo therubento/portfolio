@@ -6,10 +6,10 @@ const projetos = [
     logo: "https://i.imgur.com/8xpNpEc.jpeg",
     hashtag: "#festival #radio",
     titulo: "Festival MED",
-    mesAno: "Junho | 2026 - 2023",
+    mesAno: "Junho | 2023 - 2026",
     cargo: "Locutor de Rádio",
     local: "RUA (Loulé)",
-    capa: "https://i.imgur.com/yr869TR.jpeg",
+    capa: "https://i.imgur.com/bR4M7gF.jpeg",
     resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
     links: [
       { texto: "Teresinha Landeiro (2024)", url: "https://soundcloud.com/ruafm/teresi", icone: "mic-vocal" },
@@ -17,8 +17,7 @@ const projetos = [
       { texto: "Nomad (2024)", url: "https://soundcloud.com/ruafm/nomad", icone: "mic-vocal" }
     ],
     media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
+      { tipo: "foto", url: "https://i.imgur.com/uDRlpMH.jpeg", titulo: "20 Anos MED" }
     ]
   },
   {
@@ -28,7 +27,7 @@ const projetos = [
     logo: "https://i.imgur.com/a1LtIFl.png",
     hashtag: "#festival #radio",
     titulo: "Festival F",
-    mesAno: "Setembro | 2026 - 2022",
+    mesAno: "Setembro | 2022 - 2026",
     cargo: "Locutor de Rádio",
     local: "RUA (Faro)",
     capa: "https://i.imgur.com/1LQ3hJW.jpeg",
@@ -45,21 +44,21 @@ const projetos = [
       { texto: "Dino d'Santiago (2022)", url: "https://soundcloud.com/ruafm/entrevista-03set22-festival-f-dino-dsantiago", icone: "mic-vocal" }
     ],
     media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-      { tipo: "foto", url: "https://i.imgur.com/awy632I.jpeg", titulo: "Entrevista - Dino d'Santiago (2025)" }
+      { tipo: "foto", url: "https://i.imgur.com/HCQNTxD.jpeg", titulo: "Insert Coin" },
+      { tipo: "foto", url: "https://i.imgur.com/awy632I.jpeg", titulo: "Dino d'Santiago (2025)" }
     ]
   },
   {
     id: 3,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "https://i.imgur.com/oPtGLjv.jpeg",
+    logo: "https://i.imgur.com/Zndw010.png",
     hashtag: "#semanaacademica #radio",
     titulo: "Semana Académica do Algarve",
-    mesAno: "Maio | 2026 - 2022",
+    mesAno: "Maio | 2022 - 2026",
     cargo: "Locutor de Rádio",
     local: "RUA (Faro)",
-    capa: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/oPtGLjv.jpeg",
     resumo: "Cobertura integral do recinto da Semana Académica do Algarve com entrevistas a artistas, reação do público e pontos de reportagem para a rádio.",
     links: [
       { texto: "Ouvir na RUA FM", url: "https://www.rua.pt", icone: "radio" }
@@ -309,7 +308,7 @@ const projetos = [
     mesAno: "Março a Julho | 2020",
     cargo: "Jornalista (Estágio Curricular)",
     local: "RTP (Faro)",
-    capa: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/uiUAw6p.jpeg",
     resumo: "Escrita e edição de reportagens jornalísticas sobre variados temas. Acompanhamento do trabalho de vários jornalistas. Colaboração na edição de peças jornalísticas. Escrita e edição da Grande Reportagem \"E agora, Algarve?\"",
     links: [],
     media: []
