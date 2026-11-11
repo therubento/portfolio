@@ -68,7 +68,8 @@ const projetos = [
       { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
     ],
     media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "Rodagem da Entrevista" }
+      { tipo: "foto", url: "https://i.imgur.com/W8ckrH6.jpeg", titulo: "Mesa Redonda" }
+      { tipo: "foto", url: "https://i.imgur.com/JLEdyLY.jpeg", titulo: "Docentes" }
     ]
   },
   {
