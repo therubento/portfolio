@@ -34,14 +34,14 @@ const projetos = [
     capa: "https://i.imgur.com/1LQ3hJW.jpeg",
     resumo: "Emissão em direto, entrevistas a artistas e acompanhamento contínuo no Vila Adentro da cidade de Faro para a RUA FM.",
     links: [
-      { texto: "Entrevista Peculiar (Festival F '26)", url: "https://www.youtube.com/watch?v=qOP9UpkacNE", icone: "square-play" }
-      { texto: "Entrevista ATOA (Festival F '26)", url: "https://www.youtube.com/shorts/RTYjugSwaPM", icone: "square-play" }
-      { texto: "Entrevista Insert Coin (Festival F '25)", url: "https://www.youtube.com/watch?v=2gQ-qG08f7I", icone: "square-play" }
-      { texto: "Entrevista Dino D'Santiago (Festival F '25)", url: "https://www.youtube.com/watch?v=HqIGWQC8Bww", icone: "square-play" }
-      { texto: "Entrevista Buba Espinho (Festival F '25)", url: "https://www.youtube.com/watch?v=d9_Qm5aSNR4", icone: "square-play" }
-      { texto: "Entrevista Bandidos do Cante (Festival F ‘25)", url: "https://www.youtube.com/watch?v=8sYlFf5cwzs", icone: "square-play" }
-      { texto: "Entrevista Pedro Abrunhosa (Festival F 2023)", url: "https://youtu.be/-051lfIEL6M", icone: "square-play" }
-      { texto: "Entrevista AGIR (Festival F 2022)", url: "https://soundcloud.com/ruafm/entrevista-02set22-festival-f-agir", icone: "mic-vocal" }
+      { texto: "Entrevista Peculiar (Festival F '26)", url: "https://www.youtube.com/watch?v=qOP9UpkacNE", icone: "square-play" },
+      { texto: "Entrevista ATOA (Festival F '26)", url: "https://www.youtube.com/shorts/RTYjugSwaPM", icone: "square-play" },
+      { texto: "Entrevista Insert Coin (Festival F '25)", url: "https://www.youtube.com/watch?v=2gQ-qG08f7I", icone: "square-play" },
+      { texto: "Entrevista Dino D'Santiago (Festival F '25)", url: "https://www.youtube.com/watch?v=HqIGWQC8Bww", icone: "square-play" },
+      { texto: "Entrevista Buba Espinho (Festival F '25)", url: "https://www.youtube.com/watch?v=d9_Qm5aSNR4", icone: "square-play" },
+      { texto: "Entrevista Bandidos do Cante (Festival F ‘25)", url: "https://www.youtube.com/watch?v=8sYlFf5cwzs", icone: "square-play" },
+      { texto: "Entrevista Pedro Abrunhosa (Festival F 2023)", url: "https://youtu.be/-051lfIEL6M", icone: "square-play" },
+      { texto: "Entrevista AGIR (Festival F 2022)", url: "https://soundcloud.com/ruafm/entrevista-02set22-festival-f-agir", icone: "mic-vocal" },
       { texto: "Entrevista Dino d'Santiago (Festival F 2022)", url: "https://soundcloud.com/ruafm/entrevista-03set22-festival-f-dino-dsantiago", icone: "mic-vocal" }
     ],
     media: [
