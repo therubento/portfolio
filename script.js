@@ -231,7 +231,7 @@ const projetos = [
     id: 14,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "",
+    logo: "https://rua.pt/wp-content/uploads/2024/02/Logo_rua_fm7-1024x724.jpg",
     hashtag: "#radio",
     titulo: "RUA - Rádio Universitária do Algarve",
     mesAno: "Março 2022 – Atualmente",
