@@ -1,7 +1,7 @@
 const projetos = [
   {
     id: 1,
-    destaques: false,
+    destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA)",
@@ -68,7 +68,7 @@ const projetos = [
       { texto: "Ver no IMDB", url: "https://www.imdb.com/title/tt42718524", icone: "palette" }
     ],
     media: [
-      { tipo: "foto", url: "https://i.imgur.com/W8ckrH6.jpeg", titulo: "Mesa Redonda" }
+      { tipo: "foto", url: "https://i.imgur.com/W8ckrH6.jpeg", titulo: "Mesa Redonda" },
       { tipo: "foto", url: "https://i.imgur.com/JLEdyLY.jpeg", titulo: "Docentes" }
     ]
   },
