@@ -352,6 +352,7 @@
         <h2 class="section-title centered-title">Formação Académica</h2>
 
         <div class="timeline">
+            <!-- DOUTORAMENTO -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content hover-card">
@@ -373,9 +374,10 @@
                 </div>
             </div>
 
+            <!-- MESTRADO COM CARTÃO DA DISSERTAÇÃO EM DESTAQUE -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content hover-card">
+                <div class="timeline-content hover-card dissertation-highlight-card">
                     <div class="timeline-header">
                         <div class="timeline-logo-container">
                             <img src="https://www.escs.ipl.pt/sites/default/files/ESCS-Logo.png" alt="Logo ESCS" class="timeline-company-logo logo-white-bg">
@@ -386,23 +388,27 @@
                     <p class="timeline-institution">Mestrado - Escola Superior de Comunicação Social (IPL, Lisboa)</p>
                     <div class="timeline-description">
                         <ul>
-                            <li><strong>Formação Multimeios & Prática:</strong> Desenvolvimento avançado de competências em jornalismo televisivo, radiofónico, impresso e digital, combinando vertente experimental com investigação aplicada.</li>
+                            <li><strong>Formação Multimeios & Prática:</strong> Desenvolvimento avançado de competências em jornalismo televisivo, radiofónico, impresso e digital, combinando vertente experimental com investigação applied.</li>
                             <li><strong>Especialização Temática:</strong> Aprofundamento de linguagens e técnicas informativas em áreas como jornalismo político, cultural, de ciência, económico e desportivo.</li>
                         </ul>
-                        <p class="academic-thesis"><strong>Dissertação:</strong> “Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</p>
-                        <div class="timeline-buttons-row">
-                            <a href="https://hdl.handle.net/10400.21/15724" target="_blank" class="btn-dissertacao">
-                                <i data-lucide="file-text"></i> Ler Dissertação de Mestrado
+                        
+                        <!-- DESTAQUE DA DISSERTAÇÃO COM BOTÃO DE ACESSO -->
+                        <div class="dissertation-box">
+                            <div class="dissertation-badge"><i data-lucide="book-open"></i> DISSERTAÇÃO DE MESTRADO</div>
+                            <h4 class="dissertation-title">“Nos Bastidores do Jornalismo Televisivo: quando o essencial pode ser invisível aos olhos dos telespectadores (o caso da RTP, SIC e TVI)”</h4>
+                            <a href="https://repositorio.ipl.pt" target="_blank" class="btn-dissertation">
+                                <i data-lucide="file-text"></i> Ler Dissertação Completa <i data-lucide="arrow-up-right"></i>
                             </a>
                         </div>
                     </div>
                     <div class="associated-project-wrapper" data-project-id=""></div>
-                    <a href="https://www.escs.ipl.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                    <a href="https://www.escs.ipl.pt" target="_blank" class="corner-arrow-link" title="Visitar Website ESCS">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
             </div>
 
+            <!-- LICENCIATURA (CORRIGIDO PARA LARGURA COMPLETA) -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content hover-card">
@@ -421,7 +427,7 @@
                         </ul>
                     </div>
                     <div class="associated-project-wrapper" data-project-id=""></div>
-                    <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website">
+                    <a href="https://www.ualg.pt" target="_blank" class="corner-arrow-link" title="Visitar Website UAlg">
                         <i data-lucide="arrow-up-right"></i>
                     </a>
                 </div>
@@ -501,7 +507,6 @@
                         <div class="software-item"><span>Microsoft Word</span><div class="level-bar" data-level="3"></div></div>
                         <div class="software-item"><span>Microsoft PowerPoint</span><div class="level-bar" data-level="4"></div></div>
                         <div class="software-item"><span>Microsoft Excel</span><div class="level-bar" data-level="2"></div></div>
-
                     </div>
                 </div>
             </div>
@@ -736,47 +741,58 @@
         </div>
     </section>
 
-    <!-- GALERIA GERAL (ESTILO MASONRY / GRADE MISTA) -->
+    <!-- GALERIA GERAL EM FORMA DE GRELHA DINÂMICA (MASONRY / DIVERSOS FORMATOS) -->
     <section class="section-padded bg-alt reveal">
         <h2 class="section-title centered-title">Galeria</h2>
-        <div class="media-gallery-grid">
-            <div class="media-gallery-card span-col-2 span-row-2">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Registo 1">
+        <div class="media-gallery-masonry">
+            <!-- FOTO 1: HORIZONTAL GRANDE -->
+            <div class="media-gallery-card grid-col-span-2">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Estúdio de TV">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="camera"></i> Fotografia</span>
                     <h4>Emissão e Estúdio de Televisão</h4>
                 </div>
             </div>
-            <div class="media-gallery-card">
-                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80" alt="Registo 2">
+            
+            <!-- FOTO 2: VERTICAL -->
+            <div class="media-gallery-card grid-row-span-2">
+                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80" alt="RUA FM">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="mic"></i> Rádio</span>
                     <h4>Entrevista nos Estúdios da RUA FM</h4>
                 </div>
             </div>
-            <div class="media-gallery-card span-row-2">
-                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Registo 3">
+
+            <!-- FOTO 3: QUADRADA -->
+            <div class="media-gallery-card">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Reportagem">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="video"></i> Reportagem</span>
                     <h4>Cobertura de Eventos em Direto</h4>
                 </div>
             </div>
+
+            <!-- FOTO 4: HORIZONTAL -->
             <div class="media-gallery-card">
-                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Registo 4">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Cinema">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="film"></i> Cinema</span>
                     <h4>Rodagem de Documentário</h4>
                 </div>
             </div>
-            <div class="media-gallery-card span-col-2">
-                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Registo 5">
+
+            <!-- FOTO 5: HORIZONTAL GRANDE -->
+            <div class="media-gallery-card grid-col-span-2">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Redes Sociais">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="share-2"></i> Digital</span>
                     <h4>Produção para Redes Sociais</h4>
                 </div>
             </div>
+
+            <!-- FOTO 6: STANDARD -->
             <div class="media-gallery-card">
-                <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80" alt="Registo 6">
+                <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&w=600&q=80" alt="Congresso">
                 <div class="media-gallery-info">
                     <span class="media-badge"><i data-lucide="newspaper"></i> Imprensa</span>
                     <h4>Redação no 5º Congresso dos Jornalistas</h4>
