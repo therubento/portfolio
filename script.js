@@ -5,6 +5,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival MED (RUA)",
+    logo: "https://rua.pt/wp-content/uploads/2021/10/cropped-favicon.png",
     mesAno: "Junho | 2026 - 2023",
     cargo: "Radialista",
     local: "Loulé",
@@ -24,6 +25,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Festival F (RUA)",
+    logo: "https://rua.pt/wp-content/uploads/2021/10/cropped-favicon.png",
     mesAno: "Setembro | 2026 - 2022",
     cargo: "Radialista",
     local: "Faro",
@@ -43,6 +45,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#semanaacademica #radio",
     titulo: "Semana Académica do Algarve (RUA)",
+    logo: "",
     mesAno: "Maio | 2026 - 2022",
     cargo: "Radialista / Repórter",
     local: "Faro",
@@ -59,6 +62,7 @@ const projetos = [
     categoria: "AUDIOVISUAL",
     hashtag: "#documentario",
     titulo: "Sala 31",
+    logo: "",
     mesAno: "Fevereiro 2025 - Maio 2026",
     cargo: "Realizador / Pós-Produção",
     local: "ESEC (UAlg)",
@@ -78,6 +82,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#digital #radio",
     titulo: "Confissões de Um Universitário (RUA)",
+    logo: "https://rua.pt/wp-content/uploads/2021/10/cropped-favicon.png",
     mesAno: "Março 2026 - Atualidade",
     cargo: "Realizador / Pós-Produção",
     local: "Universidade do Algarve",
@@ -98,6 +103,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Albufeira Sounds (RUA)",
+    logo: "",
     mesAno: "2025",
     cargo: "Radialista",
     local: "Albufeira",
@@ -112,6 +118,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#festival #radio",
     titulo: "Albufeira Sea Fest (RUA)",
+    logo: "",
     mesAno: "2025",
     cargo: "Radialista",
     local: "Albufeira",
@@ -126,6 +133,7 @@ const projetos = [
     categoria: "OUTROS",
     hashtag: "#worldskillsportugal",
     titulo: "Medalha de Ouro — Skills Portugal 2024",
+    logo: "https://worldskillsportugal.iefp.pt/wp-content/uploads/2020/03/WSPT_70anos_af3-10-copy.png",
     mesAno: "Novembro | 2024",
     cargo: "Jornalista / Repórter TV",
     local: "Santa Maria da Feira",
@@ -144,6 +152,7 @@ const projetos = [
     categoria: "DIGITAL & COMUNICAÇÃO",
     hashtag: "#digital",
     titulo: "Projeto ENTR PT (RTP)",
+    logo: "https://media.rtp.pt/entr/wp-content/themes/entr/includes/img/logo-white.png",
     mesAno: "Maio — Agosto | 2024",
     cargo: "Criador de Conteúdos (Freelancer)",
     local: "RTP — Lisboa",
@@ -160,6 +169,7 @@ const projetos = [
     categoria: "OUTROS",
     hashtag: "#congressojornalistas",
     titulo: "5º Congresso dos Jornalistas",
+    logo: "",
     mesAno: "Janeiro | 2024",
     cargo: "Jornalista Redator (Redação)",
     local: "ESCS / Lisboa",
@@ -174,6 +184,7 @@ const projetos = [
     categoria: "OUTROS",
     hashtag: "#investigacao",
     titulo: "Dissertação de Mestrado (ESCS)",
+    logo: "https://www.escs.ipl.pt/sites/default/files/ESCS-Logo.png",
     mesAno: "2022 — 2024",
     cargo: "Investigador",
     local: "Escola Superior de Comunicação Social",
@@ -188,6 +199,7 @@ const projetos = [
     categoria: "OUTROS",
     hashtag: "#worldskillsportugal",
     titulo: "Medalha de Excelência — Skills Portugal 2023",
+    logo: "https://worldskillsportugal.iefp.pt/wp-content/uploads/2020/03/WSPT_70anos_af3-10-copy.png",
     mesAno: "Março | 2023",
     cargo: "Editor de Vídeo",
     local: "Portimão",
@@ -206,6 +218,7 @@ const projetos = [
     categoria: "OUTROS",
     hashtag: "#cienciasdacomunicacao #esec #ualg",
     titulo: "Núcleo de Ciências da Comunicação (NECICom) – UAlg",
+    logo: "https://upload.wikimedia.org/wikipedia/pt/4/43/UAlg_Logo_Simbolo.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     mesAno: "Fevereiro 2022 – Fevereiro 2023",
     cargo: "Coordenador do Mercado de Trabalho",
     local: "Universidade do Algarve",
@@ -220,6 +233,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#radio",
     titulo: "RUA - Rádio Universitária do Algarve",
+    logo: "https://rua.pt/wp-content/uploads/2021/10/cropped-favicon.png",
     mesAno: "Março 2022 – Atualmente",
     cargo: "Jornalista e Animador de Rádio",
     local: "Faro",
@@ -234,6 +248,7 @@ const projetos = [
     categoria: "DIGITAL & COMUNICAÇÃO",
     hashtag: "#comunicacao",
     titulo: "Projeto \"Política (NÃO) Importa\"",
+    logo: "",
     mesAno: "Setembro 2020 — Novembro 2022",
     cargo: "Coordenador de Comunicação",
     local: "Projeto Independente",
@@ -248,6 +263,7 @@ const projetos = [
     categoria: "JORNALISMO & MEDIA",
     hashtag: "#imprensa",
     titulo: "Sul Informação",
+    logo: "https://www.sulinformacao.pt/wp-content/uploads/2023/12/logo.png",
     mesAno: "Abril 2021 — Fevereiro 2022",
     cargo: "Jornalista (Estágio Profissional)",
     local: "Sul Informação (Faro)",
@@ -264,6 +280,7 @@ const projetos = [
     categoria: "JORNALISMO & MEDIA",
     hashtag: "#imprensa",
     titulo: "Revista Rotary Portugal",
+    logo: "https://revistarotaryportugal.pt/wp-content/uploads/2025/04/logo_nobg-e1746010110400.png",
     mesAno: "Março 2021 – Atualmente",
     cargo: "Editor e Jornalista (Colaborador)",
     local: "Portugal",
@@ -278,6 +295,7 @@ const projetos = [
     categoria: "JORNALISMO & MEDIA",
     hashtag: "#televisao",
     titulo: "Rádio e Televisão de Portugal (RTP)",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/81/RTP_2026.svg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original",
     mesAno: "Março 2020 – Julho 2020",
     cargo: "Jornalista (Estágio Curricular)",
     local: "Faro",
@@ -292,6 +310,7 @@ const projetos = [
     categoria: "AUDIOVISUAL",
     hashtag: "#cinema",
     titulo: "Segunda Opção (Curta-Metragem)",
+    logo: "",
     mesAno: "Março 2018 — Junho 2019",
     cargo: "Realizador, Editor, Cameraman",
     local: "Faro",
@@ -308,6 +327,7 @@ const projetos = [
     categoria: "RÁDIO & ÁUDIO",
     hashtag: "#radio",
     titulo: "+Jovem - Rádio Gilão",
+    logo: "https://www.radiogilao.com/templates/radiogilao/images/blue/logo.png",
     mesAno: "Junho a Setembro | 2019",
     cargo: "Locutor (Colaborador)",
     local: "Tavira",
@@ -362,10 +382,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement("div");
             card.className = "destaque-card-prime";
             card.id = `card-proj-${proj.id}`;
+
+            const logoHTML = (proj.logo && proj.logo.trim() !== "") 
+                ? `<img src="${proj.logo}" alt="Logo" class="card-circle-logo">` 
+                : "";
+
             card.innerHTML = `
                 <img src="${proj.capa}" alt="${proj.titulo}" class="destaque-prime-bg">
                 <div class="destaque-prime-overlay">
-                    <span class="card-category">${proj.hashtag}</span>
+                    <div class="card-header-badge-row">
+                        ${logoHTML}
+                        <span class="card-category">${proj.hashtag}</span>
+                    </div>
                     <h3 class="card-title-highlight">${proj.titulo}</h3>
                     <div class="card-sub-info">${proj.local} • ${proj.mesAno}</div>
                 </div>
@@ -399,10 +427,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card = document.createElement("div");
                 card.className = "netflix-card-16-9";
                 card.id = `card-proj-${proj.id}`;
+
+                const logoHTML = (proj.logo && proj.logo.trim() !== "") 
+                    ? `<img src="${proj.logo}" alt="Logo" class="card-circle-logo">` 
+                    : "";
+
                 card.innerHTML = `
                     <img src="${proj.capa}" alt="${proj.titulo}" class="card-bg-img">
                     <div class="card-gradient-overlay">
-                        <span class="card-category">${proj.hashtag}</span>
+                        <div class="card-header-badge-row">
+                            ${logoHTML}
+                            <span class="card-category">${proj.hashtag}</span>
+                        </div>
                         <h4 class="card-title">${proj.titulo}</h4>
                         <div class="card-sub-info">${proj.local} • ${proj.mesAno}</div>
                     </div>
@@ -416,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. POP-UP / DRAWER TOTALMENTE REMODELADO E SUAVE
+    // 6. POP-UP / DRAWER SUAVE
     function openNetflixDrawer(targetDrawer, proj, triggerElement) {
         document.querySelectorAll('.netflix-drawer').forEach(d => {
             d.classList.remove('active');
@@ -452,6 +488,10 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
 
+        const drawerLogoHTML = (proj.logo && proj.logo.trim() !== "") 
+            ? `<img src="${proj.logo}" alt="Logo" class="drawer-circle-logo">` 
+            : "";
+
         targetDrawer.innerHTML = `
             <div class="drawer-content-wrapper">
                 <div class="drawer-flex-container">
@@ -464,7 +504,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                     <div class="drawer-right-details">
-                        <span class="card-category">${proj.hashtag}</span>
+                        <div class="card-header-badge-row margin-bottom-sm">
+                            ${drawerLogoHTML}
+                            <span class="card-category">${proj.hashtag}</span>
+                        </div>
                         <h2>${proj.titulo}</h2>
                         
                         <div class="drawer-meta-boxes">
