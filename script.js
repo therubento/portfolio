@@ -120,7 +120,7 @@ const projetos = [
     mesAno: "2025",
     cargo: "Locutor de Rádio",
     local: "RUA (Albufeira)",
-    capa: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/uCwstAH.jpeg",
     resumo: "Cobertura informativa e gravação de peças de áudio durante o evento Albufeira Sounds, focando no panorama musical da região.",
     links: [
       { texto: "DJ Charlie Spot (2025)", url: "https://soundcloud.com/ruafm/entrevista-08jun25-charlie?in=ruafm/sets/albufeira-sounds-2025", icone: "mic-vocal" },
