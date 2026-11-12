@@ -105,10 +105,7 @@ const projetos = [
       { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "book-headphones" },
       { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
     ],
-    media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80", titulo: "Estúdio" },
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80", titulo: "Emissão" }
-    ]
+    media: []
   },
   {
     id: 6,
@@ -171,10 +168,12 @@ const projetos = [
     mesAno: "Maio — Agosto | 2024",
     cargo: "Criador de Conteúdos (Freelancer)",
     local: "RTP (Lisboa)",
-    capa: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/Ieai0JX.jpeg",
     resumo: "Criação, captação e edição de formatos curtos de vídeo dinâmicos orientados para o público jovem no âmbito do projeto europeu ENTR PT.",
     links: [
-      { texto: "Ver no Behance", url: "https://behance.net/rmdaqb243", icone: "palette" }
+      { texto: "Instagram", url: "https://www.instagram.com/pt.entr/", icone: "graph-star" },
+      { texto: "Facebook", url: "https://www.facebook.com/pt.entr", icone: "graph-star" },
+      { texto: "Youtube", url: "https://www.youtube.com/@ptentr", icone: "graph-star" }
     ],
     media: []
   },
@@ -190,7 +189,9 @@ const projetos = [
     local: "Lisboa",
     capa: "https://i.imgur.com/3YL18sR.jpeg",
     resumo: "Integração na equipa de redação responsável pela cobertura jornalística do 5º Congresso dos Jornalistas Portugueses.",
-    links: [],
+    links: [
+      { texto: "ESCS no 5º Congresso dos Jornalistas", url: "https://www.escs.upl.pt/editoriais/a-escs-no-5-congresso-dos-jornalistas", icone: "newspaper" }
+    ],
     media: []
   },
   {
@@ -205,7 +206,9 @@ const projetos = [
     local: "ESCS (Lisboa)",
     capa: "https://i.imgur.com/MRuUXfT.jpeg",
     resumo: "Trabalho de investigação final do Mestrado em Jornalismo: 'Nos Bastidores do Jornalismo Televisivo (o caso da RTP, SIC e TVI)'.",
-    links: [],
+    links: [
+      { texto: "Ler Dissertação de Mestrado", url: "https://repositorio.ipl.pt/entities/publication/42d8c137-fd09-4856-8628-650e289524b3", icone: "file-pen" }
+    ],
     media: []
   },
   {
@@ -223,9 +226,7 @@ const projetos = [
     links: [
       { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
     ],
-    media: [
-      { tipo: "foto", url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", titulo: "..." }
-    ]
+    media: []
   },
   {
     id: 13,
@@ -285,7 +286,10 @@ const projetos = [
     capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
     resumo: "Escrita diária de notícias, breves e entrevistas, acompanhada pela produção integral de peças jornalísticas em vídeo.",
     links: [
-      { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt", icone: "globe" }
+      { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt/author/rubenbento/", icone: "globe" },
+      { texto: "No Algarve, «ainda é o polvo quem mais ordena»", url: "https://www.sulinformacao.pt/2022/02/no-algarve-ainda-e-o-polvo-quem-mais-ordena/", icone: "newspaper" },
+      { texto: "Mais que uma Escola Profissional, Alte tem uma "família" em que «ninguém fica para trás»", url: "https://www.sulinformacao.pt/2021/07/mais-que-uma-escola-profissional-alte-tem-uma-familia-em-que-ninguem-fica-para-tras/", icone: "newspaper" },
+      { texto: "«Instinto» salvou gamos num Parque de Lazer devastado pelas chamas", url: "https://www.sulinformacao.pt/2021/08/gamos-sobrevivem-ao-incendio-no-parque-de-lazer-da-mata-da-conceicao-de-tavira/", icone: "newspaper" },
     ],
     media: []
   },
@@ -316,7 +320,9 @@ const projetos = [
     local: "RTP (Faro)",
     capa: "https://i.imgur.com/uiUAw6p.jpeg",
     resumo: "Escrita e edição de reportagens jornalísticas sobre variados temas. Acompanhamento do trabalho de vários jornalistas. Colaboração na edição de peças jornalísticas. Escrita e edição da Grande Reportagem \"E agora, Algarve?\"",
-    links: [],
+    links: [
+      { texto: "Grande Reportagem - \"E agora, Algarve?\"", url: "https://www.youtube.com/watch?v=-Mk3Pt2fUsk", icone: "virus" }
+    ],
     media: []
   },
   {
@@ -329,10 +335,11 @@ const projetos = [
     mesAno: "Março 2018 — Junho 2019",
     cargo: "Realizador, Editor, Cameraman",
     local: "Projeto",
-    capa: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/4dEE85v.png",
     resumo: "Curta-metragem académica independente onde assumi a realização, captação de imagem e montagem final.",
     links: [
-      { texto: "Ver no Vimeo", url: "https://vimeo.com/rubenbento243", icone: "video" }
+      { texto: "Teaser", url: "https://vimeo.com/rubenbento243", icone: "video" }
+      { texto: "Genérico", url: "https://vimeo.com/381793776", icone: "video" }
     ],
     media: []
   },
@@ -340,13 +347,13 @@ const projetos = [
     id: 20,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "",
+    logo: "https://i.imgur.com/LXefyNx.png",
     hashtag: "#radio",
     titulo: "+Jovem",
     mesAno: "Junho a Setembro | 2019",
     cargo: "Locutor de Rádio (Colaborador)",
     local: "Rádio Gilão",
-    capa: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/PH2KqJd.jpeg",
     resumo: "Apresentação e animação do programa jovem de verão na Rádio Gilão em Tavira, articulando música, agenda local e entrevistas.",
     links: [],
     media: []
