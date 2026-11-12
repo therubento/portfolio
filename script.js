@@ -288,7 +288,7 @@ const projetos = [
     links: [
       { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt/author/rubenbento/", icone: "globe" },
       { texto: "No Algarve, «ainda é o polvo quem mais ordena»", url: "https://www.sulinformacao.pt/2022/02/no-algarve-ainda-e-o-polvo-quem-mais-ordena/", icone: "newspaper" },
-      { texto: "Mais que uma Escola Profissional, Alte tem uma \"família\" em que «ninguém fica para trás»", url: "https://www.sulinformacao.pt/2021/07/mais-que-uma-escola-profissional-alte-tem-uma-familia-em-que-ninguem-fica-para-tras/", icone: "newspaper" },
+      { texto: "Mais que uma Escola Profissional, Alte tem uma família em que «ninguém fica para trás»", url: "https://www.sulinformacao.pt/2021/07/mais-que-uma-escola-profissional-alte-tem-uma-familia-em-que-ninguem-fica-para-tras/", icone: "newspaper" },
       { texto: "«Instinto» salvou gamos num Parque de Lazer devastado pelas chamas", url: "https://www.sulinformacao.pt/2021/08/gamos-sobrevivem-ao-incendio-no-parque-de-lazer-da-mata-da-conceicao-de-tavira/", icone: "newspaper" }
     ],
     media: []
