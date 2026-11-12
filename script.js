@@ -99,13 +99,15 @@ const projetos = [
     mesAno: "Março 2026 - Atualidade",
     cargo: "Realizador / Pós-Produção",
     local: "RUA (UAlg)",
-    capa: "https://www.ualg.pt/sites/default/files/styles/redes_sociais_landscape/public/nodes/images/2026-03/confuni.jpg?itok=l427xszY",
+    capa: "https://i.imgur.com/0XGPTpI.jpeg",
     resumo: "“Confissões de um Universitário” leva-te a conhecer, em cada episódio, um curso da Universidade do Algarve através dos próprios estudantes da UAlg.",
     links: [
       { texto: "Ouvir no Spotify", url: "https://open.spotify.com/show/4bEgJLERqSEwgND78lAXAH?si=58fbe642bf604167", icone: "book-headphones" },
       { texto: "Ver no Youtube", url: "https://youtube.com/playlist?list=PLysOGAXKuGrC_rRX-zF5B62f1aauseKbn&si=JC5Qt6ZthPNCATCF", icone: "video" }
     ],
-    media: []
+    media: [
+      { tipo: "foto", url: "https://i.imgur.com/s5jM1T7.jpeg", titulo: "Gravações" }
+    ]
   },
   {
     id: 6,
@@ -134,7 +136,7 @@ const projetos = [
     mesAno: "2025",
     cargo: "Locutor de Rádio",
     local: "RUA (Albufeira)",
-    capa: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/eF2Loqb.png",
     resumo: "Acompanhamento do festival juvenil à beira-mar, articulando entrevistas com desportistas, artistas urbanos e o público jovem.",
     links: [],
     media: []
