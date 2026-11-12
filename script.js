@@ -59,7 +59,7 @@ const projetos = [
     mesAno: "Junho | 2026",
     cargo: "Locutor de Rádio",
     local: "RUA (Lisboa)",
-    capa: "https://i.imgur.com/G5zJykb.jpeg",
+    capa: "https://i.imgur.com/8CI4fFV.jpeg",
     resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Rock in Rio Lisboa '26 para a RUA FM.",
     links: [],
     media: []
