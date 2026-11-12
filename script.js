@@ -3,27 +3,6 @@ const projetos = [
     id: 1,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
-    logo: "https://i.imgur.com/8xpNpEc.jpeg",
-    hashtag: "#festival #radio",
-    titulo: "Festival MED",
-    mesAno: "Junho | 2023 - 2026",
-    cargo: "Locutor de Rádio",
-    local: "RUA (Loulé)",
-    capa: "https://i.imgur.com/bR4M7gF.jpeg",
-    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
-    links: [
-      { texto: "Teresinha Landeiro (2024)", url: "https://soundcloud.com/ruafm/teresi", icone: "mic-vocal" },
-      { texto: "Cristina Branco (2024)", url: "https://soundcloud.com/ruafm/crist", icone: "mic-vocal" },
-      { texto: "Nomad (2024)", url: "https://soundcloud.com/ruafm/nomad", icone: "mic-vocal" }
-    ],
-    media: [
-      { tipo: "foto", url: "https://i.imgur.com/uDRlpMH.jpeg", titulo: "20 Anos MED" }
-    ]
-  },
-  {
-    id: 2,
-    destaque: false,
-    categoria: "RÁDIO & ÁUDIO",
     logo: "https://i.imgur.com/a1LtIFl.png",
     hashtag: "#festival #radio",
     titulo: "Festival F",
@@ -49,8 +28,44 @@ const projetos = [
       { tipo: "foto", url: "https://i.imgur.com/awy632I.jpeg", titulo: "Dino d'Santiago (2025)" }
     ]
   },
-  {
+    {
+    id: 2,
+    destaque: false,
+    categoria: "RÁDIO & ÁUDIO",
+    logo: "https://i.imgur.com/8xpNpEc.jpeg",
+    hashtag: "#festival #radio",
+    titulo: "Festival MED",
+    mesAno: "Junho | 2023 - 2026",
+    cargo: "Locutor de Rádio",
+    local: "RUA (Loulé)",
+    capa: "https://i.imgur.com/bR4M7gF.jpeg",
+    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Festival MED na zona histórica de Loulé para a RUA FM.",
+    links: [
+      { texto: "Teresinha Landeiro (2024)", url: "https://soundcloud.com/ruafm/teresi", icone: "mic-vocal" },
+      { texto: "Cristina Branco (2024)", url: "https://soundcloud.com/ruafm/crist", icone: "mic-vocal" },
+      { texto: "Nomad (2024)", url: "https://soundcloud.com/ruafm/nomad", icone: "mic-vocal" }
+    ],
+    media: [
+      { tipo: "foto", url: "https://i.imgur.com/uDRlpMH.jpeg", titulo: "20 Anos MED" }
+    ]
+  },
+    {
     id: 3,
+    destaque: false,
+    categoria: "RÁDIO & ÁUDIO",
+    logo: "https://i.imgur.com/Ybeiy6L.png",
+    hashtag: "#festival #radio",
+    titulo: "Rock in Rio Lisboa '26",
+    mesAno: "Junho | 2026",
+    cargo: "Locutor de Rádio",
+    local: "RUA (Lisboa)",
+    capa: "https://i.imgur.com/G5zJykb.jpeg",
+    resumo: "Cobertura radiofónica e acompanhamento dos concertos, entrevistas e bastidores do Rock in Rio Lisboa '26 para a RUA FM.",
+    links: [],
+    media: []
+  },
+  {
+    id: 4,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     logo: "https://i.imgur.com/Zndw010.png",
@@ -70,7 +85,7 @@ const projetos = [
     media: []
   },
   {
-    id: 4,
+    id: 5,
     destaque: true,
     categoria: "AUDIOVISUAL",
     logo: "https://i.imgur.com/dcoOUig.jpeg",
@@ -90,7 +105,7 @@ const projetos = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     destaque: true,
     categoria: "RÁDIO & ÁUDIO",
     logo: "https://i.imgur.com/pT4kMQC.jpeg",
@@ -110,7 +125,7 @@ const projetos = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     logo: "https://i.imgur.com/JKENVyG.png",
@@ -127,7 +142,7 @@ const projetos = [
     media: []
   },
   {
-    id: 7,
+    id: 8,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     logo: "https://i.imgur.com/eJTRoOs.png",
@@ -142,7 +157,7 @@ const projetos = [
     media: []
   },
   {
-    id: 8,
+    id: 9,
     destaque: true,
     categoria: "OUTROS",
     logo: "https://i.imgur.com/kPNFUvm.png",
@@ -161,7 +176,7 @@ const projetos = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     destaque: false,
     categoria: "DIGITAL & COMUNICAÇÃO",
     logo: "https://i.imgur.com/8l9Tv3a.png",
@@ -180,7 +195,7 @@ const projetos = [
     media: []
   },
   {
-    id: 10,
+    id: 11,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     logo: "https://i.imgur.com/9xhqCEW.png",
@@ -197,7 +212,7 @@ const projetos = [
     media: []
   },
   {
-    id: 11,
+    id: 12,
     destaque: false,
     categoria: "OUTROS",
     logo: "https://i.imgur.com/570sRhJ.png",
@@ -214,7 +229,7 @@ const projetos = [
     media: []
   },
   {
-    id: 12,
+    id: 13,
     destaque: false,
     categoria: "OUTROS",
     logo: "https://i.imgur.com/kPNFUvm.png",
@@ -231,7 +246,7 @@ const projetos = [
     media: []
   },
   {
-    id: 13,
+    id: 14,
     destaque: false,
     categoria: "OUTROS",
     logo: "",
@@ -246,7 +261,7 @@ const projetos = [
     media: []
   },
   {
-    id: 14,
+    id: 15,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     logo: "",
@@ -261,7 +276,7 @@ const projetos = [
     media: []
   },
   {
-    id: 15,
+    id: 16,
     destaque: false,
     categoria: "DIGITAL & COMUNICAÇÃO",
     logo: "https://i.imgur.com/ItJhFOP.png",
@@ -276,7 +291,7 @@ const projetos = [
     media: []
   },
   {
-    id: 16,
+    id: 17,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     logo: "https://i.imgur.com/G7sAQby.png",
@@ -296,7 +311,7 @@ const projetos = [
     media: []
   },
   {
-    id: 17,
+    id: 18,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     logo: "https://i.imgur.com/uBsGYaS.png",
@@ -311,7 +326,7 @@ const projetos = [
     media: []
   },
   {
-    id: 18,
+    id: 19,
     destaque: false,
     categoria: "JORNALISMO & MEDIA",
     logo: "https://i.imgur.com/DrJXJX6.png",
@@ -328,7 +343,7 @@ const projetos = [
     media: []
   },
   {
-    id: 19,
+    id: 20,
     destaque: false,
     categoria: "AUDIOVISUAL",
     logo: "https://i.imgur.com/VYQUGO8.png",
@@ -346,7 +361,7 @@ const projetos = [
     media: []
   },
   {
-    id: 20,
+    id: 21,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
     logo: "https://i.imgur.com/LXefyNx.png",
