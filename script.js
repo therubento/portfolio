@@ -329,7 +329,7 @@ const projetos = [
     id: 19,
     destaque: false,
     categoria: "AUDIOVISUAL",
-    logo: "",
+    logo: "https://i.imgur.com/VYQUGO8.png",
     hashtag: "#cinema",
     titulo: "Segunda Opção",
     mesAno: "Março 2018 — Junho 2019",
