@@ -28,7 +28,7 @@ const projetos = [
       { tipo: "foto", url: "https://i.imgur.com/awy632I.jpeg", titulo: "Dino d'Santiago (2025)" }
     ]
   },
-    {
+  {
     id: 2,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
@@ -49,7 +49,7 @@ const projetos = [
       { tipo: "foto", url: "https://i.imgur.com/uDRlpMH.jpeg", titulo: "20 Anos MED" }
     ]
   },
-    {
+  {
     id: 3,
     destaque: false,
     categoria: "RÁDIO & ÁUDIO",
