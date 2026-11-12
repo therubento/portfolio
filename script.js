@@ -285,7 +285,7 @@ const projetos = [
     mesAno: "Abril 2021 — Fevereiro 2022",
     cargo: "Jornalista (Estágio Profissional)",
     local: "Faro",
-    capa: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80",
+    capa: "https://i.imgur.com/mmMTXYx.png",
     resumo: "Escrita diária de notícias, breves e entrevistas, acompanhada pela produção integral de peças jornalísticas em vídeo.",
     links: [
       { texto: "Visitar Sul Informação", url: "https://www.sulinformacao.pt/author/rubenbento/", icone: "globe" },
